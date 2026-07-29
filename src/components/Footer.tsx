@@ -56,16 +56,16 @@ export default function Footer() {
                 <Link href="/videot" className="hover:text-white transition-colors">Videokirjasto</Link>
               </li>
               <li>
-                <Link href="/ilmaisopas" className="hover:text-white transition-colors">Ilmaisopas</Link>
+                <Link href="/ilmaisopas" className="hover:text-white transition-colors">Ilmaiset Kipuoppaat</Link>
               </li>
               <li>
-                <Link href="/koulutukset" className="hover:text-white transition-colors">Koulutukset & Kokemus</Link>
+                <Link href="/koulutukset" className="hover:text-white transition-colors">Koulutukset &amp; Kokemus</Link>
               </li>
               <li>
                 <Link href="/yhteystiedot" className="hover:text-white transition-colors">Yhteystiedot</Link>
               </li>
               <li>
-                <Link href="/tietosuoja" className="hover:text-white transition-colors">Tietosuoja & Vastuuvapaus</Link>
+                <Link href="/tietosuoja" className="hover:text-white transition-colors">Tietosuoja &amp; Vastuuvapaus</Link>
               </li>
             </ul>
           </div>
