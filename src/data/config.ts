@@ -2,24 +2,35 @@ export const SITE_CONFIG = {
   brandName: "FT Säkkinen",
   companyName: "Tiedottajanne Oy",
   businessId: "3305813-7",
-  domain: "ftsakkinen.fi",
+  domain: "ftsakkinen.com",
   sisterSiteName: "PT Sakkinen (English)",
-  sisterSiteUrl: "https://ptsakkinen.com",
-  youtubeUrl: "https://www.youtube.com/@ft_sakkinen",
-  youtubeHandle: "@ft_sakkinen",
-  youtubeChannelId: "UC_ft_sakkinen",
-  instagramUrl: "https://www.instagram.com/sakkinenjanne",
-  instagramHandle: "@sakkinenjanne",
-  tiktokUrl: "https://www.tiktok.com/@sakkinenjanne",
-  tiktokHandle: "@sakkinenjanne",
-  beaconsUrl: "https://beacons.ai/sakkinenjanne",
+  sisterSiteUrl: "https://www.ptsakkinen.com",
+  authorName: "Janne Säkkinen",
+  authorTitle: "Janne Säkkinen",
+  
+  // Official Contact Info
+  clinicAddress: "Lipunkantajantie 21 G, 90670 Oulu",
   contactEmail: "tiedottajanne@gmail.com",
   contactPhone: "041 327 4967",
-  clinicAddress: "Lipunkantajantie 21 G, 90670 Oulu",
+  
+  // Social Media Handles
+  youtubeUrl: "https://www.youtube.com/@ft_sakkinen",
+  youtubeHandle: "@ft_sakkinen",
+  youtubeChannelId: "UCz0XuTDgzskIDlzSrZFxsBg",
+
+  instagramUrl: "https://www.instagram.com/sakkinenjanne",
+  instagramHandle: "@sakkinenjanne",
+
+  tiktokUrl: "https://www.tiktok.com/@sakkinenjanne",
+  tiktokHandle: "@sakkinenjanne",
+
+  beaconsUrl: "https://beacons.ai/sakkinenjanne",
+  
+  // Authority Proofs
   authorityProofs: {
-    experience: "15+ vuoden kliininen OMT-kokemus",
-    appointments: "Yli 10 000 potilasvastaanottoa",
-    qualification: "OMT-fysioterapeutti (SOMTY)",
-    teaching: "Kouluttaa fysioterapeutteja & opettaa Oulun yliopistolla vuodesta 2017",
+    teaching: "Oulun yliopiston lääketieteellinen tiedekunta / Hammaslääketiede (2017–)",
+    credentials: "OMT-Fysioterapeutti (SOMTY), Terveystieteiden B.Sc., Elektroniikka-asentaja",
+    appointments: "Tiedottajanne Oy — OMT-Fysioterapia & Koulutuspalvelut",
+    qualification: "OMT-Fysioterapeutti (SOMTY 2018–2020)",
   },
 };
