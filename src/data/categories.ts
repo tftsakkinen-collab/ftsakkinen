@@ -6,14 +6,14 @@ export interface Category {
 
 export const CATEGORIES: Category[] = [
   {
+    id: "kaikki",
+    name: "Kaikki videot",
+    description: "Kaikki julkaistut fysioterapiavideot ja ohjeet.",
+  },
+  {
     id: "purenta-tmd",
     name: "Leukanivel & Purentaelimistö (TMD)",
     description: "Purentalihasten kireys, leukanivelen naksahdus, bruksismi ja kasvojen kiputilat.",
-  },
-  {
-    id: "niska-huimaus",
-    name: "Niska- & Niskahuimaus",
-    description: "Yläniskan patomekaniikka, niskahuimaus, epävarma olo ja tensiopäänsärky.",
   },
   {
     id: "ergonomia",
@@ -23,6 +23,6 @@ export const CATEGORIES: Category[] = [
   {
     id: "tule-vaivat",
     name: "Tuki- ja Liikuntaelimistö",
-    description: "Iskias, selkäkivut, olkapään ahtaus, polven ja lonkan nivelrikko.",
+    description: "Tulehdus, niska-hartiaseutu, selkäkivut, olkapään ahtaus, polvi ja lonkka.",
   },
 ];
