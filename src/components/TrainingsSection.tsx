@@ -13,13 +13,13 @@ export default function TrainingsSection() {
     {
       title: "Leukanivelen terapia -koulutus",
       target: "Pohjois-Pohjanmaan Kesäyliopisto & Yhteisöt",
-      description: "Kurssikouluttajana fysioterapeuteille ja terveydenhuollon ammattilaisille suunnatuissa erikoiskoulutuksissa (2024–).",
+      description: "Kurssikouluttajana fysioterapeuteille ja terveydenhuollon ammattilaisille suunnatuissa purentaelimistön erikoiskoulutuksissa (2024–).",
       icon: BookOpen,
     },
     {
-      title: "Niska- & Cervikogeeninen Huimaus",
+      title: "Tuki- ja Liikuntaelimistön OMT-Koulutukset",
       target: "Fysioterapeutit & Ammatinharjoittajat",
-      description: "Yläniskan patomekaniikka, niska-päänsärkyjen erotusdiagnostiikka ja niskan liikkuvuuden sekä tasapainon vaiheittainen kuntoutus.",
+      description: "Kliiniseen tutkimiseen ja manuaaliseen terapiaan pohjautuvat täydennyskoulutukset niska-hartiaseudun, selän ja nivelten vaivoista.",
       icon: Award,
     },
   ];
@@ -33,13 +33,13 @@ export default function TrainingsSection() {
           <div className="text-center max-w-3xl mx-auto space-y-4">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0C66B4]/20 border border-[#00AEEF]/40 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
               <GraduationCap className="w-4 h-4" />
-              <span>Opetustyö & Luennointi</span>
+              <span>Opetustyö &amp; Luennointi</span>
             </div>
             <h2 className="text-3xl sm:text-5xl font-display text-white tracking-wide">
-              MITÄ KOULUTUKSIA <span className="text-[#00AEEF]">VEDÄN & OPETAN</span>
+              MITÄ KOULUTUKSIA <span className="text-[#00AEEF]">VEDÄN &amp; OPETAN</span>
             </h2>
             <p className="text-gray-300 text-base">
-              Koulutan muita fysioterapeutteja ja opetan hammaslääketieteen opiskelijoita Oulun yliopistolla purentaelimistön ja yläniskan fysioterapiasta.
+              Koulutan muita fysioterapeutteja ja opetan hammaslääketieteen opiskelijoita Oulun yliopistolla purentaelimistön fysioterapiasta ja työergonomiasta.
             </p>
           </div>
 
@@ -76,7 +76,7 @@ export default function TrainingsSection() {
           <div className="text-center max-w-3xl mx-auto space-y-4">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0C66B4]/20 border border-[#00AEEF]/40 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
               <Briefcase className="w-4 h-4" />
-              <span>Ansioluettelo & Kliininen Kokemus</span>
+              <span>Ansioluettelo &amp; Kliininen Kokemus</span>
             </div>
             <h2 className="text-3xl sm:text-5xl font-display text-white tracking-wide">
               TYÖHISTORIA JA <span className="text-[#00AEEF]">TUTKINNOT</span>
@@ -89,7 +89,7 @@ export default function TrainingsSection() {
             <div className="lg:col-span-6 space-y-6">
               <h3 className="text-2xl font-bold text-white flex items-center gap-2">
                 <GraduationCap className="w-6 h-6 text-[#00AEEF]" />
-                Tutkinnot & Erikoistuminen
+                Tutkinnot &amp; Erikoistuminen
               </h3>
 
               <div className="space-y-4">
@@ -144,7 +144,7 @@ export default function TrainingsSection() {
             <div>
               <div className="inline-flex items-center gap-2 text-[#00AEEF] text-sm font-semibold uppercase tracking-widest">
                 <FileCheck className="w-4 h-4" />
-                <span>Pätevyydet & Kurssit</span>
+                <span>Pätevyydet &amp; Kurssit</span>
               </div>
               <h3 className="text-2xl sm:text-3xl font-display text-white tracking-wide">
                 TÄYDENNYSKOULUTUKSET <span className="text-[#00AEEF]">(2011–2026)</span>
