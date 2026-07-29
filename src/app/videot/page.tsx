@@ -11,15 +11,13 @@ export default function VideoLibraryPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [videos] = useState<Video[]>(FALLBACK_VIDEOS);
 
-  // STRICTLY EXCLUDE ALL SHORTS AND 1-MINUTE VIDEOS
   const filteredVideos = videos.filter((v) => {
-    const isLongForm = !v.isShort && v.duration !== "01:00" && !v.title.toLowerCase().includes("#shorts");
     const matchesCat = selectedCategory === "kaikki" || v.categoryId === selectedCategory;
     const matchesSearch =
       v.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       v.promiseDescription.toLowerCase().includes(searchQuery.toLowerCase());
 
-    return isLongForm && matchesCat && matchesSearch;
+    return matchesCat && matchesSearch;
   });
 
   return (
@@ -30,15 +28,15 @@ export default function VideoLibraryPage() {
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0C66B4]/20 border border-[#00AEEF]/40 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
             <PlayCircle className="w-4 h-4" />
-            <span>Pitkät Fysioterapiavideot</span>
+            <span>Videokirjasto</span>
           </div>
 
           <h1 className="text-4xl sm:text-6xl font-display text-white tracking-wide">
-            KAIKKI PITKÄT <span className="text-[#00AEEF]">FYSIOTERAPIAVIDEOT</span>
+            KAIKKI <span className="text-[#00AEEF]">FYSIOTERAPIAVIDEOT</span>
           </h1>
 
           <p className="text-gray-300 text-base sm:text-lg">
-            Katso OMT-fysioterapeutti Janne Säkkisen julkaisemat perusteelliset YouTube-videot ja kuntoutusohjeet.
+            Katso OMT-fysioterapeutti Janne Säkkisen julkaisemat YouTube-videot ja täsmälliset kuntoutusohjeet.
           </p>
         </div>
 
@@ -49,7 +47,7 @@ export default function VideoLibraryPage() {
             <Search className="w-5 h-5 text-gray-400 absolute left-4 top-1/2 -translate-y-1/2" />
             <input
               type="text"
-              placeholder="Etsi pitkää videota hakusanalla..."
+              placeholder="Etsi videota hakusanalla (esim. leuka, TMD, tulehdus)..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-12 pr-4 py-3.5 rounded-xl bg-[#000d21] border border-[#0C66B4] text-white placeholder-gray-400 focus:outline-none focus:border-[#00AEEF] focus:ring-1 focus:ring-[#00AEEF] text-sm font-sans"
@@ -79,7 +77,7 @@ export default function VideoLibraryPage() {
 
         {/* Results Info */}
         <div className="flex items-center justify-between text-xs text-gray-400 border-b border-[#0C66B4]/30 pb-3">
-          <span>Näytetään {filteredVideos.length} pitkää videota</span>
+          <span>Näytetään {filteredVideos.length} videota</span>
           {selectedCategory !== "kaikki" && (
             <button
               onClick={() => setSelectedCategory("kaikki")}
@@ -99,7 +97,7 @@ export default function VideoLibraryPage() {
           </div>
         ) : (
           <div className="text-center py-16 bg-[#000d21] rounded-2xl border border-[#0C66B4]/30 space-y-3">
-            <p className="text-gray-300 font-medium">Ei hakuehtoja vastaavia pitkiä videoita.</p>
+            <p className="text-gray-300 font-medium">Ei hakuehtoja vastaavia videoita.</p>
             <button
               onClick={() => {
                 setSelectedCategory("kaikki");
@@ -107,7 +105,7 @@ export default function VideoLibraryPage() {
               }}
               className="px-4 py-2 rounded-lg bg-[#00AEEF] text-black font-bold text-xs"
             >
-              Näytä kaikki pitkät videot
+              Näytä kaikki videot
             </button>
           </div>
         )}
