@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-luckiest-guy: 'Luckiest Guy', cursive, sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #000a18;
+  color: #ffffff;
+  font-family: var(--font-roboto), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #000a18;
+}
+::-webkit-scrollbar-thumb {
+  background: #0C66B4;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00AEEF;
+}
+
+.clinical-gradient-bg {
+  background: radial-gradient(circle at 50% 0%, #014489 0%, #00122a 60%, #000a18 100%);
+}
+
+.clinical-panel {
+  background: rgba(12, 102, 180, 0.12);
+  border: 1px solid rgba(12, 102, 180, 0.4);
+  backdrop-filter: blur(12px);
+}
+
+.clinical-panel-hover {
+  transition: all 0.3s ease;
+}
+.clinical-panel-hover:hover {
+  border-color: #00AEEF;
+  box-shadow: 0 0 25px rgba(0, 174, 239, 0.25);
+  transform: translateY(-2px);
+}
+
+.glow-text {
+  text-shadow: 0 0 20px rgba(0, 174, 239, 0.6);
+}
