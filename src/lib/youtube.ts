@@ -56,12 +56,11 @@ export async function fetchYouTubeVideos(): Promise<Video[]> {
       const published = publishedMatch ? publishedMatch[1].split("T")[0] : "";
       const thumbnailUrl = thumbnailMatch ? thumbnailMatch[1] : `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
 
-      // FILTER OUT SHORTS (#shorts in title or description or short format)
+      // HARD FILTER: DISCARD ALL SHORTS (#shorts in title or description or /shorts/ in URL)
       const isShort = title.toLowerCase().includes("#shorts") || 
                       description.toLowerCase().includes("#shorts") ||
                       entry.includes("/shorts/");
 
-      // STRICTLY INCLUDE ONLY LONG-FORM VIDEOS (exclude Shorts)
       if (!isShort && videoId) {
         let categoryId = "tule-vaivat";
         const lower = (title + " " + description).toLowerCase();
@@ -88,7 +87,9 @@ export async function fetchYouTubeVideos(): Promise<Video[]> {
       }
     }
 
-    return fetchedVideos.length > 0 ? fetchedVideos : FALLBACK_VIDEOS;
+    // Return only non-short videos or fallback
+    const longFormOnly = fetchedVideos.filter(v => !v.isShort);
+    return longFormOnly.length > 0 ? longFormOnly : FALLBACK_VIDEOS;
   } catch (error) {
     console.error("YouTube RSS sync error, using fallback videos:", error);
     return FALLBACK_VIDEOS;
