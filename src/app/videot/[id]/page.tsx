@@ -261,7 +261,7 @@ export default async function SingleVideoPage(props: { params: Promise<{ id: str
             </div>
           </section>
 
-          {/* Lead Magnet CTA Card */}
+          {/* Clean In-House Google Drive CTA Banner */}
           <div className="p-8 rounded-3xl bg-gradient-to-r from-[#000d21] via-[#014489]/40 to-[#000d21] border border-[#00AEEF]/50 shadow-glow space-y-4 text-center">
             <div className="w-12 h-12 rounded-xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center mx-auto">
               <Download className="w-6 h-6" />
@@ -274,7 +274,7 @@ export default async function SingleVideoPage(props: { params: Promise<{ id: str
               href="/ilmaisopas"
               className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-[#00AEEF] text-black font-bold text-sm hover:bg-[#33C2F5] transition-all shadow-glow"
             >
-              <span>Lataa ilmaiset oppaat suoraan tästä</span>
+              <span>Siirry tilaamaan oppaat (Google Drive)</span>
             </Link>
           </div>
 
