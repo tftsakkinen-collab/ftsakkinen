@@ -9,8 +9,8 @@ interface EmailLeadFormProps {
 }
 
 export default function EmailLeadForm({
-  title = "TILAA ILMAISET OPPAAT GOOGLE DRIVESTÄ",
-  subtitle = "Syötä nimesi ja sähköpostiosoitteesi alla olevaan lomakkeeseen. Saat välittömästi pääsyn Google Drive -kansioon, josta löydät OMT-fysioterapeutti Janne Säkkisen laaditut opas-PDF:t.",
+  title = "LIITY SÄHKÖPOSTILISTALLE & SAAT ILMAISET OPPAAT",
+  subtitle = "Syötä etunimesi ja sähköpostiosoitteesi alla olevaan lomakkeeseen. Saat heti pääsyn Google Drive -kansioon, johon OMT-fysioterapeutti Janne Säkkinen lisää uudet opas-PDF:t sitä mukaa kun uusia videoita ja materiaaleja julkaistaan.",
 }: EmailLeadFormProps) {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
@@ -51,7 +51,7 @@ export default function EmailLeadForm({
         <div className="text-center space-y-4">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0C66B4]/30 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
             <Sparkles className="w-4 h-4 text-[#00AEEF]" />
-            <span>Ilmaiset Oppaat &amp; Google Drive</span>
+            <span>Sähköpostilista &amp; Google Drive -Kansio</span>
           </div>
 
           <h2 className="text-3xl sm:text-5xl font-display text-white tracking-wide">
@@ -106,11 +106,11 @@ export default function EmailLeadForm({
                 className="w-full py-4 rounded-xl bg-[#00AEEF] text-black font-bold text-base hover:bg-[#33C2F5] transition-all shadow-glow flex items-center justify-center gap-2 disabled:opacity-50"
               >
                 <Download className="w-5 h-5" />
-                <span>{isLoading ? "Lähetetään..." : "Tilaa oppaat & Avaa Google Drive -kansio"}</span>
+                <span>{isLoading ? "Lähetetään..." : "Liity listalle & Avaa Google Drive -kansio"}</span>
               </button>
 
               <div className="flex items-center justify-center gap-4 text-xs text-gray-400 pt-1">
-                <span className="flex items-center gap-1.5"><ShieldCheck className="w-4 h-4 text-[#00AEEF]" /> Ilmoitus sähköpostiisi</span>
+                <span className="flex items-center gap-1.5"><ShieldCheck className="w-4 h-4 text-[#00AEEF]" /> Tiedot sähköpostiisi</span>
                 <span>•</span>
                 <span>Ei roskapostia</span>
               </div>
@@ -123,9 +123,9 @@ export default function EmailLeadForm({
               </div>
 
               <div className="space-y-2">
-                <h3 className="text-2xl font-bold text-white">Kiitos tilauksesta, {name || "hyvä lukija"}!</h3>
+                <h3 className="text-2xl font-bold text-white">Kiitos liittymisestä, {name || "hyvä lukija"}!</h3>
                 <p className="text-sm text-gray-300 max-w-md mx-auto">
-                  Tieto tilauksesta on lähetetty. Voit avata suomenkielisten oppaiden Google Drive -kansion suoraan alla olevasta painikkeesta:
+                  Tieto on lähetetty. Voit avata suomenkielisten oppaiden Google Drive -kansion suoraan alla olevasta painikkeesta:
                 </p>
               </div>
 
