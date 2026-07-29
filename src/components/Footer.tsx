@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { SITE_CONFIG } from "@/data/config";
-import { Youtube, ExternalLink, Globe, ShieldAlert, Mail, Phone, MapPin, Instagram, Video } from "lucide-react";
+import { Youtube, Globe, ShieldAlert, Mail, Phone, MapPin, Instagram, Video } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -20,7 +20,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-xs text-gray-300 leading-relaxed max-w-sm">
-              OMT-Fysioterapeutti Janne Säkkinen — Tieteelliseen näyttöön pohjautuva kuntoutus tuki- ja liikuntaelimistön vaivoihin, purentaelimistön häiriöihin (TMD) ja huimaukseen.
+              OMT-Fysioterapeutti Janne Säkkinen — Tieteelliseen näyttöön pohjautuva kuntoutus tuki- ja liikuntaelimistön vaivoihin, purentaelimistön häiriöihin (TMD) ja työergonomiaan.
             </p>
             
             {/* Company Info */}
@@ -31,7 +31,7 @@ export default function Footer() {
               <p className="flex items-center gap-1.5"><Mail className="w-3.5 h-3.5 text-[#00AEEF]" /> {SITE_CONFIG.contactEmail}</p>
             </div>
 
-            {/* Sister Site Courtesy Link */}
+            {/* Sister Site Link */}
             <div className="pt-2">
               <a
                 href={SITE_CONFIG.sisterSiteUrl}
@@ -100,15 +100,6 @@ export default function Footer() {
               >
                 <Video className="w-4 h-4 text-[#00AEEF]" />
                 <span>TikTok ({SITE_CONFIG.tiktokHandle})</span>
-              </a>
-              <a
-                href={SITE_CONFIG.beaconsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-gray-300 hover:text-[#00AEEF] transition-colors font-medium"
-              >
-                <ExternalLink className="w-4 h-4 text-[#00AEEF]" />
-                <span>Beacons.ai / SakkinenJanne</span>
               </a>
             </div>
           </div>
