@@ -5,12 +5,24 @@ export interface Category {
 }
 
 export const CATEGORIES: Category[] = [
-  { id: "kaikki", name: "Kaikki videot", description: "Katso kaikki fysioterapiavideot" },
-  { id: "niska", name: "Niska", description: "Niskan jäykkyys, päänsärky ja niskan kuntoutus" },
-  { id: "olkapaa", name: "Olkapää", description: "Kiertäjäkalvosimen vaivat, pinnetilat ja olkakipu" },
-  { id: "selka-iskias", name: "Selkä / Iskias", description: "Alaselkäkipu, iskiasoireet ja välilevyvaivat" },
-  { id: "polvi", name: "Polvi", description: "Polvikipu, nivelrikko ja linjausvaivat" },
-  { id: "lonkka", name: "Lonkka", description: "Lonkan nivelrikko, limapussin tulehdus ja liikerajoitteet" },
-  { id: "jalkatera", name: "Jalkaterä", description: "Plantaarifaskiitti, vaivaisenluu ja jalkapohjan kipu" },
-  { id: "ravinto-tulehdus", name: "Ravinto & tulehdus", description: "Tulehduksen sammuttaminen ravinnolla ja elintavoilla" },
+  {
+    id: "purenta-tmd",
+    name: "Leukanivel & Purentaelimistö (TMD)",
+    description: "Purentalihasten kireys, leukanivelen naksahdus, bruksismi ja kasvojen kiputilat.",
+  },
+  {
+    id: "niska-huimaus",
+    name: "Niska- & Niskahuimaus",
+    description: "Yläniskan patomekaniikka, niskahuimaus, epävarma olo ja tensiopäänsärky.",
+  },
+  {
+    id: "ergonomia",
+    name: "Ergonomia & Työhyvinvointi",
+    description: "Suun terveydenhuollon ja etätyön ergonomia, taukojumpat ja asennonhallinta.",
+  },
+  {
+    id: "tule-vaivat",
+    name: "Tuki- ja Liikuntaelimistö",
+    description: "Iskias, selkäkivut, olkapään ahtaus, polven ja lonkan nivelrikko.",
+  },
 ];
