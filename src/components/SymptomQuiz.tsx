@@ -1,9 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Sparkles, ArrowRight, CheckCircle2, RefreshCw, GraduationCap } from "lucide-react";
+import { Sparkles, ArrowRight, CheckCircle2, RefreshCw, Play } from "lucide-react";
 import Link from "next/link";
-import { SITE_CONFIG } from "@/data/config";
 
 export default function SymptomQuiz() {
   const [step, setStep] = useState(1);
@@ -56,10 +55,10 @@ export default function SymptomQuiz() {
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
-                  { id: "niska-huimaus", label: "Niskakipu / Cervikogeeninen huimaus" },
+                  { id: "purenta-leuka", label: "Purentalihasten kireys & Leukanivelen naksumine (TMD)" },
+                  { id: "niska-hartia", label: "Niska-hartiaseudun kireys & Jännityspäänsärky" },
                   { id: "selka-iskias", label: "Alaselkäkipu & Iskiasoireet" },
                   { id: "polvi-lonkka", label: "Polven tai lonkan jomotus / Nivelrikko" },
-                  { id: "purenta-leuka", label: "Purentalihasten kireys & Leukanivelen naksuminen" },
                 ].map((item) => (
                   <button
                     key={item.id}
@@ -111,26 +110,24 @@ export default function SymptomQuiz() {
                   Suositeltu kuntoutuspolku: <span className="text-[#00AEEF]">{symptom}</span>
                 </h4>
                 <p className="text-sm text-gray-300 leading-relaxed">
-                  Perustuen valitsemaasi oirealueeseen ({symptom}, kesto: {duration}), suosittelemme aloittamaan kohdennetulla <strong>PDF-harjoitusoppaalla</strong> ja strukturoidulla verkkovalmennuksella.
+                  Perustuen valitsemaasi oirealueeseen ({symptom}, kesto: {duration}), suosittelemme aloittamaan tutustumalla <strong>ilmaisiin opas-PDF-materiaaleihin</strong> sekä katsomalla täsmävideot aiheesta.
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center gap-4 pt-2">
-                  <a
-                    href={SITE_CONFIG.beaconsUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    href="/ilmaisopas"
                     className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#00AEEF] text-black font-bold text-sm hover:bg-[#33C2F5] transition-all shadow-glow flex items-center justify-center gap-2"
                   >
-                    <span>Lataa täsmä-PDF (Beacons.ai)</span>
+                    <span>Lataa Ilmaiset Oppaat</span>
                     <ArrowRight className="w-4 h-4" />
-                  </a>
+                  </Link>
 
                   <Link
-                    href="/valmennukset"
+                    href="/videot"
                     className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#0C66B4]/30 border border-[#0C66B4] text-[#00AEEF] font-bold text-sm hover:bg-[#00AEEF] hover:text-black transition-all flex items-center justify-center gap-2"
                   >
-                    <GraduationCap className="w-4 h-4" />
-                    <span>Katso verkkovalmennukset</span>
+                    <Play className="w-4 h-4" />
+                    <span>Katso Ilmaiset Videot</span>
                   </Link>
                 </div>
               </div>
