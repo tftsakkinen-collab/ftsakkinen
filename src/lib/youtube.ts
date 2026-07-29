@@ -1,74 +1,93 @@
 import { FALLBACK_VIDEOS, Video } from "@/data/videos";
 import { SITE_CONFIG } from "@/data/config";
 
-// Category assignment mapping by keyword / video title match or explicit ID override
+// Category assignment mapping by keyword / video title match
 const CATEGORY_MAP: Record<string, string> = {
-  niska: "niska",
-  headache: "niska",
-  päänsärky: "niska",
-  olkapaa: "olkapaa",
-  olkapää: "olkapaa",
-  iskias: "selka-iskias",
-  selkä: "selka-iskias",
-  polvi: "polvi",
-  lonkka: "lonkka",
-  jalkaterä: "jalkatera",
-  kantapää: "jalkatera",
-  tulehdus: "ravinto-tulehdus",
-  ravinto: "ravinto-tulehdus",
+  purenta: "purenta-tmd",
+  leuka: "purenta-tmd",
+  tmd: "purenta-tmd",
+  masseter: "purenta-tmd",
+  bruksismi: "purenta-tmd",
+  ergonomia: "ergonomia",
+  työ: "ergonomia",
+  nukahtaminen: "ergonomia",
+  tulehdus: "tule-vaivat",
+  selkä: "tule-vaivat",
+  iskias: "tule-vaivat",
+  polvi: "tule-vaivat",
+  lonkka: "tule-vaivat",
 };
 
 export async function fetchYouTubeVideos(): Promise<Video[]> {
-  const apiKey = process.env.YOUTUBE_API_KEY;
-  const channelId = SITE_CONFIG.youtubeChannelId;
-
-  if (!apiKey || apiKey === "[PLACEHOLDER: YOUTUBE_API_KEY]") {
-    // Return curated fallback dataset with video placeholders
-    return FALLBACK_VIDEOS;
-  }
+  const channelId = SITE_CONFIG.youtubeChannelId || "UCz0XuTDgzskIDlzSrZFxsBg";
 
   try {
+    // Fetch real-time YouTube channel RSS feed XML (revalidated automatically)
     const res = await fetch(
-      `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=20&type=video`,
-      { next: { revalidate: 3600 } }
+      `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`,
+      { next: { revalidate: 3600 } } // Auto-syncs new videos every hour
     );
 
     if (!res.ok) {
-      console.warn("YouTube API response not OK, using fallback videos.");
       return FALLBACK_VIDEOS;
     }
 
-    const data = await res.json();
-    if (!data.items || data.items.length === 0) {
+    const xmlText = await res.text();
+    const entries = xmlText.split("<entry>");
+    if (entries.length <= 1) {
       return FALLBACK_VIDEOS;
     }
 
-    return data.items.map((item: any, index: number) => {
-      const title = item.snippet.title || "";
-      const description = item.snippet.description || "";
+    const fetchedVideos: Video[] = [];
+
+    // Parse each XML entry
+    for (let i = 1; i < entries.length; i++) {
+      const entry = entries[i];
       
-      // Categorize based on title/description match
-      let categoryId = "selka-iskias";
-      const lower = (title + " " + description).toLowerCase();
-      for (const [key, cat] of Object.entries(CATEGORY_MAP)) {
-        if (lower.includes(key)) {
-          categoryId = cat;
-          break;
-        }
-      }
+      const videoIdMatch = entry.match(/<yt:videoId>(.*?)<\/yt:videoId>/);
+      const titleMatch = entry.match(/<title>(.*?)<\/title>/);
+      const descriptionMatch = entry.match(/<media:description>([\s\S]*?)<\/media:description>/);
+      const publishedMatch = entry.match(/<published>(.*?)<\/published>/);
+      const thumbnailMatch = entry.match(/<media:thumbnail url="(.*?)"/);
 
-      return {
-        id: item.id.videoId || `yt-video-${index}`,
-        youtubeId: item.id.videoId || "dQw4w9WgXcQ",
-        title: title,
-        promiseDescription: description.slice(0, 120) || "Katso asiantuntijan fysioterapiavinkit kipusi lievittämiseen.",
-        categoryId: categoryId,
-        duration: "15:00",
-        publishedAt: item.snippet.publishedAt?.split("T")[0] || "2024-01-01",
-      };
-    });
+      const videoId = videoIdMatch ? videoIdMatch[1].trim() : "";
+      const title = titleMatch ? titleMatch[1].replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1').trim() : "";
+      const description = descriptionMatch ? descriptionMatch[1].replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1').trim() : "";
+      const published = publishedMatch ? publishedMatch[1].split("T")[0] : "";
+      const thumbnailUrl = thumbnailMatch ? thumbnailMatch[1] : `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
+
+      // FILTER OUT SHORTS (#shorts in title or description or short format)
+      const isShort = title.toLowerCase().includes("#shorts") || 
+                      description.toLowerCase().includes("#shorts") ||
+                      entry.includes("/shorts/");
+
+      if (!isShort && videoId) {
+        let categoryId = "purenta-tmd";
+        const lower = (title + " " + description).toLowerCase();
+        for (const [key, cat] of Object.entries(CATEGORY_MAP)) {
+          if (lower.includes(key)) {
+            categoryId = cat;
+            break;
+          }
+        }
+
+        fetchedVideos.push({
+          id: videoId,
+          youtubeId: videoId,
+          title: title.replace(/#\w+/g, "").trim(),
+          promiseDescription: description.split("\n")[0].replace(/Ilmaiset oppaat.*?https:\/\/\S+/g, "").trim().slice(0, 140) || "Katso fysioterapeutin ohjeet ja harjoitteet.",
+          categoryId,
+          duration: "Pitkä video",
+          publishedAt: published,
+          thumbnailUrl,
+          isShort: false,
+        });
+      }
+    }
+
+    return fetchedVideos.length > 0 ? fetchedVideos : FALLBACK_VIDEOS;
   } catch (error) {
-    console.error("Failed to fetch YouTube API videos:", error);
+    console.error("YouTube RSS sync error, using fallback videos:", error);
     return FALLBACK_VIDEOS;
   }
 }
