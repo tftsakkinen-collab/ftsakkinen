@@ -12,6 +12,8 @@ import { fetchYouTubeVideos } from "@/lib/youtube";
 import Script from "next/script";
 import type { Metadata } from "next";
 
+export const revalidate = 0;
+
 export const metadata: Metadata = {
   title: "OMT-Fysioterapeutti Janne Säkkinen | Oulu | Purentaelimistö & TMD",
   description: "Purentaelimistön (TMD) ja tuki- ja liikuntaelimistön OMT-fysioterapeutti Janne Säkkinen. Kouluttaja Oulun yliopistolla vuodesta 2017. Katso oppaat ja videot.",
@@ -149,7 +151,7 @@ export default async function HomePage() {
       {/* 3. Ajanvarausohjeet (Terveystalo, Norre, Hammasvahti) */}
       <AppointmentBookingSection />
 
-      {/* 4. Potilaskokemukset & Palautteet */}
+      {/* 4. Potilaskokemukset & Palautteet (Hidden) */}
       <PatientTestimonialsSection />
 
       {/* 5. Koulutukset & Työhistoria (Tiivistetty) */}
