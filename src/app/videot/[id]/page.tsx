@@ -1,7 +1,7 @@
 import { FALLBACK_VIDEOS, Video } from "@/data/videos";
 import { CATEGORIES } from "@/data/categories";
 import Link from "next/link";
-import { ArrowLeft, Download, Sparkles, Globe, Play, ChevronRight, HelpCircle } from "lucide-react";
+import { ArrowLeft, Download, Sparkles, Globe, Play, ChevronRight, HelpCircle, Home } from "lucide-react";
 import { notFound } from "next/navigation";
 import Script from "next/script";
 import VideoCard from "@/components/VideoCard";
@@ -82,7 +82,7 @@ export default async function SingleVideoPage(props: { params: Promise<{ id: str
     (v) => v.categoryId === video.categoryId && v.id !== video.id
   ).slice(0, 3);
 
-  // Extract Q&A items if transcript contains questions
+  // FAQ items
   const faqItems = [
     {
       question: `Mistä ${video.title.toLowerCase()} johtuu ja miten sitä tutkitaan?`,
@@ -98,7 +98,7 @@ export default async function SingleVideoPage(props: { params: Promise<{ id: str
     }
   ];
 
-  // 2. VIDEO-SPECIFIC STRUCTURED DATA (JSON-LD) SCHEMAS
+  // 2. STRUCTURED DATA (JSON-LD) SCHEMAS: Article, VideoObject, FAQPage, BreadcrumbList
   const jsonLd = [
     {
       "@context": "https://schema.org",
@@ -145,6 +145,36 @@ export default async function SingleVideoPage(props: { params: Promise<{ id: str
           "text": faq.answer,
         },
       })),
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Etusivu",
+          "item": "https://www.ftsakkinen.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Videot",
+          "item": "https://www.ftsakkinen.com/videot"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": category?.name || "Fysioterapia",
+          "item": "https://www.ftsakkinen.com/videot"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": video.title,
+          "item": `https://www.ftsakkinen.com/videot/${video.id}`
+        }
+      ]
     }
   ];
 
@@ -157,10 +187,30 @@ export default async function SingleVideoPage(props: { params: Promise<{ id: str
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         
+        {/* Visible Breadcrumb Navigation (Murupolku) */}
+        <nav aria-label="Murupolku" className="flex flex-wrap items-center gap-2 text-xs text-gray-400 font-medium">
+          <Link href="/" className="hover:text-[#00AEEF] flex items-center gap-1 transition-colors">
+            <Home className="w-3.5 h-3.5" />
+            <span>Etusivu</span>
+          </Link>
+          <ChevronRight className="w-3.5 h-3.5 text-gray-600 shrink-0" />
+          <Link href="/videot" className="hover:text-[#00AEEF] transition-colors">
+            Videot
+          </Link>
+          <ChevronRight className="w-3.5 h-3.5 text-gray-600 shrink-0" />
+          <span className="text-[#00AEEF] font-semibold truncate max-w-[150px] sm:max-w-none">
+            {category?.name || "Fysioterapia"}
+          </span>
+          <ChevronRight className="w-3.5 h-3.5 text-gray-600 shrink-0" />
+          <span className="text-gray-300 truncate max-w-[200px] sm:max-w-xs font-normal">
+            {video.title}
+          </span>
+        </nav>
+
         {/* Top Navigation & Language Switcher */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2">
           <Link
             href="/videot"
             className="inline-flex items-center gap-2 text-sm text-[#00AEEF] hover:underline font-medium"
@@ -231,10 +281,10 @@ export default async function SingleVideoPage(props: { params: Promise<{ id: str
           </div>
         </div>
 
-        {/* 2. Full Text / Video Transcript Section with Expandable View & 100% HTML for Crawlers */}
+        {/* Full Text / Video Transcript Section with Expandable View & 100% HTML for Crawlers */}
         <TranscriptViewer transcript={video.transcript || video.promiseDescription} />
 
-        {/* 6. FAQ Section & FAQPage Schema */}
+        {/* FAQ Section & FAQPage Schema */}
         <div className="space-y-6 pt-6 border-t border-[#0C66B4]/30">
           <div className="flex items-center gap-2 text-white font-display text-2xl">
             <HelpCircle className="w-6 h-6 text-[#00AEEF]" />
