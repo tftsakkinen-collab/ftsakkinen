@@ -288,8 +288,8 @@ export default async function HomePage() {
       <section className="py-16 bg-[#000d21] border-b border-[#0C66B4]/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <EmailLeadForm
-            title="LATAA ILMAINEN PURENTAELIMISTÖN ITSEHOITO-OPAS"
-            subtitle="Syötä sähköpostiosoitteesi niin saat välittömästi linkin Janne Säkkisen laatimaan 5 sivuiseen opas-PDF:ään (Leukakipu, naksuminen & bruksismi)."
+            title="LIITY SÄHKÖPOSTILISTALLE & SAAT ILMAISET LISÄOHJEET"
+            subtitle="Syötä etunimesi ja sähköpostiosoitteesi alla olevaan lomakkeeseen. Saat heti pääsyn ilmaisiin lisäohjeisiin, kuntoutusmateriaaleihin ja uusiin opas-PDF-tiedostoihin siten kuin niitä julkaistaan."
           />
         </div>
       </section>

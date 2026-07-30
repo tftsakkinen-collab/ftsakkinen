@@ -9,8 +9,8 @@ interface EmailLeadFormProps {
 }
 
 export default function EmailLeadForm({
-  title = "LIITY SÄHKÖPOSTILISTALLE & SAAT ILMAISET OPPAAT",
-  subtitle = "Syötä etunimesi ja sähköpostiosoitteesi alla olevaan lomakkeeseen. Saat heti pääsyn Google Drive -kansioon, johon OMT-fysioterapeutti Janne Säkkinen lisää uudet opas-PDF:t sitä mukaa kun uusia videoita ja materiaaleja julkaistaan.",
+  title = "LIITY SÄHKÖPOSTILISTALLE & SAAT ILMAISET LISÄOHJEET",
+  subtitle = "Syötä etunimesi ja sähköpostiosoitteesi alla olevaan lomakkeeseen. Saat heti pääsyn ilmaisiin lisäohjeisiin, kuntoutusmateriaaleihin ja uusiin opas-PDF-tiedostoihin siten kuin niitä julkaistaan.",
 }: EmailLeadFormProps) {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
@@ -51,103 +51,99 @@ export default function EmailLeadForm({
         <div className="text-center space-y-4">
           <div className="flex justify-center mb-1">
             <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-[#00AEEF] shadow-[0_0_20px_rgba(0,174,239,0.6)] bg-white p-1.5">
-              <img src="/logo.jpg" alt="FT Säkkinen logo" className="w-full h-full object-contain rounded-full" />
+              <img src="/logo-whitebg.png" alt="FT Säkkinen logo" className="w-full h-full object-contain rounded-full" />
             </div>
           </div>
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0C66B4]/30 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
             <Sparkles className="w-4 h-4 text-[#00AEEF]" />
-            <span>Sähköpostilista &amp; Google Drive -Kansio</span>
+            <span>Sähköpostilista &amp; Ilmaiset Lisäohjeet</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-display text-white tracking-wide">
+          <h2 className="text-3xl sm:text-5xl font-display text-white tracking-wide leading-tight">
             {title}
           </h2>
 
-          <p className="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-gray-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
             {subtitle}
           </p>
         </div>
 
-        {/* Lead Capture Box */}
-        <div className="p-8 sm:p-12 rounded-3xl bg-[#000d21] border border-[#0C66B4] shadow-panel space-y-8">
-          {!isSubmitted ? (
-            <form onSubmit={handleSubmit} className="space-y-6">
-              
-              {/* Name & Email Fields */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-2">
-                    Etunimi *
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    placeholder="Matti"
-                    className="w-full px-4 py-3.5 rounded-xl bg-[#000a18] border border-[#0C66B4] text-white placeholder-gray-500 focus:outline-none focus:border-[#00AEEF] text-sm"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-2">
-                    Sähköpostiosoite *
-                  </label>
-                  <input
-                    type="email"
-                    required
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="matti@esimerkki.fi"
-                    className="w-full px-4 py-3.5 rounded-xl bg-[#000a18] border border-[#0C66B4] text-white placeholder-gray-500 focus:outline-none focus:border-[#00AEEF] text-sm"
-                  />
-                </div>
-              </div>
-
-              {/* Submit CTA Button */}
-              <button
-                type="submit"
-                disabled={isLoading}
-                className="w-full py-4 rounded-xl bg-[#00AEEF] text-black font-bold text-base hover:bg-[#33C2F5] transition-all shadow-glow flex items-center justify-center gap-2 disabled:opacity-50"
-              >
-                <Download className="w-5 h-5" />
-                <span>{isLoading ? "Lähetetään..." : "Liity listalle & Avaa Google Drive -kansio"}</span>
-              </button>
-
-              <div className="flex items-center justify-center gap-4 text-xs text-gray-400 pt-1">
-                <span className="flex items-center gap-1.5"><ShieldCheck className="w-4 h-4 text-[#00AEEF]" /> Tiedot sähköpostiisi</span>
-                <span>•</span>
-                <span>Ei roskapostia</span>
-              </div>
-            </form>
-          ) : (
-            /* Success View with Direct Google Drive Access */
-            <div className="text-center py-8 space-y-6">
-              <div className="w-16 h-16 rounded-full bg-[#00AEEF]/20 border border-[#00AEEF] text-[#00AEEF] flex items-center justify-center mx-auto shadow-glow">
-                <CheckCircle2 className="w-8 h-8" />
+        {!isSubmitted ? (
+          <form onSubmit={handleSubmit} className="p-8 sm:p-10 rounded-3xl bg-[#000d21]/90 border border-[#0C66B4]/60 space-y-6 shadow-glow backdrop-blur-md">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="space-y-2">
+                <label className="text-xs font-bold text-gray-300 uppercase tracking-wider">
+                  Etunimi *
+                </label>
+                <input
+                  type="text"
+                  required
+                  placeholder="Matti"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className="w-full px-4 py-3.5 rounded-xl bg-[#000a18] border border-[#0C66B4]/60 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-[#00AEEF] transition-all"
+                />
               </div>
 
               <div className="space-y-2">
-                <h3 className="text-2xl font-bold text-white">Kiitos liittymisestä, {name || "hyvä lukija"}!</h3>
-                <p className="text-sm text-gray-300 max-w-md mx-auto">
-                  Tieto on lähetetty. Voit avata suomenkielisten oppaiden Google Drive -kansion suoraan alla olevasta painikkeesta:
-                </p>
-              </div>
-
-              <div className="pt-2">
-                <a
-                  href="[PLACEHOLDER: GOOGLE_DRIVE_FI_FOLDER_URL]"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-[#00AEEF] text-black font-bold text-base hover:bg-[#33C2F5] transition-all shadow-glow"
-                >
-                  <ExternalLink className="w-5 h-5" />
-                  <span>Avaa Suomenkieliset Oppaat Google Drivessä</span>
-                </a>
+                <label className="text-xs font-bold text-gray-300 uppercase tracking-wider">
+                  Sähköpostiosoite *
+                </label>
+                <input
+                  type="email"
+                  required
+                  placeholder="matti@esimerkki.fi"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="w-full px-4 py-3.5 rounded-xl bg-[#000a18] border border-[#0C66B4]/60 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-[#00AEEF] transition-all"
+                />
               </div>
             </div>
-          )}
-        </div>
+
+            <button
+              type="submit"
+              disabled={isLoading}
+              className="w-full py-4 px-8 rounded-xl bg-[#00AEEF] text-[#000a18] font-bold text-base hover:bg-white transition-all duration-300 shadow-[0_0_25px_rgba(0,174,239,0.5)] flex items-center justify-center gap-3 group"
+            >
+              <Download className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              <span>{isLoading ? "Käsitellään..." : "Liity listalle & Avaa ilmaiset lisäohjeet"}</span>
+            </button>
+
+            <div className="flex items-center justify-center gap-6 pt-2 text-xs text-gray-400 font-medium">
+              <span className="flex items-center gap-1.5">
+                <ShieldCheck className="w-4 h-4 text-[#00AEEF]" />
+                Tiedot sähköpostiisi
+              </span>
+              <span>•</span>
+              <span>Ei roskapostia</span>
+            </div>
+          </form>
+        ) : (
+          <div className="p-8 sm:p-10 rounded-3xl bg-[#000d21] border-2 border-[#00AEEF] space-y-6 text-center shadow-glow">
+            <div className="w-16 h-16 rounded-full bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center mx-auto border border-[#00AEEF]/40">
+              <CheckCircle2 className="w-10 h-10" />
+            </div>
+
+            <div className="space-y-2">
+              <h3 className="text-2xl font-bold text-white">Kiitos liittymisestä!</h3>
+              <p className="text-sm text-gray-300 max-w-md mx-auto">
+                Sähköpostiosoitteesi <strong className="text-white">{email}</strong> on nyt lisätty listalle. Saat vahvistuksen ja linkin ilmaisiin lisäohjeisiin ja materiaaleihin sähköpostiisi.
+              </p>
+            </div>
+
+            <div className="pt-4 border-t border-[#0C66B4]/40">
+              <a
+                href="https://drive.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#00AEEF] text-[#000a18] font-bold text-sm hover:bg-white transition-all shadow-glow"
+              >
+                <span>Siirry ilmaisiin materiaaleihin</span>
+                <ExternalLink className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
+        )}
 
       </div>
     </section>
