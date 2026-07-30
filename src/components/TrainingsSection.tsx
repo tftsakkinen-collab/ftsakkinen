@@ -1,6 +1,7 @@
 import { SITE_CONFIG } from "@/data/config";
 import { CV_DATA_FI } from "@/data/cv";
-import { GraduationCap, Award, Briefcase, BookOpen, CheckCircle2, ShieldCheck, FileCheck } from "lucide-react";
+import { GraduationCap, Award, Briefcase, BookOpen, CheckCircle2, ShieldCheck, FileCheck, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function TrainingsSection() {
   const mainTrainings = [
@@ -23,6 +24,11 @@ export default function TrainingsSection() {
       icon: Award,
     },
   ];
+
+  // Truncate to top 3 highlights for homepage
+  const topDegrees = CV_DATA_FI.degrees.slice(0, 3);
+  const topWorkExperience = CV_DATA_FI.workExperience.slice(0, 3);
+  const topCertifications = CV_DATA_FI.certifications.slice(0, 3);
 
   return (
     <section className="py-20 bg-[#000d21] border-b border-[#0C66B4]/30 relative overflow-hidden">
@@ -71,7 +77,7 @@ export default function TrainingsSection() {
           </div>
         </div>
 
-        {/* Section 2: Full Clinical CV & Experience */}
+        {/* Section 2: Truncated Top CV Highlights */}
         <div className="pt-12 border-t border-[#0C66B4]/30 space-y-12">
           <div className="text-center max-w-3xl mx-auto space-y-4">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0C66B4]/20 border border-[#00AEEF]/40 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
@@ -93,7 +99,7 @@ export default function TrainingsSection() {
               </h3>
 
               <div className="space-y-4">
-                {CV_DATA_FI.degrees.map((deg, idx) => (
+                {topDegrees.map((deg, idx) => (
                   <div
                     key={idx}
                     className="p-6 rounded-2xl bg-[#000a18] border border-[#0C66B4]/50 space-y-2"
@@ -104,9 +110,6 @@ export default function TrainingsSection() {
                     </div>
                     <h4 className="text-lg font-bold text-white">{deg.degree}</h4>
                     <p className="text-sm text-gray-300 font-medium">{deg.institution}</p>
-                    {deg.description && (
-                      <p className="text-xs text-gray-400 pt-1 leading-relaxed">{deg.description}</p>
-                    )}
                   </div>
                 ))}
               </div>
@@ -120,7 +123,7 @@ export default function TrainingsSection() {
               </h3>
 
               <div className="space-y-3">
-                {CV_DATA_FI.workExperience.map((work, idx) => (
+                {topWorkExperience.map((work, idx) => (
                   <div
                     key={idx}
                     className="p-5 rounded-2xl bg-[#000a18] border border-[#0C66B4]/40 flex items-start justify-between gap-4"
@@ -138,23 +141,22 @@ export default function TrainingsSection() {
           </div>
         </div>
 
-        {/* Section 3: Continuing Education & Specialization List */}
+        {/* Section 3: Continuing Education Highlights & Full CV Link Button */}
         <div className="pt-12 border-t border-[#0C66B4]/30 space-y-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div>
               <div className="inline-flex items-center gap-2 text-[#00AEEF] text-sm font-semibold uppercase tracking-widest">
                 <FileCheck className="w-4 h-4" />
-                <span>Pätevyydet &amp; Kurssit</span>
+                <span>Pätevyydet &amp; Erikoistumiset</span>
               </div>
               <h3 className="text-2xl sm:text-3xl font-display text-white tracking-wide">
-                TÄYDENNYSKOULUTUKSET <span className="text-[#00AEEF]">(2011–2026)</span>
+                TÄYDENNYSKOULUTUKSET <span className="text-[#00AEEF]">(Yli 20 kurssia)</span>
               </h3>
             </div>
-            <span className="text-xs font-mono text-gray-400">Yli 20 erikoiskoulutuskokonaisuutta</span>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {CV_DATA_FI.certifications.map((cert, idx) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {topCertifications.map((cert, idx) => (
               <div
                 key={idx}
                 className="p-4 rounded-xl bg-[#000a18] border border-[#0C66B4]/40 flex items-start gap-3"
@@ -167,6 +169,17 @@ export default function TrainingsSection() {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Full CV Link Button */}
+          <div className="text-center pt-6">
+            <Link
+              href="/koulutukset"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-[#00AEEF] text-black font-bold text-sm hover:bg-[#33C2F5] transition-all shadow-glow group"
+            >
+              <span>Katso koko CV ja koulutushistoria</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
         </div>
 

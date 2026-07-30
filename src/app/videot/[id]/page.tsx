@@ -1,10 +1,11 @@
 import { FALLBACK_VIDEOS, Video } from "@/data/videos";
 import { CATEGORIES } from "@/data/categories";
 import Link from "next/link";
-import { ArrowLeft, Download, ShieldCheck, Sparkles, Globe, Play, FileText, ChevronRight } from "lucide-react";
+import { ArrowLeft, Download, Sparkles, Globe, Play, ChevronRight, HelpCircle } from "lucide-react";
 import { notFound } from "next/navigation";
 import Script from "next/script";
 import VideoCard from "@/components/VideoCard";
+import TranscriptViewer from "@/components/TranscriptViewer";
 import type { Metadata } from "next";
 
 export async function generateStaticParams() {
@@ -13,7 +14,7 @@ export async function generateStaticParams() {
   }));
 }
 
-// 1. VIDEO-SPECIFIC DYNAMIC META TAGS FOR SEO & AEO
+// 1. VIDEO-SPECIFIC DYNAMIC META TAGS + HREFLANG FOR SEO & AEO
 export async function generateMetadata(props: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const params = await props.params;
   const video = FALLBACK_VIDEOS.find((v) => v.id === params.id) || FALLBACK_VIDEOS[0];
@@ -26,6 +27,9 @@ export async function generateMetadata(props: { params: Promise<{ id: string }> 
   const metaTitle = `${cleanTitle} | FT Säkkinen`;
   const metaDescription = video.promiseDescription.slice(0, 155);
   const canonicalUrl = `https://www.ftsakkinen.com/videot/${video.id}`;
+  const pairedEnUrl = video.pairVideoId
+    ? `https://www.ptsakkinen.com/videos/${video.pairVideoId}`
+    : `https://www.ptsakkinen.com/videos/${video.id}`;
   const imageUrl = video.thumbnailUrl || `https://i2.ytimg.com/vi/${video.youtubeId}/hqdefault.jpg`;
 
   return {
@@ -33,6 +37,10 @@ export async function generateMetadata(props: { params: Promise<{ id: string }> 
     description: metaDescription,
     alternates: {
       canonical: canonicalUrl,
+      languages: {
+        "fi": canonicalUrl,
+        "en": pairedEnUrl,
+      },
     },
     openGraph: {
       title: metaTitle,
@@ -69,10 +77,26 @@ export default async function SingleVideoPage(props: { params: Promise<{ id: str
 
   const category = CATEGORIES.find((c) => c.id === video.categoryId);
 
-  // Find related videos in the same category (excluding current video)
+  // Related videos
   const relatedVideos = FALLBACK_VIDEOS.filter(
     (v) => v.categoryId === video.categoryId && v.id !== video.id
   ).slice(0, 3);
+
+  // Extract Q&A items if transcript contains questions
+  const faqItems = [
+    {
+      question: `Mistä ${video.title.toLowerCase()} johtuu ja miten sitä tutkitaan?`,
+      answer: video.promiseDescription,
+    },
+    {
+      question: "Milloin kannattaa hakeutua OMT-fysioterapeutin vastaanotolle?",
+      answer: "Jos oireet haittaavat jokapäiväistä elämää, aiheuttavat kipua purennassa, nielussa tai niska-hartiaseudulla, eikä vaiva parane itsehoidolla 1-2 viikon kuluessa.",
+    },
+    {
+      question: "Miten näitä harjoitteita suoritetaan turvallisesti kotona?",
+      answer: "Tee liikkeet aina rauhallisesti ilman terävää kipua. Seuraa videon täsmällisiä liikesuuntia ja toistomääriä.",
+    }
+  ];
 
   // 2. VIDEO-SPECIFIC STRUCTURED DATA (JSON-LD) SCHEMAS
   const jsonLd = [
@@ -109,6 +133,18 @@ export default async function SingleVideoPage(props: { params: Promise<{ id: str
       "uploadDate": video.publishedAt,
       "embedUrl": `https://www.youtube.com/embed/${video.youtubeId}`,
       "transcript": video.transcript || video.promiseDescription
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqItems.map((faq) => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer,
+        },
+      })),
     }
   ];
 
@@ -195,17 +231,32 @@ export default async function SingleVideoPage(props: { params: Promise<{ id: str
           </div>
         </div>
 
-        {/* Full Text / Video Transcript Section for AI Crawlers and Humans */}
-        <article className="space-y-6 text-base leading-relaxed text-gray-300 pt-4 border-t border-[#0C66B4]/30">
+        {/* 2. Full Text / Video Transcript Section with Expandable View & 100% HTML for Crawlers */}
+        <TranscriptViewer transcript={video.transcript || video.promiseDescription} />
+
+        {/* 6. FAQ Section & FAQPage Schema */}
+        <div className="space-y-6 pt-6 border-t border-[#0C66B4]/30">
           <div className="flex items-center gap-2 text-white font-display text-2xl">
-            <FileText className="w-6 h-6 text-[#00AEEF]" />
-            <h2>Videon transkripti ja täydellinen teksti</h2>
+            <HelpCircle className="w-6 h-6 text-[#00AEEF]" />
+            <h2>Usein Kysytyt Kysymykset (UKK)</h2>
           </div>
 
-          <div className="p-6 sm:p-8 rounded-2xl bg-[#000d21] border border-[#0C66B4]/40 whitespace-pre-line text-sm leading-relaxed font-sans text-gray-200">
-            {video.transcript || video.promiseDescription}
+          <div className="space-y-4">
+            {faqItems.map((faq, idx) => (
+              <div
+                key={idx}
+                className="p-6 rounded-2xl bg-[#000d21] border border-[#0C66B4]/40 space-y-2"
+              >
+                <h3 className="text-base font-bold text-white flex items-start gap-2">
+                  <span className="text-[#00AEEF]">Q:</span> {faq.question}
+                </h3>
+                <p className="text-sm text-gray-300 leading-relaxed pl-6">
+                  {faq.answer}
+                </p>
+              </div>
+            ))}
           </div>
-        </article>
+        </div>
 
         {/* Cross-linking: Related Videos in Same Category */}
         {relatedVideos.length > 0 && (
