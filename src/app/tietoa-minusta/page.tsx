@@ -160,7 +160,7 @@ export default function AboutPage() {
             </div>
             
             <h2 className="text-2xl sm:text-4xl font-display text-white">
-              INTOHIMO FYSISEEN SUORITUSKYKYYN &amp; <span className="text-[#00AEEF]">KLIINISEEN KUNTOUTUKSEEN</span>
+              INTOHIMO FYYSISEEN SUORITUSKYKYYN &amp; <span className="text-[#00AEEF]">KLIINISEEN KUNTOUTUKSEEN</span>
             </h2>
 
             <div className="space-y-4 text-gray-300 text-sm sm:text-base leading-relaxed max-w-4xl">
@@ -183,7 +183,7 @@ export default function AboutPage() {
               <span>Luottamus &amp; Yhteistyö</span>
             </h3>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="p-6 rounded-2xl bg-[#000a18] border border-[#0C66B4]/40 space-y-3">
                 <div className="w-10 h-10 rounded-xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center">
                   <HeartHandshake className="w-5 h-5" />
@@ -191,16 +191,6 @@ export default function AboutPage() {
                 <h4 className="text-base font-bold text-white">Ratkaisukeskeinen Ote</h4>
                 <p className="text-xs text-gray-300 leading-relaxed">
                   Olen saanut kollegoilta ja asiakkailta runsaasti palautetta positiivisesta asenteestani ja ratkaisukeskeisyydestäni. Paras asiakaskokemus syntyy avoimesta vuorovaikutuksesta, luottamuksesta ja huolellisesta suunnittelusta.
-                </p>
-              </div>
-
-              <div className="p-6 rounded-2xl bg-[#000a18] border border-[#0C66B4]/40 space-y-3">
-                <div className="w-10 h-10 rounded-xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center">
-                  <Users className="w-5 h-5" />
-                </div>
-                <h4 className="text-base font-bold text-white">Johtaminen &amp; Organisointi</h4>
-                <p className="text-xs text-gray-300 leading-relaxed">
-                  Opiskeluaikojen vastuulliset luottamustehtäväni — kuten opiskelijajärjestöjen puheenjohtajuudet ja tuutorvastaavan rooli — ovat vahvistaneet organisointikykyäni ja kykyäni toimia erilaisten ihmisten kanssa.
                 </p>
               </div>
 
