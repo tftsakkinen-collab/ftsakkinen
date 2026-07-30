@@ -34,6 +34,11 @@ export default function SymptomQuiz() {
           
           {/* Header */}
           <div className="text-center space-y-3">
+            <div className="flex justify-center mb-1">
+              <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[#00AEEF] shadow-[0_0_12px_rgba(0,174,239,0.6)] bg-white p-1">
+                <img src="/logo.jpg" alt="Logo" className="w-full h-full object-contain rounded-full" />
+              </div>
+            </div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00AEEF]/20 border border-[#00AEEF]/40 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
               <Sparkles className="w-3.5 h-3.5" />
               <span>1 Minuutin Interaktiivinen Oiretesti</span>

@@ -24,7 +24,9 @@ export default function CookieBanner() {
     <div className="fixed bottom-4 right-4 left-4 md:left-auto md:max-w-md z-50 bg-[#000d21] border border-[#00AEEF]/50 rounded-2xl p-5 shadow-glow backdrop-blur-lg flex flex-col gap-3 text-xs text-gray-300">
       <div className="flex items-start justify-between gap-2">
         <div className="flex items-center gap-2 font-bold text-[#00AEEF] text-sm">
-          <Cookie className="w-4 h-4" />
+          <div className="w-5 h-5 rounded-full overflow-hidden border border-[#00AEEF] bg-white p-0.5 shrink-0">
+            <img src="/logo.jpg" alt="Logo" className="w-full h-full object-contain rounded-full" />
+          </div>
           <span>Evästeet & Tietosuoja</span>
         </div>
         <button

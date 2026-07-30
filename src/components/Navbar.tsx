@@ -23,11 +23,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Brand Logo with Official Image */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-11 h-11 rounded-full overflow-hidden border border-[#00AEEF]/60 bg-black flex items-center justify-center shadow-glow group-hover:scale-105 transition-transform">
+            <div className="relative w-11 h-11 rounded-full overflow-hidden border-2 border-[#00AEEF] bg-[#000a18] flex items-center justify-center shadow-[0_0_15px_rgba(0,174,239,0.8)] group-hover:scale-105 transition-transform p-0.5">
               <img
-                src="/logo.png"
+                src="/logo-whitebg.png?v=20260730"
                 alt="FT Säkkinen logo"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain rounded-full"
               />
             </div>
             <div className="flex flex-col">
