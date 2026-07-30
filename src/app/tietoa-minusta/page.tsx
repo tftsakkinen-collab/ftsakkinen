@@ -1,13 +1,13 @@
 import { SITE_CONFIG } from "@/data/config";
 import { CV_DATA_FI } from "@/data/cv";
-import { Award, GraduationCap, Briefcase, BookOpen, CheckCircle2, ShieldCheck, FileCheck, ArrowRight, User, MapPin, Mail, Phone } from "lucide-react";
+import { Award, GraduationCap, Briefcase, BookOpen, CheckCircle2, ShieldCheck, FileCheck, ArrowRight, User, MapPin, Mail, Phone, Users, HeartHandshake, Sparkles, Target } from "lucide-react";
 import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Tietoa Minusta | OMT-Fysioterapeutti Janne Säkkinen | Oulu",
-  description: "Tutustu OMT-fysioterapeutti Janne Säkkisen koulutustaustaan, OMT-erikoistumiseen (SOMTY) ja yliopisto-opettajuuteen (Oulun yliopisto 2017–).",
+  description: "Tutustu OMT-fysioterapeutti Janne Säkkisen ammatilliseen taustaan, OMT-erikoistumiseen (SOMTY), yliopisto-opettajuuteen (Oulun yliopisto 2017–) ja ratkaisukeskeiseen valmennusfilosofiaan.",
   alternates: {
     canonical: "https://www.ftsakkinen.com/tietoa-minusta",
     languages: {
@@ -26,9 +26,9 @@ export default function AboutPage() {
       "mainEntity": {
         "@type": "Person",
         "name": "Janne Säkkinen",
-        "jobTitle": "OMT-Fysioterapeutti",
+        "jobTitle": "OMT-Fysioterapeutti & Työfysioterapeutti",
         "url": "https://www.ftsakkinen.com/tietoa-minusta",
-        "description": "OMT-fysioterapeutti ja Oulun yliopiston hammaslääketieteen työergonomian ja purentaelimistön fysioterapian kouluttaja vuodesta 2017.",
+        "description": "Pitkän työkokemuksen omaava OMT-fysioterapeutti, työfysioterapian erikoisosaaja ja Oulun yliopiston hammaslääketieteen yksikön vieraileva luennoitsija vuodesta 2017.",
         "worksFor": {
           "@type": "Organization",
           "name": "Tiedottajanne Oy",
@@ -88,9 +88,9 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         
-        {/* Header / Intro */}
+        {/* Main Profile Header */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-5 relative">
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden border-2 border-[#00AEEF] shadow-glow">
@@ -102,7 +102,7 @@ export default function AboutPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#000d21] via-transparent to-transparent opacity-60" />
               <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-[#000d21]/90 border border-[#00AEEF] backdrop-blur-md flex items-center gap-3 text-[#00AEEF] text-xs font-bold shadow-glow">
                 <Award className="w-5 h-5 shrink-0" />
-                <span>OMT-Fysioterapeutti (SOMTY 2018–2020)</span>
+                <span>OMT-Fysioterapeutti &amp; Työfysioterapeutti</span>
               </div>
             </div>
           </div>
@@ -110,7 +110,7 @@ export default function AboutPage() {
           <div className="lg:col-span-7 space-y-6">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
               <User className="w-4 h-4" />
-              <span>Tietoa Minusta &amp; Tausta</span>
+              <span>Ammatillinen Tausta &amp; Osaaminen</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl font-display text-white tracking-wide leading-tight">
@@ -118,15 +118,15 @@ export default function AboutPage() {
             </h1>
 
             <p className="text-gray-300 text-base sm:text-lg leading-relaxed font-medium">
-              Olen tuki- ja liikuntaelimistön sekä purentaelimistön toimintahäiriöihin (TMD) erikoistunut OMT-fysioterapeutti ja kouluttaja Oulusta.
+              Olen pitkän työkokemuksen omaava ja kokenut työfysioterapeutti sekä OMT-erikoisfysioterapeutti Oulusta. Erikoisosaamiseni ytimessä on tuki- ja liikuntaelimistön ongelmien ennaltaehkäisy ja hoito, purentaelimistön toimintahäiriöt (TMD) sekä työhyvinvoinnin kokonaisvaltainen edistäminen.
             </p>
 
             <div className="space-y-4 text-gray-300 text-sm sm:text-base leading-relaxed">
               <p>
-                Erikoistumiseni ytimessä on tuki- ja liikuntaelimistön monimutkaisten kiputilojen, leukanivelen naksumisen, purentalihasten kireyksien sekä cervikogeenisen päänsäryn täsmällinen fysioterapeuttinen tutkiminen ja kuntoutus.
+                Nautin asiakastyöstä, jossa yhdistyvät avoin asiakaspalvelu ja kliininen asiantuntemus. Toimin ammatinharjoittajana Terveystalon digityöterveydessä sekä perinteisen työterveyden parissa. Lisäksi toimin työfysioterapeuttina Norre Työterveydessä Kempeleessä.
               </p>
               <p>
-                Toimin luennoitsijana ja työergonomian opettajana Oulun yliopiston hammaslääketieteen laitoksella vuodesta 2017 alkaen sekä kouluttajana Pohjois-Pohjanmaan kesäyliopistolla. Kliinistä potilastyötä teen Oulussa ja Kempeleessä Norre Työterveydessä sekä Terveystalolla.
+                Olen työskennellyt ergonomia-asiantuntijana ja vierailevana luennoitsijana Oulun yliopiston hammaslääketieteen yksikössä yli 7 vuoden ajan (2017–). Tässä roolissa olen kehittänyt suun terveydenhuollon työergonomian käytäntöjä ja jakanut asiantuntemustani uusille terveydenhuollon ammattilaisille.
               </p>
             </div>
 
@@ -136,7 +136,7 @@ export default function AboutPage() {
                 <GraduationCap className="w-6 h-6 text-[#00AEEF] shrink-0 mt-0.5" />
                 <div>
                   <h3 className="text-white font-bold text-sm">Yliopisto-opettaja (2017–)</h3>
-                  <p className="text-xs text-gray-400 mt-1">Oulun yliopisto, Hammaslääketiede</p>
+                  <p className="text-xs text-gray-400 mt-1">Oulun yliopisto, Hammaslääketiede (yli 7 vuotta)</p>
                 </div>
               </div>
               <div className="p-4 rounded-xl bg-[#000d21] border border-[#0C66B4]/60 flex items-start gap-3">
@@ -150,8 +150,53 @@ export default function AboutPage() {
           </div>
         </div>
 
+        {/* Work Philosophy & Leadership Section */}
+        <div className="space-y-8 p-8 sm:p-10 rounded-3xl bg-[#000d21] border border-[#0C66B4]/60 shadow-panel">
+          <div className="space-y-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#014489]/40 border border-[#00AEEF]/40 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
+              <HeartHandshake className="w-4 h-4" />
+              <span>Työskentelytapa &amp; Filosofia</span>
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-display text-white">
+              VALMENTAVA &amp; RATKAISUKESKEINEN <span className="text-[#00AEEF]">ASIAN TUNTIJAOTE</span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="p-6 rounded-2xl bg-[#000a18] border border-[#0C66B4]/40 space-y-3">
+              <div className="w-10 h-10 rounded-xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center">
+                <HeartHandshake className="w-5 h-5" />
+              </div>
+              <h3 className="text-lg font-bold text-white">Avoin Vuorovaikutus &amp; Luottamus</h3>
+              <p className="text-xs text-gray-300 leading-relaxed">
+                Uskon, että paras asiakaskokemus ja hoitotulos syntyvät avoimesta kuuntelemisesta, molemminpuolisesta luottamuksesta ja huolellisesta yksilöllisestä suunnittelusta.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-[#000a18] border border-[#0C66B4]/40 space-y-3">
+              <div className="w-10 h-10 rounded-xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center">
+                <Target className="w-5 h-5" />
+              </div>
+              <h3 className="text-lg font-bold text-white">Valmentava Lähestymistapa</h3>
+              <p className="text-xs text-gray-300 leading-relaxed">
+                Perehdyn jokaiseen asiakastapaukseen kokonaisvaltaisesti. Olen saanut kiitosta innostavasta ja valmentavasta otteestani, joka saavuttaa tuloksia niin asiakkaiden kuin tiimin parissa.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-[#000a18] border border-[#0C66B4]/40 space-y-3">
+              <div className="w-10 h-10 rounded-xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center">
+                <Users className="w-5 h-5" />
+              </div>
+              <h3 className="text-lg font-bold text-white">Vahva Organisointi &amp; Tiimityö</h3>
+              <p className="text-xs text-gray-300 leading-relaxed">
+                Opiskelijajärjestöjen puheenjohtajuudet ja tuutorvastaavan luottamustehtävät ovat kehittäneet vahvat johtamis-, organisointi- ja tiimityötaidot eri sidosryhmien kanssa toimimiseen.
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Detailed CV Sections */}
-        <div className="space-y-10 pt-8 border-t border-[#0C66B4]/30">
+        <div className="space-y-12 pt-8 border-t border-[#0C66B4]/30">
           
           {/* Education */}
           <div className="space-y-6">
