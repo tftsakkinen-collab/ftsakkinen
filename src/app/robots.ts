@@ -6,6 +6,9 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://www.ftsakkinen.com/sitemap.xml",
+    sitemap: [
+      "https://www.ftsakkinen.com/sitemap.xml",
+      "https://www.ftsakkinen.com/video-sitemap.xml",
+    ],
   };
 }
