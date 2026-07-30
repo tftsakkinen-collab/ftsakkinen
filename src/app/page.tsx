@@ -82,17 +82,17 @@ export default async function HomePage() {
     },
     {
       title: "Niskakipu & Päänsärky",
-      slug: "niskakipu-ja-päänsärky",
+      slug: "niskakipu-ja-paansarky",
       desc: "Niska-hartiaseudun jännitystilat ja cervikogeeninen päänsärky.",
     },
     {
       title: "Selkäkipu & Iskias",
-      slug: "selkäkipu-ja-iskias",
+      slug: "selkakipu-ja-iskias",
       desc: "Alaselän fasettilukot, välilevyvaivat ja iskiasoireilu.",
     },
     {
       title: "Ergonomia & Työhyvinvointi",
-      slug: "ergonomia-ja-työhyvinvointi",
+      slug: "ergonomia-ja-tyohyvinvointi",
       desc: "Hammaslääketieteen ja etätyön fysioterapeuttiset asentokorjaukset.",
     },
   ];

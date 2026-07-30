@@ -28,8 +28,8 @@ const TOPICS_FI: Record<string, TopicData> = {
       "OMT-fysioterapiassa purentaelimistön vaivoja tutkitaan ja hoidetaan kokonaisvaltaisesti. Hoitoon kuuluu intraoraalinen (suunsisäinen) manuaalinen palpaatio ja käsittely, leukanivelen mobilisaatio, niskarangan nivelten täsmäliikkeet sekä asiakkaan omaehtoinen liikehoito. Oikein kohdistetulla fysioterapialla leukanivelen naksuminen ja lihaskireydet helpottavat usein merkittävästi jo 2–4 viikossa."
     ],
   },
-  "niskakipu-ja-päänsärky": {
-    slug: "niskakipu-ja-päänsärky",
+  "niskakipu-ja-paansarky": {
+    slug: "niskakipu-ja-paansarky",
     title: "Niskakipu, Niska-Hartiaseudun Kireys & Cervikogeeninen Päänsärky",
     enSlug: "neck-pain-and-headaches",
     categoryId: "tule-vaivat",
@@ -40,8 +40,8 @@ const TOPICS_FI: Record<string, TopicData> = {
       "Fysioterapiassa keskityytään niskarangan syvien koukistajalihasten vahvistamiseen, rintarangan liikkumattomien osien mobilisointiin sekä täsmällisiin venytys- ja hallintaharjoitteisiin. Säännöllisillä taukojumpparutiineilla ja aktiivisella liikehoidolla niskakipu ja siihen liittyvä päänsärky saadaan hallintaan tehokkaasti."
     ],
   },
-  "selkäkipu-ja-iskias": {
-    slug: "selkäkipu-ja-iskias",
+  "selkakipu-ja-iskias": {
+    slug: "selkakipu-ja-iskias",
     title: "Selkäkipu, Fasettilukot, Välilevyvaivat & Iskias",
     enSlug: "back-pain-and-sciatica",
     categoryId: "tule-vaivat",
@@ -52,27 +52,38 @@ const TOPICS_FI: Record<string, TopicData> = {
       "Aktiivinen ja turvallinen liike on selkäkivun tehokkain hoitomuoto. OMT-fysioterapeutti tutkii rangan liikesuunnat ja ohjaa täsmälliset lannerankaa vakauttavat ja mobilisoivat harjoitteet, joilla painetta välilevyistä ja hermojuurista saadaan helpotettua."
     ],
   },
-  "ergonomia-ja-työhyvinvointi": {
-    slug: "ergonomia-ja-työhyvinvointi",
+  "ergonomia-ja-tyohyvinvointi": {
+    slug: "ergonomia-ja-tyohyvinvointi",
     title: "Ergonomia, Suun Terveydenhuollon Työasennot & Taukojumppa",
     enSlug: "ergonomics-and-wellness",
     categoryId: "ergonomia",
     introSummary: "Ergonomiaopas hammaslääkäreille, suuhygienisteille ja etätyöntekijöille: kehon kuormituksen minimointi ja taukojumpparutiinit.",
     synthesisHtml: [
-      "Suun terveydenhuollon ammattilaiset – hammaslääkärit ja suuhygienistit – työskentelevät päivittäin haastavissa, etukumarissa ja staattisissa työasennoissa. Tämä aiheuttaa toistuvaa ja pitkäkestoista kuormitusta niska-hartiaseutuun, yläselkään ja ranteisiin.",
+      "Suun terveydenhuollon ammattilaiset – hammaslääkärit ja suuhygienisti – työskentelevät päivittäin haastavissa, etukumarissa ja staattisissa työasennoissa. Tämä aiheuttaa toistuvaa ja pitkäkestoista kuormitusta niska-hartiaseutuun, yläselkään ja ranteisiin.",
       "Hyvä työergonomia ei ole vain tuolin korkeuden säätämistä, vaan aktiivista asennonhallintaa ja nivelten fysiologista asentokuormituksen vähentämistä. Pienilläkin mikrotauoilla ja kohdennetuilla venytyksillä työpäivän aikana estetään kroonisten tuki- ja liikuntaelimistön vaivojen syntyminen.",
       "Janne Säkkinen kouluttaa Oulun yliopiston hammaslääketieteen opiskelijoita työergonomiasta ja vetää täydennyskoulutuksia terveydenhuollon ammattilaisille valtakunnallisesti."
     ],
   },
 };
 
+// Aliases for scandi character fallback
+const SLUG_ALIASES: Record<string, string> = {
+  "niskakipu-ja-päänsärky": "niskakipu-ja-paansarky",
+  "selkäkipu-ja-iskias": "selkakipu-ja-iskias",
+  "ergonomia-ja-työhyvinvointi": "ergonomia-ja-tyohyvinvointi",
+};
+
 export async function generateStaticParams() {
-  return Object.keys(TOPICS_FI).map((slug) => ({ slug }));
+  const keys = Object.keys(TOPICS_FI);
+  const aliasKeys = Object.keys(SLUG_ALIASES);
+  return [...keys, ...aliasKeys].map((slug) => ({ slug }));
 }
 
 export async function generateMetadata(props: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const params = await props.params;
-  const topic = TOPICS_FI[params.slug] || TOPICS_FI["leukakipu-ja-tmd"];
+  const decodedSlug = decodeURIComponent(params.slug);
+  const resolvedSlug = SLUG_ALIASES[decodedSlug] || decodedSlug;
+  const topic = TOPICS_FI[resolvedSlug] || TOPICS_FI["leukakipu-ja-tmd"];
 
   const metaTitle = `${topic.title.slice(0, 50)} | FT Säkkinen`;
   const metaDescription = topic.introSummary.slice(0, 155);
@@ -102,7 +113,9 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
 
 export default async function TopicHubPage(props: { params: Promise<{ slug: string }> }) {
   const params = await props.params;
-  const topic = TOPICS_FI[params.slug];
+  const decodedSlug = decodeURIComponent(params.slug);
+  const resolvedSlug = SLUG_ALIASES[decodedSlug] || decodedSlug;
+  const topic = TOPICS_FI[resolvedSlug];
 
   if (!topic) {
     notFound();

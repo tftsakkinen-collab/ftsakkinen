@@ -13,9 +13,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const topicSlugs = [
     "leukakipu-ja-tmd",
-    "niskakipu-ja-päänsärky",
-    "selkäkipu-ja-iskias",
-    "ergonomia-ja-työhyvinvointi",
+    "niskakipu-ja-paansarky",
+    "selkakipu-ja-iskias",
+    "ergonomia-ja-tyohyvinvointi",
   ];
 
   const topicUrls = topicSlugs.map((slug) => ({
