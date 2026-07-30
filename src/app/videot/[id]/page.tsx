@@ -5,11 +5,58 @@ import { ArrowLeft, Download, ShieldCheck, Sparkles, Globe, Play, FileText, Chev
 import { notFound } from "next/navigation";
 import Script from "next/script";
 import VideoCard from "@/components/VideoCard";
+import type { Metadata } from "next";
 
 export async function generateStaticParams() {
   return FALLBACK_VIDEOS.map((v) => ({
     id: v.id,
   }));
+}
+
+// 1. VIDEO-SPECIFIC DYNAMIC META TAGS FOR SEO & AEO
+export async function generateMetadata(props: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const params = await props.params;
+  const video = FALLBACK_VIDEOS.find((v) => v.id === params.id) || FALLBACK_VIDEOS[0];
+
+  if (!video) {
+    return {};
+  }
+
+  const cleanTitle = video.title.length > 45 ? `${video.title.slice(0, 45)}...` : video.title;
+  const metaTitle = `${cleanTitle} | FT Säkkinen`;
+  const metaDescription = video.promiseDescription.slice(0, 155);
+  const canonicalUrl = `https://www.ftsakkinen.com/videot/${video.id}`;
+  const imageUrl = video.thumbnailUrl || `https://i2.ytimg.com/vi/${video.youtubeId}/hqdefault.jpg`;
+
+  return {
+    title: metaTitle,
+    description: metaDescription,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title: metaTitle,
+      description: metaDescription,
+      url: canonicalUrl,
+      siteName: "FT Säkkinen - OMT-Fysioterapia",
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 675,
+          alt: video.title,
+        },
+      ],
+      locale: "fi_FI",
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: metaTitle,
+      description: metaDescription,
+      images: [imageUrl],
+    },
+  };
 }
 
 export default async function SingleVideoPage(props: { params: Promise<{ id: string }> }) {
@@ -27,7 +74,7 @@ export default async function SingleVideoPage(props: { params: Promise<{ id: str
     (v) => v.categoryId === video.categoryId && v.id !== video.id
   ).slice(0, 3);
 
-  // JSON-LD Schemas for AEO & SEO (Article, VideoObject, FAQPage)
+  // 2. VIDEO-SPECIFIC STRUCTURED DATA (JSON-LD) SCHEMAS
   const jsonLd = [
     {
       "@context": "https://schema.org",
@@ -50,6 +97,7 @@ export default async function SingleVideoPage(props: { params: Promise<{ id: str
         "url": "https://www.ftsakkinen.com"
       },
       "datePublished": video.publishedAt,
+      "dateModified": video.publishedAt,
       "mainEntityOfPage": `https://www.ftsakkinen.com/videot/${video.id}`
     },
     {
@@ -66,9 +114,9 @@ export default async function SingleVideoPage(props: { params: Promise<{ id: str
 
   return (
     <div className="py-12 bg-[#000a18] min-h-screen text-gray-200">
-      {/* Inject AEO Structured JSON-LD Data */}
+      {/* Inject Video-Specific AEO Structured JSON-LD Data */}
       <Script
-        id="json-ld-schemas"
+        id={`json-ld-schemas-${video.id}`}
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
