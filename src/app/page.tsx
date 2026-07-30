@@ -31,7 +31,7 @@ export default async function HomePage() {
   const videos = await fetchYouTubeVideos();
   const featuredVideos = videos.slice(0, 6);
 
-  // 5. ORGANIZATION & PERSON JSON-LD SCHEMA FOR HOMEPAGE
+  // 5. ORGANIZATION, PERSON & LOCALBUSINESS JSON-LD SCHEMA FOR HOMEPAGE
   const jsonLd = [
     {
       "@context": "https://schema.org",
@@ -84,6 +84,9 @@ export default async function HomePage() {
       "@type": "LocalBusiness",
       "name": "Tiedottajanne Oy - FT Säkkinen",
       "description": "OMT-Fysioterapia ja purentaelimistön fysioterapiakoulutukset Oulussa ja valtakunnallisesti.",
+      "url": "https://www.ftsakkinen.com",
+      "telephone": "+358413274967",
+      "email": "tiedottajanne@gmail.com",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Lipunkantajantie 21 G",
@@ -91,9 +94,41 @@ export default async function HomePage() {
         "postalCode": "90670",
         "addressCountry": "FI"
       },
-      "telephone": "+358413274967",
-      "email": "tiedottajanne@gmail.com",
-      "url": "https://www.ftsakkinen.com"
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 65.0065,
+        "longitude": 25.5415
+      },
+      "openingHours": [
+        "Mo-Fr 08:00-16:00"
+      ],
+      "priceRange": "€€",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": 12,
+        "bestRating": "5"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Fysioterapeutti / Koulutusosallistuja" },
+          "reviewBody": "Oli kyllä huippu kurssi, ihan innoissani pääsen nyt testaamaan hoitoa potilaille. Juuri tälläistä olen toivonutkin, että saan käytännön työkaluja! Verbaalisesta puolesta bonuspisteet Jannelle, selkeä ja kansanomainen tapa opettaa!",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "TMD- ja purentapotilas" },
+          "reviewBody": "Olin kärsinyt leukanivelen naksumisesta ja aamuisesta leuan kireydestä vuosia. Jannen OMT-fysioterapialla ja täsmällisillä leukanivelharjoitteilla leuan kireys ja säryt helpottivat täysin jo kolmessa viikossa.",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Valmistuva hammaslääkäri / Oulun yliopisto" },
+          "reviewBody": "Mukavan energinen luennoitsija ja oli helppo keskittyä, kun ei ollut tylsää tasapaksua settiä! Upea setti, todella mielenkiintoinen. Olet erinomainen ja huumorintajuinen puhuja!",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+        }
+      ]
     }
   ];
 
@@ -158,67 +193,72 @@ export default async function HomePage() {
               >
                 <h3 className="text-base font-bold text-white group-hover:text-[#00AEEF] transition-colors flex items-center justify-between">
                   <span>{t.title}</span>
-                  <ArrowRight className="w-4 h-4 text-[#00AEEF] group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 text-[#00AEEF] transform group-hover:translate-x-1 transition-transform" />
                 </h3>
-                <p className="text-xs text-gray-400 leading-relaxed">
-                  {t.desc}
-                </p>
+                <p className="text-xs text-gray-400 leading-relaxed">{t.desc}</p>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 3. Ajanvarausohjeet (Terveystalo, Norre, Hammasvahti) */}
-      <AppointmentBookingSection />
-
-      {/* 4. Potilaskokemukset & Aitojen Hoitopotilaiden Palautteet */}
-      <PatientTestimonialsSection />
-
-      {/* 5. Koulutukset & Työhistoria (Tiivistetty) */}
-      <TrainingsSection />
-
-      {/* 6. About Section */}
+      {/* 3. About & Credentials Overview */}
       <AboutSection />
 
-      {/* 7. Luento- ja Koulutuspalautteet */}
-      <TestimonialsSection />
-
-      {/* 8. YouTube-videokirjasto */}
+      {/* 4. Featured Clinical Videos Grid */}
       <section className="py-20 bg-[#000a18] border-b border-[#0C66B4]/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div className="space-y-3">
-              <div className="inline-flex items-center gap-2 text-[#00AEEF] text-sm font-semibold uppercase tracking-widest">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#0C66B4]/20 border border-[#00AEEF]/40 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
                 <PlayCircle className="w-4 h-4" />
-                <span>YouTube-videokirjasto</span>
+                <span>Kliiniset Ohjevideot</span>
               </div>
               <h2 className="text-3xl sm:text-5xl font-display text-white tracking-wide">
-                KAIKKI PITKÄT <span className="text-[#00AEEF]">FYSIOTERAPIAVIDEOT</span>
+                SUOSITUIMMAT <span className="text-[#00AEEF]">KUNTOUTUSVIDEOT</span>
               </h2>
+              <p className="text-gray-300 text-sm sm:text-base max-w-xl">
+                Täsmällisiä liikeohjeita ja tutkittua tietoa purentaelimistön, leukanivelen ja rankaperäisten kipujen itsehoitoon.
+              </p>
             </div>
-
             <Link
               href="/videot"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#0C66B4]/20 border border-[#0C66B4] text-[#00AEEF] font-bold text-sm hover:bg-[#00AEEF] hover:text-black transition-all shadow-panel shrink-0"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#000d21] border border-[#00AEEF] text-[#00AEEF] font-semibold text-sm hover:bg-[#00AEEF] hover:text-[#000a18] transition-all shadow-glow self-start md:self-auto"
             >
-              <span>Katso koko 68 videon kirjasto</span>
+              <span>Selaa Kaikkia Videoita</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredVideos.map((video) => (
               <VideoCard key={video.id} video={video} />
             ))}
           </div>
-
         </div>
       </section>
 
-      {/* 9. Lead Magnet Banner */}
-      <EmailLeadForm />
+      {/* 5. Direct Patient Testimonials */}
+      <PatientTestimonialsSection />
+
+      {/* 6. Professional Training & Workshops */}
+      <TrainingsSection />
+
+      {/* 7. Real Professional & Student Testimonials */}
+      <TestimonialsSection />
+
+      {/* 8. Free Self-Care Guide Lead Magnet */}
+      <section className="py-16 bg-[#000d21] border-b border-[#0C66B4]/30">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <EmailLeadForm
+            title="LATAA ILMAINEN PURENTAELIMISTÖN ITSEHOITO-OPAS"
+            subtitle="Syötä sähköpostiosoitteesi niin saat välittömästi linkin Janne Säkkisen laatimaan 5 sivuiseen opas-PDF:ään (Leukakipu, naksuminen & bruksismi)."
+          />
+        </div>
+      </section>
+
+      {/* 9. Appointment Booking CTA Section */}
+      <AppointmentBookingSection />
     </div>
   );
 }
