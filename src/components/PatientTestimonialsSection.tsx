@@ -21,7 +21,7 @@ export default function PatientTestimonialsSection() {
       stars: 5,
     },
     {
-      name: "Työterveysasiakas (Qt Company)",
+      name: "Työterveysasiakas",
       condition: "Niska-hartiakivut & Videoidut koti-ohjeet",
       review: "Monesti fysioterapiasta saa paperinipun, joka jää pöydälle lojumaan. Janne kuvasi täsmälliset kuntoutusliikkeet suoraan puhelimellani videolle minua varten! Täydellinen tapa varmistaa että liikkeet tekee kotona oikein.",
       stars: 5,
