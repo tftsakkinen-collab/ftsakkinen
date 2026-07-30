@@ -43,6 +43,7 @@ export default async function HomePage() {
         "@type": "Organization",
         "name": "Tiedottajanne Oy",
         "legalName": "Tiedottajanne Oy",
+        "image": "https://www.ftsakkinen.com/logo-whitebg.png",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Lipunkantajantie 21 G",
@@ -85,6 +86,12 @@ export default async function HomePage() {
       "name": "Tiedottajanne Oy - FT Säkkinen",
       "description": "OMT-Fysioterapia ja purentaelimistön fysioterapiakoulutukset Oulussa ja valtakunnallisesti.",
       "url": "https://www.ftsakkinen.com",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://www.ftsakkinen.com/janne-sakkinen.jpg",
+        "width": 800,
+        "height": 1000
+      },
       "telephone": "+358413274967",
       "email": "tiedottajanne@gmail.com",
       "address": {
