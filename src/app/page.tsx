@@ -4,9 +4,10 @@ import VideoCard from "@/components/VideoCard";
 import EmailLeadForm from "@/components/EmailLeadForm";
 import TrainingsSection from "@/components/TrainingsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import PatientTestimonialsSection from "@/components/PatientTestimonialsSection";
 import AppointmentBookingSection from "@/components/AppointmentBookingSection";
 import Link from "next/link";
-import { ArrowRight, PlayCircle } from "lucide-react";
+import { ArrowRight, PlayCircle, BookOpen } from "lucide-react";
 import { fetchYouTubeVideos } from "@/lib/youtube";
 import Script from "next/script";
 import type { Metadata } from "next";
@@ -73,6 +74,29 @@ export default async function HomePage() {
     }
   ];
 
+  const topics = [
+    {
+      title: "Leukakipu & Bruksismi (TMD)",
+      slug: "leukakipu-ja-tmd",
+      desc: "Leukanivelen naksahdus, purentalihasten jumit ja kasvojen jomotus.",
+    },
+    {
+      title: "Niskakipu & Päänsärky",
+      slug: "niskakipu-ja-päänsärky",
+      desc: "Niska-hartiaseudun jännitystilat ja cervikogeeninen päänsärky.",
+    },
+    {
+      title: "Selkäkipu & Iskias",
+      slug: "selkäkipu-ja-iskias",
+      desc: "Alaselän fasettilukot, välilevyvaivat ja iskiasoireilu.",
+    },
+    {
+      title: "Ergonomia & Työhyvinvointi",
+      slug: "ergonomia-ja-työhyvinvointi",
+      desc: "Hammaslääketieteen ja etätyön fysioterapeuttiset asentokorjaukset.",
+    },
+  ];
+
   return (
     <div>
       <Script
@@ -81,22 +105,63 @@ export default async function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* 1. Hero Section */}
+      {/* 1. Hero Section + Credibility Statistics Bar */}
       <Hero />
 
-      {/* 2. Ajanvarausohjeet */}
+      {/* 2. Aihekoostesivujen Pikalinkit (Top Symptoms) */}
+      <section className="py-12 bg-[#000d21] border-b border-[#0C66B4]/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <div className="inline-flex items-center gap-2 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
+                <BookOpen className="w-4 h-4" />
+                <span>Oirealueet &amp; Tietopankit</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-display text-white">
+                TUTUSTU <span className="text-[#00AEEF]">AIHEKOOSTESIVUIHIN</span>
+              </h2>
+            </div>
+            <Link href="/videot" className="text-xs text-[#00AEEF] hover:underline font-semibold">
+              Katso kaikki 68 videota →
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {topics.map((t, idx) => (
+              <Link
+                key={idx}
+                href={`/aihe/${t.slug}`}
+                className="p-5 rounded-2xl bg-[#000a18] border border-[#0C66B4]/50 hover:border-[#00AEEF] transition-all space-y-2 group"
+              >
+                <h3 className="text-base font-bold text-white group-hover:text-[#00AEEF] transition-colors flex items-center justify-between">
+                  <span>{t.title}</span>
+                  <ArrowRight className="w-4 h-4 text-[#00AEEF] group-hover:translate-x-1 transition-transform" />
+                </h3>
+                <p className="text-xs text-gray-400 leading-relaxed">
+                  {t.desc}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Ajanvarausohjeet (Terveystalo, Norre, Hammasvahti) */}
       <AppointmentBookingSection />
 
-      {/* 3. Koulutukset & Työhistoria (Tiivistetty) */}
+      {/* 4. Potilaskokemukset & Palautteet */}
+      <PatientTestimonialsSection />
+
+      {/* 5. Koulutukset & Työhistoria (Tiivistetty) */}
       <TrainingsSection />
 
-      {/* 4. About Section */}
+      {/* 6. About Section */}
       <AboutSection />
 
-      {/* 5. Luento- ja Koulutuspalautteet */}
+      {/* 7. Luento- ja Koulutuspalautteet */}
       <TestimonialsSection />
 
-      {/* 6. YouTube-videokirjasto */}
+      {/* 8. YouTube-videokirjasto */}
       <section className="py-20 bg-[#000a18] border-b border-[#0C66B4]/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
@@ -120,7 +185,6 @@ export default async function HomePage() {
             </Link>
           </div>
 
-          {/* YouTube Video Grid Showcase */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {featuredVideos.map((video) => (
               <VideoCard key={video.id} video={video} />
@@ -130,7 +194,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* 7. Lead Magnet Banner */}
+      {/* 9. Lead Magnet Banner */}
       <EmailLeadForm />
     </div>
   );

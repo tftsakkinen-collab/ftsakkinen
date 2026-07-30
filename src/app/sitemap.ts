@@ -11,6 +11,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  const topicSlugs = [
+    "leukakipu-ja-tmd",
+    "niskakipu-ja-päänsärky",
+    "selkäkipu-ja-iskias",
+    "ergonomia-ja-työhyvinvointi",
+  ];
+
+  const topicUrls = topicSlugs.map((slug) => ({
+    url: `${baseUrl}/aihe/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.9,
+  }));
+
   const staticUrls = [
     {
       url: `${baseUrl}/`,
@@ -50,5 +64,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  return [...staticUrls, ...videoUrls];
+  return [...staticUrls, ...topicUrls, ...videoUrls];
 }
