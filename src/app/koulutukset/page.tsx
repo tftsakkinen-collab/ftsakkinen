@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     languages: {
       "fi": "https://www.ftsakkinen.com/koulutukset",
       "en": "https://www.ptsakkinen.com/workshops",
+      "x-default": "https://www.ftsakkinen.com/koulutukset",
     },
   },
 };

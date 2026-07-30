@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     languages: {
       "fi": "https://www.ftsakkinen.com/aihe/leukakipu-ja-tmd",
       "en": "https://www.ptsakkinen.com/topic/tmj-and-jaw-pain",
+      "x-default": "https://www.ftsakkinen.com/aihe/leukakipu-ja-tmd",
     },
   },
 };
@@ -36,6 +37,7 @@ export default function LeukakipuTopicPage() {
         "@type": "Person",
         "name": "Janne Säkkinen",
         "jobTitle": "OMT-Fysioterapeutti",
+        "url": "https://www.ftsakkinen.com/tietoa-minusta",
         "worksFor": {
           "@type": "Organization",
           "name": "FT Säkkinen"
@@ -70,6 +72,36 @@ export default function LeukakipuTopicPage() {
           "position": 3,
           "name": "Leukakipu & TMD",
           "item": "https://www.ftsakkinen.com/aihe/leukakipu-ja-tmd"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Mikä aiheuttaa leukakipua, leukanivelen naksumista ja bruksismia (TMD)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Purentaelimistön toimintahäiriöt (TMD, temporomandibular disorders) ovat yleinen syy kasvojen jomotukseen, leukanivelen naksahduksiin ja pään alueen säryille. Purentalihaksista tehokkain on masseter-lihas (ulompi purentalihas), johon kohdistuu purennassa ja öisessä hampaiden narskuttelussa (bruksismi) poikkeuksellisen suuri mekaaninen kuormitus."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mitkä ovat purentaelimistön toimintahäiriöiden (TMD) tyypillisimmät oireet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tyypillisiä oireita ovat aamuisin tuntuva leukanivelen kireys, suun rajoittunut avautuminen, korvaan säteilevä kipu sekä tunne siitä, että hampaat eivät osu kohdakkain. Syynä ovat usein anatomiset ja toiminnalliset kireydet purentalihaksistossa, niska-hartiaseudun virheasennoissa sekä leukanivelen nivelvälilevyn (discus) dislokaatiossa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Miten purentaelimistön vaivoja hoidetaan OMT-fysioterapiassa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "OMT-fysioterapiassa purentaelimistön vaivoja tutkitaan ja hoidetaan kokonaisvaltaisesti. Hoitoon kuuluu intraoraalinen (suunsisäinen) manuaalinen palpaatio ja käsittely, leukanivelen mobilisaatio, niskarangan nivelten täsmäliikkeet sekä asiakkaan omaehtoinen liikehoito. Oikein kohdistetulla fysioterapialla leukanivelen naksuminen ja lihaskireydet helpottavat usein merkittävästi jo 2–4 viikossa."
+          }
         }
       ]
     }

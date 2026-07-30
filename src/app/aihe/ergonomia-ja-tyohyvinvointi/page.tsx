@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     languages: {
       "fi": "https://www.ftsakkinen.com/aihe/ergonomia-ja-tyohyvinvointi",
       "en": "https://www.ptsakkinen.com/topic/ergonomics-and-wellness",
+      "x-default": "https://www.ftsakkinen.com/aihe/ergonomia-ja-tyohyvinvointi",
     },
   },
 };
@@ -36,6 +37,7 @@ export default function ErgonomiaTopicPage() {
         "@type": "Person",
         "name": "Janne Säkkinen",
         "jobTitle": "OMT-Fysioterapeutti",
+        "url": "https://www.ftsakkinen.com/tietoa-minusta",
         "worksFor": {
           "@type": "Organization",
           "name": "FT Säkkinen"
@@ -68,8 +70,38 @@ export default function ErgonomiaTopicPage() {
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Ergonomia",
+          "name": "Ergonomia & Työhyvinvointi",
           "item": "https://www.ftsakkinen.com/aihe/ergonomia-ja-tyohyvinvointi"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Miksi suun terveydenhuollon ammattilaiset altistuvat niska- ja selkävaivoille?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Suun terveydenhuollon ammattilaiset – hammaslääkärit ja suuhygienistit – työskentelevät päivittäin haastavissa, etukumarissa ja staattisissa työasennoissa. Tämä aiheuttaa toistuvaa ja pitkäkestoista kuormitusta niska-hartiaseutuun, yläselkään ja ranteisiin."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mitkä ovat tehokkaimmat keinot estää kroonisia tuki- ja liikuntaelimistön vaivoja työssä?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hyvä työergonomia ei ole vain tuolin korkeuden säätämistä, vaan aktiivista asennonhallintaa ja nivelten fysiologista asentokuormituksen vähentämistä. Pienilläkin mikrotauoilla ja kohdennetuilla venytyksillä työpäivän aikana estetään kroonisten tuki- ja liikuntaelimistön vaivojen syntyminen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kuka vastaa ergonomiakoulutuksista Oulun yliopistossa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Janne Säkkinen kouluttaa Oulun yliopiston hammaslääketieteen opiskelijoita työergonomiasta ja vetää täydennyskoulutuksia terveydenhuollon ammattilaisille valtakunnallisesti."
+          }
         }
       ]
     }

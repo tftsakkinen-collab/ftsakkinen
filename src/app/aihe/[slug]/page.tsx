@@ -73,6 +73,65 @@ const SLUG_ALIASES: Record<string, string> = {
   "ergonomia-ja-työhyvinvointi": "ergonomia-ja-tyohyvinvointi",
 };
 
+const TOPIC_FAQS: Record<string, Array<{ question: string; answer: string }>> = {
+  "leukakipu-ja-tmd": [
+    {
+      question: "Mikä aiheuttaa leukakipua, leukanivelen naksumista ja bruksismia (TMD)?",
+      answer: "Purentaelimistön toimintahäiriöt (TMD, temporomandibular disorders) ovat yleinen syy kasvojen jomotukseen, leukanivelen naksahduksiin ja pään alueen säryille. Purentalihaksista tehokkain on masseter-lihas (ulompi purentalihas), johon kohdistuu purennassa ja öisessä hampaiden narskuttelussa (bruksismi) poikkeuksellisen suuri mekaaninen kuormitus."
+    },
+    {
+      question: "Mitkä ovat purentaelimistön toimintahäiriöiden (TMD) tyypillisimmät oireet?",
+      answer: "Tyypillisiä oireita ovat aamuisin tuntuva leukanivelen kireys, suun rajoittunut avautuminen, korvaan säteilevä kipu sekä tunne siitä, että hampaat eivät osu kohdakkain. Syynä ovat usein anatomiset ja toiminnalliset kireydet purentalihaksistossa, niska-hartiaseudun virheasennoissa sekä leukanivelen nivelvälilevyn (discus) dislokaatiossa."
+    },
+    {
+      question: "Miten purentaelimistön vaivoja hoidetaan OMT-fysioterapiassa?",
+      answer: "OMT-fysioterapiassa purentaelimistön vaivoja tutkitaan ja hoidetaan kokonaisvaltaisesti. Hoitoon kuuluu intraoraalinen (suunsisäinen) manuaalinen palpaatio ja käsittely, leukanivelen mobilisaatio, niskarangan nivelten täsmäliikkeet sekä asiakkaan omaehtoinen liikehoito. Oikein kohdistetulla fysioterapialla leukanivelen naksuminen ja lihaskireydet helpottavat usein merkittävästi jo 2–4 viikossa."
+    }
+  ],
+  "niskakipu-ja-paansarky": [
+    {
+      question: "Mikä aiheuttaa niskaperäistä eli cervikogeenistä päänsärkyä?",
+      answer: "Niskarangan yläosan (C0–C3) nivelten toimintahäiriöt ja kireydet voivat aiheuttaa nk. cervikogeenistä eli niskaperäistä päänsärkyä, joka tuntuu tyypillisesti toispuoleisena kipuna takaraivolla, ohimolla tai silmän takana."
+    },
+    {
+      question: "Miten niska-hartiaseudun kireydet liittyvät purentaelimistön vaivoihin?",
+      answer: "Purentaelimistön ja niskarangan välillä on tiivis neurologinen ja anatominen yhteys. Niska-hartiaseudun virheasennot ja etukumara päätä kuormittava asento etätyössä lisäävät suoraan purentalihasten aktiivisuutta. Tämän vuoksi niska- ja leukaoireita on aina tutkittava ja hoidettava rinnakkain."
+    },
+    {
+      question: "Miten niskakipua ja niskaperäistä päänsärkyä hoidetaan fysioterapiassa?",
+      answer: "Fysioterapiassa keskityytään niskarangan syvien koukistajalihasten vahvistamiseen, rintarangan liikkumattomien osien mobilisointiin sekä täsmällisiin venytys- ja hallintaharjoitteisiin. Säännöllisillä taukojumpparutiineilla ja aktiivisella liikehoidolla niskakipu ja siihen liittyvä päänsärky saadaan hallintaan tehokkaasti."
+    }
+  ],
+  "selkakipu-ja-iskias": [
+    {
+      question: "Mitä iskiaskipu tarkoittaa ja mitkä ovat sen oireet?",
+      answer: "Iskiaskivulla tarkoitetaan lannerangan hermojuuripuristuksesta aiheutuvaa terävää tai polttavaa säteilykipua, joka kulkee pakaran kautta takareiteen ja sääreen."
+    },
+    {
+      question: "Mitkä ovat tavallisimmat syyt alaselän kivuille?",
+      answer: "Valtaosa selkäkivuista on toiminnallisia ja hyvälaatuisia, vaikka kipu voi olla voimakastakin. Fasettinivelten lukkiutumat, lannerangan liikekontrollin häiriöt ja lihasepätasapaino ovat tavallisia syitä jomotukseen."
+    },
+    {
+      question: "Mikä on tehokkain hoito alaselkäkipuun ja iskiasoireisiin?",
+      answer: "Aktiivinen ja turvallinen liike on selkäkivun tehokkain hoitomuoto. OMT-fysioterapeutti tutkii rangan liikesuunnat ja ohjaa täsmälliset lannerankaa vakauttavat ja mobilisoivat harjoitteet, joilla painetta välilevyistä ja hermojuurista saadaan helpotettua."
+    }
+  ],
+  "ergonomia-ja-tyohyvinvointi": [
+    {
+      question: "Miksi suun terveydenhuollon ammattilaiset altistuvat niska- ja selkävaivoille?",
+      answer: "Suun terveydenhuollon ammattilaiset – hammaslääkärit ja suuhygienistit – työskentelevät päivittäin haastavissa, etukumarissa ja staattisissa työasennoissa. Tämä aiheuttaa toistuvaa ja pitkäkestoista kuormitusta niska-hartiaseutuun, yläselkään ja ranteisiin."
+    },
+    {
+      question: "Mitkä ovat tehokkaimmat keinot estää kroonisia tuki- ja liikuntaelimistön vaivoja työssä?",
+      answer: "Hyvä työergonomia ei ole vain tuolin korkeuden säätämistä, vaan aktiivista asennonhallintaa ja nivelten fysiologista asentokuormituksen vähentämistä. Pienilläkin mikrotauoilla ja kohdennetuilla venytyksillä työpäivän aikana estetään kroonisten tuki- ja liikuntaelimistön vaivojen syntyminen."
+    },
+    {
+      question: "Kuka vastaa ergonomiakoulutuksista Oulun yliopistossa?",
+      answer: "Janne Säkkinen kouluttaa Oulun yliopiston hammaslääketieteen opiskelijoita työergonomiasta ja vetää täydennyskoulutuksia terveydenhuollon ammattilaisille valtakunnallisesti."
+    }
+  ]
+};
+
 export async function generateStaticParams() {
   const keys = Object.keys(TOPICS_FI);
   const aliasKeys = Object.keys(SLUG_ALIASES);
@@ -98,6 +157,7 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
       languages: {
         "fi": canonicalUrl,
         "en": pairedEnUrl,
+        "x-default": canonicalUrl,
       },
     },
     openGraph: {
@@ -123,6 +183,7 @@ export default async function TopicHubPage(props: { params: Promise<{ slug: stri
 
   // Filter related videos by category
   const topicVideos = FALLBACK_VIDEOS.filter((v) => v.categoryId === topic.categoryId);
+  const faqs = TOPIC_FAQS[resolvedSlug] || [];
 
   const jsonLd = [
     {
@@ -134,6 +195,7 @@ export default async function TopicHubPage(props: { params: Promise<{ slug: stri
         "@type": "Person",
         "name": "Janne Säkkinen",
         "jobTitle": "OMT-Fysioterapeutti",
+        "url": "https://www.ftsakkinen.com/tietoa-minusta",
         "worksFor": {
           "@type": "Organization",
           "name": "FT Säkkinen"
@@ -160,7 +222,7 @@ export default async function TopicHubPage(props: { params: Promise<{ slug: stri
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Aihekoosteet",
+          "name": "Videot & Aiheet",
           "item": "https://www.ftsakkinen.com/videot"
         },
         {
@@ -170,6 +232,18 @@ export default async function TopicHubPage(props: { params: Promise<{ slug: stri
           "item": `https://www.ftsakkinen.com/aihe/${topic.slug}`
         }
       ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqs.map((faq) => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
     }
   ];
 

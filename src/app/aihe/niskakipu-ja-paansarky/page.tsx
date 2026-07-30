@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     languages: {
       "fi": "https://www.ftsakkinen.com/aihe/niskakipu-ja-paansarky",
       "en": "https://www.ptsakkinen.com/topic/neck-pain-and-headaches",
+      "x-default": "https://www.ftsakkinen.com/aihe/niskakipu-ja-paansarky",
     },
   },
 };
@@ -36,6 +37,7 @@ export default function NiskakipuTopicPage() {
         "@type": "Person",
         "name": "Janne Säkkinen",
         "jobTitle": "OMT-Fysioterapeutti",
+        "url": "https://www.ftsakkinen.com/tietoa-minusta",
         "worksFor": {
           "@type": "Organization",
           "name": "FT Säkkinen"
@@ -70,6 +72,36 @@ export default function NiskakipuTopicPage() {
           "position": 3,
           "name": "Niskakipu & Päänsärky",
           "item": "https://www.ftsakkinen.com/aihe/niskakipu-ja-paansarky"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Mikä aiheuttaa niskaperäistä eli cervikogeenistä päänsärkyä?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Niskarangan yläosan (C0–C3) nivelten toimintahäiriöt ja kireydet voivat aiheuttaa nk. cervikogeenistä eli niskaperäistä päänsärkyä, joka tuntuu tyypillisesti toispuoleisena kipuna takaraivolla, ohimolla tai silmän takana."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Miten niska-hartiaseudun kireydet liittyvät purentaelimistön vaivoihin?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Purentaelimistön ja niskarangan välillä on tiivis neurologinen ja anatominen yhteys. Niska-hartiaseudun virheasennot ja etukumara päätä kuormittava asento etätyössä lisäävät suoraan purentalihasten aktiivisuutta. Tämän vuoksi niska- ja leukaoireita on aina tutkittava ja hoidettava rinnakkain."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Miten niskakipua ja niskaperäistä päänsärkyä hoidetaan fysioterapiassa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fysioterapiassa keskityytään niskarangan syvien koukistajalihasten vahvistamiseen, rintarangan liikkumattomien osien mobilisointiin sekä täsmällisiin venytys- ja hallintaharjoitteisiin. Säännöllisillä taukojumpparutiineilla ja aktiivisella liikehoidolla niskakipu ja siihen liittyvä päänsärky saadaan hallintaan tehokkaasti."
+          }
         }
       ]
     }

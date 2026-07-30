@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     languages: {
       "fi": "https://www.ftsakkinen.com/aihe/selkakipu-ja-iskias",
       "en": "https://www.ptsakkinen.com/topic/back-pain-and-sciatica",
+      "x-default": "https://www.ftsakkinen.com/aihe/selkakipu-ja-iskias",
     },
   },
 };
@@ -36,6 +37,7 @@ export default function SelkakipuTopicPage() {
         "@type": "Person",
         "name": "Janne Säkkinen",
         "jobTitle": "OMT-Fysioterapeutti",
+        "url": "https://www.ftsakkinen.com/tietoa-minusta",
         "worksFor": {
           "@type": "Organization",
           "name": "FT Säkkinen"
@@ -70,6 +72,36 @@ export default function SelkakipuTopicPage() {
           "position": 3,
           "name": "Selkäkipu & Iskias",
           "item": "https://www.ftsakkinen.com/aihe/selkakipu-ja-iskias"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Mitä iskiaskipu tarkoittaa ja mitkä ovat sen oireet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Iskiaskivulla tarkoitetaan lannerangan hermojuuripuristuksesta aiheutuvaa terävää tai polttavaa säteilykipua, joka kulkee pakaran kautta takareiteen ja sääreen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mitkä ovat tavallisimmat syyt alaselän kivuille?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Valtaosa selkäkivuista on toiminnallisia ja hyvälaatuisia, vaikka kipu voi olla voimakastakin. Fasettinivelten lukkiutumat, lannerangan liikekontrollin häiriöt ja lihasepätasapaino ovat tavallisia syitä jomotukseen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mikä on tehokkain hoito alaselkäkipuun ja iskiasoireisiin?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Aktiivinen ja turvallinen liike on selkäkivun tehokkain hoitomuoto. OMT-fysioterapeutti tutkii rangan liikesuunnat ja ohjaa täsmälliset lannerankaa vakauttavat ja mobilisoivat harjoitteet, joilla painetta välilevyistä ja hermojuurista saadaan helpotettua."
+          }
         }
       ]
     }

@@ -53,6 +53,9 @@ export default function Footer() {
                 <Link href="/" className="hover:text-white transition-colors">Etusivu</Link>
               </li>
               <li>
+                <Link href="/tietoa-minusta" className="hover:text-white transition-colors">Tietoa minusta &amp; Tausta</Link>
+              </li>
+              <li>
                 <Link href="/videot" className="hover:text-white transition-colors">Videokirjasto</Link>
               </li>
               <li>

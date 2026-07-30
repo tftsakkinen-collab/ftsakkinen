@@ -11,9 +11,10 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Etusivu", href: "/" },
+    { name: "Tietoa minusta", href: "/tietoa-minusta" },
     { name: "Videokirjasto", href: "/videot" },
     { name: "Ilmaisopas", href: "/ilmaisopas" },
-    { name: "Koulutukset & Kokemus", href: "/koulutukset" },
+    { name: "Koulutukset & Tausta", href: "/koulutukset" },
     { name: "Yhteystiedot", href: "/yhteystiedot" },
   ];
 
