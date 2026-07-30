@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Yhteystiedot & Ajanvaraus | OMT-Fysioterapeutti Janne Säkkinen",
-  description: "Ota yhteyttä OMT-fysioterapeutti Janne Säkkitiehen tai varaa vastaanottoaika Terveystalolta / Norre Työterveydeltä.",
+  description: "Ota yhteyttä OMT-fysioterapeutti Janne Säkkitiehen tai varaa vastaanottoaika Terveystalolta / Norre Työterveydeltä / Hammasvahdilta.",
   alternates: {
     canonical: "https://www.ftsakkinen.com/yhteystiedot",
     languages: {
@@ -49,8 +49,8 @@ export default function ContactPage() {
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="w-4 h-4 text-[#00AEEF] shrink-0" />
-                  <a href="tel:+358407675529" className="hover:underline text-white font-medium">
-                    +358 40 767 5529
+                  <a href="tel:+358413274967" className="hover:underline text-white font-medium">
+                    041 327 4967
                   </a>
                 </div>
               </div>

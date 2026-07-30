@@ -48,7 +48,7 @@ export default async function HomePage() {
           "postalCode": "90670",
           "addressCountry": "FI"
         },
-        "telephone": "+358407675529",
+        "telephone": "+358413274967",
         "email": "tiedottajanne@gmail.com",
         "url": "https://www.ftsakkinen.com"
       },
@@ -70,7 +70,7 @@ export default async function HomePage() {
         "postalCode": "90670",
         "addressCountry": "FI"
       },
-      "telephone": "+358407675529",
+      "telephone": "+358413274967",
       "email": "tiedottajanne@gmail.com",
       "url": "https://www.ftsakkinen.com"
     }
