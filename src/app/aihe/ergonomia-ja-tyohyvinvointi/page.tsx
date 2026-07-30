@@ -1,13 +1,13 @@
 import { FALLBACK_VIDEOS } from "@/data/videos";
 import VideoCard from "@/components/VideoCard";
 import Link from "next/link";
-import { BookOpen, Sparkles, Home, ChevronRight, Download } from "lucide-react";
+import { BookOpen, Sparkles, Home, ChevronRight } from "lucide-react";
 import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Ergonomia, Suun Terveydenhuollon Työasennot & Taukojumppa | FT Säkkinen",
-  description: "Ergonomiaopas hammaslääkäreille, suuhygienisteille ja etätyöntekijöille: kehon kuormituksen minimointi ja taukojumpparutiinit.",
+  title: "Ergonomia & Työhyvinvointi | FT Säkkinen",
+  description: "Fysioterapeuttinen opas suun terveydenhuollon ammattilaisten, hammaslääkäreiden ja tietotyöläisten työergonomian ja fyysisen suorituskyvyn optimointiin.",
   alternates: {
     canonical: "https://www.ftsakkinen.com/aihe/ergonomia-ja-tyohyvinvointi",
     languages: {
@@ -22,17 +22,32 @@ export default function ErgonomiaTopicPage() {
   const topicVideos = FALLBACK_VIDEOS.filter((v) => v.categoryId === "ergonomia");
 
   const paragraphs = [
-    "Suun terveydenhuollon ammattilaiset – hammaslääkärit ja suuhygienistit – työskentelevät päivittäin haastavissa, etukumarissa ja staattisissa työasennoissa. Tämä aiheuttaa toistuvaa ja pitkäkestoista kuormitusta niska-hartiaseutuun, yläselkään ja ranteisiin.",
-    "Hyvä työergonomia ei ole vain tuolin korkeuden säätämistä, vaan aktiivista asennonhallintaa ja nivelten fysiologista asentokuormituksen vähentämistä. Pienilläkin mikrotauoilla ja kohdennetuilla venytyksillä työpäivän aikana estetään kroonisten tuki- ja liikuntaelimistön vaivojen syntyminen.",
-    "Janne Säkkinen kouluttaa Oulun yliopiston hammaslääketieteen opiskelijoita työergonomiasta ja vetää täydennyskoulutuksia terveydenhuollon ammattilaisille valtakunnallisesti."
+    "Ergonomia ja fyysisen suorituskyvyn optimointi ovat avainasemassa erityisesti hammaslääkäreillä, suuhygienisteillä ja tietotyöntekijöillä. Pitkään jatkuneet etukumarat ja kiertyneet työasennot aiheuttavat kuormitusta niska-hartiaseutuun, alaselkään ja kämmenen/ranteen alueelle.",
+    "Kliinisellä työergonomialla pyritään minimoimaan tuki- ja liikuntaelimistön epäsymmetrinen kuormitus, parantamaan työasennon dynamiikkaa sekä ehkäisemään ammattitaudeista johtuvia sairauspoissaoloja.",
+    "Oulun yliopiston hammaslääketieteen yksikön vierailevana ergonomialuennoitsijana (2017–) Janne Säkkinen opettaa käytännönläheisiä asentokorjauksia, mikrotaukoliikkeitä ja suorituskykyharjoitteita, joilla työkyky säilyy hyvänä läpi koko työuran."
   ];
 
   const jsonLd = [
     {
       "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Ergonomia, Suun Terveydenhuollon Työasennot & Taukojumppa",
-      "description": "Ergonomiaopas hammaslääkäreille, suuhygienisteille ja etätyöntekijöille: kehon kuormituksen minimointi ja taukojumpparutiinit.",
+      "@type": ["Article", "MedicalWebPage"],
+      "headline": "Ergonomia & Työhyvinvointi",
+      "description": "Fysioterapeuttinen opas suun terveydenhuollon ammattilaisten, hammaslääkäreiden ja tietotyöläisten työergonomian ja fyysisen suorituskyvyn optimointiin.",
+      "medicalAudience": {
+        "@type": "MedicalAudience",
+        "audienceType": "Patient"
+      },
+      "lastReviewed": "2026-07-30",
+      "reviewedBy": {
+        "@type": "Person",
+        "name": "Janne Säkkinen",
+        "jobTitle": "OMT-Fysioterapeutti",
+        "url": "https://www.ftsakkinen.com/tietoa-minusta"
+      },
+      "about": {
+        "@type": "MedicalCondition",
+        "name": "Hammaslääketieteen ja tietotyön kliininen ergonomia"
+      },
       "author": {
         "@type": "Person",
         "name": "Janne Säkkinen",
@@ -46,10 +61,17 @@ export default function ErgonomiaTopicPage() {
       "publisher": {
         "@type": "Organization",
         "name": "FT Säkkinen",
-        "url": "https://www.ftsakkinen.com"
+        "url": "https://www.ftsakkinen.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.ftsakkinen.com/logo-whitebg.png",
+          "width": 600,
+          "height": 60
+        }
       },
-      "datePublished": "2024-07-24",
-      "dateModified": "2026-07-30"
+      "datePublished": "2024-10-01",
+      "dateModified": "2026-07-30",
+      "mainEntityOfPage": "https://www.ftsakkinen.com/aihe/ergonomia-ja-tyohyvinvointi"
     },
     {
       "@context": "https://schema.org",
@@ -81,26 +103,26 @@ export default function ErgonomiaTopicPage() {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Miksi suun terveydenhuollon ammattilaiset altistuvat niska- ja selkävaivoille?",
+          "name": "Miksi hammaslääkäreillä ja tietotyöntekijöillä on suuri riski niska- ja selkävaivoihin?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Suun terveydenhuollon ammattilaiset – hammaslääkärit ja suuhygienistit – työskentelevät päivittäin haastavissa, etukumarissa ja staattisissa työasennoissa. Tämä aiheuttaa toistuvaa ja pitkäkestoista kuormitusta niska-hartiaseutuun, yläselkään ja ranteisiin."
+            "text": paragraphs[0]
           }
         },
         {
           "@type": "Question",
-          "name": "Mitkä ovat tehokkaimmat keinot estää kroonisia tuki- ja liikuntaelimistön vaivoja työssä?",
+          "name": "Mitä hyötyä kliinisestä työergonomiasta on tuki- ja liikuntaelimistölle?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Hyvä työergonomia ei ole vain tuolin korkeuden säätämistä, vaan aktiivista asennonhallintaa ja nivelten fysiologista asentokuormituksen vähentämistä. Pienilläkin mikrotauoilla ja kohdennetuilla venytyksillä työpäivän aikana estetään kroonisten tuki- ja liikuntaelimistön vaivojen syntyminen."
+            "text": paragraphs[1]
           }
         },
         {
           "@type": "Question",
-          "name": "Kuka vastaa ergonomiakoulutuksista Oulun yliopistossa?",
+          "name": "Miten OMT-fysioterapeutti kouluttaa työergonomiaa Oulun yliopistolla?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Janne Säkkinen kouluttaa Oulun yliopiston hammaslääketieteen opiskelijoita työergonomiasta ja vetää täydennyskoulutuksia terveydenhuollon ammattilaisille valtakunnallisesti."
+            "text": paragraphs[2]
           }
         }
       ]
@@ -108,91 +130,68 @@ export default function ErgonomiaTopicPage() {
   ];
 
   return (
-    <div className="py-12 bg-[#000a18] min-h-screen text-gray-200">
+    <div className="py-12 bg-[#000a18] min-h-screen text-gray-200 space-y-12">
       <Script
-        id="json-ld-topic-ergonomia"
+        id="json-ld-ergonomia"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-        
-        {/* Breadcrumbs */}
-        <nav aria-label="Murupolku" className="flex flex-wrap items-center gap-2 text-xs text-gray-400 font-medium">
-          <Link href="/" className="hover:text-[#00AEEF] flex items-center gap-1 transition-colors">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+        <nav className="flex items-center gap-2 text-xs text-gray-400">
+          <Link href="/" className="hover:text-[#00AEEF] flex items-center gap-1">
             <Home className="w-3.5 h-3.5" />
             <span>Etusivu</span>
           </Link>
-          <ChevronRight className="w-3.5 h-3.5 text-gray-600 shrink-0" />
-          <Link href="/videot" className="hover:text-[#00AEEF] transition-colors">
+          <ChevronRight className="w-3.5 h-3.5 text-gray-600" />
+          <Link href="/videot" className="hover:text-[#00AEEF]">
             Videot &amp; Aiheet
           </Link>
-          <ChevronRight className="w-3.5 h-3.5 text-gray-600 shrink-0" />
-          <span className="text-[#00AEEF] font-semibold">Ergonomia</span>
+          <ChevronRight className="w-3.5 h-3.5 text-gray-600" />
+          <span className="text-white font-semibold">Ergonomia &amp; Työhyvinvointi</span>
         </nav>
 
-        {/* Header */}
-        <div className="space-y-4">
-          <div className="inline-block px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-semibold uppercase tracking-wider">
-            Kliininen Aihekooste &amp; Tietopankki
+        <div className="space-y-4 max-w-4xl border-b border-[#0C66B4]/30 pb-8">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
+            <BookOpen className="w-4 h-4" />
+            <span>Kliininen Tietopankki &amp; Aihekooste</span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl font-display text-white tracking-wide leading-tight">
-            Ergonomia, Suun Terveydenhuollon Työasennot &amp; Taukojumppa
+            ERGONOMIA &amp; <span className="text-[#00AEEF]">TYÖHYVINVOINTI</span>
           </h1>
 
-          <p className="text-base sm:text-lg text-gray-300 leading-relaxed font-medium">
-            Ergonomiaopas hammaslääkäreille, suuhygienisteille ja etätyöntekijöille: kehon kuormituksen minimointi ja taukojumpparutiinit.
+          <p className="text-gray-300 text-base sm:text-lg leading-relaxed font-medium">
+            Fysioterapeuttinen opas suun terveydenhuollon ammattilaisten, hammaslääkäreiden ja tietotyöläisten työergonomian ja fyysisen suorituskyvyn optimointiin.
           </p>
         </div>
 
-        {/* Written Synthesis */}
-        <article className="p-8 rounded-3xl bg-[#000d21] border border-[#0C66B4]/50 space-y-6 text-sm sm:text-base leading-relaxed text-gray-200 shadow-panel">
-          <div className="flex items-center gap-2 text-white font-display text-2xl border-b border-[#0C66B4]/30 pb-3">
-            <BookOpen className="w-6 h-6 text-[#00AEEF]" />
-            <h2>OMT-Fysioterapeutin Kliininen Synteesi</h2>
+        <div className="p-8 sm:p-10 rounded-3xl bg-[#000d21] border border-[#0C66B4]/60 space-y-6 shadow-panel">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00AEEF]/20 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
+            <Sparkles className="w-4 h-4" />
+            <span>Asiantuntija Vastaa Työergonomiakysymyksiin</span>
           </div>
 
-          {paragraphs.map((p, idx) => (
-            <p key={idx} className="leading-relaxed">
-              {p}
-            </p>
-          ))}
-        </article>
+          <div className="space-y-4 text-gray-200 text-sm sm:text-base leading-relaxed">
+            {paragraphs.map((p, idx) => (
+              <p key={idx}>{p}</p>
+            ))}
+          </div>
+        </div>
 
-        {/* Video Grid Section */}
-        <div className="space-y-6 pt-6 border-t border-[#0C66B4]/30">
+        <div className="space-y-6 pt-6">
           <div className="flex items-center justify-between">
-            <h2 className="text-2xl font-display text-white flex items-center gap-2">
-              <Sparkles className="w-5 h-5 text-[#00AEEF]" />
-              <span>Aiheeseen Liittyvät Opetusvideot ({topicVideos.length} videota)</span>
+            <h2 className="text-2xl font-display text-white">
+              AIHEESEEN LIITTYVÄT <span className="text-[#00AEEF]">OHJEVIDEOT ({topicVideos.length} KPL)</span>
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {topicVideos.map((video) => (
               <VideoCard key={video.id} video={video} />
             ))}
           </div>
         </div>
-
-        {/* CTA Lead Magnet */}
-        <div className="p-8 rounded-3xl bg-gradient-to-r from-[#000d21] via-[#014489]/40 to-[#000d21] border border-[#00AEEF]/50 shadow-glow space-y-4 text-center">
-          <div className="w-12 h-12 rounded-xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center mx-auto">
-            <Download className="w-6 h-6" />
-          </div>
-          <h3 className="text-2xl font-bold text-white">Lataa aihealueen harjoiteohjeet PDF-muodossa</h3>
-          <p className="text-sm text-gray-300 max-w-lg mx-auto">
-            Saat heti pääsyn Janne Säkkisen viralliseen Google Drive -kansioon, johon päivitetään täsmälliset liike- ja kuntoutusoppaat.
-          </p>
-          <Link
-            href="/ilmaisopas"
-            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-[#00AEEF] text-black font-bold text-sm hover:bg-[#33C2F5] transition-all shadow-glow"
-          >
-            <span>Lataa oppaat (Google Drive)</span>
-          </Link>
-        </div>
-
       </div>
     </div>
   );

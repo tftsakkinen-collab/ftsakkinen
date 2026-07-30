@@ -30,9 +30,24 @@ export default function LeukakipuTopicPage() {
   const jsonLd = [
     {
       "@context": "https://schema.org",
-      "@type": "Article",
+      "@type": ["Article", "MedicalWebPage"],
       "headline": "Leukakipu, Leukanivelen Naksahdus & Bruksismi (TMD)",
       "description": "Täydellinen opas purentaelimistön toimintahäiriöiden (TMD), leukanivelten jännitystilojen, naksumisen ja hammassäryn hoitoon OMT-fysioterapian keinoin.",
+      "medicalAudience": {
+        "@type": "MedicalAudience",
+        "audienceType": "Patient"
+      },
+      "lastReviewed": "2026-07-30",
+      "reviewedBy": {
+        "@type": "Person",
+        "name": "Janne Säkkinen",
+        "jobTitle": "OMT-Fysioterapeutti",
+        "url": "https://www.ftsakkinen.com/tietoa-minusta"
+      },
+      "about": {
+        "@type": "MedicalCondition",
+        "name": "Purentaelimistön toimintahäiriö (TMD)"
+      },
       "author": {
         "@type": "Person",
         "name": "Janne Säkkinen",
@@ -46,10 +61,17 @@ export default function LeukakipuTopicPage() {
       "publisher": {
         "@type": "Organization",
         "name": "FT Säkkinen",
-        "url": "https://www.ftsakkinen.com"
+        "url": "https://www.ftsakkinen.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.ftsakkinen.com/logo-whitebg.png",
+          "width": 600,
+          "height": 60
+        }
       },
       "datePublished": "2024-07-24",
-      "dateModified": "2026-07-30"
+      "dateModified": "2026-07-30",
+      "mainEntityOfPage": "https://www.ftsakkinen.com/aihe/leukakipu-ja-tmd"
     },
     {
       "@context": "https://schema.org",
@@ -70,7 +92,7 @@ export default function LeukakipuTopicPage() {
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Leukakipu & TMD",
+          "name": "Leukakipu, Leukanivelen Naksahdus & Bruksismi (TMD)",
           "item": "https://www.ftsakkinen.com/aihe/leukakipu-ja-tmd"
         }
       ]
@@ -84,7 +106,7 @@ export default function LeukakipuTopicPage() {
           "name": "Mikä aiheuttaa leukakipua, leukanivelen naksumista ja bruksismia (TMD)?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Purentaelimistön toimintahäiriöt (TMD, temporomandibular disorders) ovat yleinen syy kasvojen jomotukseen, leukanivelen naksahduksiin ja pään alueen säryille. Purentalihaksista tehokkain on masseter-lihas (ulompi purentalihas), johon kohdistuu purennassa ja öisessä hampaiden narskuttelussa (bruksismi) poikkeuksellisen suuri mekaaninen kuormitus."
+            "text": paragraphs[0]
           }
         },
         {
@@ -92,7 +114,7 @@ export default function LeukakipuTopicPage() {
           "name": "Mitkä ovat purentaelimistön toimintahäiriöiden (TMD) tyypillisimmät oireet?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Tyypillisiä oireita ovat aamuisin tuntuva leukanivelen kireys, suun rajoittunut avautuminen, korvaan säteilevä kipu sekä tunne siitä, että hampaat eivät osu kohdakkain. Syynä ovat usein anatomiset ja toiminnalliset kireydet purentalihaksistossa, niska-hartiaseudun virheasennoissa sekä leukanivelen nivelvälilevyn (discus) dislokaatiossa."
+            "text": paragraphs[1]
           }
         },
         {
@@ -100,7 +122,7 @@ export default function LeukakipuTopicPage() {
           "name": "Miten purentaelimistön vaivoja hoidetaan OMT-fysioterapiassa?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "OMT-fysioterapiassa purentaelimistön vaivoja tutkitaan ja hoidetaan kokonaisvaltaisesti. Hoitoon kuuluu intraoraalinen (suunsisäinen) manuaalinen palpaatio ja käsittely, leukanivelen mobilisaatio, niskarangan nivelten täsmäliikkeet sekä asiakkaan omaehtoinen liikehoito. Oikein kohdistetulla fysioterapialla leukanivelen naksuminen ja lihaskireydet helpottavat usein merkittävästi jo 2–4 viikossa."
+            "text": paragraphs[2]
           }
         }
       ]
@@ -108,89 +130,72 @@ export default function LeukakipuTopicPage() {
   ];
 
   return (
-    <div className="py-12 bg-[#000a18] min-h-screen text-gray-200">
+    <div className="py-12 bg-[#000a18] min-h-screen text-gray-200 space-y-12">
       <Script
-        id="json-ld-topic-leukakipu"
+        id="json-ld-leukakipu"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         
-        {/* Breadcrumbs */}
-        <nav aria-label="Murupolku" className="flex flex-wrap items-center gap-2 text-xs text-gray-400 font-medium">
-          <Link href="/" className="hover:text-[#00AEEF] flex items-center gap-1 transition-colors">
+        {/* Breadcrumb Navigation */}
+        <nav className="flex items-center gap-2 text-xs text-gray-400">
+          <Link href="/" className="hover:text-[#00AEEF] flex items-center gap-1">
             <Home className="w-3.5 h-3.5" />
             <span>Etusivu</span>
           </Link>
-          <ChevronRight className="w-3.5 h-3.5 text-gray-600 shrink-0" />
-          <Link href="/videot" className="hover:text-[#00AEEF] transition-colors">
+          <ChevronRight className="w-3.5 h-3.5 text-gray-600" />
+          <Link href="/videot" className="hover:text-[#00AEEF]">
             Videot &amp; Aiheet
           </Link>
-          <ChevronRight className="w-3.5 h-3.5 text-gray-600 shrink-0" />
-          <span className="text-[#00AEEF] font-semibold">Leukakipu &amp; TMD</span>
+          <ChevronRight className="w-3.5 h-3.5 text-gray-600" />
+          <span className="text-white font-semibold">Leukakipu &amp; TMD</span>
         </nav>
 
-        {/* Header */}
-        <div className="space-y-4">
-          <div className="inline-block px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-semibold uppercase tracking-wider">
-            Kliininen Aihekooste &amp; Tietopankki
+        {/* Page Header */}
+        <div className="space-y-4 max-w-4xl border-b border-[#0C66B4]/30 pb-8">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
+            <BookOpen className="w-4 h-4" />
+            <span>Kliininen Tietopankki &amp; Aihekooste</span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl font-display text-white tracking-wide leading-tight">
-            Leukakipu, Leukanivelen Naksahdus &amp; Bruksismi (TMD)
+            LEUKAKIPU, LEUKANIVELEN NAKSAHDUS &amp; <span className="text-[#00AEEF]">BRUKSISMI (TMD)</span>
           </h1>
 
-          <p className="text-base sm:text-lg text-gray-300 leading-relaxed font-medium">
-            Täydellinen opas purentaelimistön toimintahäiriöiden (TMD), leukanivelten jännitystilojen, naksumisen ja hammassäryn hoitoon OMT-fysioterapian keinoin.
+          <p className="text-gray-300 text-base sm:text-lg leading-relaxed font-medium">
+            Täydellinen kliininen opas purentaelimistön toimintahäiriöiden (TMD), leukanivelten jännitystilojen, naksumisen ja hammassäryn hoitoon OMT-fysioterapian keinoin.
           </p>
         </div>
 
-        {/* Written Synthesis */}
-        <article className="p-8 rounded-3xl bg-[#000d21] border border-[#0C66B4]/50 space-y-6 text-sm sm:text-base leading-relaxed text-gray-200 shadow-panel">
-          <div className="flex items-center gap-2 text-white font-display text-2xl border-b border-[#0C66B4]/30 pb-3">
-            <BookOpen className="w-6 h-6 text-[#00AEEF]" />
-            <h2>OMT-Fysioterapeutin Kliininen Synteesi</h2>
+        {/* Synthesis Article Text */}
+        <div className="p-8 sm:p-10 rounded-3xl bg-[#000d21] border border-[#0C66B4]/60 space-y-6 shadow-panel">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00AEEF]/20 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
+            <Sparkles className="w-4 h-4" />
+            <span>Leukaterapeutit Vastaavat Yleisimpiin Kysymyksiin</span>
           </div>
 
-          {paragraphs.map((p, idx) => (
-            <p key={idx} className="leading-relaxed">
-              {p}
-            </p>
-          ))}
-        </article>
-
-        {/* Video Grid Section */}
-        <div className="space-y-6 pt-6 border-t border-[#0C66B4]/30">
-          <div className="flex items-center justify-between">
-            <h2 className="text-2xl font-display text-white flex items-center gap-2">
-              <Sparkles className="w-5 h-5 text-[#00AEEF]" />
-              <span>Aiheeseen Liittyvät Opetusvideot ({topicVideos.length} videota)</span>
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {topicVideos.map((video) => (
-              <VideoCard key={video.id} video={video} />
+          <div className="space-y-4 text-gray-200 text-sm sm:text-base leading-relaxed">
+            {paragraphs.map((p, idx) => (
+              <p key={idx}>{p}</p>
             ))}
           </div>
         </div>
 
-        {/* CTA Lead Magnet */}
-        <div className="p-8 rounded-3xl bg-gradient-to-r from-[#000d21] via-[#014489]/40 to-[#000d21] border border-[#00AEEF]/50 shadow-glow space-y-4 text-center">
-          <div className="w-12 h-12 rounded-xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center mx-auto">
-            <Download className="w-6 h-6" />
+        {/* Videos Grid */}
+        <div className="space-y-6 pt-6">
+          <div className="flex items-center justify-between">
+            <h2 className="text-2xl font-display text-white">
+              AIHEESEEN LIITTYVÄT <span className="text-[#00AEEF]">OHJEVIDEOT ({topicVideos.length} KPL)</span>
+            </h2>
           </div>
-          <h3 className="text-2xl font-bold text-white">Lataa aihealueen harjoiteohjeet PDF-muodossa</h3>
-          <p className="text-sm text-gray-300 max-w-lg mx-auto">
-            Saat heti pääsyn Janne Säkkisen viralliseen Google Drive -kansioon, johon päivitetään täsmälliset liike- ja kuntoutusoppaat.
-          </p>
-          <Link
-            href="/ilmaisopas"
-            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-[#00AEEF] text-black font-bold text-sm hover:bg-[#33C2F5] transition-all shadow-glow"
-          >
-            <span>Lataa oppaat (Google Drive)</span>
-          </Link>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {topicVideos.map((video) => (
+              <VideoCard key={video.id} video={video} />
+            ))}
+          </div>
         </div>
 
       </div>

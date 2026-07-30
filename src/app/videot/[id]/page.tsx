@@ -132,6 +132,7 @@ export default async function SingleVideoPage(props: { params: Promise<{ id: str
       "description": video.promiseDescription,
       "thumbnailUrl": video.thumbnailUrl || `https://i2.ytimg.com/vi/${video.youtubeId}/hqdefault.jpg`,
       "uploadDate": video.publishedAt,
+      "duration": video.isShort ? "PT59S" : "PT12M30S",
       "embedUrl": `https://www.youtube.com/embed/${video.youtubeId}`,
       "transcript": video.transcript || video.promiseDescription
     },

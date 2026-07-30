@@ -185,12 +185,34 @@ export default async function TopicHubPage(props: { params: Promise<{ slug: stri
   const topicVideos = FALLBACK_VIDEOS.filter((v) => v.categoryId === topic.categoryId);
   const faqs = TOPIC_FAQS[resolvedSlug] || [];
 
+  const topicMedicalConditions: Record<string, string> = {
+    "leukakipu-ja-tmd": "Purentaelimistön toimintahäiriö (TMD)",
+    "niskakipu-ja-paansarky": "Niska-hartiaseudun kipu ja cervikogeeninen päänsärky",
+    "selkakipu-ja-iskias": "Alaselän fasettilukot, välilevyvaivat ja iskiasoireilu",
+    "ergonomia-ja-tyohyvinvointi": "Hammaslääketieteen ja tietotyön kliininen ergonomia"
+  };
+
   const jsonLd = [
     {
       "@context": "https://schema.org",
-      "@type": "Article",
+      "@type": ["Article", "MedicalWebPage"],
       "headline": topic.title,
       "description": topic.introSummary,
+      "medicalAudience": {
+        "@type": "MedicalAudience",
+        "audienceType": "Patient"
+      },
+      "lastReviewed": "2026-07-30",
+      "reviewedBy": {
+        "@type": "Person",
+        "name": "Janne Säkkinen",
+        "jobTitle": "OMT-Fysioterapeutti",
+        "url": "https://www.ftsakkinen.com/tietoa-minusta"
+      },
+      "about": {
+        "@type": "MedicalCondition",
+        "name": topicMedicalConditions[resolvedSlug] || topic.title
+      },
       "author": {
         "@type": "Person",
         "name": "Janne Säkkinen",
@@ -204,7 +226,13 @@ export default async function TopicHubPage(props: { params: Promise<{ slug: stri
       "publisher": {
         "@type": "Organization",
         "name": "FT Säkkinen",
-        "url": "https://www.ftsakkinen.com"
+        "url": "https://www.ftsakkinen.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.ftsakkinen.com/logo-whitebg.png",
+          "width": 600,
+          "height": 60
+        }
       },
       "datePublished": "2024-07-24",
       "dateModified": "2026-07-30"

@@ -127,6 +127,36 @@ export default async function HomePage() {
           "author": { "@type": "Person", "name": "Valmistuva hammaslääkäri / Oulun yliopisto" },
           "reviewBody": "Mukavan energinen luennoitsija ja oli helppo keskittyä, kun ei ollut tylsää tasapaksua settiä! Upea setti, todella mielenkiintoinen. Olet erinomainen ja huumorintajuinen puhuja!",
           "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Selkäkipu- ja kuntoutuspotilas" },
+          "reviewBody": "Olin kärsinyt leikkauksen jälkeisestä selkäkivusta ja pelkäsin jo joutuvani uudelleen leikkauskierteeseen. Jannen tutkimuksen ja täsmällisten liikeohjeiden ansiosta normaali arki ja kivuton liikkuminen palasivat parissa kuukaudessa.",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Koulutusosallistuja (2 pvää TMD)" },
+          "reviewBody": "Raikas syventävä ja innostava kokonaisuus! Paljon tuttua asiaa, mutta moni asia tarkentui. Kahden päivän koulutus on erinomainen!",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Kroonisen selkäkivun potilas" },
+          "reviewBody": "Olen kärsinyt selkäkivuista vuosia ja aiemmin hoito oli vain oireiden peittelyä. Jannen perusteellisessa tutkimuksessa löydettiin vaivan syy, ja täsmällisillä liikeohjeilla selkäkivut kaikkosivat kokonaan ilman lääkkeitä.",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Suun terveydenhuollon henkilöstö" },
+          "reviewBody": "Kiinnostavin kaikista Denstalin etäluennoista, kiitos! Käytännönläheinen esitys!! Iso kiitos sinulle! Jatka samaan malliin.",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Työterveysasiakas (Videoidut koti-ohjeet)" },
+          "reviewBody": "Monesti fysioterapiasta saa paperinipun, joka jää pöydälle lojumaan. Janne kuvasi täsmälliset kuntoutusliikkeet suoraan puhelimellani videolle minua varten! Täydellinen tapa varmistaa että liikkeet tekee kotona oikein.",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
         }
       ]
     }
