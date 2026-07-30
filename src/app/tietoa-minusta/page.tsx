@@ -1,12 +1,12 @@
 import { SITE_CONFIG } from "@/data/config";
 import { CV_DATA_FI } from "@/data/cv";
-import { Award, GraduationCap, Briefcase, BookOpen, CheckCircle2, ShieldCheck, FileCheck, ArrowRight, User, MapPin, Mail, Phone, Users, HeartHandshake, Sparkles, Target } from "lucide-react";
+import { Award, GraduationCap, Briefcase, BookOpen, CheckCircle2, ShieldCheck, FileCheck, ArrowRight, User, MapPin, Mail, Phone, Users, HeartHandshake, Sparkles, Target, Compass } from "lucide-react";
 import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Tietoa Minusta | OMT-Fysioterapeutti Janne Säkkinen | Oulu",
+  title: "Tietoa Minusta & Filosofia | OMT-Fysioterapeutti Janne Säkkinen",
   description: "Tutustu OMT-fysioterapeutti Janne Säkkisen ammatilliseen taustaan, OMT-erikoistumiseen (SOMTY), yliopisto-opettajuuteen (Oulun yliopisto 2017–) ja ratkaisukeskeiseen valmennusfilosofiaan.",
   alternates: {
     canonical: "https://www.ftsakkinen.com/tietoa-minusta",
@@ -28,7 +28,7 @@ export default function AboutPage() {
         "name": "Janne Säkkinen",
         "jobTitle": "OMT-Fysioterapeutti & Työfysioterapeutti",
         "url": "https://www.ftsakkinen.com/tietoa-minusta",
-        "description": "Pitkän työkokemuksen omaava OMT-fysioterapeutti, työfysioterapian erikoisosaaja ja Oulun yliopiston hammaslääketieteen yksikön vieraileva luennoitsija vuodesta 2017.",
+        "description": "Pitkän työkokemuksen omaava OMT-fysioterapeutti, työfysioterapian erikoisosaaja ja Oulun yliopiston hammaslääketieteen yksikön vieraileva luennoitsija vuodesta 2017. Erikoistunut tuki- ja liikuntaelimistön sekä purentaelimistön vaivojen (TMD) ennaltaehkäisyyn ja hoitoon. Uskon, että paras asiakaskokemus syntyy avoimesta vuorovaikutuksesta, luottamuksesta ja huolellisesta yksilöllisestä suunnittelusta. Kliinisessä työssä yhdistyvät uusin tieteellinen tutkimusnäyttö, manuaalinen terapia ja aktiivinen liikeharjoittelu.",
         "worksFor": {
           "@type": "Organization",
           "name": "Tiedottajanne Oy",
@@ -73,7 +73,7 @@ export default function AboutPage() {
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Tietoa minusta",
+          "name": "Tietoa minusta & Filosofia",
           "item": "https://www.ftsakkinen.com/tietoa-minusta"
         }
       ]
@@ -150,49 +150,72 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Work Philosophy & Leadership Section */}
-        <div className="space-y-8 p-8 sm:p-10 rounded-3xl bg-[#000d21] border border-[#0C66B4]/60 shadow-panel">
-          <div className="space-y-3">
+        {/* Section: Why I do this work & Work Philosophy */}
+        <div className="space-y-10 p-8 sm:p-10 rounded-3xl bg-[#000d21] border border-[#0C66B4]/60 shadow-panel">
+          
+          <div className="space-y-4">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#014489]/40 border border-[#00AEEF]/40 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
-              <HeartHandshake className="w-4 h-4" />
-              <span>Työskentelytapa &amp; Filosofia</span>
+              <Compass className="w-4 h-4" />
+              <span>Miksi teen tätä työtä</span>
             </div>
-            <h2 className="text-2xl sm:text-3xl font-display text-white">
-              VALMENTAVA &amp; RATKAISUKESKEINEN <span className="text-[#00AEEF]">ASIAN TUNTIJAOTE</span>
+            
+            <h2 className="text-2xl sm:text-4xl font-display text-white">
+              INTOHIMO FYSISEEN SUORITUSKYKYYN &amp; <span className="text-[#00AEEF]">KLIINISEEN KUNTOUTUKSEEN</span>
             </h2>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 rounded-2xl bg-[#000a18] border border-[#0C66B4]/40 space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center">
-                <HeartHandshake className="w-5 h-5" />
-              </div>
-              <h3 className="text-lg font-bold text-white">Avoin Vuorovaikutus &amp; Luottamus</h3>
-              <p className="text-xs text-gray-300 leading-relaxed">
-                Uskon, että paras asiakaskokemus ja hoitotulos syntyvät avoimesta kuuntelemisesta, molemminpuolisesta luottamuksesta ja huolellisesta yksilöllisestä suunnittelusta.
+            <div className="space-y-4 text-gray-300 text-sm sm:text-base leading-relaxed max-w-4xl">
+              <p>
+                Minua ajaa eteenpäin vahva intohimo ihmisen fyysisen toimintakyvyn ja toiminnallisen hyvinvoinnin edistämiseen — erityisesti työympäristöissä. Vuodesta 2010 alkaen olen työskennellyt laajasti työfysioterapian ja tuki- ja liikuntaelimistön kuntoutuksen parissa, ja toimin nykyään ammatinharjoittajana Terveystalon perinteisessä ja digitaalisessa työterveydessä.
               </p>
-            </div>
-
-            <div className="p-6 rounded-2xl bg-[#000a18] border border-[#0C66B4]/40 space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center">
-                <Target className="w-5 h-5" />
-              </div>
-              <h3 className="text-lg font-bold text-white">Valmentava Lähestymistapa</h3>
-              <p className="text-xs text-gray-300 leading-relaxed">
-                Perehdyn jokaiseen asiakastapaukseen kokonaisvaltaisesti. Olen saanut kiitosta innostavasta ja valmentavasta otteestani, joka saavuttaa tuloksia niin asiakkaiden kuin tiimin parissa.
+              <p>
+                Ydinosaamiseni pohjautuu ortopediseen manuaaliseen terapiaan (OMT), ergonomiaan ja tutkittuun fysioterapiaan. Vuosien varrella olen erikoistunut monimutkaisten tuki- ja liikuntaelinoireiden hoitoon ja ihmisten ohjaamiseen kohti kestävää fyysistä suorituskykyä arjessa ja työssä. Olipa kyseessä niskakivuista kärsivä hammaslääkäri tai selkäjäykkyyden kanssa kamppaileva tietotyöläinen, sytytän käytännönläheisten ja yksilöllisten ratkaisujen löytämisestä.
               </p>
-            </div>
-
-            <div className="p-6 rounded-2xl bg-[#000a18] border border-[#0C66B4]/40 space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center">
-                <Users className="w-5 h-5" />
-              </div>
-              <h3 className="text-lg font-bold text-white">Vahva Organisointi &amp; Tiimityö</h3>
-              <p className="text-xs text-gray-300 leading-relaxed">
-                Opiskelijajärjestöjen puheenjohtajuudet ja tuutorvastaavan luottamustehtävät ovat kehittäneet vahvat johtamis-, organisointi- ja tiimityötaidot eri sidosryhmien kanssa toimimiseen.
+              <p>
+                Kliinisen työn lisäksi olen toiminut yli seitsemän vuotta vierailevana luennoitsijana Oulun yliopiston hammaslääketieteen yksikössä opettamassa työergonomian strategioita tuleville ammattilaisille. Luennoin myös valtakunnallisesti leukanivelen (TMD) toimintahäiriöistä ja niiden terapiasta — aihealueesta, johon olen kehittänyt syvän erikoisosaamisen. Tavoitteeni on aina sama: yhdistää korkeatasoinen tutkittu tieto konkreettisiin työkaluihin, jotka auttavat sekä ammattilaisia että potilaita.
               </p>
             </div>
           </div>
+
+          {/* Cards: Trust & Collaboration */}
+          <div className="pt-6 border-t border-[#0C66B4]/30 space-y-6">
+            <h3 className="text-xl font-display text-white flex items-center gap-2">
+              <HeartHandshake className="w-5 h-5 text-[#00AEEF]" />
+              <span>Luottamus &amp; Yhteistyö</span>
+            </h3>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="p-6 rounded-2xl bg-[#000a18] border border-[#0C66B4]/40 space-y-3">
+                <div className="w-10 h-10 rounded-xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center">
+                  <HeartHandshake className="w-5 h-5" />
+                </div>
+                <h4 className="text-base font-bold text-white">Ratkaisukeskeinen Ote</h4>
+                <p className="text-xs text-gray-300 leading-relaxed">
+                  Olen saanut kollegoilta ja asiakkailta runsaasti palautetta positiivisesta asenteestani ja ratkaisukeskeisyydestäni. Paras asiakaskokemus syntyy avoimesta vuorovaikutuksesta, luottamuksesta ja huolellisesta suunnittelusta.
+                </p>
+              </div>
+
+              <div className="p-6 rounded-2xl bg-[#000a18] border border-[#0C66B4]/40 space-y-3">
+                <div className="w-10 h-10 rounded-xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center">
+                  <Users className="w-5 h-5" />
+                </div>
+                <h4 className="text-base font-bold text-white">Johtaminen &amp; Organisointi</h4>
+                <p className="text-xs text-gray-300 leading-relaxed">
+                  Opiskeluaikojen vastuulliset luottamustehtäväni — kuten opiskelijajärjestöjen puheenjohtajuudet ja tuutorvastaavan rooli — ovat vahvistaneet organisointikykyäni ja kykyäni toimia erilaisten ihmisten kanssa.
+                </p>
+              </div>
+
+              <div className="p-6 rounded-2xl bg-[#000a18] border border-[#0C66B4]/40 space-y-3">
+                <div className="w-10 h-10 rounded-xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center">
+                  <Target className="w-5 h-5" />
+                </div>
+                <h4 className="text-base font-bold text-white">Ammattilaisten &amp; Potilaiden Voimauttaminen</h4>
+                <p className="text-xs text-gray-300 leading-relaxed">
+                  Nämä kokemukset palvelevat minua edelleen kliinisessä työssäni ja opetustehtävissäni yhdistämällä akateemisen asiantuntemuksen selkeisiin arjen työkaluun.
+                </p>
+              </div>
+            </div>
+          </div>
+
         </div>
 
         {/* Detailed CV Sections */}
