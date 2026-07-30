@@ -12,7 +12,7 @@ import { fetchYouTubeVideos } from "@/lib/youtube";
 import Script from "next/script";
 import type { Metadata } from "next";
 
-export const revalidate = 0;
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "OMT-Fysioterapeutti Janne Säkkinen | Oulu | Purentaelimistö & TMD",
@@ -151,7 +151,7 @@ export default async function HomePage() {
       {/* 3. Ajanvarausohjeet (Terveystalo, Norre, Hammasvahti) */}
       <AppointmentBookingSection />
 
-      {/* 4. Potilaskokemukset & Palautteet (Hidden) */}
+      {/* 4. Potilaskokemukset & Aitojen Hoitopotilaiden Palautteet */}
       <PatientTestimonialsSection />
 
       {/* 5. Koulutukset & Työhistoria (Tiivistetty) */}
