@@ -189,28 +189,8 @@ export default async function SingleVideoPage(props: { params: Promise<{ id: str
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         
-        {/* Visible Breadcrumb Navigation (Murupolku) */}
-        <nav aria-label="Murupolku" className="flex flex-wrap items-center gap-2 text-xs text-gray-400 font-medium">
-          <Link href="/" className="hover:text-[#00AEEF] flex items-center gap-1 transition-colors">
-            <Home className="w-3.5 h-3.5" />
-            <span>Etusivu</span>
-          </Link>
-          <ChevronRight className="w-3.5 h-3.5 text-gray-600 shrink-0" />
-          <Link href="/videot" className="hover:text-[#00AEEF] transition-colors">
-            Videot
-          </Link>
-          <ChevronRight className="w-3.5 h-3.5 text-gray-600 shrink-0" />
-          <span className="text-[#00AEEF] font-semibold truncate max-w-[150px] sm:max-w-none">
-            {category?.name || "Fysioterapia"}
-          </span>
-          <ChevronRight className="w-3.5 h-3.5 text-gray-600 shrink-0" />
-          <span className="text-gray-300 truncate max-w-[200px] sm:max-w-xs font-normal">
-            {video.title}
-          </span>
-        </nav>
-
         {/* Top Navigation & Language Switcher */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <Link
             href="/videot"
             className="inline-flex items-center gap-2 text-sm text-[#00AEEF] hover:underline font-medium"
@@ -233,8 +213,28 @@ export default async function SingleVideoPage(props: { params: Promise<{ id: str
           )}
         </div>
 
-        {/* Article Header */}
+        {/* Article Header & Visible Breadcrumb Directly Above Title */}
         <div className="space-y-4">
+          {/* Visible Breadcrumb Navigation (Murupolku) - Directly Above Title */}
+          <nav aria-label="Murupolku" className="flex flex-wrap items-center gap-2 text-xs text-gray-400 font-medium pb-1">
+            <Link href="/" className="hover:text-[#00AEEF] flex items-center gap-1 transition-colors">
+              <Home className="w-3.5 h-3.5" />
+              <span>Etusivu</span>
+            </Link>
+            <ChevronRight className="w-3.5 h-3.5 text-gray-600 shrink-0" />
+            <Link href="/videot" className="hover:text-[#00AEEF] transition-colors">
+              Videot
+            </Link>
+            <ChevronRight className="w-3.5 h-3.5 text-gray-600 shrink-0" />
+            <span className="text-[#00AEEF] font-semibold truncate max-w-[150px] sm:max-w-none">
+              {category?.name || "Fysioterapia"}
+            </span>
+            <ChevronRight className="w-3.5 h-3.5 text-gray-600 shrink-0" />
+            <span className="text-gray-300 truncate max-w-[200px] sm:max-w-xs font-normal">
+              {video.title}
+            </span>
+          </nav>
+
           <div className="inline-block px-3 py-1 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-semibold uppercase tracking-wider">
             {category?.name || "Fysioterapia"}
           </div>
