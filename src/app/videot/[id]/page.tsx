@@ -83,20 +83,25 @@ export default async function SingleVideoPage(props: { params: Promise<{ id: str
     (v) => v.categoryId === video.categoryId && v.id !== video.id
   ).slice(0, 3);
 
-  // FAQ items
+  // Dynamic video-specific FAQ items
+  const cleanTitle = video.title.trim();
+  const categoryName = category?.name || "fysioterapia";
+
   const faqItems = [
     {
-      question: `Mistä ${video.title.toLowerCase()} johtuu ja miten sitä tutkitaan?`,
+      question: `Mitä teemaa videossa "${cleanTitle}" käsitellään?`,
       answer: video.promiseDescription,
     },
     {
-      question: "Milloin kannattaa hakeutua OMT-fysioterapeutin vastaanotolle?",
-      answer: "Jos oireet haittaavat jokapäiväistä elämää, aiheuttavat kipua purennassa, nielussa tai niska-hartiaseudulla, eikä vaiva parane itsehoidolla 1-2 viikon kuluessa.",
+      question: `Miten videon "${cleanTitle}" ohjeita sovelletaan ${categoryName.toLowerCase()}n kuntoutuksessa?`,
+      answer: video.transcript
+        ? `Videolla käydään läpi täsmälliset liikeradat, palpaatio-ohjeet ja itsehoitomenetelmät: ${video.transcript.slice(0, 220).trim()}...`
+        : `Videolla OMT-fysioterapeutti Janne Säkkinen näyttää vaihe vaiheelta sopivat harjoitteet ja asennonhallintavinkit teeman hoitoon.`,
     },
     {
-      question: "Miten näitä harjoitteita suoritetaan turvallisesti kotona?",
-      answer: "Tee liikkeet aina rauhallisesti ilman terävää kipua. Seuraa videon täsmällisiä liikesuuntia ja toistomääriä.",
-    }
+      question: `Milloin videon aihealueen oireissa kannattaa hakeutua OMT-fysioterapeutin vastaanotolle?`,
+      answer: `Jos oireet liittyvät teemaan "${cleanTitle}" ja ne haittaavat päivittäistä toimintakykyä, heikentävät unta tai aiheuttavat kovaa kipua, asiantuntijan tekemä kliininen OMT-tutkimus auttaa varmistamaan tarkan diagnoosin ja oikean hoitosuunnitelman.`,
+    },
   ];
 
   // 2. STRUCTURED DATA (JSON-LD) SCHEMAS: Article, VideoObject, FAQPage, BreadcrumbList
