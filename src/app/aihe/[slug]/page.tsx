@@ -9,6 +9,7 @@ import type { Metadata } from "next";
 interface TopicData {
   slug: string;
   title: string;
+  seoTitle: string;
   enSlug: string;
   categoryId: string;
   introSummary: string;
@@ -19,6 +20,7 @@ const TOPICS_FI: Record<string, TopicData> = {
   "leukakipu-ja-tmd": {
     slug: "leukakipu-ja-tmd",
     title: "Leukakipu, Leukanivelen Naksahdus & Bruksismi (TMD)",
+    seoTitle: "Leukakipu, Leukanivelen Naksahdus & TMD | FT Säkkinen",
     enSlug: "tmj-and-jaw-pain",
     categoryId: "purenta-tmd",
     introSummary: "Täydellinen kliininen opas purentaelimistön toimintahäiriöiden (TMD), leukanivelten jännitystilojen, naksumisen ja hammassäryn hoitoon OMT-fysioterapian keinoin.",
@@ -31,6 +33,7 @@ const TOPICS_FI: Record<string, TopicData> = {
   "niskakipu-ja-paansarky": {
     slug: "niskakipu-ja-paansarky",
     title: "Niskakipu, Niska-Hartiaseudun Kireys & Cervikogeeninen Päänsärky",
+    seoTitle: "Niskakipu & Cervikogeeninen Päänsärky | FT Säkkinen",
     enSlug: "neck-pain-and-headaches",
     categoryId: "tule-vaivat",
     introSummary: "Kliininen tietopankki niska-hartiaseudun jännitystilojen, cervikogeenisen päänsäryn ja ylärangan liikerajoitusten fysioterapeuttiseen hoitoon.",
@@ -43,6 +46,7 @@ const TOPICS_FI: Record<string, TopicData> = {
   "selkakipu-ja-iskias": {
     slug: "selkakipu-ja-iskias",
     title: "Selkäkipu, Fasettilukot, Välilevyvaivat & Iskias",
+    seoTitle: "Alaselkäkipu, Fasettilukot & Iskias | FT Säkkinen",
     enSlug: "back-pain-and-sciatica",
     categoryId: "tule-vaivat",
     introSummary: "Asiantuntijaopas alaselän kiputilojen, fasettilukkojen, välilevyn pullistumien ja pakaraan/jalkaan säteilevän iskiaskivun hoitoon.",
@@ -55,6 +59,7 @@ const TOPICS_FI: Record<string, TopicData> = {
   "ergonomia-ja-tyohyvinvointi": {
     slug: "ergonomia-ja-tyohyvinvointi",
     title: "Ergonomia, Suun Terveydenhuollon Työasennot & Taukojumppa",
+    seoTitle: "Suun Terveydenhuollon Ergonomia & Taukojumppa | FT Säkkinen",
     enSlug: "ergonomics-and-wellness",
     categoryId: "ergonomia",
     introSummary: "Ergonomiaopas hammaslääkäreille, suuhygienisteille ja etätyöntekijöille: kehon kuormituksen minimointi ja taukojumpparutiinit.",
@@ -67,6 +72,7 @@ const TOPICS_FI: Record<string, TopicData> = {
   "tenniskyynarpaa-ja-golfkyynarpaa": {
     slug: "tenniskyynarpaa-ja-golfkyynarpaa",
     title: "Tenniskyynärpää (Epikondyliitti) & Golfkyynärpää",
+    seoTitle: "Tenniskyynärpää & Golfkyynärpää | FT Säkkinen",
     enSlug: "tennis-and-golfers-elbow",
     categoryId: "tule-vaivat",
     introSummary: "Kliininen opas kyynärvarren lihas-jänneliitoksen kuormituskipujen, tenniskyynärpään (sivuepikondyliitti) ja golfkyynärpään kuntoutukseen sekä apuvälinehoitoon.",
@@ -78,7 +84,6 @@ const TOPICS_FI: Record<string, TopicData> = {
   },
 };
 
-// Aliases for scandi character fallback
 const SLUG_ALIASES: Record<string, string> = {
   "niskakipu-ja-päänsärky": "niskakipu-ja-paansarky",
   "selkäkipu-ja-iskias": "selkakipu-ja-iskias",
@@ -136,7 +141,7 @@ const TOPIC_FAQS: Record<string, Array<{ question: string; answer: string }>> = 
   "ergonomia-ja-tyohyvinvointi": [
     {
       question: "Miksi suun terveydenhuollon ammattilaiset altistuvat niska- ja selkävaivoille?",
-      answer: "Suun terveydenhuollon ammattilaiset – hammaslääkärit ja suuhygienistit – työskentelevät päivittäin haastavissa, etukumarissa ja staattisissa työasennoissa. Tämä aiheuttaa toistuvaa ja pitkäkestoista kuormitusta niska-hartiaseutuun, yläselkään ja ranteisiin."
+      answer: "Suun terveydenhuollon ammattilaiset – hammaslääkärit ja suuhygienisti – työskentelevät päivittäin haastavissa, etukumarissa ja staattisissa työasennoissa. Tämä aiheuttaa toistuvaa ja pitkäkestoista kuormitusta niska-hartiaseutuun, yläselkään ja ranteisiin."
     },
     {
       question: "Mitkä ovat tehokkaimmat keinot estää kroonisia tuki- ja liikuntaelimistön vaivoja työssä?",
@@ -161,8 +166,14 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
   const resolvedSlug = SLUG_ALIASES[decodedSlug] || decodedSlug;
   const topic = TOPICS_FI[resolvedSlug] || TOPICS_FI["leukakipu-ja-tmd"];
 
-  const metaTitle = `${topic.title.slice(0, 50)} | FT Säkkinen`;
-  const metaDescription = topic.introSummary.slice(0, 155);
+  const safeTruncate = (str: string, len: number) => {
+    if (str.length <= len) return str;
+    const sub = str.slice(0, len);
+    return sub.slice(0, sub.lastIndexOf(" "));
+  };
+
+  const metaTitle = topic.seoTitle;
+  const metaDescription = safeTruncate(topic.introSummary, 155);
   const canonicalUrl = `https://www.ftsakkinen.com/aihe/${topic.slug}`;
   const pairedEnUrl = `https://www.ptsakkinen.com/topic/${topic.enSlug}`;
 
@@ -208,7 +219,8 @@ export default async function TopicHubPage(props: { params: Promise<{ slug: stri
       return text.includes("niska") || text.includes("päänsärky") || text.includes("paansarky") || text.includes("kaula") || text.includes("huimaus") || text.includes("cervik");
     }
     if (resolvedSlug === "selkakipu-ja-iskias") {
-      return text.includes("selkä") || text.includes("selka") || text.includes("iskias") || text.includes("lanneranka") || text.includes("fasetti");
+      if (v.categoryId === "purenta-tmd") return false;
+      return text.includes("selkä") || text.includes("selka") || text.includes("iskias") || text.includes("lanneranka") || text.includes("fasetti") || text.includes("lumba");
     }
     if (resolvedSlug === "ergonomia-ja-tyohyvinvointi") {
       return v.categoryId === "ergonomia" || text.includes("ergonomia") || text.includes("työ") || text.includes("istum") || text.includes("näppäil");
