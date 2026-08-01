@@ -11,6 +11,21 @@ export interface Program {
 
 export const PROGRAMS: Program[] = [
   {
+    id: "leukanivel-purenta-tmd",
+    name: "Purentaelimistö & TMD-verkkovalmennus",
+    promiseDescription: "Täydellinen leukanivelen, purentalihasten ja kasvojen kiputilojen strukturoitu kotikuntoutusohjelma.",
+    details: [
+      "Täsmälliset itsetestaus- ja hierontaliikkeet purentalihaksille",
+      "Leukanivelen liikeratoja ja naksumista korjaavat harjoitteet",
+      "Päivä- ja yöpurentajännityksen purkumenetelmät",
+      "Oulun yliopistolla opetetut kliiniset protokollat",
+    ],
+    pricePlaceholder: "Tulossa",
+    checkoutUrl: "#",
+    badge: "Valmisteilla",
+    isPlaceholder: true,
+  },
+  {
     id: "huimaus-niskasta",
     name: "Huimaus niskasta -ohjelma",
     promiseDescription: "Selvitä cervikogeenisen huimauksen syy ja korjaa niskaperäinen tasapainohäiriö ammattilaisen selkeällä itsetestaus- ja kuntoutusohjelmalla.",
@@ -20,9 +35,10 @@ export const PROGRAMS: Program[] = [
       "Videomuotoiset tekniikkaohjeet ja liikesuoritukset",
       "Eroon epävarmasta olosta liikkumisessa",
     ],
-    pricePlaceholder: "[PLACEHOLDER: Hinta 79 €]",
-    checkoutUrl: "[PLACEHOLDER: PAYTRAIL_CHECKOUT_URL]",
-    badge: "Suosittu verkkovalmennus",
+    pricePlaceholder: "Tulossa",
+    checkoutUrl: "#",
+    badge: "Valmisteilla",
+    isPlaceholder: true,
   },
   {
     id: "polvi-lonkka-nivelrikko",
@@ -34,21 +50,9 @@ export const PROGRAMS: Program[] = [
       "Soveltuu eri tasoisille nivelrikko-oireille",
       "Selkeät viikko-ohjelmat kotikuntoutukseen",
     ],
-    pricePlaceholder: "[PLACEHOLDER: Hinta 89 €]",
-    checkoutUrl: "[PLACEHOLDER: PAYTRAIL_CHECKOUT_URL]",
-    badge: "Kliinisesti testattu",
-  },
-  {
-    id: "tuleva-ohjelma",
-    name: "Tuleva valmennusohjelma",
-    promiseDescription: "Valmisteilla oleva uusi täsmäohjelma tuki- ja liikuntaelimistön suorituskyvyn palauttamiseen.",
-    details: [
-      "Syventävä uusi aihepiiri tuki- ja liikuntaelinvaivoihin",
-      "Liity sähköpostilistalle kuullaksesi julkaisusta ensimmäisenä",
-    ],
-    pricePlaceholder: "[PLACEHOLDER: Tulossa pian]",
+    pricePlaceholder: "Tulossa",
     checkoutUrl: "#",
-    badge: "Tulossa",
+    badge: "Valmisteilla",
     isPlaceholder: true,
   },
 ];

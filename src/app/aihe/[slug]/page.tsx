@@ -64,6 +64,18 @@ const TOPICS_FI: Record<string, TopicData> = {
       "Janne Säkkinen kouluttaa Oulun yliopiston hammaslääketieteen opiskelijoita työergonomiasta ja vetää täydennyskoulutuksia terveydenhuollon ammattilaisille valtakunnallisesti."
     ],
   },
+  "tenniskyynarpaa-ja-golfkyynarpaa": {
+    slug: "tenniskyynarpaa-ja-golfkyynarpaa",
+    title: "Tenniskyynärpää (Epikondyliitti) & Golfkyynärpää",
+    enSlug: "tennis-and-golfers-elbow",
+    categoryId: "tule-vaivat",
+    introSummary: "Kliininen opas kyynärvarren lihas-jänneliitoksen kuormituskipujen, tenniskyynärpään (sivuepikondyliitti) ja golfkyynärpään kuntoutukseen sekä apuvälinehoitoon.",
+    synthesisHtml: [
+      "Tenniskyynärpää (sivuepikondyliitti) ja golfkyynärpää (sisäepikondyliitti) ovat kyynärvarren lihasten jännekiinnityskohtien rasitustiloja. Tenniskyynärpäässä kipu tuntuu kyynärpään ulkosivulla ranne- ja sormiojentajalihasten kiinnityskohdassa, kun taas golfkyynärpäässä särky paikantuu sisäsivulle koukistajalihasten alueelle.",
+      "Oireet pahenevat tyypillisesti puristusotteessa, kättä kiertäessä tai painavia taakkoja nostettaessa. Pitkittynyt kipu johtuu usein jännekudoksen hitaasta uusiutumisesta ja vääränlaisesta rasituskuormituksesta arjessa tai työssä.",
+      "Tehokkaaseen OMT-fysioterapiaan kuuluu täsmällinen manuaalinen käsittely, ranteen ja kyynärvarren eksentrinen lihasharjoittelu sekä kuormitusta tasaavien täsmäapuvälineiden käyttö. Opetusvideoillamme ja kuntoutusohjeissamme esitellään apuvälineet ja liikehoidot jännealueen toipumisen nopeuttamiseksi."
+    ],
+  },
 };
 
 // Aliases for scandi character fallback
@@ -71,6 +83,11 @@ const SLUG_ALIASES: Record<string, string> = {
   "niskakipu-ja-päänsärky": "niskakipu-ja-paansarky",
   "selkäkipu-ja-iskias": "selkakipu-ja-iskias",
   "ergonomia-ja-työhyvinvointi": "ergonomia-ja-tyohyvinvointi",
+  "tenniskyynärpää-ja-golfkyynärpää": "tenniskyynarpaa-ja-golfkyynarpaa",
+  "tenniskyynarpaa": "tenniskyynarpaa-ja-golfkyynarpaa",
+  "tenniskyynärpää": "tenniskyynarpaa-ja-golfkyynarpaa",
+  "golfkyynarpaa": "tenniskyynarpaa-ja-golfkyynarpaa",
+  "golfkyynärpää": "tenniskyynarpaa-ja-golfkyynarpaa",
 };
 
 const TOPIC_FAQS: Record<string, Array<{ question: string; answer: string }>> = {
@@ -321,12 +338,51 @@ export default async function TopicHubPage(props: { params: Promise<{ slug: stri
             <h2>OMT-Fysioterapeutin Kliininen Synteesi</h2>
           </div>
 
+          {resolvedSlug === "leukakipu-ja-tmd" && (
+            <div className="relative aspect-[16/9] rounded-2xl overflow-hidden border border-[#0C66B4]/60 my-4 shadow-panel">
+              <img src="/janne-tmd-intraoral.jpg" alt="Purentaelimistön OMT-fysioterapia" className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#000d21] via-transparent to-transparent opacity-80" />
+              <span className="absolute bottom-3 left-4 text-xs font-bold text-white">Kuva: Purentaelimistön (TMD) manuaalinen käsittely vastaanotolla</span>
+            </div>
+          )}
+
+          {resolvedSlug === "niskakipu-ja-paansarky" && (
+            <div className="relative aspect-[16/9] rounded-2xl overflow-hidden border border-[#0C66B4]/60 my-4 shadow-panel">
+              <img src="/janne-cervical-treatment.jpg" alt="Yläniskarangan OMT-käsittely" className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#000d21] via-transparent to-transparent opacity-80" />
+              <span className="absolute bottom-3 left-4 text-xs font-bold text-white">Kuva: Yläniskarangan OMT-mobilisaatio ja cervikogeenisen päänsäryn hoito</span>
+            </div>
+          )}
+
+          {resolvedSlug === "ergonomia-ja-tyohyvinvointi" && (
+            <div className="relative aspect-[16/9] rounded-2xl overflow-hidden border border-[#0C66B4]/60 my-4 shadow-panel">
+              <img src="/janne-workstation.jpg" alt="Ergonomia ja etätyö" className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#000d21] via-transparent to-transparent opacity-80" />
+              <span className="absolute bottom-3 left-4 text-xs font-bold text-white">Kuva: Kliininen ergonomia ja digityöterveysvastaanotto</span>
+            </div>
+          )}
+
           {topic.synthesisHtml.map((paragraph, idx) => (
             <p key={idx} className="leading-relaxed">
               {paragraph}
             </p>
           ))}
         </article>
+
+        {resolvedSlug === "tenniskyynarpaa-ja-golfkyynarpaa" && (
+          <div className="p-6 rounded-3xl bg-[#000d21] border border-[#00AEEF] flex flex-col sm:flex-row items-center justify-between gap-4 shadow-glow">
+            <div>
+              <h3 className="text-xl font-bold text-white">Kiinnostunut opetusvideoiden kuntoutusapuvälineestä?</h3>
+              <p className="text-xs text-gray-300">Tennis- ja golfkyynärpään täsmäapuvälineen hankintakyselyt ja ennakkotiedustelut.</p>
+            </div>
+            <Link
+              href="/kyynarpaa-apuvaline"
+              className="px-6 py-3 rounded-xl bg-[#00AEEF] text-black font-bold text-sm hover:bg-white transition-all shadow-glow shrink-0"
+            >
+              Täytä hankintakysely →
+            </Link>
+          </div>
+        )}
 
         {/* Video Grid Section */}
         <div className="space-y-6 pt-6 border-t border-[#0C66B4]/30">

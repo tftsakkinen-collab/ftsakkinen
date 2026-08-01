@@ -15,6 +15,7 @@ export default function Navbar() {
     { name: "Videokirjasto", href: "/videot" },
     { name: "Ilmaisopas", href: "/ilmaisopas" },
     { name: "Koulutukset & Tausta", href: "/koulutukset" },
+    { name: "Kyynärpää-apuväline", href: "/kyynarpaa-apuvaline" },
     { name: "Yhteystiedot", href: "/yhteystiedot" },
   ];
 

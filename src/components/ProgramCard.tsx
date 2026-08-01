@@ -43,22 +43,23 @@ export default function ProgramCard({ program }: ProgramCardProps) {
         </ul>
       </div>
 
-      {/* Pricing & Checkout Action */}
+      {/* Pricing & Action */}
       <div className="pt-6 border-t border-[#0C66B4]/30 space-y-4">
         <div className="flex items-baseline justify-between">
-          <span className="text-xs text-gray-400 uppercase tracking-wider font-mono">Hinta</span>
-          <span className="text-xl font-bold text-[#00AEEF] font-mono">
+          <span className="text-xs text-gray-400 uppercase tracking-wider font-mono">Tila</span>
+          <span className="text-sm font-bold text-[#00AEEF] font-mono">
             {program.pricePlaceholder}
           </span>
         </div>
 
         {program.isPlaceholder ? (
-          <button
-            disabled
-            className="w-full py-3.5 rounded-xl bg-gray-800 text-gray-400 font-bold text-sm cursor-not-allowed text-center"
+          <a
+            href="mailto:tiedottajanne@gmail.com?subject=Verkkovalmennus%20tiedustelu"
+            className="w-full py-3.5 rounded-xl bg-[#0C66B4]/20 border border-[#00AEEF]/50 text-[#00AEEF] font-bold text-sm hover:bg-[#00AEEF]/10 transition-all text-center flex items-center justify-center gap-2"
           >
-            Julkaistaan piakkoin
-          </button>
+            <span>Kysy lisätietoja sähköpostitse</span>
+            <ExternalLink className="w-4 h-4" />
+          </a>
         ) : (
           <a
             href={program.checkoutUrl}

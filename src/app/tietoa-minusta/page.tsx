@@ -208,6 +208,68 @@ export default function AboutPage() {
 
         </div>
 
+        {/* Clinical Practice Gallery */}
+        <div className="space-y-6 pt-4">
+          <div className="text-center max-w-2xl mx-auto space-y-2">
+            <h2 className="text-2xl sm:text-3xl font-display text-white">
+              KLIININEN VASTAANOTTOTYÖ &amp; <span className="text-[#00AEEF]">HOITOTEKNIIKAT</span>
+            </h2>
+            <p className="text-xs sm:text-sm text-gray-400">
+              Aitoja kuvia OMT-fysioterapian tutkimuksesta, purentaelimistön manuaalisesta terapiasta ja etätyöergonomiasta.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-[#0C66B4]/60 group shadow-panel">
+              <img
+                src="/janne-tmd-intraoral.jpg"
+                alt="Purentaelimistön manuaalinen fysioterapia"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#000d21] via-transparent to-transparent opacity-85" />
+              <span className="absolute bottom-3 left-3 right-3 text-xs font-bold text-white leading-tight">
+                Purentaelimistön (TMD) suunsisäinen hoito
+              </span>
+            </div>
+
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-[#0C66B4]/60 group shadow-panel">
+              <img
+                src="/janne-cervical-treatment.jpg"
+                alt="Niskarangan OMT-mobilisaatio"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#000d21] via-transparent to-transparent opacity-85" />
+              <span className="absolute bottom-3 left-3 right-3 text-xs font-bold text-white leading-tight">
+                Yläniskarangan OMT-käsittely
+              </span>
+            </div>
+
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-[#0C66B4]/60 group shadow-panel">
+              <img
+                src="/janne-tmd-examination.jpg"
+                alt="Leukanivelen ja purentalihasten tutkiminen"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#000d21] via-transparent to-transparent opacity-85" />
+              <span className="absolute bottom-3 left-3 right-3 text-xs font-bold text-white leading-tight">
+                Masseter-lihasten &amp; leukanivelen palpaatio
+              </span>
+            </div>
+
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-[#0C66B4]/60 group shadow-panel">
+              <img
+                src="/janne-workstation.jpg"
+                alt="Ergonomia ja digityöterveys"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#000d21] via-transparent to-transparent opacity-85" />
+              <span className="absolute bottom-3 left-3 right-3 text-xs font-bold text-white leading-tight">
+                Digityöterveys &amp; Työergonomia
+              </span>
+            </div>
+          </div>
+        </div>
+
         {/* Detailed CV Sections */}
         <div className="space-y-12 pt-8 border-t border-[#0C66B4]/30">
           

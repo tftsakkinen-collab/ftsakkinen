@@ -4,36 +4,41 @@ import { SITE_CONFIG } from "@/data/config";
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, email, guide, locale = "fi" } = body;
+    const { name, email, phone, condition, message, type = "lead", guide, locale = "fi" } = body;
 
     if (!email) {
       return NextResponse.json({ error: "Sähköposti vaaditaan" }, { status: 400 });
     }
 
     const leadData = {
+      type,
       name,
       email,
+      phone,
+      condition,
+      message,
       guide,
       locale,
-      list: "FT_Sakkinen_FI",
+      list: type === "deviceInquiry" ? "FT_Sakkinen_Elbow_Device_Inquiries" : "FT_Sakkinen_FI",
       recipient: SITE_CONFIG.contactEmail, // tiedottajanne@gmail.com
       timestamp: new Date().toISOString(),
     };
 
-    console.log("=== UUSI SUOMENKIELINEN TILAUS ===");
+    console.log(`=== UUSI SUOMENKIELINEN YHTEYDENOTTO (${type.toUpperCase()}) ===`);
     console.log(`Lähetetään ilmoitus osoitteeseen: ${leadData.recipient}`);
-    console.log(`Tilaaja: ${name} (${email}), Opas: ${guide}`);
-
-    // Here we integrate with Formspree / Resend / Webhook if API Key is configured
-    // E.g., await fetch('https://formspree.io/f/YOUR_FORM_ID', { method: 'POST', body: JSON.stringify(leadData) })
+    console.log(`Lähettäjä: ${name} (${email}, puh: ${phone || "ei ilmoitettu"})`);
+    if (type === "deviceInquiry") {
+      console.log(`Aihe: ${condition}, Viesti: ${message}`);
+    } else {
+      console.log(`Opas: ${guide}`);
+    }
 
     return NextResponse.json({
       success: true,
-      message: "Tilaus vastaanotettu ja ilmoitus lähetetty sähköpostiin.",
-      driveUrl: "https://drive.google.com/drive/folders/[PLACEHOLDER_SUOMI_DRIVE_KANSIO]",
+      message: "Viesti vastaanotettu onnistuneesti.",
     });
   } catch (error) {
-    console.error("Virhe tilauksen käsittelyssä:", error);
-    return NextResponse.json({ error: "Palvelinvirhe tilauksen käsittelyssä" }, { status: 500 });
+      console.error("Virhe tilauksen käsittelyssä:", error);
+      return NextResponse.json({ error: "Palvelinvirhe tilauksen käsittelyssä" }, { status: 500 });
   }
 }

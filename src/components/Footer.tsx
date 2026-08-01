@@ -69,6 +69,9 @@ export default function Footer() {
                 <Link href="/yhteystiedot" className="hover:text-white transition-colors">Yhteystiedot</Link>
               </li>
               <li>
+                <Link href="/kyynarpaa-apuvaline" className="hover:text-[#00AEEF] transition-colors text-[#00AEEF]">Kyynärpää-apuvälinekysely</Link>
+              </li>
+              <li>
                 <Link href="/tietosuoja" className="hover:text-white transition-colors">Tietosuoja &amp; Vastuuvapaus</Link>
               </li>
             </ul>

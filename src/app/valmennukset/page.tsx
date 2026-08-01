@@ -20,7 +20,7 @@ export default function ProgramsPage() {
           </h1>
 
           <p className="text-gray-300 text-base sm:text-lg">
-            Ammattilaisen suunnittelemat täsmäohjelmat vaivojen hoitoon. Saat vaiheittain etenevät liikevideot, itsetestausohjeet ja turvallisen kuntoutuspolun.
+            Kliiniseen kokemukseen ja tutkittuun tietoon pohjautuvat täsmäohjelmat vaivojen kotikuntoutukseen ovat parhaillaan valmisteilla. Tutustu tuleviin aiheisiin ja ota yhteyttä lisätietoja varten.
           </p>
         </div>
 

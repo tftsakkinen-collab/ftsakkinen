@@ -102,7 +102,7 @@ export default function AppointmentBookingSection() {
 
         <div className="p-6 rounded-2xl bg-[#000d21] border border-[#0C66B4]/30 text-center space-y-2">
           <p className="text-xs text-gray-300">
-            Yritys- ja koulutuskyselyissä voit olla suoraan yhteydessä sähköpostitse: <a href="mailto:tiedottajanne@gmail.com" className="text-[#00AEEF] hover:underline font-bold">tiedottajanne@gmail.com</a> tai puhelimitse: <a href="tel:+358407675529" className="text-[#00AEEF] hover:underline font-bold">+358 40 767 5529</a>.
+            Yritys- ja koulutuskyselyissä voit olla suoraan yhteydessä sähköpostitse: <a href="mailto:tiedottajanne@gmail.com" className="text-[#00AEEF] hover:underline font-bold">tiedottajanne@gmail.com</a> tai puhelimitse: <a href="tel:+358413274967" className="text-[#00AEEF] hover:underline font-bold">041 327 4967</a>.
           </p>
         </div>
       </div>
