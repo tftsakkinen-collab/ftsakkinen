@@ -1,4 +1,5 @@
 import { FALLBACK_VIDEOS, Video } from "@/data/videos";
+import { FI_TOPIC_VIDEOS_MAP } from "@/data/topicVideosMap";
 import VideoCard from "@/components/VideoCard";
 import Link from "next/link";
 import { ArrowLeft, BookOpen, Sparkles, Home, ChevronRight, Download } from "lucide-react";
@@ -222,37 +223,10 @@ export default async function TopicHubPage(props: { params: Promise<{ slug: stri
     .replace("työhyvinvointi", "tyohyvinvointi")
     .replace("tenniskyynärpää-ja-golfkyynärpää", "tenniskyynarpaa-ja-golfkyynarpaa");
 
-  // Filter related videos by topic relevance (category + normalized slug matching)
+  // Filter related videos by exact content-based topic assignment
   const topicVideos = FALLBACK_VIDEOS.filter((v) => {
-    const text = (v.title + " " + v.promiseDescription + " " + (v.transcript || "")).toLowerCase();
-    
-    if (normSlug === "leukakipu-ja-tmd") {
-      return v.categoryId === "purenta-tmd" || text.includes("leuka") || text.includes("purenta") || text.includes("tmd") || text.includes("bruksismi");
-    }
-    
-    if (normSlug === "niskakipu-ja-paansarky") {
-      if (v.categoryId === "purenta-tmd") {
-        return v.title.toLowerCase().includes("niska") || v.title.toLowerCase().includes("päänsärky") || v.title.toLowerCase().includes("kaula");
-      }
-      return v.categoryId === "tule-vaivat" || v.categoryId === "ergonomia";
-    }
-    
-    if (normSlug === "selkakipu-ja-iskias") {
-      if (v.categoryId === "purenta-tmd") return false;
-      const titleLower = v.title.toLowerCase();
-      if (titleLower.includes("kyynär") || titleLower.includes("rannekanava") || titleLower.includes("vaivasenluu")) return false;
-      return true;
-    }
-    
-    if (normSlug === "ergonomia-ja-tyohyvinvointi") {
-      return v.categoryId === "ergonomia" || text.includes("ergonomia") || text.includes("työ") || text.includes("istum") || text.includes("näppäil");
-    }
-    
-    if (normSlug === "tenniskyynarpaa-ja-golfkyynarpaa") {
-      return text.includes("kyynär") || text.includes("kyynar") || text.includes("tennis") || text.includes("golf");
-    }
-    
-    return true;
+    const assignedTopics = FI_TOPIC_VIDEOS_MAP[v.id] || [];
+    return assignedTopics.includes(normSlug);
   });
   const faqs = TOPIC_FAQS[resolvedSlug] || [];
 
