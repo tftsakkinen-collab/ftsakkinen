@@ -26,7 +26,17 @@ export const metadata: Metadata = {
   openGraph: {
     title: "FT Säkkinen — OMT-fysioterapeutti Janne Säkkinen",
     description: "Vapauta kehosi kivusta ja liiku varmuudella.",
+    url: "https://www.ftsakkinen.com",
+    siteName: "FT Säkkinen - OMT-Fysioterapia",
+    locale: "fi_FI",
     type: "website",
+    images: [{ url: "https://www.ftsakkinen.com/janne-sakkinen.jpg" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FT Säkkinen — OMT-fysioterapeutti Janne Säkkinen",
+    description: "Vapauta kehosi kivusta ja liiku varmuudella.",
+    images: ["https://www.ftsakkinen.com/janne-sakkinen.jpg"],
   },
 };
 

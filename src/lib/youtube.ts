@@ -18,6 +18,16 @@ const CATEGORY_MAP: Record<string, string> = {
   lonkka: "tule-vaivat",
 };
 
+function decodeXmlEntities(str: string): string {
+  return str
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&apos;/g, "'");
+}
+
 export async function fetchYouTubeVideos(): Promise<Video[]> {
   const channelId = SITE_CONFIG.youtubeChannelId || "UCz0XuTDgzskIDlzSrZFxsBg";
 
@@ -51,8 +61,10 @@ export async function fetchYouTubeVideos(): Promise<Video[]> {
       const thumbnailMatch = entry.match(/<media:thumbnail url="(.*?)"/);
 
       const videoId = videoIdMatch ? videoIdMatch[1].trim() : "";
-      const title = titleMatch ? titleMatch[1].replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1').trim() : "";
-      const description = descriptionMatch ? descriptionMatch[1].replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1').trim() : "";
+      const rawTitle = titleMatch ? titleMatch[1].replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1').trim() : "";
+      const rawDescription = descriptionMatch ? descriptionMatch[1].replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1').trim() : "";
+      const title = decodeXmlEntities(rawTitle);
+      const description = decodeXmlEntities(rawDescription);
       const published = publishedMatch ? publishedMatch[1].split("T")[0] : "";
       const thumbnailUrl = thumbnailMatch ? thumbnailMatch[1] : `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
 

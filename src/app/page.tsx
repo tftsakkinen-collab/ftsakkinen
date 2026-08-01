@@ -25,6 +25,21 @@ export const metadata: Metadata = {
       "x-default": "https://www.ftsakkinen.com/",
     },
   },
+  openGraph: {
+    title: "OMT-Fysioterapeutti Janne Säkkinen | Oulu | Purentaelimistö & TMD",
+    description: "Purentaelimistön (TMD) ja tuki- ja liikuntaelimistön OMT-fysioterapeutti Janne Säkkinen. Kouluttaja Oulun yliopistolla vuodesta 2017.",
+    url: "https://www.ftsakkinen.com/",
+    siteName: "FT Säkkinen - OMT-Fysioterapia",
+    locale: "fi_FI",
+    type: "website",
+    images: [{ url: "https://www.ftsakkinen.com/janne-sakkinen.jpg" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "OMT-Fysioterapeutti Janne Säkkinen | Oulu | Purentaelimistö & TMD",
+    description: "Purentaelimistön (TMD) ja tuki- ja liikuntaelimistön OMT-fysioterapeutti Janne Säkkinen. Kouluttaja Oulun yliopistolla vuodesta 2017.",
+    images: ["https://www.ftsakkinen.com/janne-sakkinen.jpg"],
+  },
 };
 
 export default async function HomePage() {
