@@ -198,8 +198,26 @@ export default async function TopicHubPage(props: { params: Promise<{ slug: stri
     notFound();
   }
 
-  // Filter related videos by category
-  const topicVideos = FALLBACK_VIDEOS.filter((v) => v.categoryId === topic.categoryId);
+  // Filter related videos by topic relevance (category + title/description/transcript keywords)
+  const topicVideos = FALLBACK_VIDEOS.filter((v) => {
+    const text = (v.title + " " + v.promiseDescription + " " + (v.transcript || "")).toLowerCase();
+    if (resolvedSlug === "leukakipu-ja-tmd") {
+      return v.categoryId === "purenta-tmd" || text.includes("leuka") || text.includes("purenta") || text.includes("tmd") || text.includes("bruksismi");
+    }
+    if (resolvedSlug === "niskakipu-ja-paansarky") {
+      return text.includes("niska") || text.includes("päänsärky") || text.includes("paansarky") || text.includes("kaula") || text.includes("huimaus") || text.includes("cervik");
+    }
+    if (resolvedSlug === "selkakipu-ja-iskias") {
+      return text.includes("selkä") || text.includes("selka") || text.includes("iskias") || text.includes("lanneranka") || text.includes("fasetti");
+    }
+    if (resolvedSlug === "ergonomia-ja-tyohyvinvointi") {
+      return v.categoryId === "ergonomia" || text.includes("ergonomia") || text.includes("työ") || text.includes("istum") || text.includes("näppäil");
+    }
+    if (resolvedSlug === "tenniskyynarpaa-ja-golfkyynarpaa") {
+      return text.includes("kyynär") || text.includes("kyynar") || text.includes("tennis") || text.includes("golf");
+    }
+    return v.categoryId === topic.categoryId;
+  });
   const faqs = TOPIC_FAQS[resolvedSlug] || [];
 
   const topicMedicalConditions: Record<string, string> = {

@@ -64,7 +64,7 @@ export default function TrainingsSection() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-8 space-y-4">
               <h2 className="text-2xl sm:text-4xl font-display text-[#ffffff] tracking-wide leading-tight">
-                Craniomandibuläre Dysfunktion (CMD): <span className="text-[#00AEEF]">Assessment &amp; Behandlung</span>
+                Kraniomandibulaarinen dysfunktio (CMD): <span className="text-[#00AEEF]">Arviointi &amp; Hoito</span>
               </h2>
               <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
                 Kattava verkkomasterclass fysioterapeuteille, osteopaateille, manuaalisille terapeuteille ja hammaslääkäreille. Opi näyttöön perustuvat tutkimusmenetelmät, leukanivelen biomekaniikka ja kliiniset hoitotekniikat purentaelimistön toimintahäiriöihin (CMD/TMD).

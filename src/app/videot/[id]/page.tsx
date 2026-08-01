@@ -85,7 +85,37 @@ export default async function SingleVideoPage(props: { params: Promise<{ id: str
 
   // Dynamic video-specific FAQ items
   const cleanTitle = video.title.trim();
-  const categoryName = category?.name || "fysioterapia";
+  
+  // Fix Category Genitive Grammar (Task 3)
+  const formatCategoryGenitiveFI = (catId: string) => {
+    if (catId === "purenta-tmd") return "purentaelimistön ja TMD:n";
+    if (catId === "ergonomia") return "ergonomian";
+    return "TULE-vaivojen";
+  };
+  const categoryGenitive = formatCategoryGenitiveFI(video.categoryId);
+
+  // Content type detection for non-exercise videos (Task 2)
+  const videoText = (video.title + " " + video.promiseDescription).toLowerCase();
+  let contentType = "exercise";
+  if (videoText.includes("ruoka") || videoText.includes("ravinto") || videoText.includes("tulehdus") || videoText.includes("syö") || videoText.includes("ruokavalio")) {
+    contentType = "nutrition";
+  } else if (videoText.includes("haastattelu") || videoText.includes("etä") || videoText.includes("vastaavat") || videoText.includes("tarina") || videoText.includes("myytti")) {
+    contentType = "interview";
+  } else if (videoText.includes("luento") || videoText.includes("kunto") || videoText.includes("tilasto") || videoText.includes("tieto")) {
+    contentType = "lecture";
+  }
+
+  let q2Answer = video.transcript
+    ? `Videolla käydään läpi täsmälliset liikeradat, palpaatio-ohjeet ja itsehoitomenetelmät: ${video.transcript.slice(0, 220).trim()}...`
+    : `Videolla OMT-fysioterapeutti Janne Säkkinen näyttää vaihe vaiheelta sopivat harjoitteet ja asennonhallintavinkit teeman hoitoon.`;
+
+  if (contentType === "nutrition") {
+    q2Answer = `Videolla annetaan täsmälliset ravitsemussuositukset, tulehdusta rauhoittavat ravintoaineet ja arjen elämäntapaohjeet. ${video.transcript ? video.transcript.slice(0, 180).trim() + "..." : ""}`;
+  } else if (contentType === "interview") {
+    q2Answer = `Videolla käydään läpi asiantuntijahaastattelu, käytännön kliiniset esimerkit sekä potilastarinan mukaiset itsehoitovinkit. ${video.transcript ? video.transcript.slice(0, 180).trim() + "..." : ""}`;
+  } else if (contentType === "lecture") {
+    q2Answer = `Videolla esitellään kliininen luentotallenne, tutkittuun tietoon perustuvat tilastot sekä ergonomiset asennonhallintaohjeet. ${video.transcript ? video.transcript.slice(0, 180).trim() + "..." : ""}`;
+  }
 
   const faqItems = [
     {
@@ -93,10 +123,8 @@ export default async function SingleVideoPage(props: { params: Promise<{ id: str
       answer: video.promiseDescription,
     },
     {
-      question: `Miten videon "${cleanTitle}" ohjeita sovelletaan ${categoryName.toLowerCase()}n kuntoutuksessa?`,
-      answer: video.transcript
-        ? `Videolla käydään läpi täsmälliset liikeradat, palpaatio-ohjeet ja itsehoitomenetelmät: ${video.transcript.slice(0, 220).trim()}...`
-        : `Videolla OMT-fysioterapeutti Janne Säkkinen näyttää vaihe vaiheelta sopivat harjoitteet ja asennonhallintavinkit teeman hoitoon.`,
+      question: `Miten videon "${cleanTitle}" ohjeita sovelletaan ${categoryGenitive} kuntoutuksessa?`,
+      answer: q2Answer,
     },
     {
       question: `Milloin videon aihealueen oireissa kannattaa hakeutua OMT-fysioterapeutin vastaanotolle?`,
