@@ -31,7 +31,7 @@ export default function KyynarpaaApuvalinePage() {
         </p>
 
         {/* Feature Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4 text-left">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 text-left max-w-2xl mx-auto">
           <div className="p-6 rounded-2xl bg-[#000d21] border border-[#0C66B4]/50 space-y-3 shadow-panel">
             <div className="w-10 h-10 rounded-xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center">
               <Repeat className="w-5 h-5" />
@@ -39,16 +39,6 @@ export default function KyynarpaaApuvalinePage() {
             <h3 className="text-base font-bold text-white">Sisä- ja ulkokierto vastuksella</h3>
             <p className="text-xs text-gray-300 leading-relaxed">
               Mahdollistaa kyynärvarren kiertoliikkeen vastuksella — avainliike golf- ja tenniskyynärpään tulokselliseen kuntoutukseen.
-            </p>
-          </div>
-
-          <div className="p-6 rounded-2xl bg-[#000d21] border border-[#0C66B4]/50 space-y-3 shadow-panel">
-            <div className="w-10 h-10 rounded-xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center">
-              <Sliders className="w-5 h-5" />
-            </div>
-            <h3 className="text-base font-bold text-white">Säädettävä kuormitus</h3>
-            <p className="text-xs text-gray-300 leading-relaxed">
-              Kuormaa voi säätää helposti otetta siirtämällä: mitä kauempaa kepin päästä otat kiinni, sitä raskaampi liike on.
             </p>
           </div>
 
