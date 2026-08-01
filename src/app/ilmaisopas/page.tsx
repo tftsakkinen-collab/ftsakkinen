@@ -1,6 +1,20 @@
 import EmailLeadForm from "@/components/EmailLeadForm";
 import { BookOpen, ShieldCheck, Sparkles, FolderDown, Video } from "lucide-react";
 import { SITE_CONFIG } from "@/data/config";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Ilmaiset Kipuoppaat & Kuntoutusmateriaalit | FT Säkkinen",
+  description: "Lataa ilmaiset fysioterapian ja leukanivelkuntoutuksen PDF-oppaat sekä opetusvideot suoraan Janne Säkkisen Google Drive -kansiosta.",
+  alternates: {
+    canonical: "https://www.ftsakkinen.com/ilmaisopas",
+    languages: {
+      "fi": "https://www.ftsakkinen.com/ilmaisopas",
+      "en": "https://www.ptsakkinen.com/free-guide",
+      "x-default": "https://www.ftsakkinen.com/ilmaisopas",
+    },
+  },
+};
 
 export default function FreeGuidePage() {
   return (

@@ -37,7 +37,7 @@ export default function AboutSection() {
 
             <div className="space-y-4 text-gray-300 text-base leading-relaxed">
               <p>
-                Olen Janne Säkkinen, erikoistunut OMT-fysioterapeutti. Erikoistumiseni ytimessä on tuki- ja liikuntaelimistön monimutkaisten kiputilojen ja toimintahäiriöiden ratkaiseminen.
+                Olen Janne Säkkinen, erikoistunut OMT-fysioterapeutti yli 15 vuoden kliinisellä kokemuksella. Erikoistumiseni ytimessä on tuki- ja liikuntaelimistön monimutkaisten kiputilojen ja toimintahäiriöiden ratkaiseminen.
               </p>
               <p>
                 Kliinisessä työssäni kohtaan päivittäin asiakkaita, jotka kärsivät iskiaksesta, niska- ja olkapäävaivoista, nivelrikosta sekä pitkittyneistä kiputiloista. Tavoitteeni on purkaa kipumekanismit selkeiksi, ymmärrettäviksi askeleiksi ja antaa sinulle täsmälliset työkalut kehosi kuntouttamiseen.
@@ -52,8 +52,8 @@ export default function AboutSection() {
               <div className="p-4 rounded-xl bg-[#0C66B4]/10 border border-[#0C66B4]/40 flex items-start gap-3">
                 <UserCheck className="w-6 h-6 text-[#00AEEF] shrink-0 mt-1" />
                 <div>
-                  <h3 className="text-white font-bold text-sm">{SITE_CONFIG.authorityProofs.qualification}</h3>
-                  <p className="text-xs text-gray-400 mt-1">Erikoistunut tuki- ja liikuntaelimistön fysioterapiaan</p>
+                  <h3 className="text-white font-bold text-sm">OMT-Fysioterapeutti (SOMTY 2018–2020)</h3>
+                  <p className="text-xs text-gray-400 mt-1">Erikoistunut TMD-purentafysioterapiaan (2015) &amp; TULE-vaivoihin</p>
                 </div>
               </div>
               <div className="p-4 rounded-xl bg-[#0C66B4]/10 border border-[#0C66B4]/40 flex items-start gap-3">
