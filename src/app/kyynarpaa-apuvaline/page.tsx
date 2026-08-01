@@ -27,7 +27,7 @@ export default function KyynarpaaApuvalinePage() {
         </h1>
 
         <p className="text-gray-300 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed">
-          Golfkyynärpää- ja tenniskyynärpää-videoillamme näet yksinkertaisen täsmävälineen: vastuskuminauhan, jonka toiseen päähän on kierretty noin 10 cm puukeppi. Kuminauhan toinen pää kiinnitetään esimerkiksi ovenkahvaan, ja kyynärpää pysyy 90 asteen kulmassa vartalon vieressä koko liikkeen ajan.
+          Golfkyynärpää- ja tenniskyynärpää-videoilla näet yksinkertaisen kotitekoisen välineen, jolla kyynärvartta voi kuormittaa vastuksella — juuri sen liikkeen, joka on tärkeä osa golf- ja tenniskyynärpään kuntoutusta.
         </p>
 
         {/* Feature Cards Grid */}
@@ -38,7 +38,7 @@ export default function KyynarpaaApuvalinePage() {
             </div>
             <h3 className="text-base font-bold text-white">Sisä- ja ulkokierto vastuksella</h3>
             <p className="text-xs text-gray-300 leading-relaxed">
-              Väline mahdollistaa kyynärvarren kiertoliikkeen vastuksella — juuri sen avainliikkeen, joka on tärkeä osa golf- ja tenniskyynärpään tuloksellista kuntoutusta.
+              Mahdollistaa kyynärvarren kiertoliikkeen vastuksella — avainliike golf- ja tenniskyynärpään tulokselliseen kuntoutukseen.
             </p>
           </div>
 
@@ -46,9 +46,9 @@ export default function KyynarpaaApuvalinePage() {
             <div className="w-10 h-10 rounded-xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center">
               <Sliders className="w-5 h-5" />
             </div>
-            <h3 className="text-base font-bold text-white">Helppo kuormituksen säätö</h3>
+            <h3 className="text-base font-bold text-white">Säädettävä kuormitus</h3>
             <p className="text-xs text-gray-300 leading-relaxed">
-              Kuormaa voi säätää yksinkertaisesti ottamalla kepin päästä eri kohdista kiinni: mitä kauempaa otat kiinni, sitä raskaampi liike on.
+              Kuormaa voi säätää helposti otetta siirtämällä: mitä kauempaa kepin päästä otat kiinni, sitä raskaampi liike on.
             </p>
           </div>
 
@@ -56,9 +56,9 @@ export default function KyynarpaaApuvalinePage() {
             <div className="w-10 h-10 rounded-xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center">
               <ShieldCheck className="w-5 h-5" />
             </div>
-            <h3 className="text-base font-bold text-white">Suora toimitus</h3>
+            <h3 className="text-base font-bold text-white">Toimitus kotiin</h3>
             <p className="text-xs text-gray-300 leading-relaxed">
-              Jos haluat itsellesi vastaavan valmiin apuvälineen, jätä yhteystietosi alla olevalla lomakkeella — järjestämme sen jälkeen toimituksen sinulle.
+              Jos haluat itsellesi vastaavan välineen, jätä yhteystietosi lomakkeella — järjestän sen jälkeen toimituksen sinulle.
             </p>
           </div>
         </div>
@@ -67,8 +67,8 @@ export default function KyynarpaaApuvalinePage() {
 
       {/* Embedded Inquiry Form */}
       <ElbowDeviceInquiryForm
-        title="TILAA REHAB-VÄLINE / JÄTÄ YHTEYDENOTTOPYYNTÖ"
-        subtitle="Jos haluat itsellesi vastaavan kyynärvarsitreenarin, jätä yhteystietosi alla olevalla lomakkeella — järjestän sen jälkeen toimituksen sinulle."
+        title="TILAA VÄLINE / JÄTÄ YHTEYDENOTTOPYYNTÖ"
+        subtitle="Jos haluat itsellesi vastaavan välineen, jätä yhteystietosi alla olevalla lomakkeella — järjestän sen jälkeen toimituksen sinulle."
       />
 
       <AppointmentBookingSection />

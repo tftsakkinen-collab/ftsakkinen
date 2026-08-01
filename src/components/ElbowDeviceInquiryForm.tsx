@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Send, CheckCircle2, ShieldCheck, PackageCheck, Repeat, Sliders } from "lucide-react";
+import { Send, CheckCircle2, ShieldCheck, PackageCheck } from "lucide-react";
 
 interface ElbowDeviceInquiryFormProps {
   title?: string;
@@ -10,7 +10,7 @@ interface ElbowDeviceInquiryFormProps {
 
 export default function ElbowDeviceInquiryForm({
   title = "TENNIS- JA GOLFKYYNÄRPÄÄN KUNTOUTUSAPUVÄLINE",
-  subtitle = "Jos haluat itsellesi videoilla esiintyvän vastaavan kyynärvarsitreenarin, jätä yhteystietosi alla olevalla lomakkeella — järjestän sen jälkeen toimituksen sinulle.",
+  subtitle = "Jos haluat itsellesi vastaavan välineen, jätä yhteystietosi alla olevalla lomakkeella — järjestän sen jälkeen toimituksen sinulle.",
 }: ElbowDeviceInquiryFormProps) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
