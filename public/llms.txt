@@ -10,6 +10,13 @@
 - [Koulutukset & CV](https://www.ftsakkinen.com/koulutukset): Yliopisto-opetus, erikoiskoulutukset fysioterapeuteille sekä kliininen työkokemus (2011–2026).
 - [Ajanvaraus & Yhteystiedot](https://www.ftsakkinen.com/yhteystiedot): Vastaanottoajat Terveystalolla, Norre Työterveydessä sekä Hammasvahdissa.
 
+## Aihekoostesivut & Kliiniset Tietopakit
+
+- [Leukakipu & Bruksismi (TMD)](https://www.ftsakkinen.com/aihe/leukakipu-ja-tmd): Leukanivelen naksahdus, purentalihasten jumit ja kasvojen jomotus — 12 opetusvideota & kliininen opas.
+- [Niskakipu & Päänsärky](https://www.ftsakkinen.com/aihe/niskakipu-ja-paansarky): Niska-hartiaseudun jännitystilat ja cervikogeeninen päänsärky.
+- [Selkäkipu & Iskias](https://www.ftsakkinen.com/aihe/selkakipu-ja-iskias): Alaselän fasettilukot, välilevyvaivat ja iskiasoireilu.
+- [Ergonomia & Työhyvinvointi](https://www.ftsakkinen.com/aihe/ergonomia-ja-tyohyvinvointi): Hammaslääketieteen ja etätyön fysioterapeuttiset asentokorjaukset.
+
 ## Vastaanottopisteet & Ajanvaraus
 
 - **Terveystalo**: OMT-fysioterapia ja purentaelimistön tutkimus (Oulu & Digihoitopolku). Ajanvaraus: terveystalo.com

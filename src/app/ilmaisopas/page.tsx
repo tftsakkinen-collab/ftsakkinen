@@ -14,6 +14,21 @@ export const metadata: Metadata = {
       "x-default": "https://www.ftsakkinen.com/ilmaisopas",
     },
   },
+  openGraph: {
+    title: "Ilmaiset Kipuoppaat & Kuntoutusmateriaalit | FT Säkkinen",
+    description: "Lataa ilmaiset fysioterapian ja leukanivelkuntoutuksen PDF-oppaat sekä opetusvideot suoraan Janne Säkkisen Google Drive -kansiosta.",
+    url: "https://www.ftsakkinen.com/ilmaisopas",
+    siteName: "FT Säkkinen - OMT-Fysioterapia",
+    locale: "fi_FI",
+    type: "website",
+    images: [{ url: "https://www.ftsakkinen.com/logo-whitebg.png" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ilmaiset Kipuoppaat & Kuntoutusmateriaalit | FT Säkkinen",
+    description: "Lataa ilmaiset fysioterapian ja leukanivelkuntoutuksen PDF-oppaat sekä opetusvideot suoraan Janne Säkkisen Google Drive -kansiosta.",
+    images: ["https://www.ftsakkinen.com/logo-whitebg.png"],
+  },
 };
 
 export default function FreeGuidePage() {
@@ -48,7 +63,7 @@ export default function FreeGuidePage() {
           <div className="space-y-1 text-center md:text-left">
             <h3 className="text-lg font-bold text-white">Google Drive -Kansion automaattinen päivitys</h3>
             <p className="text-xs text-gray-300 leading-relaxed">
-              Kun syötät nimesi ja sähköpostiosoitteesi yllä olevaan lomakkeeseen, saat heti suoran linkin Janne Säkkisen suomenkieliseen Google Drive -kansioon (<a href={SITE_CONFIG.googleDriveUrl} target="_blank" rel="noopener noreferrer" className="text-[#00AEEF] underline font-semibold">avaa tästä</a>). Uudet oppaat (TMD, purentaelimistö, niska-hartiaseutu) tulevat suoraan kansioon näkyville heti kun ne julkaistaan.
+              Kun syötät nimesi ja sähköpostiosoitteesi yllä olevaan lomakkeeseen, saat heti suoran linkin Janne Säkkisen suomenkieliseen Google Drive -kansioon. Uudet oppaat (TMD, purentaelimistö, niska-hartiaseutu) tulevat suoraan kansioon näkyville heti kun ne julkaistaan.
             </p>
           </div>
         </div>

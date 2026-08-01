@@ -13,6 +13,21 @@ export const metadata: Metadata = {
       "x-default": "https://www.ftsakkinen.com/yhteystiedot",
     },
   },
+  openGraph: {
+    title: "Yhteystiedot & Ajanvaraus | OMT-Fysioterapeutti Janne Säkkinen",
+    description: "Ota yhteyttä OMT-fysioterapeutti Janne Säkkitiehen tai varaa vastaanottoaika Terveystalolta / Norre Työterveydeltä / Hammasvahdilta.",
+    url: "https://www.ftsakkinen.com/yhteystiedot",
+    siteName: "FT Säkkinen - OMT-Fysioterapia",
+    locale: "fi_FI",
+    type: "website",
+    images: [{ url: "https://www.ftsakkinen.com/janne-sakkinen.jpg" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Yhteystiedot & Ajanvaraus | OMT-Fysioterapeutti Janne Säkkinen",
+    description: "Ota yhteyttä OMT-fysioterapeutti Janne Säkkitiehen tai varaa vastaanottoaika Terveystalolta / Norre Työterveydeltä / Hammasvahdilta.",
+    images: ["https://www.ftsakkinen.com/janne-sakkinen.jpg"],
+  },
 };
 
 export default function ContactPage() {
