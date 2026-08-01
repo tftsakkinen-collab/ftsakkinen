@@ -16,6 +16,21 @@ export const metadata: Metadata = {
       "x-default": "https://www.ftsakkinen.com/tietoa-minusta",
     },
   },
+  openGraph: {
+    title: "Tietoa Minusta & Filosofia | OMT-Fysioterapeutti Janne Säkkinen",
+    description: "Tutustu OMT-fysioterapeutti Janne Säkkisen ammatilliseen taustaan, OMT-erikoistumiseen (SOMTY), yliopisto-opettajuuteen (Oulun yliopisto 2017–) ja ratkaisukeskeiseen valmennusfilosofiaan.",
+    url: "https://www.ftsakkinen.com/tietoa-minusta",
+    siteName: "FT Säkkinen - OMT-Fysioterapia",
+    locale: "fi_FI",
+    type: "profile",
+    images: [{ url: "https://www.ftsakkinen.com/janne-sakkinen.jpg" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tietoa Minusta & Filosofia | OMT-Fysioterapeutti Janne Säkkinen",
+    description: "Tutustu OMT-fysioterapeutti Janne Säkkisen ammatilliseen taustaan, OMT-erikoistumiseen (SOMTY), yliopisto-opettajuuteen (Oulun yliopisto 2017–) ja ratkaisukeskeiseen valmennusfilosofiaan.",
+    images: ["https://www.ftsakkinen.com/janne-sakkinen.jpg"],
+  },
 };
 
 export default function AboutPage() {

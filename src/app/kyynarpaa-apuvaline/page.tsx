@@ -10,6 +10,21 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.ftsakkinen.com/kyynarpaa-apuvaline",
   },
+  openGraph: {
+    title: "Kyynärvarsitreenari — Tennis- ja Golfkyynärpään Kuntoutusapuväline | FT Säkkinen",
+    description: "Tilaa opetusvideoilla näkyvä kyynärvarsitreenari golfkyynärpään ja tenniskyynärpään kuntoutukseen. Jätä yhteystietosi lomakkeella, niin järjestämme toimituksen.",
+    url: "https://www.ftsakkinen.com/kyynarpaa-apuvaline",
+    siteName: "FT Säkkinen - OMT-Fysioterapia",
+    locale: "fi_FI",
+    type: "website",
+    images: [{ url: "https://www.ftsakkinen.com/logo-whitebg.png" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kyynärvarsitreenari — Tennis- ja Golfkyynärpään Kuntoutusapuväline | FT Säkkinen",
+    description: "Tilaa opetusvideoilla näkyvä kyynärvarsitreenari golfkyynärpään ja tenniskyynärpään kuntoutukseen. Jätä yhteystietosi lomakkeella, niin järjestämme toimituksen.",
+    images: ["https://www.ftsakkinen.com/logo-whitebg.png"],
+  },
 };
 
 export default function KyynarpaaApuvalinePage() {

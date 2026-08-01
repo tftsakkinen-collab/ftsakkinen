@@ -195,6 +195,13 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
       siteName: "FT Säkkinen - OMT-Fysioterapia",
       locale: "fi_FI",
       type: "article",
+      images: [{ url: "https://www.ftsakkinen.com/logo-whitebg.png" }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: metaTitle,
+      description: metaDescription,
+      images: ["https://www.ftsakkinen.com/logo-whitebg.png"],
     },
   };
 }

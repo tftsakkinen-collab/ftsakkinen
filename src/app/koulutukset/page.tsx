@@ -14,6 +14,21 @@ export const metadata: Metadata = {
       "x-default": "https://www.ftsakkinen.com/koulutukset",
     },
   },
+  openGraph: {
+    title: "Koulutukset, Luennot & Työhistoria | FT Säkkinen",
+    description: "Tiedot OMT-fysioterapeutti Janne Säkkisen koulutustoiminnasta, Oulun yliopiston opetuksesta, työhistoriasta ja koulutuspalautteista.",
+    url: "https://www.ftsakkinen.com/koulutukset",
+    siteName: "FT Säkkinen - OMT-Fysioterapia",
+    locale: "fi_FI",
+    type: "website",
+    images: [{ url: "https://www.ftsakkinen.com/janne-sakkinen.jpg" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Koulutukset, Luennot & Työhistoria | FT Säkkinen",
+    description: "Tiedot OMT-fysioterapeutti Janne Säkkisen koulutustoiminnasta, Oulun yliopiston opetuksesta, työhistoriasta ja koulutuspalautteista.",
+    images: ["https://www.ftsakkinen.com/janne-sakkinen.jpg"],
+  },
 };
 
 export default function KoulutuksetPage() {
