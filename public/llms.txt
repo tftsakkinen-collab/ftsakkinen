@@ -26,7 +26,7 @@
 ## Yritystiedot
 
 - **Yritys**: Tiedottajanne Oy
-- **Osoite**: Lipunkantajantie 21 G, 90670 Oulu
+- **Vastaanottopaikat**: Terveystalo, Norre Työterveys, Hammasvahti (Oulu)
 - **Puhelin**: +358 41 327 4967
 - **Sähköposti**: tiedottajanne@gmail.com
 - **Kansainvälinen sivusto (English)**: https://www.ptsakkinen.com

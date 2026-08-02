@@ -100,7 +100,7 @@ export default function ContactPage() {
                   height="100%"
                   loading="lazy"
                   style={{ border: 0, filter: "brightness(0.85) contrast(1.1) invert(0.9) hue-rotate(180deg)" }}
-                  src="https://www.openstreetmap.org/export/embed.html?bbox=25.4000%2C65.0000%2C25.5500%2C65.0500&amp;layer=mapnik&amp;marker=65.0123%2C25.4682"
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=25.4400%2C65.0000%2C25.5000%2C65.0300&amp;layer=mapnik&amp;marker=65.0121%2C25.4688"
                 />
               </div>
               <p className="text-[11px] text-gray-400 text-center px-2">
