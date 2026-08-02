@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Menu, X, Download } from "lucide-react";
+import { Menu, X, Download, Globe } from "lucide-react";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -63,11 +63,20 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* Desktop CTA */}
-          <div className="hidden md:flex items-center gap-4">
+          {/* Desktop CTA & Language Switcher */}
+          <div className="hidden md:flex items-center gap-3">
+            <a
+              href="https://www.ptsakkinen.com"
+              title="In English — ptsakkinen.com"
+              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg border border-[#0C66B4]/60 bg-[#000d21] text-xs font-semibold text-gray-200 hover:text-white hover:border-[#00AEEF] hover:bg-[#0C66B4]/30 transition-all shadow-sm"
+            >
+              <Globe className="w-4 h-4 text-[#00AEEF]" />
+              <span>EN</span>
+              <span className="text-gray-500 font-normal">/ FI</span>
+            </a>
             <Link
               href="/ilmaisopas"
-              className="px-5 py-2.5 rounded-lg bg-[#00AEEF] text-black font-semibold text-sm hover:bg-[#33C2F5] transition-all shadow-glow flex items-center gap-2"
+              className="px-4 py-2 rounded-lg bg-[#00AEEF] text-black font-semibold text-sm hover:bg-[#33C2F5] transition-all shadow-glow flex items-center gap-2"
             >
               <Download className="w-4 h-4" />
               Lataa ilmainen opas
@@ -107,7 +116,14 @@ export default function Navbar() {
               );
             })}
           </nav>
-          <div className="pt-2">
+          <div className="pt-2 flex flex-col gap-3">
+            <a
+              href="https://www.ptsakkinen.com"
+              className="w-full py-2.5 rounded-lg border border-[#0C66B4]/60 bg-[#000a18] text-gray-200 text-center text-sm font-semibold hover:border-[#00AEEF] transition-all flex items-center justify-center gap-2"
+            >
+              <Globe className="w-4 h-4 text-[#00AEEF]" />
+              Switch to English (ptsakkinen.com)
+            </a>
             <Link
               href="/ilmaisopas"
               onClick={() => setMobileMenuOpen(false)}

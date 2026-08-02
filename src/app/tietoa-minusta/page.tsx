@@ -1,13 +1,13 @@
 import { SITE_CONFIG } from "@/data/config";
 import { CV_DATA_FI } from "@/data/cv";
-import { Award, GraduationCap, Briefcase, BookOpen, CheckCircle2, ShieldCheck, FileCheck, ArrowRight, User, MapPin, Mail, Phone, Users, HeartHandshake, Sparkles, Target, Compass } from "lucide-react";
+import { Award, GraduationCap, Briefcase, BookOpen, CheckCircle2, ShieldCheck, FileCheck, ArrowRight, User, MapPin, Mail, Phone, Users, HeartHandshake, Sparkles, Target, Compass, Globe } from "lucide-react";
 import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Tietoa Minusta & Filosofia | OMT-Fysioterapeutti Janne Säkkinen",
-  description: "Tutustu OMT-fysioterapeutti Janne Säkkisen ammatilliseen taustaan, OMT-erikoistumiseen (SOMTY), yliopisto-opettajuuteen (Oulun yliopisto 2017–) ja ratkaisukeskeiseen valmennusfilosofiaan.",
+  title: "Tietoa Minusta | OMT-Fysioterapeutti Janne Säkkinen",
+  description: "Tutustu OMT-fysioterapeutti Janne Säkkiseen (SOMTY), Oulun yliopiston opettajuuteen (2017–) sekä fysioterapia- ja valmennusfilosofiaan.",
   alternates: {
     canonical: "https://www.ftsakkinen.com/tietoa-minusta",
     languages: {
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Tietoa Minusta & Filosofia | OMT-Fysioterapeutti Janne Säkkinen",
-    description: "Tutustu OMT-fysioterapeutti Janne Säkkisen ammatilliseen taustaan, OMT-erikoistumiseen (SOMTY), yliopisto-opettajuuteen (Oulun yliopisto 2017–) ja ratkaisukeskeiseen valmennusfilosofiaan.",
+    title: "Tietoa Minusta | OMT-Fysioterapeutti Janne Säkkinen",
+    description: "Tutustu OMT-fysioterapeutti Janne Säkkiseen (SOMTY), Oulun yliopiston opettajuuteen (2017–) sekä fysioterapia- ja valmennusfilosofiaan.",
     url: "https://www.ftsakkinen.com/tietoa-minusta",
     siteName: "FT Säkkinen - OMT-Fysioterapia",
     locale: "fi_FI",
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tietoa Minusta & Filosofia | OMT-Fysioterapeutti Janne Säkkinen",
-    description: "Tutustu OMT-fysioterapeutti Janne Säkkisen ammatilliseen taustaan, OMT-erikoistumiseen (SOMTY), yliopisto-opettajuuteen (Oulun yliopisto 2017–) ja ratkaisukeskeiseen valmennusfilosofiaan.",
+    title: "Tietoa Minusta | OMT-Fysioterapeutti Janne Säkkinen",
+    description: "Tutustu OMT-fysioterapeutti Janne Säkkiseen (SOMTY), Oulun yliopiston opettajuuteen (2017–) sekä fysioterapia- ja valmennusfilosofiaan.",
     images: ["https://www.ftsakkinen.com/janne-sakkinen.jpg"],
   },
 };
@@ -143,6 +143,12 @@ export default function AboutPage() {
               <p>
                 Olen työskennellyt ergonomia-asiantuntijana ja vierailevana luennoitsijana Oulun yliopiston hammaslääketieteen yksikössä yli 7 vuoden ajan (2017–). Tässä roolissa olen kehittänyt suun terveydenhuollon työergonomian käytäntöjä ja jakanut asiantuntemustani uusille terveydenhuollon ammattilaisille.
               </p>
+              <div className="p-4 rounded-xl bg-[#000a18] border border-[#0C66B4]/50 text-xs text-gray-300 flex items-start gap-3 mt-3">
+                <Globe className="w-5 h-5 text-[#00AEEF] shrink-0 mt-0.5" />
+                <p>
+                  <strong>Kansainvälinen nimen kirjoitusasu:</strong> Englanninkielisellä sivustollani (<strong><a href="https://www.ptsakkinen.com" className="text-[#00AEEF] hover:underline">ptsakkinen.com</a></strong>) käytän nimen kirjoitusasua <em>"PT Janne Sakkinen"</em> ilman ääkkösiä kansainvälisen luettavuuden helpottamiseksi.
+                </p>
+              </div>
             </div>
 
             {/* Quick Proof Badges */}

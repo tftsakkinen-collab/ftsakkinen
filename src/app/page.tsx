@@ -15,8 +15,8 @@ import type { Metadata } from "next";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "OMT-Fysioterapeutti Janne Säkkinen | Oulu | Purentaelimistö & TMD",
-  description: "Purentaelimistön (TMD) ja tuki- ja liikuntaelimistön OMT-fysioterapeutti Janne Säkkinen. Kouluttaja Oulun yliopistolla vuodesta 2017. Katso oppaat ja videot.",
+  title: "OMT-Fysioterapeutti Janne Säkkinen | Purenta & TMD Oulu",
+  description: "OMT-fysioterapeutti Janne Säkkinen | Purentaelimistön (TMD) ja TULE-vaivojen asiantuntija Oulussa. Oulun yliopiston kouluttaja. Katso videot & oppaat.",
   alternates: {
     canonical: "https://www.ftsakkinen.com/",
     languages: {
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "OMT-Fysioterapeutti Janne Säkkinen | Oulu | Purentaelimistö & TMD",
-    description: "Purentaelimistön (TMD) ja tuki- ja liikuntaelimistön OMT-fysioterapeutti Janne Säkkinen. Kouluttaja Oulun yliopistolla vuodesta 2017.",
+    title: "OMT-Fysioterapeutti Janne Säkkinen | Purenta & TMD Oulu",
+    description: "OMT-fysioterapeutti Janne Säkkinen | Purentaelimistön (TMD) ja TULE-vaivojen asiantuntija Oulussa. Oulun yliopiston kouluttaja. Katso videot & oppaat.",
     url: "https://www.ftsakkinen.com/",
     siteName: "FT Säkkinen - OMT-Fysioterapia",
     locale: "fi_FI",
@@ -36,8 +36,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OMT-Fysioterapeutti Janne Säkkinen | Oulu | Purentaelimistö & TMD",
-    description: "Purentaelimistön (TMD) ja tuki- ja liikuntaelimistön OMT-fysioterapeutti Janne Säkkinen. Kouluttaja Oulun yliopistolla vuodesta 2017.",
+    title: "OMT-Fysioterapeutti Janne Säkkinen | Purenta & TMD Oulu",
+    description: "OMT-fysioterapeutti Janne Säkkinen | Purentaelimistön (TMD) ja TULE-vaivojen asiantuntija Oulussa. Oulun yliopiston kouluttaja. Katso videot & oppaat.",
     images: ["https://www.ftsakkinen.com/janne-sakkinen.jpg"],
   },
 };
@@ -61,7 +61,6 @@ export default async function HomePage() {
         "image": "https://www.ftsakkinen.com/logo-whitebg.png",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Lipunkantajantie 21 G",
           "addressLocality": "Oulu",
           "postalCode": "90670",
           "addressCountry": "FI"
@@ -111,7 +110,6 @@ export default async function HomePage() {
       "email": "tiedottajanne@gmail.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Lipunkantajantie 21 G",
         "addressLocality": "Oulu",
         "postalCode": "90670",
         "addressCountry": "FI"

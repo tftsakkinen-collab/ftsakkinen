@@ -6,8 +6,8 @@ import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Leukakipu, Leukanivelen Naksahdus & Bruksismi (TMD) | FT Säkkinen",
-  description: "Täydellinen opas purentaelimistön toimintahäiriöiden (TMD), leukanivelten jännitystilojen, naksumisen ja hammassäryn hoitoon OMT-fysioterapian keinoin.",
+  title: "Leukakipu & Leukanivelen TMD-Fysioterapia | FT Säkkinen",
+  description: "Opas purentaelimistön (TMD), leukanivelten naksumisen, kireyksien ja hammassäryn tutkimiseen ja hoitoon OMT-fysioterapialla.",
   alternates: {
     canonical: "https://www.ftsakkinen.com/aihe/leukakipu-ja-tmd",
     languages: {

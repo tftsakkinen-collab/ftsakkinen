@@ -6,8 +6,8 @@ import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Niskakipu & Cervikogeeninen Päänsärky | FT Säkkinen",
-  description: "Täydellinen opas niska-hartiaseudun jännitystilojen, takaraivon särkyjen ja cervikogeenisen päänsäryn fysioterapeuttiseen tutkimiseen ja hoitoon.",
+  title: "Niskakipu & Niskaperäinen Päänsärky | FT Säkkinen",
+  description: "Opas niska-hartiaseudun jännitysten ja cervikogeenisen päänsäryn fysioterapeuttiseen tutkimiseen ja hoitoon OMT-fysioterapialla.",
   alternates: {
     canonical: "https://www.ftsakkinen.com/aihe/niskakipu-ja-paansarky",
     languages: {

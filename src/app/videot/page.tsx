@@ -4,8 +4,8 @@ import VideoLibraryClient from "@/components/VideoLibraryClient";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "OMT-Fysioterapian Videokirjasto | 68 Videoartikkelia | FT Säkkinen",
-  description: "Kaikki 68 OMT-fysioterapeutti Janne Säkkisen opetusvideota ja AEO-optimoidut blogiartikkelit purennasta, leukanivelestä, ergonomiasta ja TULE-vaivoista.",
+  title: "Videokirjasto & Fysioterapia-oppaat | FT Janne Säkkinen",
+  description: "Tutustu 68 fysioterapia- ja opetusvideoon: purenta, TMD, leukanivel, ergonomia ja niska-selkävaivat. OMT-fysioterapeutti Janne Säkkinen.",
   alternates: {
     canonical: "https://www.ftsakkinen.com/videot",
     languages: {
@@ -15,8 +15,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "OMT-Fysioterapian Videokirjasto | 68 Videoartikkelia | FT Säkkinen",
-    description: "Kaikki 68 OMT-fysioterapeutti Janne Säkkisen opetusvideota ja AEO-optimoidut blogiartikkelit purennasta, leukanivelestä, ergonomiasta ja TULE-vaivoista.",
+    title: "Videokirjasto & Fysioterapia-oppaat | FT Janne Säkkinen",
+    description: "Tutustu 68 fysioterapia- ja opetusvideoon: purenta, TMD, leukanivel, ergonomia ja niska-selkävaivat. OMT-fysioterapeutti Janne Säkkinen.",
     url: "https://www.ftsakkinen.com/videot",
     siteName: "FT Säkkinen - OMT-Fysioterapia",
     locale: "fi_FI",
@@ -25,8 +25,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OMT-Fysioterapian Videokirjasto | 68 Videoartikkelia | FT Säkkinen",
-    description: "Kaikki 68 OMT-fysioterapeutti Janne Säkkisen opetusvideota ja AEO-optimoidut blogiartikkelit purennasta, leukanivelestä, ergonomiasta ja TULE-vaivoista.",
+    title: "Videokirjasto & Fysioterapia-oppaat | FT Janne Säkkinen",
+    description: "Tutustu 68 fysioterapia- ja opetusvideoon: purenta, TMD, leukanivel, ergonomia ja niska-selkävaivat. OMT-fysioterapeutti Janne Säkkinen.",
     images: ["https://www.ftsakkinen.com/logo-whitebg.png"],
   },
 };
