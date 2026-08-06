@@ -47,11 +47,11 @@ export default function FreeGuidePage() {
         </h1>
 
         <p className="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-          Liity sähköpostilistalle ja saat VÄLITTÖMÄSTI pääsyn kolmeen erikoisvideo-opasteeseen sekä Janne Säkkisen suomenkieliseen Google Drive -kansioon.
+          Liity sähköpostilistalle ja saat VÄLITTÖMÄSTI pääsyn neljään erikoisvideo-opasteeseen sekä Janne Säkkisen suomenkieliseen Google Drive -kansioon.
         </p>
       </div>
 
-      {/* Main Email Lead Capture Form with 3 Video Preview Cards */}
+      {/* Main Email Lead Capture Form with 4 Video Preview Cards */}
       <EmailLeadForm />
 
       {/* Trust & Drive Info Box */}

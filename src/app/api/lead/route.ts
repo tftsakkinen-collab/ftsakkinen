@@ -29,7 +29,7 @@ export async function POST(request: Request) {
           body: JSON.stringify({
             from: "FT Janne Säkkinen <onboarding@resend.dev>",
             to: [email],
-            subject: `Tässä ovat luvatut 3 erikoisvideo-opastasi${name ? `, ${name}` : ""}!`,
+            subject: `Tässä ovat luvatut 4 erikoisvideo-opastasi${name ? `, ${name}` : ""}!`,
             tags: [
               { name: "language", value: "fi" },
               { name: "site", value: "ftsakkinen.com" },
@@ -42,7 +42,7 @@ export async function POST(request: Request) {
                 </div>
                 
                 <p style="font-size: 15px; line-height: 1.6; color: #ffffff;">Hei ${name || "terveydenystävä"},</p>
-                <p style="font-size: 14px; line-height: 1.6; color: #dddddd;">Kiitos liittymisestä sähköpostilistalleni! Tässä ovat kolme luvattua erikoisvideo-opasta kehonhuollon, leukanivelen ja hermoston rauhoittamisen tueksi:</p>
+                <p style="font-size: 14px; line-height: 1.6; color: #dddddd;">Kiitos liittymisestä sähköpostilistalleni! Tässä ovat neljä luvattua erikoisvideo-opasta kehonhuollon, leukanivelen, yläniskan ja hermoston rauhoittamisen tueksi:</p>
                 
                 <!-- Video 1 -->
                 <div style="margin: 20px 0; background-color: #000d21; border-radius: 12px; padding: 18px; border: 1px solid #0C66B4;">
@@ -63,6 +63,13 @@ export async function POST(request: Request) {
                   <h3 style="color: #00AEEF; margin-top: 0; font-size: 16px;">3. Parasympaattisen Hermoston Aktivoiminen</h3>
                   <p style="color: #bbbbbb; font-size: 13px; margin-bottom: 14px; line-height: 1.5;">Täsmälliset ohjeet kehon ja hermoston rauhoittamiseen sekä kivun säätelyyn.</p>
                   <a href="https://www.youtube.com/watch?v=ZFTSdUdEkC0" target="_blank" style="display: inline-block; background-color: #00AEEF; color: #000a18; font-weight: bold; text-decoration: none; padding: 11px 20px; border-radius: 8px; font-size: 13px;">Katso Hermosto-Video (YouTube) →</a>
+                </div>
+
+                <!-- Video 4 -->
+                <div style="margin: 20px 0; background-color: #000d21; border-radius: 12px; padding: 18px; border: 1px solid #0C66B4;">
+                  <h3 style="color: #00AEEF; margin-top: 0; font-size: 16px;">4. Yläniskan Venyttelyohje</h3>
+                  <p style="color: #bbbbbb; font-size: 13px; margin-bottom: 14px; line-height: 1.5;">Kliiniset fysioterapiaohjeet yläniskan kireyksien lievittämiseen ja niskan liikkuvuuden parantamiseen.</p>
+                  <a href="https://www.youtube.com/watch?v=JyducxjS1b8" target="_blank" style="display: inline-block; background-color: #00AEEF; color: #000a18; font-weight: bold; text-decoration: none; padding: 11px 20px; border-radius: 8px; font-size: 13px;">Katso Yläniska-Video (YouTube) →</a>
                 </div>
 
                 <hr style="border: 0; border-top: 1px solid #0C66B4; margin: 24px 0;" />
@@ -100,7 +107,7 @@ export async function POST(request: Request) {
                 <p><strong>Tyyppi:</strong> ${type}</p>
                 <p><strong>Aika:</strong> ${new Date().toLocaleString("fi-FI")}</p>
                 <hr />
-                <p style="color: #666; font-size: 12px;">Automaattinen 3-osainen videopalkkio lähetettiin tilaajan osoitteeseen.</p>
+                <p style="color: #666; font-size: 12px;">Automaattinen 4-osainen videopalkkio lähetettiin tilaajan osoitteeseen.</p>
               </div>
             `,
           }),

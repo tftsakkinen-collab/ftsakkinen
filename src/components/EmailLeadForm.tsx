@@ -10,8 +10,8 @@ interface EmailLeadFormProps {
 }
 
 export default function EmailLeadForm({
-  title = "LIITY SÄHKÖPOSTILISTALLE & SAAT VÄLITTÖMÄSTI 3 ERIKOISVIDEO-OPASTA",
-  subtitle = "Syötä etunimesi ja sähköpostiosoitteesi. Saat heti VÄLITTÖMÄN pääsyn kolmeen exklusiiviseen video-oppaaseen sekä Janne Säkkisen ilmaisille kuntoutusmateriaaleille.",
+  title = "LIITY SÄHKÖPOSTILISTALLE & SAAT VÄLITTÖMÄSTI 4 ERIKOISVIDEO-OPASTA",
+  subtitle = "Syötä etunimesi ja sähköpostiosoitteesi. Saat heti VÄLITTÖMÄN pääsyn neljään exklusiiviseen video-oppaaseen sekä Janne Säkkisen ilmaisille kuntoutusmateriaaleille.",
 }: EmailLeadFormProps) {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
@@ -46,6 +46,15 @@ export default function EmailLeadForm({
       thumbnail: "https://img.youtube.com/vi/ZFTSdUdEkC0/mqdefault.jpg",
       badge: "Hermoston Rauhoitus & Kipu",
     },
+    {
+      id: "JyducxjS1b8",
+      title: "4. Yläniskan Venyttelyohje",
+      desc: "Kliiniset fysioterapiaohjeet yläniskan kireyksien lievittämiseen ja niskan liikkuvuuden parantamiseen.",
+      youtubeUrl: "https://www.youtube.com/watch?v=JyducxjS1b8",
+      embedUrl: "https://www.youtube-nocookie.com/embed/JyducxjS1b8",
+      thumbnail: "https://img.youtube.com/vi/JyducxjS1b8/mqdefault.jpg",
+      badge: "Yläniska & Niskakipu",
+    },
   ];
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -79,7 +88,7 @@ export default function EmailLeadForm({
       {/* Glow Effects */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#00AEEF]/10 rounded-full blur-[150px] pointer-events-none" />
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-10">
         
         <div className="text-center space-y-4">
           <div className="flex justify-center mb-1">
@@ -93,18 +102,18 @@ export default function EmailLeadForm({
           </div>
 
           <h2 className="text-3xl sm:text-5xl font-display text-white tracking-wide leading-tight max-w-4xl mx-auto">
-            NÄMÄ 3 ERIKOISVIDEO-OPASTA AUKEEVAT HETI KUN LIITYT LISTALLE:
+            NÄMÄ 4 ERIKOISVIDEO-OPASTA AUKEEVAT HETI KUN LIITYT LISTALLE:
           </h2>
 
           <p className="text-gray-300 text-sm sm:text-base max-w-3xl mx-auto leading-relaxed">
-            Syötä etunimesi ja sähköpostiosoitteesi alla olevaan lomakkeeseen. Saat heti VÄLITTÖMÄN pääsyn näihin kolmeen erikoisvideoon suoraan ruudullesi &amp; sähköpostiisi, sekä Janne Säkkisen ladattaviin PDF-kuntoutusmateriaaleihin!
+            Syötä etunimesi ja sähköpostiosoitteesi alla olevaan lomakkeeseen. Saat heti VÄLITTÖMÄN pääsyn näihin neljään erikoisvideoon suoraan ruudullesi &amp; sähköpostiisi, sekä Janne Säkkisen ladattaviin PDF-kuntoutusmateriaaleihin!
           </p>
         </div>
 
         {!isSubmitted ? (
           <div className="space-y-10">
             {/* Showcase Cards with Real Thumbnails & Lock Badges */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {bonusVideos.map((video, idx) => (
                 <div key={idx} className="rounded-2xl bg-[#000d21]/95 border-2 border-[#0C66B4]/60 overflow-hidden space-y-4 shadow-panel hover:border-[#00AEEF] transition-all group flex flex-col justify-between">
                   <div>
@@ -121,7 +130,7 @@ export default function EmailLeadForm({
                       </div>
 
                       <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-white font-medium bg-[#000a18]/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-[#0C66B4]/40">
-                        <span className="flex items-center gap-1.5 text-[#00AEEF] font-bold">
+                        <span className="flex items-center gap-1.5 text-[#00AEEF] font-bold text-[11px]">
                           <Play className="w-3.5 h-3.5 fill-[#00AEEF]" />
                           Erikoisvideo #{idx + 1}
                         </span>
@@ -129,8 +138,8 @@ export default function EmailLeadForm({
                       </div>
                     </div>
 
-                    <div className="p-5 space-y-2">
-                      <h3 className="text-base font-bold text-white leading-snug group-hover:text-[#00AEEF] transition-colors">
+                    <div className="p-4 space-y-2">
+                      <h3 className="text-sm font-bold text-white leading-snug group-hover:text-[#00AEEF] transition-colors">
                         {video.title}
                       </h3>
                       <p className="text-xs text-gray-300 leading-relaxed">
@@ -139,7 +148,7 @@ export default function EmailLeadForm({
                     </div>
                   </div>
 
-                  <div className="px-5 pb-5">
+                  <div className="px-4 pb-4">
                     <div className="w-full py-2 px-3 rounded-lg bg-[#014489]/20 border border-[#0C66B4]/40 text-center text-[11px] text-[#00AEEF] font-semibold">
                       ✔ Saatavilla heti liittymisen jälkeen
                     </div>
@@ -152,7 +161,7 @@ export default function EmailLeadForm({
             <form onSubmit={handleSubmit} className="p-8 sm:p-10 rounded-3xl bg-[#000d21]/95 border-2 border-[#00AEEF] space-y-6 shadow-[0_0_50px_rgba(0,174,239,0.3)] backdrop-blur-md">
               <div className="flex items-center gap-2 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
                 <Gift className="w-4 h-4 text-[#00AEEF]" />
-                <span>Liity sähköpostilistalle – Avaa 3 erikoisvideot &amp; Drive-oppaat</span>
+                <span>Liity sähköpostilistalle – Avaa 4 erikoisvideota &amp; Drive-oppaat</span>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -191,7 +200,7 @@ export default function EmailLeadForm({
                 className="w-full py-4 px-8 rounded-xl bg-[#00AEEF] text-[#000a18] font-bold text-base hover:bg-white transition-all duration-300 shadow-[0_0_25px_rgba(0,174,239,0.5)] flex items-center justify-center gap-3 group cursor-pointer"
               >
                 <Download className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                <span>{isLoading ? "Käsitellään..." : "Liity listalle & Avaa 3 erikoisvideota (Välitön pääsy)"}</span>
+                <span>{isLoading ? "Käsitellään..." : "Liity listalle & Avaa 4 erikoisvideota (Välitön pääsy)"}</span>
               </button>
 
               <div className="flex flex-wrap items-center justify-center gap-6 pt-2 text-xs text-gray-400 font-medium">
@@ -218,12 +227,12 @@ export default function EmailLeadForm({
                 Kiitos liittymisestä{name ? `, ${name}` : ""}!
               </h3>
               <p className="text-gray-300 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
-                Sähköpostiosoitteesi <strong className="text-[#00AEEF]">{email}</strong> on lisätty listalle. Videolinkit on lähetetty sähköpostiisi, ja voit lisäksi katsoa kaikki 3 erikoisvideota tästä suoraan:
+                Sähköpostiosoitteesi <strong className="text-[#00AEEF]">{email}</strong> on lisätty listalle. Videolinkit on lähetetty sähköpostiisi, ja voit lisäksi katsoa kaikki 4 erikoisvideota tästä suoraan:
               </p>
             </div>
 
-            {/* Embedded 3 Videos */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Embedded 4 Videos */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {bonusVideos.map((video, idx) => (
                 <div key={idx} className="rounded-2xl bg-[#000a18] border border-[#0C66B4]/60 overflow-hidden space-y-3 flex flex-col justify-between p-4 shadow-panel">
                   <div className="space-y-3">
@@ -238,7 +247,7 @@ export default function EmailLeadForm({
                     </div>
                     <div>
                       <span className="text-[10px] font-bold text-[#00AEEF] uppercase tracking-wider block">
-                        Osa {idx + 1} / 3
+                        Osa {idx + 1} / 4
                       </span>
                       <h4 className="text-sm font-bold text-white leading-snug mt-1">
                         {video.title}
