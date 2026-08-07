@@ -1,7 +1,9 @@
 import { CATEGORIES } from "@/data/categories";
-import { FALLBACK_VIDEOS } from "@/data/videos";
+import { getAllVideos } from "@/lib/youtube";
 import VideoLibraryClient from "@/components/VideoLibraryClient";
 import type { Metadata } from "next";
+
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Videokirjasto & Fysioterapia-oppaat | FT Janne Säkkinen",
@@ -31,6 +33,8 @@ export const metadata: Metadata = {
   },
 };
 
-export default function VideoLibraryPage() {
-  return <VideoLibraryClient videos={FALLBACK_VIDEOS} categories={CATEGORIES} />;
+export default async function VideoLibraryPage() {
+  const videos = await getAllVideos();
+  return <VideoLibraryClient videos={videos} categories={CATEGORIES} />;
 }
+

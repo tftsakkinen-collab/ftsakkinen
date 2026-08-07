@@ -8,7 +8,7 @@ export interface Category {
 export const CATEGORIES: Category[] = [
   {
     id: "kaikki",
-    name: "Kaikki 68 videota",
+    name: "Kaikki 69 videota",
     description: "Kaikki OMT-fysioterapeutti Janne Säkkisen julkaisemat fysioterapiavideot.",
   },
   {
@@ -23,7 +23,7 @@ export const CATEGORIES: Category[] = [
   },
   {
     id: "tule-vaivat",
-    name: "TULE-vaivat",
-    description: "Tulehdus, niska-hartiaseutu, selkäkivut, olkapään ahtaus, polvi ja lonkka.",
+    name: "TULE-vaivat & Lantionpohja",
+    description: "Lantionpohjan fysioterapia, virtsankarkailu, niska-hartiaseutu, selkäkivut, olkapään ahtaus, polvi ja lonkka.",
   },
 ];

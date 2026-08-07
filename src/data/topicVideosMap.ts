@@ -2,6 +2,7 @@
 // Maps video IDs directly to relevant clinical topic slugs based on actual content (not broad categories).
 
 export const FI_TOPIC_VIDEOS_MAP: Record<string, string[]> = {
+  "8H_k0lrebJ0": ["lantionpohja-ja-virtsankarkailu", "selkakipu-ja-iskias"],
   "0MKwbFkXQ2w": ["leukakipu-ja-tmd", "niskakipu-ja-paansarky", "ergonomia-ja-tyohyvinvointi"],
   "TqVWQND9g64": ["leukakipu-ja-tmd"],
   "Nnf2NUdnC7M": ["leukakipu-ja-tmd"],

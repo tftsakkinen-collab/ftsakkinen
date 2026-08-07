@@ -1,4 +1,5 @@
 import { FALLBACK_VIDEOS, Video } from "@/data/videos";
+import { getAllVideos, getVideoById } from "@/lib/youtube";
 import { CATEGORIES } from "@/data/categories";
 import Link from "next/link";
 import { ArrowLeft, Download, Sparkles, Globe, Play, ChevronRight, HelpCircle, Home } from "lucide-react";
@@ -9,7 +10,8 @@ import TranscriptViewer from "@/components/TranscriptViewer";
 import type { Metadata } from "next";
 
 export async function generateStaticParams() {
-  return FALLBACK_VIDEOS.map((v) => ({
+  const videos = await getAllVideos();
+  return videos.map((v) => ({
     id: v.id,
   }));
 }
@@ -17,7 +19,7 @@ export async function generateStaticParams() {
 // 1. VIDEO-SPECIFIC DYNAMIC META TAGS + HREFLANG FOR SEO & AEO
 export async function generateMetadata(props: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const params = await props.params;
-  const video = FALLBACK_VIDEOS.find((v) => v.id === params.id) || FALLBACK_VIDEOS[0];
+  const video = await getVideoById(params.id);
 
   if (!video) {
     return {};
@@ -70,7 +72,7 @@ export async function generateMetadata(props: { params: Promise<{ id: string }> 
 
 export default async function SingleVideoPage(props: { params: Promise<{ id: string }> }) {
   const params = await props.params;
-  const video = FALLBACK_VIDEOS.find((v) => v.id === params.id) || FALLBACK_VIDEOS[0];
+  const video = await getVideoById(params.id);
 
   if (!video) {
     notFound();
@@ -78,8 +80,9 @@ export default async function SingleVideoPage(props: { params: Promise<{ id: str
 
   const category = CATEGORIES.find((c) => c.id === video.categoryId);
 
-  // Related videos
-  const relatedVideos = FALLBACK_VIDEOS.filter(
+  // Related videos from all available videos
+  const allVideos = await getAllVideos();
+  const relatedVideos = allVideos.filter(
     (v) => v.categoryId === video.categoryId && v.id !== video.id
   ).slice(0, 3);
 

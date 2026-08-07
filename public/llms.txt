@@ -5,13 +5,14 @@
 ## Tärkeimmät Osikot & Palvelut
 
 - [Kotisivu](https://www.ftsakkinen.com/): Yleiskatsaus OMT-fysioterapiapalveluihin, vastaanottopisteisiin ja koulutustoimintaan.
-- [Videokirjasto & Blogi](https://www.ftsakkinen.com/videot): 68 AEO-optimoidun opetusvideon ja fysioterapia-artikkelin tietopankki (Purenta & TMD, Ergonomia, TULE-vaivat).
+- [Videokirjasto & Blogi](https://www.ftsakkinen.com/videot): 69 AEO-optimoidun opetusvideon ja fysioterapia-artikkelin tietopankki (Purenta & TMD, Ergonomia, TULE-vaivat & Lantionpohja).
 - [Ilmaiset Oppaat (Google Drive)](https://www.ftsakkinen.com/ilmaisopas): Viralliset liike- ja kuntoutusohjeet PDF-muodossa suoraan Janne Säkkisen Google Drive -kansiosta.
 - [Koulutukset & CV](https://www.ftsakkinen.com/koulutukset): Yliopisto-opetus, erikoiskoulutukset fysioterapeuteille sekä kliininen työkokemus (2011–2026).
 - [Ajanvaraus & Yhteystiedot](https://www.ftsakkinen.com/yhteystiedot): Vastaanottoajat Terveystalolla, Norre Työterveydessä sekä Hammasvahdissa.
 
 ## Aihekoostesivut & Kliiniset Tietopakit
 
+- [Lantionpohja & Virtsankarkailu](https://www.ftsakkinen.com/videot/8H_k0lrebJ0): Fysioterapeutti: puristelu (kegelit) voi pahentaa virtsankarkailua — heikko vs ylikireä lantionpohja, kotitesti & asiantuntijahaastattelu (Sofia Lahtinen).
 - [Leukakipu & Bruksismi (TMD)](https://www.ftsakkinen.com/aihe/leukakipu-ja-tmd): Leukanivelen naksahdus, purentalihasten jumit ja kasvojen jomotus — 12 opetusvideota & kliininen opas.
 - [Niskakipu & Päänsärky](https://www.ftsakkinen.com/aihe/niskakipu-ja-paansarky): Niska-hartiaseudun jännitystilat ja cervikogeeninen päänsärky.
 - [Selkäkipu & Iskias](https://www.ftsakkinen.com/aihe/selkakipu-ja-iskias): Alaselän fasettilukot, välilevyvaivat ja iskiasoireilu.
