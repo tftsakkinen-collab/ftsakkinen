@@ -60,6 +60,9 @@ export default function Footer() {
                 <Link href="/videot" className="hover:text-white transition-colors">Videokirjasto</Link>
               </li>
               <li>
+                <Link href="/kamat" className="hover:text-white transition-colors text-[#00AEEF]">Kamat &amp; Työkalut</Link>
+              </li>
+              <li>
                 <Link href="/ilmaisopas" className="hover:text-white transition-colors">Ilmaiset Kipuoppaat</Link>
               </li>
               <li>

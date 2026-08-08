@@ -45,6 +45,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/kamat`,
+      lastModified: new Date("2026-08-08"),
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/ilmaisopas`,
       lastModified: new Date("2024-06-15"),
       changeFrequency: "monthly" as const,

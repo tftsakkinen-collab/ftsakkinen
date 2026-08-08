@@ -126,10 +126,16 @@ export default async function HomePage() {
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5.0",
-        "reviewCount": 12,
+        "reviewCount": 13,
         "bestRating": "5"
       },
       "review": [
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Työterveysasiakas (Kenttäasentaja)" },
+          "reviewBody": "Kävin vastaanotollasi alaselkäkipujen vuoksi. Opin ohjauksessasi oikean nostotavan, eikä alaselkäoireilua ole sen jälkeen juuri ollut. Jos oireita on ajoittain tuntunut, olen tehnyt fysioterapeutin voimisteluliikkeitä ja saanut niistä heti avun. Kiitos työstäsi – mahtavaa kun homma toimii!",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+        },
         {
           "@type": "Review",
           "author": { "@type": "Person", "name": "Fysioterapeutti / Koulutusosallistuja" },

@@ -47,7 +47,7 @@ export default function TestimonialsSection() {
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0C66B4]/20 border border-[#00AEEF]/40 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
             <MessageSquareQuote className="w-4 h-4" />
-            <span>Aitoja Koulutus- & Luentopalautteita</span>
+            <span>Aitoja koulutus- ja luentopalautteita</span>
           </div>
 
           <h2 className="text-3xl sm:text-5xl font-display text-white tracking-wide">
@@ -62,31 +62,31 @@ export default function TestimonialsSection() {
           {realTestimonials.map((item, idx) => (
             <div
               key={idx}
-              className="p-8 rounded-3xl bg-[#000d21] border border-[#0C66B4]/60 flex flex-col justify-between space-y-6 shadow-panel hover:border-[#00AEEF] transition-all"
+              className="p-8 rounded-3xl bg-[#000d21] border border-[#0C66B4]/60 flex flex-col justify-between space-y-6 shadow-panel hover:border-[#00AEEF] transition-all text-center items-center"
             >
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-bold text-[#00AEEF] uppercase tracking-wider">
+              <div className="space-y-4 w-full flex flex-col items-center">
+                <div className="flex flex-col items-center gap-2 w-full">
+                  <span className="text-xs font-bold text-[#00AEEF] uppercase tracking-wider text-center">
                     {item.category}
                   </span>
-                  <div className="flex items-center gap-1 text-[#00AEEF]">
+                  <div className="flex items-center justify-center gap-1 text-[#00AEEF]">
                     {[...Array(item.rating)].map((_, i) => (
                       <Star key={i} className="w-3.5 h-3.5 fill-current" />
                     ))}
                   </div>
                 </div>
 
-                <p className="text-sm text-gray-200 italic leading-relaxed">
+                <p className="text-sm text-gray-200 italic leading-relaxed text-center break-words">
                   "{item.text}"
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-[#0C66B4]/30 flex items-center justify-between text-xs text-gray-300">
-                <span className="font-semibold flex items-center gap-1.5 text-white">
-                  <UserCheck className="w-3.5 h-3.5 text-[#00AEEF]" />
+              <div className="pt-4 border-t border-[#0C66B4]/30 flex items-center justify-center gap-2 text-xs text-gray-300 w-full text-center">
+                <UserCheck className="w-3.5 h-3.5 text-[#00AEEF] shrink-0" />
+                <span className="font-semibold text-white break-words text-center">
                   {item.target}
                 </span>
-                <CheckCircle2 className="w-4 h-4 text-[#00AEEF]" />
+                <CheckCircle2 className="w-4 h-4 text-[#00AEEF] shrink-0" />
               </div>
             </div>
           ))}

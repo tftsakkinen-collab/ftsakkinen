@@ -54,11 +54,11 @@ export default function VideoCard({ video }: VideoCardProps) {
         </div>
 
         {/* Details */}
-        <div className="p-6 space-y-3">
-          <h3 className="text-xl font-bold text-white group-hover:text-[#00AEEF] transition-colors leading-snug">
+        <div className="p-6 space-y-3 text-center flex flex-col items-center">
+          <h3 className="text-xl font-bold text-white group-hover:text-[#00AEEF] transition-colors leading-snug text-center">
             {video.title}
           </h3>
-          <p className="text-sm text-gray-300 line-clamp-2 leading-relaxed">
+          <p className="text-sm text-gray-300 line-clamp-2 leading-relaxed text-center">
             {video.promiseDescription}
           </p>
         </div>
@@ -68,7 +68,7 @@ export default function VideoCard({ video }: VideoCardProps) {
       <div className="px-6 pb-6 pt-2">
         <Link
           href={`/videot/${video.id}`}
-          className="inline-flex items-center justify-center w-full py-2.5 rounded-xl bg-[#0C66B4]/20 border border-[#0C66B4]/50 text-[#00AEEF] font-semibold text-sm hover:bg-[#00AEEF] hover:text-black transition-all gap-2"
+          className="inline-flex items-center justify-center w-full py-2.5 rounded-xl bg-[#0C66B4]/20 border border-[#0C66B4]/50 text-[#00AEEF] font-semibold text-sm hover:bg-[#00AEEF] hover:text-black transition-all gap-2 text-center"
         >
           Katso video &amp; ohjeet
           <ArrowUpRight className="w-4 h-4" />

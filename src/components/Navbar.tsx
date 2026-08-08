@@ -13,6 +13,7 @@ export default function Navbar() {
     { name: "Etusivu", href: "/" },
     { name: "Tietoa minusta", href: "/tietoa-minusta" },
     { name: "Videokirjasto", href: "/videot" },
+    { name: "Kamat & Työkalut", href: "/kamat" },
     { name: "Ilmaisopas", href: "/ilmaisopas" },
     { name: "Koulutukset & Tausta", href: "/koulutukset" },
     { name: "Kyynärpää-apuväline", href: "/kyynarpaa-apuvaline" },
