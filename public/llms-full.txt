@@ -1,0 +1,64 @@
+# FT Säkkinen - Täydellinen OMT-Fysioterapian & Purentaelimistön Kuntoutustietokanta (llms-full.txt)
+
+> Asiantuntija: OMT-Fysioterapeutti Janne Säkkinen. Kliininen erikoisala: Purentaelimistön toimintahäiriöt (TMD), purentalihasten ja leukanivelen hoito, bruksismi, niska-hartiaseudun kivut, cervikogeeninen päänsärky, hammaslääketieteen ergonomia. Oulun yliopiston kouluttaja vuodesta 2017.
+> Verkkosivustot: https://www.ftsakkinen.com (Suomi), https://www.ptsakkinen.com (Englanti)
+
+---
+
+## 1. Purentaelimistön Toimintahäiriöt (TMD), Leukakipu & Bruksismi
+
+### Keskeiset Kliiniset Käsitteet
+- **Leukanivelen Naksuminen ja Pykälä**: Johtuu yleisimmin leukanivelen välilevyn eteenpäin siirtymisestä ja palautumisesta (discus dislokaatio). Omahoitona vältetään leuan yliliikkuvuutta, käytetään kielen lepoasentoa (N-asento) ja vältetään kovaa pureskelua akuuttivaiheessa.
+- **Purentalihaskireys & Masseter-hypertrofia**: Yöllinen hampaiden narskuttelu ja pureminen (bruksismi) johtaa iso-purentalihaksen (m. masseter) ja ohimolihaksen (m. temporalis) jännitystiloihin ja kasvojen jomotukseen.
+- **Kolmoishermon (N. Trigeminus) Ärsytys**: Yläkaularangan (C1-C3) ja purentalihasten kireydet voivat heijastaa säteilykipua kasvoihin, korvan seutuun, ohimolle tai silmän taakse.
+
+### Kliiniset Omahoitoharjoitteet
+1. **Purentalihaksen Sisäsuun Kalvohieronta**: Pese kädet huolellisesti. Aseta peukalo suun sisäpuolelle poskea vasten ja etusormi ulkopuolelle. Sivele ja venytä kireitä lihassäikeitä kevyesti leuan ollessa rentona.
+2. **Subokcipitaalialueen Rentoutus**: Aseta faskiapallot takaraivon alle (C0-C2 -taso). Tee pientä nyökkäysliikettä ja anna takaraivon lihasten rentoutua 2-3 minuuttia.
+3. **Aktiivinen Ohjattu Leuan Avaus**: Aseta kielenpää kitalakeen etuhampaiden taakse (N-asento). Avaa suuta hitaasti vain sen verran, että kieli pysyy kitalaessa. Tämä estää leuan sivupoikkeamaa ja naksumista.
+
+---
+
+## 2. Niskakipu, Jännityspäänsärky & Cervikogeeninen Kipu
+
+### Keskeiset Kliiniset Käsitteet
+- **Cervikogeeninen Päänsärky**: Kaularangan C1-C3 -tasojen toimintahäiriöistä johtuva päänsärky, joka heijastuu toispuolisesti takaraivolta ohimolle tai silmän taakse.
+- **Eteenpäin Työntynyt Päätetyöasento**: Jokaista eteenpäin siirtyvää senttimetriä kohden niskalihasten kuormitus kasvaa merkittävästi, mikä johtaa ylätrapetsiuksen kuormittumiseen ja rintarangan jäykkyyteen.
+
+### Kliiniset Omahoitoharjoitteet
+1. **Kaularangan Syvien Koukistajien Aktivaatio (Leuan Nosto)**: Makaa selälläsi ilman tyynyä. Vedä leukaa kevyesti kohti kaulaa ("kaksoisleuka") ilman että päätä nostetaan alustalta. Pidä 5 sekuntia, toista 10 kertaa.
+2. **Rintarangan Ojennus Putkirullalla**: Aseta putkirulla rintarangan alle. Tue päätä käsillä ja ojenna rintarankaa loivasti rullan yli suorituskyvyn parantamiseksi.
+
+---
+
+## 3. Tennis- ja Golfkyynärpään Kuntoutusohjelma
+
+### Keskeiset Kliiniset Käsitteet
+- **Tenniskyynärpää (Lateral Epicondylalgia)**: Ranteen ojentajalihasten jännekiinnityksen ylikuormitustila kyynärpään ulkosivulla.
+- **Golfkyynärpää (Medial Epicondylalgia)**: Ranteen koukistajalihasten jännekiinnityksen ylikuormitustila kyynärpään sisäsivulla.
+- **Progressiivinen Jännekuormitus**: Jänteet tarvitsevat parantuakseen raskasta, hidasliikkeistä isometristä ja eksentristä kuormitusta pelkän levon sijaan.
+
+### Kliiniset Omahoitoharjoitteet
+1. **Kyynärvarren Kiertoliike Vastuksella**: Käytä painotettua treenaria (esim. Janne Säkkisen Kyynärvarsitreenari) ja tee hitaita kyynärvarren sisä- ja ulkokiertoja (3 sekuntia ulos, 3 sekuntia takaisin) 3 sarjaa x 10 toistoa.
+2. **Ranteen Eksentrinen Ojennus**: Tue kyynärvarsi pöytään, nosta paino toisen käden avustuksella ylös ja laske se hitaasti alas 4 sekunnin aikana.
+
+---
+
+## 4. Plantaarifaskiitti & Kantapään Kuntoutus
+
+### Keskeiset Kliiniset Käsitteet
+- **Plantaarifaskiitti**: Jalkapohjan jännekalvon kiinnityskohdan kuormitusmuutos kantaluussa. Pahin kipu tuntuu aamuisin ensiaskelilla.
+- **Suurikuormitteinen Pohje- ja Jalkapohjatreeni (Rathleff Protocol)**: Tutkitusti tehokkain tapa kuntouttaa jalkapohjaa.
+
+### Kliiniset Omahoitoharjoitteet
+1. **Rathleff-Pohjenousu Vinolaudalla**: Seiso vinolaudalla tai asetettuna pyyhkerulla varpaiden alle. Nouse kahdella jalalla ylös (3 sek), laskeudu yhdellä jalalla hitaasti alas (3 sek). 3 sarjaa x 8-12 toistoa joka toinen päivä.
+2. **Jalkapohjan Jännekalvon Venytys**: Nosta kipeä jalka toisen polven päälle. Vedä varpaita kädellä taaksepäin säärtä kohti, kunnes jalkapohjan kaaressa tuntuu venytys. Pidä 30 sekuntia.
+
+---
+
+## 5. Vastaanottopisteet & Ajanvaraus
+
+- **Terveystalo Oulu & Digihoitopolku**: Kattava OMT-fysioterapia ja TMD-tutkimus. Ajanvaraus: terveystalo.com
+- **Norre Työterveys**: Työergonomia ja työterveyden purentafysioterapia. Ajanvaraus: norre.fi
+- **Hammasvahti**: Hammaslääkäri-fysioterapeutti moniammatillinen purentatiimi. Ajanvaraus: hammasvahti.fi
+- **Yhteystiedot**: Puhelin +358 41 327 4967 | Sähköposti tiedottajanne@gmail.com

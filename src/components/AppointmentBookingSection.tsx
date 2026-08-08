@@ -35,12 +35,12 @@ export default function AppointmentBookingSection() {
               </p>
             </div>
             <a
-              href="https://www.terveystalo.com"
+              href="https://www.terveystalo.com/fi/asiakaspalvelu/asiantuntijat/?q=Janne+S%C3%A4kkinen"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 text-xs font-bold text-[#00AEEF] hover:underline pt-3 border-t border-[#0C66B4]/30 w-full text-center"
             >
-              <span>Terveystalo-ajanvaraus</span>
+              <span>Terveystalo: Janne Säkkinen</span>
               <ExternalLink className="w-3.5 h-3.5" />
             </a>
           </div>

@@ -6,23 +6,23 @@ import { ShieldCheck, Play, ArrowRight, Award, GraduationCap, CheckCircle2, Eye,
 export default function Hero() {
   const stats = [
     {
-      label: "Yli 1,1 miljoonaa",
+      label: "Yli 1,1M+ Katselua",
       sublabel: "Katselukertaa YouTubessa",
       icon: Eye,
     },
     {
-      label: "5 380+ tilaajaa",
+      label: "5 380+ Tilaajaa",
       sublabel: "Oppimassa kanavalla",
       icon: Users,
     },
     {
-      label: "68 opetusvideota",
-      sublabel: "Täydelliset artikkelit",
+      label: "70+ Opetusvideota",
+      sublabel: "Maksuttomat oppaat",
       icon: Video,
     },
     {
-      label: "Kouluttaja 2017–",
-      sublabel: "Oulun yliopisto",
+      label: "15+ Täydennyskoulutusta",
+      sublabel: "OMT & Purenta-asiantuntija",
       icon: GraduationCap,
     },
   ];

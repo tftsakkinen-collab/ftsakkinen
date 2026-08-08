@@ -31,6 +31,7 @@ export const SITE_CONFIG = {
   authorityProofs: {
     teaching: "Oulun yliopiston lääketieteellinen tiedekunta / Hammaslääketiede (2017–)",
     credentials: "OMT-Fysioterapeutti (SOMTY), Terveystieteiden B.Sc., Elektroniikka-asentaja",
+    valvira: "Laillistettu terveydenhuollon ammattihenkilö (Valvira / Terhikki -rekisteröity OMT-fysioterapeutti)",
     appointments: "Tiedottajanne Oy — OMT-Fysioterapia & Koulutuspalvelut",
     qualification: "OMT-Fysioterapeutti (SOMTY 2018–2020)",
   },
