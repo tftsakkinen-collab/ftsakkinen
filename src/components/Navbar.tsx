@@ -11,21 +11,21 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Etusivu", href: "/" },
-    { name: "Tietoa minusta", href: "/tietoa-minusta" },
-    { name: "Videokirjasto", href: "/videot" },
-    { name: "Kamat & Työkalut", href: "/kamat" },
+    { name: "Tietoa", href: "/tietoa-minusta" },
+    { name: "Videot", href: "/videot" },
+    { name: "Kamat", href: "/kamat" },
     { name: "Ilmaisopas", href: "/ilmaisopas" },
-    { name: "Koulutukset & Tausta", href: "/koulutukset" },
-    { name: "Kyynärpää-apuväline", href: "/kyynarpaa-apuvaline" },
+    { name: "Koulutukset", href: "/koulutukset" },
+    { name: "Kyynärpää-apu", href: "/kyynarpaa-apuvaline" },
     { name: "Yhteystiedot", href: "/yhteystiedot" },
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-[#000a18]/90 backdrop-blur-md border-b border-[#0C66B4]/40">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+    <header className="sticky top-0 z-50 bg-[#000a18]/95 backdrop-blur-md border-b border-[#0C66B4]/40">
+      <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20 gap-4">
           {/* Brand Logo with Official Image */}
-          <Link href="/" className="flex items-center gap-3 group">
+          <Link href="/" className="flex items-center gap-3 shrink-0 group">
             <div className="relative w-11 h-11 rounded-full overflow-hidden border-2 border-[#00AEEF] bg-[#000a18] flex items-center justify-center shadow-[0_0_15px_rgba(0,174,239,0.8)] group-hover:scale-105 transition-transform p-0.5">
               <img
                 src="/logo-whitebg.png?v=20260730"
@@ -34,7 +34,7 @@ export default function Navbar() {
               />
             </div>
             <div className="flex flex-col">
-              <span className="font-display text-2xl tracking-wide text-white group-hover:text-[#00AEEF] transition-colors">
+              <span className="font-display text-xl sm:text-2xl tracking-wide text-white group-hover:text-[#00AEEF] transition-colors">
                 FT SÄKKINEN<span className="text-[#00AEEF]">.</span>
               </span>
               <span className="text-[10px] text-gray-400 uppercase tracking-widest -mt-1 font-sans">
@@ -43,16 +43,16 @@ export default function Navbar() {
             </div>
           </Link>
 
-          {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-7">
+          {/* Desktop Nav - Evenly Spaced & Centered */}
+          <nav className="hidden lg:flex items-center justify-center flex-1 gap-5 xl:gap-7">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-sm font-medium transition-colors hover:text-[#00AEEF] relative py-1 ${
-                    isActive ? "text-[#00AEEF]" : "text-gray-300"
+                  className={`text-sm font-semibold transition-colors hover:text-[#00AEEF] whitespace-nowrap relative py-1.5 ${
+                    isActive ? "text-[#00AEEF]" : "text-gray-200"
                   }`}
                 >
                   {link.name}
@@ -65,7 +65,7 @@ export default function Navbar() {
           </nav>
 
           {/* Desktop CTA & Language Switcher */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-3 shrink-0">
             <a
               href="https://www.ptsakkinen.com"
               title="In English — ptsakkinen.com"
@@ -77,10 +77,10 @@ export default function Navbar() {
             </a>
             <Link
               href="/ilmaisopas"
-              className="px-4 py-2 rounded-lg bg-[#00AEEF] text-black font-semibold text-sm hover:bg-[#33C2F5] transition-all shadow-glow flex items-center gap-2"
+              className="px-4 py-2 rounded-lg bg-[#00AEEF] text-black font-bold text-xs sm:text-sm hover:bg-[#33C2F5] transition-all shadow-glow flex items-center gap-2 whitespace-nowrap"
             >
               <Download className="w-4 h-4" />
-              Lataa ilmainen opas
+              <span>Lataa ilmainen opas</span>
             </Link>
           </div>
 
