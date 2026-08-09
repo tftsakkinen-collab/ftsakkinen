@@ -19,8 +19,8 @@ export function PersonPhysicianSchema() {
           "@id": "https://www.ftsakkinen.com/#organization",
           "name": "Tiedottajanne Oy",
           "legalName": "Tiedottajanne Oy",
-          "identifier": "3505813-7",
-          "vatID": "FI35058137"
+          "identifier": "3305813-7",
+          "vatID": "FI33058137"
         },
         "alumniOf": [
           {
@@ -72,8 +72,8 @@ export function PersonPhysicianSchema() {
         "@id": "https://www.ftsakkinen.com/#organization",
         "name": "Tiedottajanne Oy",
         "legalName": "Tiedottajanne Oy",
-        "identifier": "3505813-7",
-        "vatID": "FI35058137",
+        "identifier": "3305813-7",
+        "vatID": "FI33058137",
         "url": "https://www.ftsakkinen.com/",
         "telephone": "+358401234567",
         "address": {
