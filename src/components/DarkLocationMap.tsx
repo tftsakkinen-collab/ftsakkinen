@@ -17,17 +17,22 @@ export default function DarkLocationMap({ title = "Vastaanottopisteet (Oulu & Ke
 
       {/* Dark Styled Map Box */}
       <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden border border-[#0C66B4]/50 bg-[#000814] shadow-inner group">
-        <iframe
-          title="Vastaanottopisteet Oulu"
-          width="100%"
-          height="100%"
-          loading="lazy"
+        <div
+          className="w-full h-full"
           style={{
-            border: 0,
             filter: "invert(90%) hue-rotate(185deg) brightness(85%) contrast(120%)",
+            WebkitFilter: "invert(90%) hue-rotate(185deg) brightness(85%) contrast(120%)",
           }}
-          src="https://www.openstreetmap.org/export/embed.html?bbox=25.4200%2C64.9900%2C25.5200%2C65.0350&amp;layer=mapnik"
-        />
+        >
+          <iframe
+            title="Vastaanottopisteet Oulu"
+            width="100%"
+            height="100%"
+            loading="lazy"
+            style={{ border: 0 }}
+            src="https://www.openstreetmap.org/export/embed.html?bbox=25.4200%2C64.9900%2C25.5200%2C65.0350&amp;layer=mapnik"
+          />
+        </div>
 
         {/* Branded Cyan Pin Overlay */}
         <div className="absolute inset-0 pointer-events-none flex items-center justify-center">

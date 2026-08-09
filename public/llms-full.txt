@@ -329,7 +329,7 @@
 - **Direct Clinical Answer**: Transkriptio ei saatavilla.
 - **Full Clinical Summary**: Transkriptio ei saatavilla. ---...
 
-## purenta-tmd
+## Purentaelintoiminnan Häiriöt (TMD) & Kasvokivut
 
 ### Leukakipua? Leukaterapeutit vastaavat yleisimpiin kysymyksiin
 - **URL**: https://www.ftsakkinen.com/videot/0MKwbFkXQ2w
@@ -403,7 +403,7 @@
 - **Direct Clinical Answer**: Transkriptio ei saatavilla.
 - **Full Clinical Summary**: Transkriptio ei saatavilla. ---...
 
-## ergonomia
+## Ergonomia & Työhyvinvointi
 
 ### Tarvitsetko oikeasti erityistyölasit? Katso tämä ennen kuin maksat!
 - **URL**: https://www.ftsakkinen.com/videot/SOTE4IF23bs

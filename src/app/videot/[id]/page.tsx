@@ -110,7 +110,7 @@ export default async function SingleVideoPage(props: { params: Promise<{ id: str
   // Content type detection for non-exercise videos (Task 2)
   const videoText = (video.title + " " + video.promiseDescription).toLowerCase();
   let contentType = "exercise";
-  if (videoText.includes("ruoka") || videoText.includes("ravinto") || videoText.includes("tulehdus") || videoText.includes("syö") || videoText.includes("ruokavalio")) {
+  if (videoText.includes("ruoka") || videoText.includes("ravinto") || videoText.includes("ravitsemus") || videoText.includes("syö") || videoText.includes("ruokavalio")) {
     contentType = "nutrition";
   } else if (videoText.includes("haastattelu") || videoText.includes("etä") || videoText.includes("vastaavat") || videoText.includes("tarina") || videoText.includes("myytti")) {
     contentType = "interview";

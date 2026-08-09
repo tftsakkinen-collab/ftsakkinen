@@ -19,20 +19,27 @@ export const PROSHOP_TRACKING_LINK = "https://adtr.co/9w3xdl";
 
 export function getAmazonUrl(item: GearItem): string {
   if (item.amazonUrl) {
-    if (item.amazonUrl.includes("tag=")) return item.amazonUrl;
-    const separator = item.amazonUrl.includes("?") ? "&" : "?";
-    return `${item.amazonUrl}${separator}tag=${AMAZON_ASSOCIATE_TAG}`;
+    let url = item.amazonUrl;
+    if (!url.includes("tag=")) {
+      const separator = url.includes("?") ? "&" : "?";
+      url = `${url}${separator}tag=${AMAZON_ASSOCIATE_TAG}`;
+    }
+    if (!url.includes("language=")) {
+      const separator = url.includes("?") ? "&" : "?";
+      url = `${url}${separator}language=en_GB`;
+    }
+    return url;
   }
 
   if (item.amazonAsinOrSearch) {
     const query = item.amazonAsinOrSearch.trim();
     if (/^[A-Z0-9]{10}$/i.test(query)) {
-      return `https://www.amazon.de/dp/${query}?tag=${AMAZON_ASSOCIATE_TAG}`;
+      return `https://www.amazon.de/dp/${query}?tag=${AMAZON_ASSOCIATE_TAG}&language=en_GB`;
     }
-    return `https://www.amazon.de/s?k=${encodeURIComponent(query)}&tag=${AMAZON_ASSOCIATE_TAG}`;
+    return `https://www.amazon.de/s?k=${encodeURIComponent(query)}&tag=${AMAZON_ASSOCIATE_TAG}&language=en_GB`;
   }
 
-  return `https://www.amazon.de/s?k=${encodeURIComponent(item.name)}&tag=${AMAZON_ASSOCIATE_TAG}`;
+  return `https://www.amazon.de/s?k=${encodeURIComponent(item.name)}&tag=${AMAZON_ASSOCIATE_TAG}&language=en_GB`;
 }
 
 export const GEAR_CATEGORIES = [
