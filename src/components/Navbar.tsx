@@ -18,6 +18,7 @@ export default function Navbar() {
     { name: "Koulutukset", href: "/koulutukset" },
     { name: "Kyynärpää-apu", href: "/kyynarpaa-apuvaline" },
     { name: "Yhteystiedot", href: "/yhteystiedot" },
+    { name: "Tietosuoja", href: "/tietosuoja" },
   ];
 
   return (
