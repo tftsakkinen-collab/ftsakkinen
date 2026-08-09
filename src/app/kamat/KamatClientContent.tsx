@@ -17,6 +17,7 @@ import {
   GEAR_CATEGORIES,
   getAmazonUrl,
 } from "@/data/gearData";
+import { trackEvent } from "@/lib/analytics";
 
 export default function KamatClientContent() {
   const [selectedCategory, setSelectedCategory] = useState<string>("kaikki");
@@ -40,6 +41,7 @@ export default function KamatClientContent() {
     const url = getAmazonUrl(item);
     navigator.clipboard.writeText(url);
     setCopiedId(item.id);
+    trackEvent("copy_affiliate_link", { itemId: item.id, url });
     setTimeout(() => setCopiedId(null), 2000);
   };
 

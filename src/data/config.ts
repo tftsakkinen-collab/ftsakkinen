@@ -1,3 +1,5 @@
+import { FALLBACK_VIDEOS } from "./videos";
+
 export const SITE_CONFIG = {
   brandName: "FT Säkkinen",
   companyName: "Tiedottajanne Oy",
@@ -13,7 +15,7 @@ export const SITE_CONFIG = {
   streetAddress: "Oulu, Suomi",
   contactEmail: "tiedottajanne@gmail.com",
   contactPhone: "041 327 4967",
-  totalVideosCount: 70,
+  totalVideosCount: FALLBACK_VIDEOS.length,
   
   // Social Media Handles
   youtubeUrl: "https://www.youtube.com/@ft_sakkinen",

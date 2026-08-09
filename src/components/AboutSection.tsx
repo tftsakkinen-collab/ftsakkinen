@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SITE_CONFIG } from "@/data/config";
 import { UserCheck, Award, Stethoscope } from "lucide-react";
 
@@ -10,10 +11,12 @@ export default function AboutSection() {
           {/* Professional Photo */}
           <div className="lg:col-span-5 relative">
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden border-2 border-[#0C66B4] shadow-panel group">
-              <img
+              <Image
                 src="/janne-sakkinen.jpg"
                 alt="Janne Säkkinen OMT-fysioterapeutti kliinisessä työssä"
-                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                fill
+                sizes="(max-width: 768px) 100vw, 40vw"
+                className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#000d21] via-transparent to-transparent opacity-60" />
 
