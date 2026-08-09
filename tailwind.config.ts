@@ -30,7 +30,7 @@ const config: Config = {
         },
       },
       fontFamily: {
-        display: ["var(--font-luckiest-guy)", "cursive", "sans-serif"],
+        display: ["var(--font-display-heading)", "system-ui", "sans-serif"],
         sans: ["var(--font-roboto)", "system-ui", "sans-serif"],
       },
       boxShadow: {

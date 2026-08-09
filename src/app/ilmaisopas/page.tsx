@@ -69,6 +69,50 @@ export default function FreeGuidePage() {
         </div>
       </div>
 
+      {/* Mitä oppaat sisältävät -osio */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 pt-6">
+        <div className="text-center max-w-2xl mx-auto space-y-2">
+          <h2 className="text-2xl sm:text-3xl font-display text-white uppercase tracking-wide">
+            MITÄ KUNTOUTUSOPPAAT <span className="text-[#00AEEF]">SISÄLTÄVÄT</span>
+          </h2>
+          <p className="text-sm text-gray-300">
+            OMT-Fysioterapeutti Janne Säkkisen kehittämät omatoimiset kuntoutusohjelmat ja liikekaaviot.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="p-6 rounded-2xl bg-gradient-to-b from-[#000d21] to-[#000814] border border-[#0C66B4]/40 hover:border-[#00AEEF]/60 transition-all space-y-3">
+            <div className="w-10 h-10 rounded-xl bg-[#014489]/40 border border-[#00AEEF]/40 text-[#00AEEF] flex items-center justify-center font-bold">
+              01
+            </div>
+            <h3 className="font-bold text-lg text-white">Purenta &amp; TMD -Oppaat</h3>
+            <p className="text-xs text-gray-300 leading-relaxed">
+              Kuvalliset ohjeet purentalihasten omatoimiseen käsittelyyn, leukanivelen paineen kevennykseen, bruksismin hallintaan ja kielen lepoasennon linjaukseen.
+            </p>
+          </div>
+
+          <div className="p-6 rounded-2xl bg-gradient-to-b from-[#000d21] to-[#000814] border border-[#0C66B4]/40 hover:border-[#00AEEF]/60 transition-all space-y-3">
+            <div className="w-10 h-10 rounded-xl bg-[#014489]/40 border border-[#00AEEF]/40 text-[#00AEEF] flex items-center justify-center font-bold">
+              02
+            </div>
+            <h3 className="font-bold text-lg text-white">Ergonomia &amp; Työhyvinvointi</h3>
+            <p className="text-xs text-gray-300 leading-relaxed">
+              Työpisteen mittataulukot, näytön ja tuolin oikeat säädöt, suun terveydenhuollon asento-ohjeet sekä 30 sekunnin taukojumpparutiinit.
+            </p>
+          </div>
+
+          <div className="p-6 rounded-2xl bg-gradient-to-b from-[#000d21] to-[#000814] border border-[#0C66B4]/40 hover:border-[#00AEEF]/60 transition-all space-y-3">
+            <div className="w-10 h-10 rounded-xl bg-[#014489]/40 border border-[#00AEEF]/40 text-[#00AEEF] flex items-center justify-center font-bold">
+              03
+            </div>
+            <h3 className="font-bold text-lg text-white">Niska, Selkä &amp; Iskias -Ohjeet</h3>
+            <p className="text-xs text-gray-300 leading-relaxed">
+              Rintarangan rotaatioharjoitteet, niskan syvien lihasten aktivointi, iskiashermon liukuharjoitteet ja fasetin vapautusliikkeet.
+            </p>
+          </div>
+        </div>
+      </div>
+
     </div>
   );
 }

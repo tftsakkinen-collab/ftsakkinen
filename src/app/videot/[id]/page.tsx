@@ -228,7 +228,7 @@ export default async function SingleVideoPage(props: { params: Promise<{ id: str
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         
         {/* Top Navigation & Language Switcher */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2">
           <Link
             href="/videot"
             className="inline-flex items-center gap-2 text-sm text-[#00AEEF] hover:underline font-medium"
@@ -236,22 +236,7 @@ export default async function SingleVideoPage(props: { params: Promise<{ id: str
             <ArrowLeft className="w-4 h-4" />
             <span>Takaisin videokirjastoon</span>
           </Link>
-
-          {/* Sister Site Language Link if paired video exists */}
-          {video.pairVideoId && (
-            <a
-              href={`https://www.ptsakkinen.com/videos/${video.pairVideoId}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-[#000d21] border border-[#00AEEF]/40 text-[#00AEEF] text-xs font-semibold hover:bg-[#00AEEF] hover:text-black transition-all"
-            >
-              <Globe className="w-3.5 h-3.5" />
-              <span>Available in English → ptsakkinen.com</span>
-            </a>
-          )}
         </div>
-
-        {/* Article Header & Visible Breadcrumb Directly Above Title */}
         <div className="space-y-4">
           {/* Visible Breadcrumb Navigation (Murupolku) - Directly Above Title */}
           <nav aria-label="Murupolku" className="flex flex-wrap items-center gap-2 text-xs text-gray-400 font-medium pb-1">

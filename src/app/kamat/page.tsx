@@ -138,7 +138,7 @@ export default function KamatPage() {
                         {item.category === "ohjelmistot" && "💻 Ohjelmistot"}
                       </span>
                       {item.badge && (
-                        <span className="text-xs font-bold text-amber-300 bg-amber-400/10 border border-amber-400/30 px-2.5 py-1 rounded-md">
+                        <span className="text-xs font-bold text-[#00AEEF] bg-[#0C66B4]/20 border border-[#00AEEF]/40 px-2.5 py-1 rounded-md">
                           {item.badge}
                         </span>
                       )}
@@ -157,7 +157,7 @@ export default function KamatPage() {
                     {/* Recommended Reason / Jannen Vinkki */}
                     <div className="p-3.5 rounded-xl bg-[#00050f] border border-[#0C66B4]/30 mb-6">
                       <div className="text-xs font-bold text-[#00AEEF] uppercase tracking-wider mb-1 flex items-center gap-1.5">
-                        <Sparkles className="w-3.5 h-3.5" />
+                        <Sparkles className="w-3.5 h-3.5 text-[#00AEEF]" />
                         <span>Miksi käytän tätä:</span>
                       </div>
                       <p className="text-gray-300 text-xs italic leading-normal">
@@ -169,12 +169,12 @@ export default function KamatPage() {
                   {/* Actions & Coupon */}
                   <div className="space-y-3 pt-2 border-t border-[#0C66B4]/20">
                     {item.couponCode && (
-                      <div className="flex items-center justify-between gap-2 p-2.5 rounded-xl bg-[#0C66B4]/10 border border-[#0C66B4]/30">
+                      <div className="flex items-center justify-between gap-2 p-2.5 rounded-xl bg-[#0C66B4]/10 border border-[#00AEEF]/30">
                         <div className="flex flex-col">
                           <span className="text-[10px] text-gray-400 uppercase tracking-wider">
                             Alennuskoodi
                           </span>
-                          <span className="font-mono font-bold text-sm text-amber-300">
+                          <span className="font-mono font-bold text-sm text-[#00AEEF]">
                             {item.couponCode}{" "}
                             {item.couponDiscount && `(${item.couponDiscount})`}
                           </span>
@@ -216,7 +216,7 @@ export default function KamatPage() {
                             href={amazonLink}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-full py-2.5 px-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-black font-bold text-xs transition-all shadow-[0_0_15px_rgba(245,158,11,0.3)] flex items-center justify-center gap-1.5"
+                            className="w-full py-2.5 px-3 rounded-xl bg-[#00AEEF] hover:bg-[#33C2F5] text-black font-bold text-xs transition-all shadow-[0_0_15px_rgba(0,174,239,0.3)] flex items-center justify-center gap-1.5"
                           >
                             <ShoppingBag className="w-3.5 h-3.5" />
                             <span>Amazon.de</span>

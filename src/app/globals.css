@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --font-luckiest-guy: 'Luckiest Guy', cursive, sans-serif;
+  --font-display-heading: 'Outfit', system-ui, sans-serif;
   --font-roboto: 'Roboto', sans-serif;
 }
 

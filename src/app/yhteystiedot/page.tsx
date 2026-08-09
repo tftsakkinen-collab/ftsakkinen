@@ -1,5 +1,6 @@
 import AppointmentBookingSection from "@/components/AppointmentBookingSection";
 import ContactForm from "@/components/ContactForm";
+import DarkLocationMap from "@/components/DarkLocationMap";
 import { Mail, Phone, MapPin, Building2, ExternalLink } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -84,29 +85,8 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Interactive Map Embed for Oulu Practice Locations */}
-            <div className="p-4 rounded-3xl bg-[#000d21] border border-[#0C66B4]/60 space-y-3">
-              <div className="flex items-center justify-between px-2">
-                <span className="text-xs font-bold text-white uppercase tracking-wider flex items-center gap-1.5">
-                  <MapPin className="w-4 h-4 text-[#00AEEF]" />
-                  Vastaanottopaikat Oulussa
-                </span>
-                <span className="text-[10px] text-[#00AEEF] bg-[#014489]/40 px-2 py-0.5 rounded-full border border-[#00AEEF]/30">3 Toimipistettä</span>
-              </div>
-              <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden border border-[#0C66B4]/40">
-                <iframe
-                  title="Vastaanottopaikat Oulussa"
-                  width="100%"
-                  height="100%"
-                  loading="lazy"
-                  style={{ border: 0, filter: "brightness(0.85) contrast(1.1) invert(0.9) hue-rotate(180deg)" }}
-                  src="https://www.openstreetmap.org/export/embed.html?bbox=25.4400%2C65.0000%2C25.5000%2C65.0300&amp;layer=mapnik&amp;marker=65.0121%2C25.4688"
-                />
-              </div>
-              <p className="text-[11px] text-gray-400 text-center px-2">
-                Vastaanotot sijaitsevat Oulun keskusta-alueella ja Kempeleessä (Terveystalo, Norre, Hammasvahti).
-              </p>
-            </div>
+            {/* Interactive Dark Map Embed for Oulu Practice Locations */}
+            <DarkLocationMap />
           </div>
 
           {/* Form Column */}

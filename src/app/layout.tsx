@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Luckiest_Guy, Roboto } from "next/font/google";
+import { Outfit, Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CookieBanner from "@/components/CookieBanner";
 
-const luckiestGuy = Luckiest_Guy({
-  weight: "400",
+const outfit = Outfit({
   subsets: ["latin"],
-  variable: "--font-luckiest-guy",
+  weight: ["600", "700", "800", "900"],
+  variable: "--font-display-heading",
   display: "swap",
 });
 
@@ -46,7 +46,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fi" className={`${luckiestGuy.variable} ${roboto.variable}`}>
+    <html lang="fi" className={`${outfit.variable} ${roboto.variable}`}>
       <body className="min-h-screen flex flex-col bg-[#000a18] text-white selection:bg-[#00AEEF] selection:text-black">
         <Navbar />
         <main className="flex-grow">{children}</main>
