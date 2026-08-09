@@ -66,8 +66,12 @@ export default function Hero() {
             {/* Authority Pills */}
             <div className="pt-2 flex flex-wrap items-center gap-3 text-xs text-gray-300">
               <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#000d21] border border-[#0C66B4]/50">
+                <ShieldCheck className="w-4 h-4 text-[#00AEEF]" />
+                <span>Valvira / Terhikki -rekisteröity laillistettu OMT-fysioterapeutti</span>
+              </div>
+              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#000d21] border border-[#0C66B4]/50">
                 <GraduationCap className="w-4 h-4 text-[#00AEEF]" />
-                <span>Oulun yliopisto (Hammaslääketiede) vuodesta 2017</span>
+                <span>Oulun yliopisto (Hammaslääketiede 2017–)</span>
               </div>
               <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#000d21] border border-[#0C66B4]/50">
                 <Award className="w-4 h-4 text-[#00AEEF]" />
@@ -95,7 +99,9 @@ export default function Hero() {
             </div>
 
             {/* Trust Micro-Bullet */}
-            <div className="pt-2 flex items-center gap-4 text-xs text-gray-400">
+            <div className="pt-2 flex flex-wrap items-center gap-4 text-xs text-gray-400">
+              <span className="flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-[#00AEEF]" /> Valvira / Terhikki -rekisteröity</span>
+              <span>•</span>
               <span className="flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-[#00AEEF]" /> Tiedottajanne Oy</span>
               <span>•</span>
               <span className="flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-[#00AEEF]" /> YouTube: @ft_sakkinen</span>

@@ -169,6 +169,13 @@ export default function AboutPage() {
                   <p className="text-xs text-gray-400 mt-1">SOMTY 2.5 vuotta (2018–2020)</p>
                 </div>
               </div>
+              <div className="p-4 rounded-xl bg-[#000d21] border border-[#00AEEF]/60 flex items-start gap-3 sm:col-span-2">
+                <FileCheck className="w-6 h-6 text-[#00AEEF] shrink-0 mt-0.5" />
+                <div>
+                  <h3 className="text-white font-bold text-sm">Valvira &amp; Terhikki -Rekisteröinti</h3>
+                  <p className="text-xs text-gray-300 mt-1">Laillistettu terveydenhuollon ammattihenkilö (Valvira / Terhikki -rekisteröity OMT-fysioterapeutti)</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

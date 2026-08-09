@@ -27,6 +27,7 @@ export default function Footer() {
             {/* Company Info */}
             <div className="pt-2 text-xs space-y-1 text-gray-300">
               <p className="font-bold text-white">{SITE_CONFIG.companyName}</p>
+              <p className="text-[11px] text-[#00AEEF] font-medium">✓ Valvira / Terhikki -rekisteröity OMT-fysioterapeutti</p>
               <p className="flex items-center gap-1.5"><MapPin className="w-3.5 h-3.5 text-[#00AEEF]" /> {SITE_CONFIG.clinicLocations}</p>
               <p className="flex items-center gap-1.5"><Phone className="w-3.5 h-3.5 text-[#00AEEF]" /> {SITE_CONFIG.contactPhone}</p>
               <p className="flex items-center gap-1.5"><Mail className="w-3.5 h-3.5 text-[#00AEEF]" /> {SITE_CONFIG.contactEmail}</p>
@@ -54,28 +55,28 @@ export default function Footer() {
                 <Link href="/" className="hover:text-white transition-colors">Etusivu</Link>
               </li>
               <li>
-                <Link href="/tietoa-minusta" className="hover:text-white transition-colors">Tietoa minusta &amp; Tausta</Link>
+                <Link href="/tietoa-minusta" className="hover:text-white transition-colors">Tietoa minusta</Link>
               </li>
               <li>
                 <Link href="/videot" className="hover:text-white transition-colors">Videokirjasto</Link>
               </li>
               <li>
-                <Link href="/kamat" className="hover:text-white transition-colors text-[#00AEEF]">Kamat &amp; Työkalut</Link>
+                <Link href="/kamat" className="hover:text-white transition-colors text-[#00AEEF]">Kamat</Link>
               </li>
               <li>
-                <Link href="/ilmaisopas" className="hover:text-white transition-colors">Ilmaiset Kipuoppaat</Link>
+                <Link href="/ilmaisopas" className="hover:text-white transition-colors">Ilmaisopas</Link>
               </li>
               <li>
-                <Link href="/koulutukset" className="hover:text-white transition-colors">Koulutukset &amp; Kokemus</Link>
+                <Link href="/koulutukset" className="hover:text-white transition-colors">Koulutukset</Link>
+              </li>
+              <li>
+                <Link href="/kyynarpaa-apuvaline" className="hover:text-[#00AEEF] transition-colors text-[#00AEEF]">Kyynärpää-apu</Link>
               </li>
               <li>
                 <Link href="/yhteystiedot" className="hover:text-white transition-colors">Yhteystiedot</Link>
               </li>
               <li>
-                <Link href="/kyynarpaa-apuvaline" className="hover:text-[#00AEEF] transition-colors text-[#00AEEF]">Kyynärpää-apuvälinekysely</Link>
-              </li>
-              <li>
-                <Link href="/tietosuoja" className="hover:text-white transition-colors">Tietosuoja &amp; Vastuuvapaus</Link>
+                <Link href="/tietosuoja" className="hover:text-white transition-colors">Tietosuoja</Link>
               </li>
             </ul>
           </div>

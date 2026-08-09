@@ -53,13 +53,26 @@ const SYMPTOM_DATA: SymptomTopic[] = [
     summary: "Niskan jäykkyys, jännityspäänsärky, takaraivon jännitys ja huimausoireet.",
     recommendedVideos: [
       { id: "t8iCnAUr4pU", title: "Niskakivun ja Jännityspäänsäryn Tehohoito" },
-      { id: "8H_k0lrebJ0", title: "Yläniskan Rentoarvio ja Nikamaliikkuvuus" },
+      { id: "0MKwbFkXQ2w", title: "Yläniskan Rentoarvio ja Nikamaliikkuvuus" },
     ],
     recommendedGear: [
       { name: "Niskan Venytystyyny / Cervical Traction", url: "/kamat", note: "Lievittää painetta yläniskassa ja avaa rintarankaa" },
       { name: "Piikkimatto & Niskatyyny Set", url: "/kamat", note: "Laukaisee takaraivolihasten kroonista kireyttä" },
     ],
     pdfGuide: "Niskan & Jännityspäänsäryn Koti-opas PDF",
+  },
+  {
+    id: "pelvic-floor",
+    name: "Lantionpohja & Virtsankarkailu",
+    iconName: "🌸",
+    summary: "Lantionpohjan ylijännitys, virtsankarkailu hyppiessä/juostessa ja kegel-virheet.",
+    recommendedVideos: [
+      { id: "8H_k0lrebJ0", title: "Fysioterapeutti: puristelu (kegelit) voi pahentaa virtsankarkailua" },
+    ],
+    recommendedGear: [
+      { name: "Lantionpohjan Biopalaute & Harjoitusväline", url: "/kamat", note: "Fysioterapeutin suosittelema väline hallittuun jännitykseen ja rentoutukseen" },
+    ],
+    pdfGuide: "Lantionpohjan & Virtsankarkailun Omahoito-opas PDF",
   },
   {
     id: "tennis-elbow",
@@ -98,7 +111,7 @@ const SYMPTOM_DATA: SymptomTopic[] = [
     summary: "Alaselän jännitys, iskiassärky pakarassa tai reidessä ja lanneselän jäykkyys.",
     recommendedVideos: [
       { id: "t8iCnAUr4pU", title: "Alaselkäkivun ja Iskiasoireen Helpotus" },
-      { id: "8H_k0lrebJ0", title: "Lannerangan Mobilisointi ja Syvä Tuki" },
+      { id: "TqVWQND9g64", title: "Lannerangan Mobilisointi ja Syvä Tuki" },
     ],
     recommendedGear: [
       { name: "Rullattava Putkirulla / Foam Roller", url: "/kamat", note: "Lantioseudun ja pakaran lihaskalvojen avaamiseen" },
@@ -133,7 +146,7 @@ export default function OireNavigaattori() {
         </div>
 
         {/* Symptom Tab Selector */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
           {SYMPTOM_DATA.map((sym) => {
             const isActive = sym.id === selectedId;
             return (

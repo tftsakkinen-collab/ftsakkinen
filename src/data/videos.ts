@@ -28,6 +28,19 @@ export const FALLBACK_VIDEOS: Video[] = [
     "pairUrl": "https://www.ptsakkinen.com/videos/Qh8uK23HSAQ",
     "isShort": false
   },
+  {
+    "id": "9C-yL1kBgH8",
+    "youtubeId": "9C-yL1kBgH8",
+    "title": "Fysioterapeutti: 3 ruoka-ainetta jotka voivat ylläpitää kroonista kipua",
+    "promiseDescription": "Videossa käydään läpi miten matala-asteinen tulehdus hidastaa kudosten paranemista ja herkistää hermostoa kivulle, sekä 3 konkreettista ruokavaliomuutosta (rasvainen kala, värikkäät kasvikset, neitsytoliiviöljy) rauhallisemman kehon saavuttamiseksi.",
+    "categoryId": "tule-vaivat",
+    "duration": "Pitkä video",
+    "publishedAt": "2024-07-24",
+    "thumbnailUrl": "https://i2.ytimg.com/vi/9C-yL1kBgH8/hqdefault.jpg",
+    "pairVideoId": "9C-yL1kBgH8",
+    "pairUrl": "https://www.ptsakkinen.com/videos/9C-yL1kBgH8",
+    "isShort": false
+  },
 
   {
     "id": "0MKwbFkXQ2w",

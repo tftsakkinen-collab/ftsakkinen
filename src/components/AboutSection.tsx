@@ -63,6 +63,13 @@ export default function AboutSection() {
                   <p className="text-xs text-gray-400 mt-1">{SITE_CONFIG.authorityProofs.teaching}</p>
                 </div>
               </div>
+              <div className="p-4 rounded-xl bg-[#0C66B4]/10 border border-[#00AEEF]/60 flex items-start gap-3 sm:col-span-2">
+                <Stethoscope className="w-6 h-6 text-[#00AEEF] shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-white font-bold text-sm">Valvira &amp; Terhikki -rekisteröinti</h3>
+                  <p className="text-xs text-gray-300 mt-1">{SITE_CONFIG.authorityProofs.valvira}</p>
+                </div>
+              </div>
             </div>
 
           </div>

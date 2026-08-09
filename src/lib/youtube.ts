@@ -78,11 +78,15 @@ export async function fetchYouTubeVideos(): Promise<Video[]> {
 
       if (!isShort && videoId) {
         let categoryId = "tule-vaivat";
-        const lower = (title + " " + description).toLowerCase();
-        for (const [key, cat] of Object.entries(CATEGORY_MAP)) {
-          if (lower.includes(key)) {
-            categoryId = cat;
-            break;
+        if (videoId === "8H_k0lrebJ0") {
+          categoryId = "tule-vaivat";
+        } else {
+          const lower = (title + " " + description).toLowerCase();
+          for (const [key, cat] of Object.entries(CATEGORY_MAP)) {
+            if (lower.includes(key)) {
+              categoryId = cat;
+              break;
+            }
           }
         }
 
