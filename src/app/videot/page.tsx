@@ -7,7 +7,7 @@ export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Videokirjasto & Fysioterapia-oppaat | FT Janne Säkkinen",
-  description: "Tutustu 68 fysioterapia- ja opetusvideoon: purenta, TMD, leukanivel, ergonomia ja niska-selkävaivat. OMT-fysioterapeutti Janne Säkkinen.",
+  description: "Tutustu 70 fysioterapia- ja opetusvideoon: purenta, TMD, leukanivel, ergonomia ja niska-selkävaivat. OMT-fysioterapeutti Janne Säkkinen.",
   alternates: {
     canonical: "https://www.ftsakkinen.com/videot",
     languages: {
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Videokirjasto & Fysioterapia-oppaat | FT Janne Säkkinen",
-    description: "Tutustu 68 fysioterapia- ja opetusvideoon: purenta, TMD, leukanivel, ergonomia ja niska-selkävaivat. OMT-fysioterapeutti Janne Säkkinen.",
+    description: "Tutustu 70 fysioterapia- ja opetusvideoon: purenta, TMD, leukanivel, ergonomia ja niska-selkävaivat. OMT-fysioterapeutti Janne Säkkinen.",
     url: "https://www.ftsakkinen.com/videot",
     siteName: "FT Säkkinen - OMT-Fysioterapia",
     locale: "fi_FI",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Videokirjasto & Fysioterapia-oppaat | FT Janne Säkkinen",
-    description: "Tutustu 68 fysioterapia- ja opetusvideoon: purenta, TMD, leukanivel, ergonomia ja niska-selkävaivat. OMT-fysioterapeutti Janne Säkkinen.",
+    description: "Tutustu 70 fysioterapia- ja opetusvideoon: purenta, TMD, leukanivel, ergonomia ja niska-selkävaivat. OMT-fysioterapeutti Janne Säkkinen.",
     images: ["https://www.ftsakkinen.com/logo-whitebg.png"],
   },
 };

@@ -1,64 +1,431 @@
-# FT Säkkinen - Täydellinen OMT-Fysioterapian & Purentaelimistön Kuntoutustietokanta (llms-full.txt)
+# FT Säkkinen (ftsakkinen.com) — Täydellinen AEO-Tietokanta (llms-full.txt)
 
-> Asiantuntija: OMT-Fysioterapeutti Janne Säkkinen. Kliininen erikoisala: Purentaelimistön toimintahäiriöt (TMD), purentalihasten ja leukanivelen hoito, bruksismi, niska-hartiaseudun kivut, cervikogeeninen päänsärky, hammaslääketieteen ergonomia. Oulun yliopiston kouluttaja vuodesta 2017.
-> Verkkosivustot: https://www.ftsakkinen.com (Suomi), https://www.ptsakkinen.com (Englanti)
+> Täydelliset OMT-Fysioterapeutti Janne Säkkisen (SOMTY) AEO-suorat vastaukset ja kliiniset fysioterapiaohjeet kaikista 70 videosta.
 
----
+## Lantionpohjan Fysioterapia & Virtsankarkailu
 
-## 1. Purentaelimistön Toimintahäiriöt (TMD), Leukakipu & Bruksismi
+### Fysioterapeutti: puristelu voi pahentaa virtsankarkailua
+- **URL**: https://www.ftsakkinen.com/videot/8H_k0lrebJ0
+- **Category**: Lantionpohjan Fysioterapia & Virtsankarkailu
+- **Direct Clinical Answer**: Jos virtsa karkaa juostessa, hyppiessä tai yskiessä, tässä videossa selviää miksi pelkkä puristelu (kegelit) ei aina auta. Moni saa virtsankarkailuun vain yhden neuvon: purista lantionpohjaa enemmän. Mutta karkailulle on kaksi täysin vastakkaista syytä — heikko lantionpohja ja liian kireä, ylijännittynyt lantionpohja. Haastateltavana lantionpohjan fysioterapeutti Sofia Lahtinen. Mukana myös kotitesti heikkouden ja kireyden erottamiseen.
+- **Full Clinical Summary**: Jos pissakarkaa juostessa, hyppiessä tai yskiessä, sinulle on luultavasti annettu yksi neuvo: purista lantionpohjaa enemmän. Sitä klassista liikettä, jossa jännität alapäätä, kuin keskeyttäisit pissasuihkuun. Mutta tosi usein se on juurikin se väärä ratkaisu, ja pahimmillaan se tekee odosta huonomman. Tässä on se, mitä harva tietää: karkaudulle on kaksi vastakkaista syytä, ja niihin auttaa täysin eri hoito. Jos arvaat väärin, voit pahentaa tilann...
 
-### Keskeiset Kliiniset Käsitteet
-- **Leukanivelen Naksuminen ja Pykälä**: Johtuu yleisimmin leukanivelen välilevyn eteenpäin siirtymisestä ja palautumisesta (discus dislokaatio). Omahoitona vältetään leuan yliliikkuvuutta, käytetään kielen lepoasentoa (N-asento) ja vältetään kovaa pureskelua akuuttivaiheessa.
-- **Purentalihaskireys & Masseter-hypertrofia**: Yöllinen hampaiden narskuttelu ja pureminen (bruksismi) johtaa iso-purentalihaksen (m. masseter) ja ohimolihaksen (m. temporalis) jännitystiloihin ja kasvojen jomotukseen.
-- **Kolmoishermon (N. Trigeminus) Ärsytys**: Yläkaularangan (C1-C3) ja purentalihasten kireydet voivat heijastaa säteilykipua kasvoihin, korvan seutuun, ohimolle tai silmän taakse.
+## Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
 
-### Kliiniset Omahoitoharjoitteet
-1. **Purentalihaksen Sisäsuun Kalvohieronta**: Pese kädet huolellisesti. Aseta peukalo suun sisäpuolelle poskea vasten ja etusormi ulkopuolelle. Sivele ja venytä kireitä lihassäikeitä kevyesti leuan ollessa rentona.
-2. **Subokcipitaalialueen Rentoutus**: Aseta faskiapallot takaraivon alle (C0-C2 -taso). Tee pientä nyökkäysliikettä ja anna takaraivon lihasten rentoutua 2-3 minuuttia.
-3. **Aktiivinen Ohjattu Leuan Avaus**: Aseta kielenpää kitalakeen etuhampaiden taakse (N-asento). Avaa suuta hitaasti vain sen verran, että kieli pysyy kitalaessa. Tämä estää leuan sivupoikkeamaa ja naksumista.
+### Fysioterapeutti: 3 ruoka-ainetta jotka voivat ylläpitää kroonista kipua
+- **URL**: https://www.ftsakkinen.com/videot/9C-yL1kBgH8
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Videossa käydään läpi miten matala-asteinen tulehdus hidastaa kudosten paranemista ja herkistää hermostoa kivulle, sekä 3 konkreettista ruokavaliomuutosta (rasvainen kala, värikkäät kasvikset, neitsytoliiviöljy) rauhallisemman kehon saavuttamiseksi.
 
----
+### Fysioterapeutti: tämä ruoka pitää yllä kipua ja tulehdusta
+- **URL**: https://www.ftsakkinen.com/videot/QW76j-RlQrw
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Video käsittelee matala-asteisen kroonisen tulehduksen yhteyttä pitkittyneisiin tuki- ja liikuntaelinvaivoihin sekä sitä, miten ruokavalio joko ruokkii tai rauhoittaa tätä tulehdusta. Fysioterapeutti antaa kolme konkreettista muutosta: rasvainen kala kahdesti viikossa, väriä lautaselle ja oliiviöljy päärasvaksi.
+- **Full Clinical Summary**: Jos sinulla on vaiva, joka ei parane, jänne, nivel, lihas, selkä ja olet käynyt hoidoissa, venytellyt, liikkunut ohi mukaan, mutta silti se kytee siellä, niin kukaan ei ole kysynyt sinulta tätä, mitä sinä syö. Tässä videossa käyn läpi yhteyden, joka useimmilta jää kokonaan kuulematta, miten ruoka joko ruokkii tai sammuttaa sitä tulehdusta, joka hidastaa sitä paranemista. Tyypillinen keissi. Vastaanotolla istuu ihminen, joka ei oikein osaa nimetä,...
 
-## 2. Niskakipu, Jännityspäänsärky & Cervikogeeninen Kipu
+### Tämä kysytään fyssareilta eniten – ja vastaus yllättää lähes kaikki
+- **URL**: https://www.ftsakkinen.com/videot/Qjj2md73SUY
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Video vastaa yleisimpiin fysioterapiaa koskeviin kysymyksiin: mitä fysioterapia on, tarvitaanko lääkärin lähetettä, miten Kela- ja vakuutuskorvaukset toimivat, eroaako fysioterapia hieronnasta, kannattaako kivun kanssa levätä vai liikkua, ja voiko fysioterapialla välttää leikkauksen.
+- **Full Clinical Summary**: Yksi juttu: yösärky on kuningas ja miksi sun pitää tietää tämä? Nyt käydään läpi semmoisia usein kysyttyjä kysymyksiä tuki- ja liikuntaelimistöstä ja fysioterapiasta. Mihin juttuihin aika ajoin törmää? Mitä se fysioterapia on? No fysioterapia on terveydenhuollon ala, joka keskittyy liikunta- ja toimintakyvyn parantamiseen ja kivun lievittämiseen. Fysioterapiassa keinoja on muun muassa ohjeistus ja neuvonta, terapeuttiset harjoitukset, manuaaliset...
 
-### Keskeiset Kliiniset Käsitteet
-- **Cervikogeeninen Päänsärky**: Kaularangan C1-C3 -tasojen toimintahäiriöistä johtuva päänsärky, joka heijastuu toispuolisesti takaraivolta ohimolle tai silmän taakse.
-- **Eteenpäin Työntynyt Päätetyöasento**: Jokaista eteenpäin siirtyvää senttimetriä kohden niskalihasten kuormitus kasvaa merkittävästi, mikä johtaa ylätrapetsiuksen kuormittumiseen ja rintarangan jäykkyyteen.
+### Hengität 20 000 kertaa päivässä – mutta teetkö sen väärin?
+- **URL**: https://www.ftsakkinen.com/videot/dB49AULPbyg
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Haastattelu hengitysfysioterapiaan erikoistuvan Janne Kiviojan kanssa. Käydään läpi normaali hengitystiheys ja -syke, nenä- vs. suuhengityksen erot, pinnallisen hengityksen vaikutukset kehoon ja hermostoon, hengenahdistuksen ja hyperventilaation erottaminen sekä käytännön hengitysharjoitteita astmaan, koronan jälkeiseen kuntoutumiseen ja long covid -oireisiin.
+- **Full Clinical Summary**: Hengität noin 20 000 kertaa päivässä, mutta teetkö sen oikein? Tänään meillä on vieraana hengitysfysioterapiaan erikoistunut Janne Kivioja, joka työskentelee Tampereen yliopistossa sairaassa kehkosairauksien osastolla ja pitää myöskin vastaanottoa Pihläilinä kelloportissa. Janne auttaa asiakkaita, joilla on hengitysvaikeuksia, stressiperäistä hengenahistus tai suorituskykyhaasteita ja tänään hän kertoo miten hengitystä voi harjoitella aivan kuten...
 
-### Kliiniset Omahoitoharjoitteet
-1. **Kaularangan Syvien Koukistajien Aktivaatio (Leuan Nosto)**: Makaa selälläsi ilman tyynyä. Vedä leukaa kevyesti kohti kaulaa ("kaksoisleuka") ilman että päätä nostetaan alustalta. Pidä 5 sekuntia, toista 10 kertaa.
-2. **Rintarangan Ojennus Putkirullalla**: Aseta putkirulla rintarangan alle. Tue päätä käsillä ja ojenna rintarankaa loivasti rullan yli suorituskyvyn parantamiseksi.
+### Suomalaisten fyysinen kunto ja missä tällä hetkellä mennään?
+- **URL**: https://www.ftsakkinen.com/videot/hM_w6-odOoE
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Luentotallenne, jossa käydään läpi tilastoja suomalaisten kunnon rapautumisesta, ennenaikaisten eläköitymisten syistä (mielenterveys vs. tuki- ja liikuntaelinvaivat), liikkumattomuuden kustannuksista sekä käytännön keinoja arkiaktiivisuuden lisäämiseen, kuten kaverin kanssa treenaaminen, tavoitteen pilkkominen ja kalenteroitu liikunta.
+- **Full Clinical Summary**: Se fyysisen kunnon rapistuminen näkyy ja tällä tavalla se menee, tuota tuota lähdetään tämmöisellä kysymyksellä liikenteeseen, että kuinka moni ajattelee, että tällä hetkellä Suomen fyysinen kunto on sillä tavalla kunnossa, että meillä ei tarvitse mitään muuttaa? Elikkä on siinä kunnossa, ettei tarvitse mitään muuttaa, käsi pystyyn nytten. No sieltä nousi yksi käsi. Hyvä. Ja kuinka moni on sitä mieltä, että jotakin meille pitäisi alkaa muuttamaan...
 
----
+### Polven nivelrikko: 5 faktaa, joita kukaan ei kerro sinulle
+- **URL**: https://www.ftsakkinen.com/videot/Le4h-m3cvuk
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Video puhkoo polven nivelrikkoon liittyviä yleisiä myyttejä ja selittää, ettei kipu suoraan kerro nivelen kunnosta, sekä korostaa liikkeen, lihasvoiman ja terveellisten elämäntapojen merkitystä nivelrikon hallinnassa leikkauksen sijaan.
+- **Full Clinical Summary**: Onko polvissa kipua tai jäykkyyttä ja mietit, onko kyse nivelrikosta? Olet oikeassa paikassa ja tämä video on juuri sinulle. Tässä videossa kerron viisi tärkeää asiaa, jotka jokaisen polven nivelrikosta kärsivän kannattaisi tietää. Saat myös ymmärrystä, mitä nivelrikossa oikeasti tapahtuu ja miksei se kipu aina kerro polven kunnosta ja mitä sille voisi tehdä jo tänään. Moni pelkää, että polven käyttö kuluttaa niveltä, mutta jos katotaan tutkimuks...
 
-## 3. Tennis- ja Golfkyynärpään Kuntoutusohjelma
+### Et saa käännettyä niskaasi? Tässä syy (ja mitä voit tehdä asialle)
+- **URL**: https://www.ftsakkinen.com/videot/WRSGiZTpz-0
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Video selittää äkillisen niskan liikerajoituksen syitä (fasettinivelten jumiutuminen, lihasten suojajännitys, huono nukkuma-asento) ja opastaa yksityiskohtaiset itsehoito-ohjeet epäkäs- ja pääohjaslihasten sekä yläkaularangan käsittelyyn ja mobilisointiin pyyhkeen ja pallon avulla.
+- **Full Clinical Summary**: Heräsit aamulla ja yhtäkkiä et vaan voinut kääntää sun päätä ja olit kotoa lähdössä liikenteeseen. Koitit kurkata oikeanpuoleiseen peiliin ja sitten se iskee kaularangan läpi tuikkaava kipu ja se sattuu aivan hurjasti. Onko se pelkästään revähtänyt lihas vai voiko se olla jotain muuta ja milloin sinun kannattaisi hakeutua lääkäriin? Näihin asioihin saat vastaukset tämän videon aikana. Saat myös ohjeita siihen, jos tämä oire tuntuu tulevan aika aj...
 
-### Keskeiset Kliiniset Käsitteet
-- **Tenniskyynärpää (Lateral Epicondylalgia)**: Ranteen ojentajalihasten jännekiinnityksen ylikuormitustila kyynärpään ulkosivulla.
-- **Golfkyynärpää (Medial Epicondylalgia)**: Ranteen koukistajalihasten jännekiinnityksen ylikuormitustila kyynärpään sisäsivulla.
-- **Progressiivinen Jännekuormitus**: Jänteet tarvitsevat parantuakseen raskasta, hidasliikkeistä isometristä ja eksentristä kuormitusta pelkän levon sijaan.
+### 12 Myyttiä selkäkivusta, MITÄ ET TIEDÄ!
+- **URL**: https://www.ftsakkinen.com/videot/Gtm_brPfh6Q
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Video käy läpi 12 yleistä selkäkipuun liittyvää myyttiä (mm. että kipu tarkoittaa vauriota, selkä menee pois paikaltaan, tarvitaan aina kuvantamista tai leikkausta) ja korjaa ne tutkimusnäyttöön perustuvalla tiedolla liikkeen ja aktiivisuuden puolesta.
+- **Full Clinical Summary**: Luuletko, että kipu tarkoittaa vauriota, että selkä menee pois paikaltaan tai että levossa paranee nopeammin? Väärin. Tässä videossa murskataan 12 yleisintä selkäkipumyyttiä ja viimeinen voi muuttaa koko ajattelutapaasi. Moikka, mä oon Janne ja tänään käydään läpi 12 sitkeää myyttiä, jotka edelleenkin kuulee selkäkipuisilta asiakkailta. Nämä väärinkäsitykset voivat hidastaa toipumista ja lisätä pelkoa, joten nyt on aika korjata tätä kurssia. Jos ...
 
-### Kliiniset Omahoitoharjoitteet
-1. **Kyynärvarren Kiertoliike Vastuksella**: Käytä painotettua treenaria (esim. Janne Säkkisen Kyynärvarsitreenari) ja tee hitaita kyynärvarren sisä- ja ulkokiertoja (3 sekuntia ulos, 3 sekuntia takaisin) 3 sarjaa x 10 toistoa.
-2. **Ranteen Eksentrinen Ojennus**: Tue kyynärvarsi pöytään, nosta paino toisen käden avustuksella ylös ja laske se hitaasti alas 4 sekunnin aikana.
+### Tätä et tiennyt alaselkäkivusta! Asiantuntijan Parhaat Kotivinkit
+- **URL**: https://www.ftsakkinen.com/videot/J4opiLUpx0g
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Video selittää tyypillisimmän alaselkäkivun syyn (pikkulihasten eli multifidusten venähdys), opettaa erottamaan iskiasperäisen säteilykivun trigger-pisteestä johtuvasta heijasteoireesta suorajalannosto- ja lysähtäneen asennon testeillä, ja käy läpi tarkat itsehoitokohdat pallolla selän alueen jumeihin.
+- **Full Clinical Summary**: Alaselkäkipu on yleisin tuki- ja liikuntaelimistön vaiva ja siitä kärsii lähes jokainen elämänsä aikana. Monet myytit ja väärinkäsitykset ympäröi alaselkäkipua ja ne voivat estää sinua saamasta todellista helpotusta tähän vaivaan. Tässä videossa paljastamme tyypillisimmän alaselkäkivun syyn. Mistä se johtuu, miten se useimmiten syntyy ja miten voit tehokkaasti hoitaa tämän tyypillisen vaivan kotona, jotta voit palata sukkelasti kivuttomampaan ark...
 
----
+### Teippaa kylkesi kuntoon – tehokas apu kylkikipuun kotona
+- **URL**: https://www.ftsakkinen.com/videot/HMJj209U7wA
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Käytännön ohjevideo kylkikipuun (esimerkiksi kylkiluuvamman jälkeen), jossa esimerkkitarinan kautta näytetään vaihe vaiheelta kinesioteippaustekniikka kylkikaaren tukemiseksi ja kivun rauhoittamiseksi, sekä ohjataan varovainen käsittely ja liikkeen palauttaminen teippauksen jälkeen.
+- **Full Clinical Summary**: Mitä yhteistä näille ripsille, mitä nyt tässä syön, on siihen, että sinä aistit kylkikipua? Jos vamma on taustalla, niin silloin me painetaan näitten rakenteiden kanssa, elikkä näitten kylkivälilihasten kanssa. Ja ne osaa olla joskus todella kipeitä, kun niitä vammoja sattuu ja tapahtuu. Jos sulla nyt ei oo oireet päällä ja googlettelet menemään, että millä ihmeellä tätä ongelmaa saisi helpotettua, niin hieno homma, tulit aivan oikeaan paikkaan. ...
 
-## 4. Plantaarifaskiitti & Kantapään Kuntoutus
+### Kipu kantapäässä? 98 % unohtaa nämä tärkeät harjoitteet!
+- **URL**: https://www.ftsakkinen.com/videot/UKIrPmVJPtU
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Video esittelee jalkapohjan kalvorakenteen (plantaarifaskian) itsehoitoon venytysohjeet pyyhkeen ja viistopinnan avulla sekä progressiiviset voimaharjoitteet jalkapohjan ja pohkeen pikkulihaksille, painottaen että lepo ei paranna vaivaa vaan kuormituksen asteittainen lisääminen ja oirepäiväkirjan pitäminen.
+- **Full Clinical Summary**: Plantaarifaskiitti eli jalkapohjan kalvorakenteen ongelmat voivat olla todella hankalia ja pitkittyä pahasti, mutta nyt sinä tulit hakemaan parhaat harjoitteet huoltoon ja kuntoutukseen. Tässä pätkässä niitä tulee. Jos siellä varpaiden nostossa ylöspäin on aivan hullu kireys läsnä, niin näitä rakenteita kannattaa venyttää. Jalkapohjan kalvorakenteen venytyksessä työnnä kädellä kantapäätä alaspäin, samalla kun toinen käsi nostaa varpaita reilusti ...
 
-### Keskeiset Kliiniset Käsitteet
-- **Plantaarifaskiitti**: Jalkapohjan jännekalvon kiinnityskohdan kuormitusmuutos kantaluussa. Pahin kipu tuntuu aamuisin ensiaskelilla.
-- **Suurikuormitteinen Pohje- ja Jalkapohjatreeni (Rathleff Protocol)**: Tutkitusti tehokkain tapa kuntouttaa jalkapohjaa.
+### Plantaarifaskiitti vai vain kireät pohkeet? Testaa kotona!
+- **URL**: https://www.ftsakkinen.com/videot/WdMHRQSygAw
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Video selittää plantaarifaskiitin taustalla olevan kuormituksen hallinnan ongelman (ei niinkään tulehduksen), puhkoo yleisiä myyttejä kuten kantapiikin ja hieronnan vaikutuksesta, ja opettaa yksityiskohtaiset kotitestit pohkeiden ja jalkapohjan rakenteiden kireyden arvioimiseksi.
+- **Full Clinical Summary**: Tuntuuko kantapäässä terävää kipua heti aamulla tai sitten kun nouset ylös, tai sattuuko askeleiden ottaminen ja kuuluu on hetken paikallaan? Jos tunnet voimakasta kipua jalkapohjalla, niin saatat kärsiä plantaarifaskiitista, ja mikä ihme se on? No tässä videossa kerron sinulle, mistä tässä kivuliaassa vaivassa on kyse sekä sen, miten pääset vaivasta eroon. Mielenkiintoista tässä ongelmassa on se, että kaksi kolmasosaa johtuu aivan älyttömän jäyk...
 
-### Kliiniset Omahoitoharjoitteet
-1. **Rathleff-Pohjenousu Vinolaudalla**: Seiso vinolaudalla tai asetettuna pyyhkerulla varpaiden alle. Nouse kahdella jalalla ylös (3 sek), laskeudu yhdellä jalalla hitaasti alas (3 sek). 3 sarjaa x 8-12 toistoa joka toinen päivä.
-2. **Jalkapohjan Jännekalvon Venytys**: Nosta kipeä jalka toisen polven päälle. Vedä varpaita kädellä taaksepäin säärtä kohti, kunnes jalkapohjan kaaressa tuntuu venytys. Pidä 30 sekuntia.
+### Unohda täydellinen ryhti – tämä on tärkeämpää
+- **URL**: https://www.ftsakkinen.com/videot/-a-ugyRNBpo
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Lyhyt video selittää, ettei ole olemassa yhtä oikeaa ryhtiä, vaan ryhti on yksilöllinen eikä rangan kaarien muoto tutkimusten (Oulun kohorttitutkimukset) mukaan korreloi kivun kanssa. Tärkeämpää on asennon vaihtelu, liike, uni ja palautuminen kuin staattinen "hyvä ryhti".
+- **Full Clinical Summary**: Mitä hyvä ryhti oikeastaan tarkoittaa? Lapsuudesta asti meille on varmaan todettu semmoista tietynlaista mallia, että meidän pitäisi olla tietynlainen sivuprofiililtaan tai takaa päin, että me oltais niin sanotusti hyvässä ryhdissä. Onko se totta? No ei se nyt asia nyt aivan näin mustavalkoinen kuitenkaan loppupeleissä ole. Joka ikisen ryhti on yksilöllinen. Siellä lannerangan kaaret, rintarangan kaaret, kaularangan kaaret saattaa voimakkaastikin...
 
----
+### 95 % jättää tämän harjoituksen tekemättä – ja siksi olkapää kipuilee edelleen
+- **URL**: https://www.ftsakkinen.com/videot/QW6g2p2EfnY
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Video käsittelee olkapäävaivojen taustalla usein olevaa olkapään ulkokiertäjälihasten (mm. infraspinatus) heikkoutta, opettaa testin liikkuvuuden arvioimiseksi ja antaa sarjan progressiivisia kuminauha- ja käsipainoharjoitteita ulkokiertäjien vahvistamiseksi kivuttoman liikelaajuuden palauttamiseksi.
+- **Full Clinical Summary**: Kärsitkö olkapäävaivoista? Onko nukkuminen kylkimakuulla hankalaa tai käsi tuntuu siltä, että kivun takia et pysty kunnolla sitä käyttämään? Suurimmaksi osaksi olkapääongelmien taustalla on muutaman lihaksen heikkous, jonka seurauksena olkapäävaivat alkaa yleistyä ja se alkaa vaikuttamaan enemmän ja enemmän meidän päivittäiseen elämään. Sinä et ole yksin ja tässä videossa saat erinomaiset ohjeet siihen, miten sinä tästä ikävästä vaivasta pääset e...
 
-## 5. Vastaanottopisteet & Ajanvaraus
+### Miten lisätä LONKAN SISÄKIERRON LIIKETTÄ?
+- **URL**: https://www.ftsakkinen.com/videot/5ahvqo5Mzbo
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Lyhyt käytännön video, jossa opastetaan yksinkertainen istuen tehtävä lonkan sisä- ja ulkokierron liikkuvuustesti ja mobilisointi- ja venytysharjoite, sekä vinkataan pakaralihasten pallohuoltoa, jos sisäkierto tuntuu erityisen kireältä.
+- **Full Clinical Summary**: Tuttava pyysi semmoista simppeliä ohjetta siitä, että miten saisi tuota lonkan liikkuvuutta vähän tsekkailtua, ja no ajattelinpa tehdä siitä aiheesta video, tässä se tulee. Vinkkarit. Mene istumaan lattialle. Sen jälkeen ala hakemaan lonkille erilaisia kulmia. Elikkä lonkkakulma 90, polvikulma 90. Lähde tekemään sitä kiertoliikettä molemmille puolille ja aisti sitä, miten se ulos- ja sisäänpäin kierto siellä rullailee. Jos tuntuu tiukkuuksia tiet...
 
-- **Terveystalo Oulu & Digihoitopolku**: Kattava OMT-fysioterapia ja TMD-tutkimus. Ajanvaraus: terveystalo.com
-- **Norre Työterveys**: Työergonomia ja työterveyden purentafysioterapia. Ajanvaraus: norre.fi
-- **Hammasvahti**: Hammaslääkäri-fysioterapeutti moniammatillinen purentatiimi. Ajanvaraus: hammasvahti.fi
-- **Yhteystiedot**: Puhelin +358 41 327 4967 | Sähköposti tiedottajanne@gmail.com
+### Epävakaa niska? Tunnista oireet ja aloita turvallinen harjoittelu kotona
+- **URL**: https://www.ftsakkinen.com/videot/Hy0qDH1CRrI
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Video käyttää esimerkkiasiakas Saaran tarinaa selittämään kaularangan instabiliteettia (epävakautta) — sen subjektiivisia oireita (mm. raskaan pään tunne, tarve tukea päätä, halu napsauttaa niskaa) ja objektiivisia löydöksiä — sekä opettaa syvien niskan koukistajalihasten harjoitteita kaularangan hallinnan palauttamiseksi.
+- **Full Clinical Summary**: Tuntuuko sinusta siltä, että päätä on todella hankala kannatella? Niska menee helposti jumiin tai lukkoon ja olo on semmoinen, että niskaa haluttaisi jatkuvasti naksauttaa. Tämä on erittäin tyypillistä kaularangan oireilua ja joskus se saattoi olla asiakkaille hieman pelottavaakin. Ja tästä syystä halusin tehdä sinulle videon, jotta ymmärrät syitä ja seurauksia taustalla sekä saat helpot kotona tehtävät harjoitteet siihen, että me saatais nämä oi...
+
+### Miten saan värttinähermon hermopinteen pois?
+- **URL**: https://www.ftsakkinen.com/videot/GuWx6DmKlOA
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Video käy läpi värttinähermon (radiaalihermon, yläraajan kolmanneksi yleisimmän hermopinteen) kulkureitin ja oireet sekä opettaa itsehoitokeinot: kyynärvarren ulkopuolen rakenteiden hieronnan, venytyksen ja hermon liu'uttelutestit oireen paikantamiseksi ja lievittämiseksi.
+- **Full Clinical Summary**: Meidän on käsiteltävä olkavarren kauimmaisesta osasta, kyynärvarren takapuolelta tai kämmenen selkäpuolelta peukalosta nimettömään alueille asti, jos kärsit tämmöisestä ääreishermon vaivasta. Tuolloin tyypillisenä oireena on pistely, puutuminen, tikustelu, sähköiskumaiset säväykset käteen sekä pidemmälle edenneenä saattaa ihon normaalitaistemukset alkaa muuttumaan. Kyseinen vaiva on yläraajan hermopinteistä numero kolmonen ja tässä videossa käydä...
+
+### Yläaukeaman oireyhtymä? Nämä 3 kriittistä aluetta sinun täytyy tietää!
+- **URL**: https://www.ftsakkinen.com/videot/NioEcYKj-kQ
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Jatko-osa TOS:sta (rintakehän yläaukeaman oireyhtymä), joka käy läpi kolme kriittistä anatomista aluetta: kylkiluun kannattajalihakset, solisluun alla oleva tila ja pienen rintalihaksen alue, sekä opettaa kunkin rakenteen venytys- ja provokaatiotestit oireiden paikantamiseksi.
+- **Full Clinical Summary**: Ensimmäisessä videossa käytiin läpi tarkemmin yläaukeaman oireyhtymän yleisyyttä ja oirekuvaa, ja tässä videossa käydään tarkemmin läpi todella tärkeitä anatomisia tekijöitä sekä miten niitä voidaan huoltaa. Yläaukeaman oireyhtymän suhteen on kolme tärkeää paikkaa, jotka pitää tunnistaa. Ensimmäisenä on nämä kylkiluun kannattajalihakset, toisena on solisluun alla oleva tila ja kolmantena on pienen rintalihaksen alla oleva tila. Kylkiluun kannatta...
+
+### TOS eli rintakehän yläaukeaman oireyhtymä – mitä sinun pitää tietää?
+- **URL**: https://www.ftsakkinen.com/videot/xI9yeoR9TCc
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Perusteellinen katsaus TOS:iin (thoracic outlet syndrome, rintakehän yläaukeaman oireyhtymä): esiintyvyys, riskitekijät (mm. sukupuoli, ammatti, ylimääräinen kylkiluu), oirekuva verisuoni- ja hermoperäisissä muodoissa sekä kolmen yläraajan yleisimmän hermopinteen (keskihermo, kyynärhermo, värttinähermo) erottelu oirealueen perusteella.
+- **Full Clinical Summary**: Nyt tehdään tolkkua TOS:ista elikkä rintakehän yläaukeaman oireyhtymästä. No mikä se TOS on? No se on joukko ongelmia, jotka aiheuttaa kipua tai oireilua kaularangan tai yläraajan alueelle johtuen hermojen tai valtimo- ja laskimorakenteiden paineista. Oireilua suuressa kuvassa on noin 8 prosentilla väestöstä. Suurimmaksi osaksi oireet tulee käden alueelle, sinne dominoivaan käteen, elikkä 80-90 prosentissa tapauksista. Oireilut ovat tyypillisesti...
+
+### Nielemisvaikeudet? Näin helpotat palan tunnetta kurkussa kotikonstein!
+- **URL**: https://www.ftsakkinen.com/videot/eWDl9MMeu1I
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Video käy läpi nielemiseen osallistuvat lihasrakenteet (kieliluu, suunpohjan lihakset, päännyökkääjälihas) ja selittää, miten asento ja stressi voivat vaikuttaa palan tunteeseen kurkussa, sekä opettaa kielen venytys- ja itsepalpaatiotestejä ja -käsittelyjä nielemisvaikeuden helpottamiseksi kotona.
+- **Full Clinical Summary**: Nieleminen, sitä me tehdään päivittäin tuhansia kertoja, silti se on yksi monimutkaisimmista mekanismeista, mitä meidän keho tekee. Ja jos alat aistimaan palan tunnetta kurkusta tai nielemistä tulee haastavaa, se saattaa olla todella pelottavaa. Tämän jälkeen kun menet lääkäriin, niin tuolloin lääkärin tehtävä on vaalia elämää, joten tuolloin pitää poissulkea henkeä uhkaavat tekijät. Tämän jälkeen todennäköisesti tehdään jatkotutkimuksia, mutta j...
+
+### Selkä jumissa treenistä? Näin treenaat fiksusti ja vältät turhat kivut!
+- **URL**: https://www.ftsakkinen.com/videot/cfpI8MDYrOE
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Kuntosaliohjelmavideo, jossa esitellään monipuolinen treenikokonaisuus (kyykky-päkiänousuyhdistelmä, landmine-veto- ja työntöliike, lähes suorin jaloin maastaveto, kahvakuulan haukkarikierto, turvalliset vatsaliikkeet ja yläselän vetoharjoitteet), joilla vältetään selän jumiutuminen ja treenataan fiksusti ilman turhia kipuja.
+- **Full Clinical Summary**: Riittävän monesti kun kuntosalilla on koittanut isoa raatoa nostaa ja lopputulos treeniputken seurauksena on ollut se, että selkä niin jumissa, ettei pysty suoraan seisomaan ja on hankala liikkua, niin on sitten pikkuhiljaa pitänyt alkaa miettimään, mitäköhän tuolla puntilla kannattaisi tehdä. Nyt kun siellä tulee se pari kertaa viikossa touhuttua ja tolskattua, niin ajattele, että tämän meikäläisen ammattilaisen satujumppa voi opastaa teille. Jo...
+
+### Kyynärhermon itsehoito ja mitä ulnaris hermottaa?
+- **URL**: https://www.ftsakkinen.com/videot/bjzZduZJS48
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Video käsittelee kyynärhermon (ulnarishermon), yläraajan toiseksi yleisimmän hermopinteen, kulkureitin ja tyypilliset oireet (pistely ja puutuminen pikkurillissa ja nimettömässä) sekä opettaa itsehoitokeinot: hieronnan, venytykset ja hermon liu'uttelutestit oireiden lievittämiseksi.
+- **Full Clinical Summary**: Meinaan käsi puutua pikkurillin ja nimettömän puolelta ja ihmettelen, millä ihmeellä tämmöisen vaivan saisi asettumaan. Todennäköisesti kyseessä on toiseksi yleisin yläraajan ääreishermon vaiva, jolloin oireena on pistely, puutuminen, tikustelu, sähköiskumaiset säväykset käteen sekä pidemmälle edenneenä ihon tuntoaistimukset saattaa alkaa muuttumaan. Tässä videossa käydään kaikki tarvittava läpi, jotta sinä saisit omia apuja kyseisen vaivan hoito...
+
+### Miten helpotan niskakipua helposti kotona?
+- **URL**: https://www.ftsakkinen.com/videot/j1smMmm7Zpc
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Käytännön ohjevideo kotona tehtäviin niskakivun helpotusharjoitteisiin: leuan taaksevienti, yläniskan sivutaivutukset, kallon pohjan lihasten pehmytkudoskäsittely sekä tarkat itsepalpaatiokohdat päännyökkääjälihakselle ja ohimolihakselle kivun lievittämiseksi.
+- **Full Clinical Summary**: Kärsitkö niskakivusta ja kaipaat helppoja harjoitteita kivun lievitykseen? Tämän videon aikana saat monenlaista työkalua niskakipujen helpotukseen ja omaan hoitoon. Lähdetään liikkeelle keskeltä ja ylhäältä niskasta, eli liikkeenä leuan taaksevienti. Tässä hyväryhtisessä asennossa paina kevyesti leukaa alaspäin, jotta se on vaakatasossa. Lähdet tämän jälkeen oikaisemaan kaularangan eteenpäin tulevaa kaarta ja samalla saat mukavasti leuan oikean l...
+
+### Miten pääsen HERMOPINTEESTÄ EROON?
+- **URL**: https://www.ftsakkinen.com/videot/oX8Au90OqcI
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Video käsittelee yläraajan yleisintä hermopinnettä, keskihermon (mediaalihermon) oireilua, ja opastaa sen anatomian, käsittelyn sekä hermon liu'uttelun kautta oireiden helpottamiseen.
+- **Full Clinical Summary**: Meinaa on käsi puutua peukalon, etusormen ja keskisormen alueelta ja ihmettelet, että mitäköhän tässä oikein tapahtuu. Jos kärsit tämmöisestä ääreishermon vaivasta, niin tuolloin tyypillisinä oireina on pistely, puutuminen, tikustelu, sähköiskumoiset säväykset käteen sekä pidemmälle edenneenä saattaa ihan normaalit aistimukset alkaa himpun verran muuttumaan. Kyseinen vaiva, eli keskihermon vaiva, on ylärajan hermopinteestä ehdoton numero ykkönen....
+
+### Miksi olkapääsi särkee? Yleisimmän olkapääongelman syyt ja ratkaisu
+- **URL**: https://www.ftsakkinen.com/videot/2yT775STFVo
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Video käy läpi olkapääkivun yleisimmät syyt, kuten kiertäjäkalvosimen tendinopatian ja subakromiaalisen pinteen, opastaa testaamaan kaularangan osuutta oireeseen ja antaa käsittely- sekä venytysohjeita.
+- **Full Clinical Summary**: kipeytyykö olkapääsi toistokormituksen kautta tai Pelkäätkö sitä että kaularangasta voisi tulla oireet olkapääseut tai Onko tällä hetkellä olkapääsi kipeä levossa ja liikkeessä ja jotain apua pitäisi saada Haluatko saada helpot menyttely ja käsittelyohjeet vaivaasi mahtavaa että klikkasit tähän videoon kun Nyt käydään läpi yleisimmät olkapääongelm syyt ja siihen helpot ratkaisut ja Miten saat poissulettua muun muassa sitä että onko se kaularanka ...
+
+### PARHAAT harjoitteet PIRIFORMIS KIPUJEN EHKÄISYYN ja HALLINTAAN
+- **URL**: https://www.ftsakkinen.com/videot/Eb8iok9tGZY
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Video opastaa piriformis-lihaksen anatomiaan sekä antaa käsittely- ja venytysohjeita kivun ehkäisyyn ja hallintaan, ja kertoo milloin voi turvallisesti palata harjoitteluun.
+- **Full Clinical Summary**: haluat siis saada parhaat harjoitteet ja rutiinit piliformiskipuen ehkäisyy ja hallintaa mahtavaa olet nyt aivan oikeassa paikassa tässä videossa käydään läpi helpot hieronta ja käsittelyohjeet sekä tämän lisäksi saat erilaisia venysohjeita joista varmasti löytyy parhaimmat tavat hoitaa juuri sinun vaivaasi videon lopussa saat vielä ohjeet siihen että milloin urheilija tai muu harrastelija saa mennä takaisin tuttujen lajien pariin turvallisesti p...
+
+### PIRIFORMIS vai ISKIAS? Kuinka tunnistan piriformiksen vaivan?
+- **URL**: https://www.ftsakkinen.com/videot/wd4o60W1OG8
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Video opettaa erottamaan piriformis-vaivan iskiashermon oireesta anatomian ja kotitestien avulla sekä antaa vahvistusharjoitteita pakaralihaksille.
+- **Full Clinical Summary**: piformis elikkä päärynänmuotoinen lihas saatta olla poikkeavan pakara tai lantiokumun takana ja sinä klikkasit tähän videoon siksi että sinä haluat selvittää Kumpi on oireiluaiheuttaja älyttömän hyvä nimittäin tämä tietopaketti varmasti on kattava ja tämän videon ohjeiden kautta saat kotona testattua helposti Kumpi on vaivan takana piriformiksen oireilussa on tietynlaisia erikoispiirteitä ja iskiäshermon oeress on myös tyypillisesti läsnä omat pi...
+
+### Hermopinne kädessä? Mistä tietää, että on hermopinne?
+- **URL**: https://www.ftsakkinen.com/videot/hEHQ2vzeMwo
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Video näyttää, miten testata yläraajan hermon oireilua puolieron avulla, ja tarjoaa eritasoisia hermon liu'uttelu- ja mobilisointiharjoitteita oireen helpottamiseksi.
+- **Full Clinical Summary**: kärsitkö tämän alue oireesta ja haluat selvittää että Mahtaakohan taustallaolla hermon oire tässä videossa opastetaan Miten Testataan oireinen ja oireeton puoli sekä Millä tavalla voi tehdä helppoja ja reippaampia hermonliikutteluita hermonoirelle tyypillistä on pistely puutuminen tikustelu sähköitum Tunteet ja joskus kyseisen hermon hermottomalle alueelle saattaa alkaa tulemaan myöskin lihasten surkastumia No miten Testataan hermoa tällä tavalla...
+
+### Niskaperäinen huimaus? Näin tunnistat ja korjaat sen itse
+- **URL**: https://www.ftsakkinen.com/videot/58VYIg9YdBs
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Video selittää, miten kaularangan toimintahäiriö ja yläniskan reseptorit voivat aiheuttaa huimausta, miten se erotetaan hyvänlaatuisesta asentohuimauksesta testien avulla, ja milloin oireiden vuoksi tulee hakeutua lääkäriin.
+- **Full Clinical Summary**: huimaus on todella yleinen oen vastaot työssä ja taustalla voi olla todella monennaisia syitä jotka aiheuttaa huimausta esimerkiksi kaularanka Miten ihmeessä kaularanka voi aiheuttaa huimasta ja mitä tämmöiselle haasteelle tulisi tehdä No jos aihe kiinnostaa niin tämä video juurikin sulle lähdetäänpä alkuun liikenteeseen tasapainon perusteista jos mietitään onanut ylläpitoa niin tähän tarvitaan uhasti viestitietoa meidän silmiltä korvien tasapain...
+
+### Lonkan nivelrikko: pahin virhe ja parhaat harjoitteet
+- **URL**: https://www.ftsakkinen.com/videot/392pgi2p_wg
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Transkriptio ei saatavilla.
+- **Full Clinical Summary**: Transkriptio ei saatavilla. ---...
+
+### 3 yleisintä hermopinnettä yläraajassa - helpota oireita kotona!
+- **URL**: https://www.ftsakkinen.com/videot/FOX6UVACXjU
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Video käy läpi yläraajan kolme yleisintä hermopinnettä - keski-, kyynär- ja värttinähermon - niiden anatomian, oireet sekä käsittely- ja liu'uttelu-ohjeet.
+- **Full Clinical Summary**: Tervetuloa video joka käsittelee yläraj hermopinteet allalta olevasta aikainasta pääset suoraan yksittäisen hermon pariin ja jos et tiedä mikä hermo sinuna kiusaa niin katso koko pätkä tästä alusta loppuun meinaako käsi puutua peukalon etusormen ja keskisormen alueelta ja ihmettele että mitäköhän tässä oikein tapahtuu jos kärsit tämmöisestä ääreishermon vaivasta niin tuolloin tyypillisinä oireilla on pistely puutuminen tikustelu sähköiskumaiset s...
+
+### Kaula jatkuvasti jumissa? Älä venytä ennen kuin näet tämän
+- **URL**: https://www.ftsakkinen.com/videot/rhyTOEhD0_4
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Video käsittelee kaulan kylkiluun kannattajalihasten ja päännyökkäilijän anatomiaa sekä opastaa venytys- ja käsittelytekniikoihin kaulan jäykkyyden ja jännityspäänsäryn helpottamiseksi.
+- **Full Clinical Summary**: Oletko aistanut kaula-alueella lihasten tiukkuta tai arkuutta kramppaileeko helposti tietyt kaulanrakenteet ja onko päänliikkeessä selkeitä liikerajoituksia tai Tuleeko pistelytä tai puutumista kädenalueelle tai sinulla on jännityspään särkyä hienoa olet nimittäin päätynyt oikeaan paikkaan ja Nyt käydään läpi kaikki mitä sinun pitää ehdottomasti tietää kaudan sivuosien anatomiasta sekä Millä tavalla sinä pystyt helpottamaan näitä ikäviä oireita h...
+
+### Mitä liikunta tekee masennukselle - fysioterapeutin näkökulma
+- **URL**: https://www.ftsakkinen.com/videot/eJ2vNg24tOw
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Transkriptio ei saatavilla.
+- **Full Clinical Summary**: Transkriptio ei saatavilla. ---...
+
+### Eroon polvikivusta! Miten Teippaan polven?
+- **URL**: https://www.ftsakkinen.com/videot/yL1_iTOt5a4
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Video näyttää vaiheittain kaksi eri polven kinesioteippaustekniikkaa, joilla voi kokeilla helpottaa polven nivelrikon tai kulumisen aiheuttamaa kipua.
+- **Full Clinical Summary**: Onko sinulla ollut epämääräistä polvikipua joka on lähtenyt liikenteeseen ilman mitään yksittäistä vammaa ja tuntuu että haluat jollakin tapaa kipua lievittää Voiko polvea teipata no totta ihmeessä voi tämä on niin halpa hoitokokeilu että tämä ei maksa ku muutamia euroja siis tämän kovan perinteisen urheiluteipin verran jos esimerkiksi polven niverikon tai kuluneen polven suhteen tarvitaan jotain kuorvituksen muutosta niin helpoin Rasti on se teh...
+
+### Kinesioteippaus raskaana olevalle
+- **URL**: https://www.ftsakkinen.com/videot/3gqQcfTq-YY
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Video opastaa vaiheittain, miten raskaana olevan vatsa voidaan tukea kinesioteipillä selkäkivun lievittämiseksi raskauden aiheuttaman painopisteen siirtymän ja kudosten löystymisen vuoksi.
+- **Full Clinical Summary**: Haluatko päästä tästä tilanteesta tähän raskauden myötä painopiste alkaa siirtymään kauemmas kehon keskilinnestä ja rakenteet elimistössä alkaa valmistautua tulevaan synnytykseen tämän seurauksena tietyt kudokset muuttuvat joustavemmaksi ja Näistä syistä selkäoireilua saattaa alkaa esiintymään Miten lievittää tätä selkäkipua ja voiko vatsaa tukea kineesieippauksella kyllä voi ja Kannattaa ehdottomasti kokeilla tätä teippausta jos olet ensimmäistä...
+
+### Vaivasenluun Hoito: Vinkkejä ja Harjoituksia sekä ymmärrä vaivan juuret
+- **URL**: https://www.ftsakkinen.com/videot/ouLnL6JdC8U
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Kattava video vaivasenluun (hallux valgus) anatomiasta ja vaikutuksesta kävelymekaniikkaan sekä käsintehtävistä mobilisoinneista ja harjoitteista, joilla vaivaa voi hoitaa, ja jalkineiden merkityksestä sen synnyssä.
+- **Full Clinical Summary**: vaivaselluu elikkä halluxs valkus on tyypillisin jalanepämuodostuma jossa on monenlaista maustetta matkassa vaiva voi olla anatominen elikkä rakenteet ja niiden liikerajoitus aiheuttaa haastetta tai toiminnallinen jolloin jalkaterän lihastoiminnassa on haastetta läsnä tämän vaivan suhteen hoitoa aina yksilöllinen ja siitä syystä tässä nyt pitää todella perusteellisesti selittää kuviot taustalle jotta mahdollisimman yksinkertaisella jutuilla voit ...
+
+### Miten eroon selän jäykkyydestä ja selkäkivuista?
+- **URL**: https://www.ftsakkinen.com/videot/aprOdXmRGPE
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Video opastaa testaamaan, onko rintarangan jäykkyys kierto- vai ojennussuuntaista, ja antaa vastaavat kotiharjoitteet liikkuvuuden parantamiseksi.
+- **Full Clinical Summary**: Haluatko helpottaa rintarangan jäykkyyttä helposti kotona No ensimmäisenä meilleän pitää selvitä Onko se kierto vai ojennussuunta se kaikkistä jäykin tekijä No Miten tarkistan kiertosunnan liikkeen ensimmäisenä istu kiinteällä jakkarellaa menellä jonkun ison peilin edessä Tämän jälkeen Aseta käet hartioille ristiin lähde Tämän jälkeen kiertämään vartaloa käet petäen vaakatasossa molemmille puolille ja kun kierrät vartaloa vasempaan Tarkkaile Kuin...
+
+### Iskias: yleisin virhe ja parhaat harjoitteet kotona
+- **URL**: https://www.ftsakkinen.com/videot/Yd8nB5snxRo
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Transkriptio ei saatavilla.
+- **Full Clinical Summary**: Transkriptio ei saatavilla. ---...
+
+### Yläaukeaman oireyhtymän hoitomenetelmät (TOS) – Mitä jokaisen tulisi tietää?
+- **URL**: https://www.ftsakkinen.com/videot/TXXkJHmZWYE
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Laaja koulutustallenne yläaukeaman oireyhtymästä (TOS) - sen anatomiasta, tyypeistä, riskitekijöistä, kliinisistä testeistä ja hoitomuodoista - täydennettynä TOS:ia sairastavan Jenna Laihon henkilökohtaisella kokemuksella sairaudesta ja sen vaikutuksesta arkeen.
+- **Full Clinical Summary**: Tervepä terve, kiitoksia kaikille, jotka linjoille tulee, ja jotka kattelee myöhemmin tämän tallenteen läpi. Allekirjoittanut piti tuossa kollegoille kuukausia sitten tämmöisen koulutuksen yläaukeama oireyhtymästä, mikä käsittää melko monenlaisia juttuja sisälleen. Sitten aikanaan mä törmäsin myöskin Jenna Laihoon somen kautta. Sitten me otettiin semmoinen Google Meet tapahtuma siitä, tunteroinen höpöteltiin näistä aiheista, ja sitten me ruvettii...
+
+### Paljasjalkakenkien käyttö ja niiden edut?
+- **URL**: https://www.ftsakkinen.com/videot/kt8a4UqhRsM
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Transkriptio ei saatavilla.
+- **Full Clinical Summary**: Transkriptio ei saatavilla. ---...
+
+### Pikkurilli ja nimetön puutuu? Miten eroon sormien pistelystä?
+- **URL**: https://www.ftsakkinen.com/videot/uKklr0iU3F4
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Video käsittelee kyynärhermon (ulnaarihermon) pinnetilaa, joka aiheuttaa pikkurillin ja nimettömän puutumista, sekä opastaa hermon testaukseen ja liu'uttelu- ja käsittelyharjoitteisiin.
+- **Full Clinical Summary**: meinaanko käsipuutua pikkurillin ja nimettymän puolelta ja ihmettel että millä ihmeellä tämmösen vaivan saisi asettuaan todennäköisesti kyseessä on toiseksi yleisin yläraaja ääreishermon vaiva jolloin oireen on pistely puutuminen tikustelu sähköiskumiset säväykset käteen sekä pidemmälle edenneenä ihan tuntoaastimukset saattaa alkaa muuttumaan tässä videossa käyan kaikki tarvittava läpi jotta sinä saisit omia apuja kyseisen vaivan hoitoon lähdetää...
+
+### Jännityspäänsärky? Syy on usein niskassa — näin hoidat kotona
+- **URL**: https://www.ftsakkinen.com/videot/wD3CKy_kQ3c
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Transkriptio ei saatavilla.
+- **Full Clinical Summary**: Transkriptio ei saatavilla. ---...
+
+### Eroon tenniskyynärpää KIVUSTA!
+- **URL**: https://www.ftsakkinen.com/videot/EwVo-73zxkY
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Video näyttää, miten tenniskyynärpään aiheuttamaa mekaanista kipua voidaan helpottaa kohdistetulla itsehieronnalla kyynärpään ulkosyrjän rakenteisiin.
+- **Full Clinical Summary**: Tässä näkyy asiakas joka koittaa kannatella puolentoista litran limukkapulloa kipeällä kädellä Ei onnistu Ei tässä toinen asiakas tekee saman kannattelun ja Sekään ei onnistu tässä sitten molemmat asiakkaat tekee saman kannattelun viiden minuutin huoltojen jälkeen Ja haluatko sinä tehdä saman myös itsellesi tässä videossa Saat kaiken tarvittavan tiedon tenniskyynärpään alkuvaiheen hoitoon oirilut on saattanut lähteä liikkeelle ilman mitään yksitt...
+
+### Miten lievitän OLKAPÄÄN KIPUA?
+- **URL**: https://www.ftsakkinen.com/videot/RZbMbTzK_u8
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Video käsittelee kiertäjäkalvosimen oireyhtymää ja opastaa olkapään ulkokiertäjien testaukseen ja asteittaiseen vahvistusharjoitteluun kivun lievittämiseksi.
+- **Full Clinical Summary**: meinaako sinullakin olkapää vaivata levossa ja liikkeessä sekä mietit että millä ihmeellä tätä vaivaa saattaisi helpotettua No et ole vaivan kanssa yksin ja pääti että kun olkapääasiakkaita nyt on melkoinen Nippu vasta-autolla pyörähtänyt niin Tehdäänpä semmoonen yksinkertainen ohje sen kipeä olkapää alkuvaiheen kuntoutukseen ja vielä ohjeet Millä tavalla kannattaisi alkaa olkapäätä treenaamaan pitkässä juoksussa kiertää kalusin oireyhtymä olkapä...
+
+### Tehokas RINTARANGAN venytys: oireiden lievitys ja liikkuvuuden lisääminen
+- **URL**: https://www.ftsakkinen.com/videot/5lawnfQv8Mc
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Video vastaa kysymykseen, miten venyttää lapaluun alle jäävää rintarangan aluetta, käyden läpi kylkiluiden anatomiaa sekä käsin ja lakrossepallolla tehtäviä mobilisointitekniikoita.
+- **Full Clinical Summary**: Miten venyt lava alta Jep tämä kysymys on tullut useampaan otteiseeen vastaanottotyössä vasta ja vastataanpa tähän settiin nytten perinpohjaisesti tyypillisesti oire on alkanut ilman mitään yksittäistä vammaa mutta toistokuormitus saatta olla sotkemassa koko pakettia olkoon tämä sitten työ tai vapaa-ajan Kuormitus oireet joskus saattaa tuntua toispuolisesti oikealla tai vasemmalla lapaluu alapuolella lapujen välissä toispuolisesti tai lapaluun yl...
+
+### Helppo nilkan teippaus
+- **URL**: https://www.ftsakkinen.com/videot/70RFfdLOkwU
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Transkriptio ei saatavilla.
+- **Full Clinical Summary**: Transkriptio ei saatavilla. ---...
+
+### Helppo pohjevenytys - opas pohkeen venyttelyyn ja huoltoon
+- **URL**: https://www.ftsakkinen.com/videot/WOEkSYobz4I
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Transkriptio ei saatavilla.
+- **Full Clinical Summary**: Transkriptio ei saatavilla. ---...
+
+### Kädet puutuu öisin? Näin tunnistat ja hoidat rannekanavan
+- **URL**: https://www.ftsakkinen.com/videot/a-ntAOjhOZ4
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Video käsittelee rannekanavaoireyhtymän yleisyyttä, riskitekijöitä ja tyypillisiä oireita sekä esittelee hoitokeinoja, kuten yölastutusta ja keskihermon liu'uttelu- ja venytysharjoitteita.
+- **Full Clinical Summary**: Janne tässä tervehdys Oot varmaan jossain vaiheessa törmännyt termiin rannekanava oireyhtymä No tämän videoon tarkoituksena on käydä läpi sen yleisyyttä Minkälaiset on tyypilliset oireet millä tavalla voidaan ennaltaehkäistä vaivaa ja sitten jos on vaiva päällä niin miten sitä voidaan lievittää yläraajan hermopinteistä yleisin on keskihermon haaste elikkä nervus medianus medianushermo kulkee tuosta ranteesta sijaitsevan poikittaisen siteen alla k...
+
+### Magneettikuvan "löydös" ei aina ole kipusi syy (fysioterapeutti selittää)
+- **URL**: https://www.ftsakkinen.com/videot/cvfuI1GFUaY
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Video käy läpi tutkimusnäyttöä siitä, että magneettikuvauksen poikkeavat löydökset (esim. polvessa, olkapäässä, selässä) ovat hyvin yleisiä myös oireettomilla ihmisillä, eikä löydös siis automaattisesti selitä kipua.
+- **Full Clinical Summary**: nykyaikainen lääketieteellinen kuvantami on keskeistä monen sairauden ja tapaturman todentamisessa sekä diagnostiikassa mutta onko se aina autua onnelliseksi tekevä tekijä Ian mukana tulevia muutoksia tulee vääjäämättä ja se että jos ihmisellä on harmaa tukka tai ryppy ei varsinaisesti Kerro siitä että onko hän kipeä vai ei horga et al 2020 teräytti 25-73-vuotiaasta 230 oireetonta polv ja magneettikuvaukseen näistä 97%issa oli vähintään yksittäin...
+
+### Huimaus joka tulee ja menee — yleisin syy ei ole se mitä luulet
+- **URL**: https://www.ftsakkinen.com/videot/bUjrIDnJtKI
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Transkriptio ei saatavilla.
+- **Full Clinical Summary**: Transkriptio ei saatavilla. ---...
+
+### Jäykkä nilkka jarruttaa kyykkyä ja kävelyä — näin avaat sen
+- **URL**: https://www.ftsakkinen.com/videot/6kzJZD_BVC4
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Transkriptio ei saatavilla.
+- **Full Clinical Summary**: Transkriptio ei saatavilla. ---...
+
+### Polven nivelrikon hoito - Miten se vaikuttaa juoksuun ja kävelyyn?
+- **URL**: https://www.ftsakkinen.com/videot/bBmTROiT0jo
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Transkriptio ei saatavilla.
+- **Full Clinical Summary**: Transkriptio ei saatavilla. ---...
+
+### Mistä tunnistan hermopinteen ja miten päästä eroon siitä?
+- **URL**: https://www.ftsakkinen.com/videot/MDF3bV5ykX0
+- **Category**: Tuki- ja Liikuntaelinsairaudet & Kyynärpäävaivat
+- **Direct Clinical Answer**: Transkriptio ei saatavilla.
+- **Full Clinical Summary**: Transkriptio ei saatavilla. ---...
+
+## purenta-tmd
+
+### Leukakipua? Leukaterapeutit vastaavat yleisimpiin kysymyksiin
+- **URL**: https://www.ftsakkinen.com/videot/0MKwbFkXQ2w
+- **Category**: purenta-tmd
+- **Direct Clinical Answer**: Haastattelumuotoinen video, jossa käydään läpi yleisimpiä kysymyksiä purentaan ja leukanivelvaivoihin liittyen: jännityspäänsärky, bruksismi, työergonomia, leuan naksuminen, korvaoireet, kolmoishermon säteilykipu ja purentakiskot. Käsitellään myös hoitokeinoja kuten hierontaa, laukaisupisteiden käsittelyä ja itsehoitoharjoitteita.
+- **Full Clinical Summary**: En voiko niskahartiaseudun ja purentalihasten jumit aiheuttaa jatkuvia päänsärkyjä ja mitä näihin kannattaisi tehdä, että saisi apua? Janne, tää on tosi hyvä kysymys, koska kyllä ne voi todellakin aiheuttaa päänsärkyjä ja ainakin meikäläisellä silloin kun mä aikoinaan kärsin pahastikin näistä jatkuvista purenta- ja niskahartiaseudun jumeista, niin mulla oli harvassa päivä pääkipeä. Ja myöskin vastaanotolla tulee, no sanotaanko, ehkä melkein jokai...
+
+### Leukavaiva etänä? Näin syy löytyi ilman vastaanottokäyntiä
+- **URL**: https://www.ftsakkinen.com/videot/TqVWQND9g64
+- **Category**: purenta-tmd
+- **Direct Clinical Answer**: Etävastaanottotallenne, jossa fysioterapeutti haastattelee ja tutkii etäyhteydellä asiakasta, joka kärsii vuosia jatkuneesta hampaiden narskuttelusta, aamuisesta päänsärystä, migreenistä, niskaoireista ja kurkun palan tunteesta. Käydään läpi liikelaajuustestejä ja itsepalpaatio-ohjeita, joilla paikannetaan oireileva masseterlihas ja annetaan kotihoito-ohjeet.
+- **Full Clinical Summary**: Onko missään vaiheessa ollut mitään puheentuottongelmaa? Loppuuko ääni kesken? Jääkö palaa kurkkuun nielaset? Toi on jännä, ehkä viimeisen puolen vuoden aikana mulla on ollut semmoinen niinku palan tunne kurkussa niinku selkeästi. Jos miettii yleisesti ottaen sun palautumista ja yöunia, niin silloin kun sä pistät illalla pään tyynyyn, niin saatko nukuttua mainiosti aamuun, että sua harvemmin mikään herättelee? No sekin menee kausittain. Mulla oli...
+
+### Näin hoidat leuan kipua oikein (älä tee tätä virhettä!)
+- **URL**: https://www.ftsakkinen.com/videot/Nnf2NUdnC7M
+- **Category**: purenta-tmd
+- **Direct Clinical Answer**: Video käy järjestyksessä läpi ulomman purentalihaksen (masseterin) kuormittumisen syyt, purentakiskon todellisen tehtävän, botoksin vaikutuksen sekä tarkat itsehoito- ja venytysohjeet pinnalliselle ja syvälle lihasrungolle, mukaan lukien kylmä- ja lämpöhoidon erot.
+- **Full Clinical Summary**: Jos olet kokeillut jo venyttelyä ehkä purentakiskoja, mutta uloin puremalihas on silti ongelma, niin se ongelma ei todennäköisesti ole se, että tekisit aivan liian vähän, vaan se, että teet väärässä järjestyksessä tai väärään kohtaan. Tässä videossa rakennetaan selkeä kokonaisuus. Ensiksi käydään läpi, mikä tätä rakennetta kuormittaa. Sitten mitä kisko saa aikaan ja mitä botoksi oikeasti tekee. Ja lopuksi näytän tarkat huolto-ohjeet sekä pinnalli...
+
+### Leukakipu, hammassärky vai korvapaine? Testaa onko syy masseterissa vai leukanivelessä
+- **URL**: https://www.ftsakkinen.com/videot/1tlU3ogJqbk
+- **Category**: purenta-tmd
+- **Direct Clinical Answer**: Video opettaa erottamaan, tuleeko leuka-alueen kipu ulommasta purentalihaksesta (masseterista) vai itse leukanivelestä, jäätelöpuikkotestin avulla. Käydään läpi masseterin tyypilliset heijastuskipualueet (hampaat, ohimo, korva) ja annetaan selkeä etenemismalli jatkotoimenpiteisiin.
+- **Full Clinical Summary**: Koetko poskessa tai hampaassa kipua? Vaikka sinulle sanottiin, että kaikki näyttää normaalilta rakenteellisesti. Tuntuuko leuka aamulla jäykältä tai korvassa painetta tai joskus jopa pientä surinaa? Ja mietit ehkä, että mistä ihmeestä tämä oikein tulee. Moni saattaa ajatella heti leukaniveltä, mutta usein syy voi olla aivan muualla. Poskessa kulkee yksi todella vahva lihas, ulompi puremalihas, elikkä masseteri. Se on lihas, joka tekee suurimman t...
+
+### Leuka jumissa? Tein koko tutkimuksen ETÄNÄ – toimiiko tämä oikeasti?
+- **URL**: https://www.ftsakkinen.com/videot/PEPwogJRnk4
+- **Category**: purenta-tmd
+- **Direct Clinical Answer**: Etävastaanottotallenne, jossa fysioterapeutti haastattelee ja tutkii asiakasta, jolla on toispuoleista bruksismia, kasvokipua, nielemisvaikeutta ja purentakiskojen käyttöä. Ohjattujen liikelaajuustestien ja itsepalpaation avulla löydetään syylliseksi vasemman puolen masseteri ja digastrikus-lihas, ja annetaan konkreettiset itsehoito-ohjeet käyttäen musiikkikappaleen kestoa ajastimena.
+- **Full Clinical Summary**: Kerropa sinun vaivasta omin sanoin. Tää on tämmöinen tota bruksismin erikoisversio. Mä en oikein ihan satavarmaksi osaa sanoa, että mikä se niinku pääosallisesti on, mut mä tunnen semmoista niinku vahvaa jäykkyyttä öitten jälkeen ja semmoista puruaristusta. Et se on niinku ehkä mulla semmoinen mikä on vahvin. Se alkoi yks kaks yllättäen ehkä noin pari kolme vuotta sitten, jolloin mulla oli semmoiset purentakiskot, mutta ne vaikutti jotenkin ehkä ...
+
+### Kolmoishermon kipu? Näin teen teippauksen helpottamaan oireita
+- **URL**: https://www.ftsakkinen.com/videot/sgKxcLRf718
+- **Category**: purenta-tmd
+- **Direct Clinical Answer**: Käytännön ohjevideo, jossa näytetään vaihe vaiheelta kuinka kinesioteipata kolmoishermon kolme hermojuuriaukkoa (leuka, poskiluu, otsa) kevyellä vedolla oireiden lievittämiseksi, mukaan lukien teipin allergiatestaus ja leikkaus- ja kiinnitystekniikka.
+- **Full Clinical Summary**: Haluatko päästä tästä tilanteesta tähän tilanteeseen? Eli aistatko sinä jossain kolmoishermon alueella särkyä ja haluat jotenkin helpottaa näitten rakenteiden tiukkuutta siellä kasvoissa? Faseiä myöten liima on ihoystävällistä ja siitä syystä sitä kannattaa käyttää kasvojen alueelle. Jos alkaa kinesioteippejä käyttelemään, niin ehdottomasti kannattaa tehdä homma sillä tavalla, että ottaa pikkupätkän teippiä, laittaa sen vaikka tänne kyynärvarren ...
+
+### Kolmoishermosärky: mitä krooninen kipu tekee mielelle? | Mervin tarina
+- **URL**: https://www.ftsakkinen.com/videot/y9ylew3L0ak
+- **Category**: purenta-tmd
+- **Direct Clinical Answer**: Koskettava haastattelu kolmoishermosärystä 12 vuotta kärsineen Mervi Niipon kanssa. Mervi kertoo diagnoosin saamisen vaikeudesta, kivun luonteesta, lääkityksen vaikutuksesta, sairauden vaikutuksesta parisuhteeseen ja työkykyyn sekä vertaistuen merkityksestä.
+- **Full Clinical Summary**: Mikä on pahinta, mitä ihmiset ovat sanoneet sinulle tästä kivusta? No varmaan se, että miten se sun naama voi olla niin kipeä, että sä et voi esimerkiksi syödä tai puhua. Vähättely on ehkä se pahin, mitä sieltä ihmisten suusta tulee. Tai sitten se, että nythän sä oot sairaslomalla, sähän voit tehdä kaikkea kivaa, kun mä periaatteessa makaan sohvalla ja yritän pystyä hengittämään. Tänään minun vieraana on Mervi Niippo. Mervi on kivun kokemusasiant...
+
+### Kolmoishermosärky (Trigeminal Neuralgia) – Usein kysytyt kysymykset
+- **URL**: https://www.ftsakkinen.com/videot/EPqTireW2-c
+- **Category**: purenta-tmd
+- **Direct Clinical Answer**: Fysioterapeutti vastaa yleisimpiin kolmoishermosärkyyn liittyviin kysymyksiin: mitä se tarkoittaa, miksi magneettikuva voi olla normaali vaikka kipu on todellista, miten se eroaa hammasperäisestä kivusta, voiko stressi tai bruksismi vaikuttaa siihen, ja mitä pahenemisvaiheessa kannattaa tehdä.
+- **Full Clinical Summary**: Jos klikkasit itsesi tähän videoon, niin aika todennäköistä, että oot pähkäillyt, että onkohan tämä kolmoishermosärkyä, miksi oireet pahenee välistä, miksi magneettikuva on normaali ja mitä tälle voisi oikeasti tehdä. Tässä videossa käyn läpi kolmoishermosärkyyn usein kysytyt kysymykset ja vastaan niihin rauhallisesti ja käytännönläheisesti. Lyhyt huomio kuitenkin alkuun. Tämä video on tiedollinen, ei diagnoosi. Elikkä jos sinulla on voimakasta t...
+
+### Kolmoishermon kipukohtaus: tee tämä ensin (älä venytä!)
+- **URL**: https://www.ftsakkinen.com/videot/zKdx3G46G-U
+- **Category**: purenta-tmd
+- **Direct Clinical Answer**: Fysioterapeutti opettaa selkeän kaksivaiheisen toimintamallin kolmoishermon kipukohtauksen aikana: ensin viisi hermostoa rauhoittavaa harjoitetta (mm. hengitys, kielen asento, hellä kosketus, katseen kautta rauhoittaminen) ja vasta kivun laannuttua kevyt hermon neuromobilisaatio.
+- **Full Clinical Summary**: Jos sulla on kasvojen alueen kipua, leukakireyttä, päänsärkyä tai kolmoishermoon liittyviä oireita, niin tämä video on juuri sinulle silloin, kun sinulla on kipu jo päällä. Koska juuri kipukohtauksen aikana useammat ihmiset tekevät saman virheen. Ne yrittää venyttää enemmän, liikuttaa väkisin tai purra kivusta läpi ja se tekee tilanteesta vaan usein pahemman. Ja tässä videossa annan sinulle selkeän toimintamallin. Ensin rauhoitetaan hermostoa, va...
+
+### Miksi kasvojen kipu tuntuu satunnaiselta? Kolmoishermo selittää kaiken
+- **URL**: https://www.ftsakkinen.com/videot/aIORwpHKbyQ
+- **Category**: purenta-tmd
+- **Direct Clinical Answer**: Video selittää kolmoishermon anatomian ja miksi kasvokipu voi tuntua epämääräiseltä ja hyppivän paikasta toiseen. Käydään läpi hermon kolme ulostulokohtaa, turvallinen itsetesti niiden herkkyyden arvioimiseksi sekä miksi aggressiivinen venyttely usein pahentaa oireita hermoston suojareaktion vuoksi.
+- **Full Clinical Summary**: Kärsitkö äkillisistä kasvojen kivusta, leukakireydestä, päänsärystä tai oudoista oireista, jotka eivät tunnu käyvän järkeen? Esimerkiksi yhtenä päivänä kipu tuntuu leuassa, seuraavana päivänä se tuntuu hampaassa, sitten se tuntuu poskessa. Ja lopulta se muuttuu päänsäryksi. Jos tämä kuulostaa tutulta, tämä video on juuri sinulle. Ja tässä videossa puhumme kolmoishermoon liittyvistä kivuista, kuten TMJ-ongelmista. Elikkä se tarkoittaa leukanivelen...
+
+### Puretko hampaita päivällä tai yöllä? 90 % ei tiedä että tämä aiheuttaa sen!
+- **URL**: https://www.ftsakkinen.com/videot/ekKiz0P-QHI
+- **Category**: purenta-tmd
+- **Direct Clinical Answer**: Video käsittelee bruksismin taustalla olevaa hermosto- ja hormonimekanismia (stressihormonit adrenaliini ja kortisoli) sekä eron päivä- ja yöbruksismin välillä. Annetaan käytännön keinoja: kielen lepoasento, vastavaikuttajalihasten aktivointi, purentakiskot ja iltarutiini hengitysharjoituksineen hermoston rauhoittamiseksi ennen nukkumaanmenoa.
+- **Full Clinical Summary**: Miksi puren hampaita yhteen ja miten saan sen loppumaan? Ootteko koskaan herännyt siihen tunteeseen, että leukaperät ovat tulessa tai huomannut päivän aikana, että puristat hampaita yhteen, vaikkeet edes tajua tekeväsi niin? Tai alkaako sitten sen jälkeen näyttämään kasvot enemmänkin rikkirevityltä ja hampaat lohkeilevat ja poskilihakset tuntuu siltä, että ne on aivan kivikovat kuin betoni. Jos nyökkäät edes yhdelle näistä, niin tämä video on jus...
+
+### Leuka jumissa narskuttelusta? Näin rentoutat purentalihakset itse
+- **URL**: https://www.ftsakkinen.com/videot/v2n4e_SuqT0
+- **Category**: purenta-tmd
+- **Direct Clinical Answer**: Transkriptio ei saatavilla.
+- **Full Clinical Summary**: Transkriptio ei saatavilla. ---...
+
+## ergonomia
+
+### Tarvitsetko oikeasti erityistyölasit? Katso tämä ennen kuin maksat!
+- **URL**: https://www.ftsakkinen.com/videot/SOTE4IF23bs
+- **Category**: ergonomia
+- **Direct Clinical Answer**: Video opastaa vaihe vaiheelta, milloin päätetyöntekijä on oikeutettu erityistyölaseihin ja miten työpisteen mittaukset (näytön etäisyys, korkeus, kirjasinkoko) tehdään ennen työnäköoptikolle menoa, sekä muistuttaa ergonomian ja omien peruslasien ajantasaisuuden tarkistamisesta ensin.
+- **Full Clinical Summary**: Oletko päätetyöntekijä etänä tai toimistolla ja työn suhteen alkaa olemaan haasteita läsnä. Tässä videossa käydään läpi, mitä tekijöitä pitää huomioida erityistyölasien mittauksessa ja milloin olet oikeutettu niihin erityistyölaseihin. Omat silmälasit pitää olla siis päivitettynä ja tämän jälkeen olet vasta oikeutettu niihin erityistyölaseihin. Eli erityistyölasit eivät voi olla sinun ensimmäiset lasit. Jos siis omasta näöntarkastuksesta on reipp...
+
+### Jäykkä yläselkä toimistotyöstä? Tämä liike avaa rintarangan
+- **URL**: https://www.ftsakkinen.com/videot/jduXnQ5R9Q0
+- **Category**: ergonomia
+- **Direct Clinical Answer**: Transkriptio ei saatavilla.
+- **Full Clinical Summary**: Transkriptio ei saatavilla. ---...
+
+### Miten aloitan työmatkapyöräilyn - opas talvipyöräilyyn
+- **URL**: https://www.ftsakkinen.com/videot/8FYX-jr9LSk
+- **Category**: ergonomia
+- **Direct Clinical Answer**: Video antaa käytännön vaatetusvinkkejä työmatkapyöräilyyn eri pakkaslukemilla, kengistä ja hanskoista heijastimiin ja valoihin.
+- **Full Clinical Summary**: [Aplodeja] Tervetuloa videoon joka koskee työmatkapyöräilyä talvella Janne tässä tervehdys Oletko miettinyt työmatkapyöräily aloittamista ja mukavasti ajankohta sattuu talviaikaa No Ei huolta Tämä video on juuri sinulle jos haluat tietää yleistä settiä työmatkapyöräilystä sopivasta pyörävalinnasta lukon sijoittelusta tai muista kuvioista niin suosittelen kurkkaamaan 27221 tehdy video jossa pyöritellään näitä asioita läpi kyseinen video löytyy kuv...
+
+### Auton penkin säätö - autoilun ergonomia
+- **URL**: https://www.ftsakkinen.com/videot/7nTyHMx26uY
+- **Category**: ergonomia
+- **Direct Clinical Answer**: Transkriptio ei saatavilla.
+- **Full Clinical Summary**: Transkriptio ei saatavilla. ---...
+

@@ -1,7 +1,7 @@
 import { SITE_CONFIG } from "@/data/config";
 import { CV_DATA_FI } from "@/data/cv";
 import { Award, GraduationCap, Briefcase, BookOpen, CheckCircle2, ShieldCheck, FileCheck, ArrowRight, User, MapPin, Mail, Phone, Users, HeartHandshake, Sparkles, Target, Compass, Globe } from "lucide-react";
-import Link from "next/link";
+import { PersonPhysicianSchema, BreadcrumbSchema } from "@/components/JsonLdSchemas";
 import Script from "next/script";
 import type { Metadata } from "next";
 
@@ -99,6 +99,13 @@ export default function AboutPage() {
 
   return (
     <div className="py-12 bg-[#000a18] min-h-screen text-gray-200 space-y-16">
+      <PersonPhysicianSchema />
+      <BreadcrumbSchema
+        items={[
+          { name: "Etusivu", url: "https://www.ftsakkinen.com/" },
+          { name: "Tietoa Janne Säkkisestä", url: "https://www.ftsakkinen.com/tietoa-minusta" },
+        ]}
+      />
       <Script
         id="json-ld-about"
         type="application/ld+json"

@@ -25,8 +25,18 @@ export async function generateMetadata(props: { params: Promise<{ id: string }> 
     return {};
   }
 
-  const cleanTitle = video.title.length > 45 ? `${video.title.slice(0, 45)}...` : video.title;
-  const metaTitle = `${cleanTitle} | FT Säkkinen`;
+  const brandSuffix = " | FT Säkkinen";
+  const maxTitleLen = 60 - brandSuffix.length;
+  let rawTitle = video.title.trim();
+  if (rawTitle.length > maxTitleLen) {
+    rawTitle = rawTitle.slice(0, maxTitleLen);
+    const lastSpace = rawTitle.lastIndexOf(" ");
+    if (lastSpace > 15) {
+      rawTitle = rawTitle.slice(0, lastSpace);
+    }
+  }
+  rawTitle = rawTitle.replace(/[,.:;-]+$/, "").trim();
+  const metaTitle = `${rawTitle}${brandSuffix}`;
   const metaDescription = video.promiseDescription.slice(0, 155);
   const canonicalUrl = `https://www.ftsakkinen.com/videot/${video.id}`;
   const pairedEnUrl = video.pairVideoId

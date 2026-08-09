@@ -130,9 +130,10 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="mt-8 pt-6 border-t border-[#0C66B4]/20 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400 gap-4">
-          <p>© {new Date().getFullYear()} {SITE_CONFIG.companyName} — Kaikki oikeudet pidätetään.</p>
-          <VisitorCounter siteKey="ftsakkinen_com" label="Sivuston kävijät" />
-          <p className="font-mono text-[11px]">Y-tunnus: {SITE_CONFIG.businessId}</p>
+          <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#000d21] border border-[#00AEEF]/40 text-[#00AEEF] text-[11px] font-medium shadow-glow">
+            <span className="font-bold text-amber-400">✓ Valvira / Terhikki</span>
+            <span className="text-gray-300">| Rekisteröity OMT-Fysioterapeutti (SOMTY)</span>
+          </div>
         </div>
       </div>
     </footer>

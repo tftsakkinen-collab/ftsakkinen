@@ -9,8 +9,9 @@ import AppointmentBookingSection from "@/components/AppointmentBookingSection";
 import Link from "next/link";
 import { ArrowRight, PlayCircle, BookOpen } from "lucide-react";
 import { fetchYouTubeVideos } from "@/lib/youtube";
-import Script from "next/script";
+import { PersonPhysicianSchema } from "@/components/JsonLdSchemas";
 import type { Metadata } from "next";
+import Script from "next/script";
 import dynamicImport from "next/dynamic";
 
 const OireNavigaattori = dynamicImport(() => import("@/components/OireNavigaattori"), {
@@ -220,6 +221,7 @@ export default async function HomePage() {
 
   return (
     <div>
+      <PersonPhysicianSchema />
       <Script
         id="homepage-json-ld"
         type="application/ld+json"
@@ -247,7 +249,7 @@ export default async function HomePage() {
               </h2>
             </div>
             <Link href="/videot" className="text-xs text-[#00AEEF] hover:underline font-semibold">
-              Katso kaikki 68 videota →
+              Katso kaikki 70 videota →
             </Link>
           </div>
 
