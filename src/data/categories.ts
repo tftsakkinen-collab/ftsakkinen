@@ -8,7 +8,7 @@ export interface Category {
 export const CATEGORIES: Category[] = [
   {
     id: "kaikki",
-    name: "Kaikki 69 videota",
+    name: "Kaikki 68 videota",
     description: "Kaikki OMT-fysioterapeutti Janne Säkkisen julkaisemat fysioterapiavideot.",
   },
   {

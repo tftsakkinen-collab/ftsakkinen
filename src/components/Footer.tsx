@@ -28,7 +28,7 @@ export default function Footer() {
             <div className="pt-2 text-xs space-y-1 text-gray-300">
               <p className="font-bold text-white">{SITE_CONFIG.companyName}</p>
               <p className="text-[11px] text-[#00AEEF] font-medium">✓ Valvira / Terhikki -rekisteröity OMT-fysioterapeutti</p>
-              <p className="flex items-center gap-1.5"><MapPin className="w-3.5 h-3.5 text-[#00AEEF]" /> {SITE_CONFIG.clinicLocations}</p>
+              <p className="flex items-center gap-1.5"><MapPin className="w-3.5 h-3.5 text-[#00AEEF]" /> {SITE_CONFIG.streetAddress}</p>
               <p className="flex items-center gap-1.5"><Phone className="w-3.5 h-3.5 text-[#00AEEF]" /> {SITE_CONFIG.contactPhone}</p>
               <p className="flex items-center gap-1.5"><Mail className="w-3.5 h-3.5 text-[#00AEEF]" /> {SITE_CONFIG.contactEmail}</p>
             </div>

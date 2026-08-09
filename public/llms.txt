@@ -5,7 +5,7 @@
 ## Tärkeimmät Osikot & Palvelut
 
 - [Kotisivu](https://www.ftsakkinen.com/): Yleiskatsaus OMT-fysioterapiapalveluihin, vastaanottopisteisiin ja koulutustoimintaan.
-- [Videokirjasto & Blogi](https://www.ftsakkinen.com/videot): 69 AEO-optimoidun opetusvideon ja fysioterapia-artikkelin tietopankki (Purenta & TMD, Ergonomia, TULE-vaivat & Lantionpohja).
+- [Videokirjasto & Blogi](https://www.ftsakkinen.com/videot): 68 AEO-optimoidun opetusvideon ja fysioterapia-artikkelin tietopankki (Purenta & TMD, Ergonomia, TULE-vaivat & Lantionpohja).
 - [Ilmaiset Oppaat (Google Drive)](https://www.ftsakkinen.com/ilmaisopas): Viralliset liike- ja kuntoutusohjeet PDF-muodossa suoraan Janne Säkkisen Google Drive -kansiosta.
 - [Koulutukset & CV](https://www.ftsakkinen.com/koulutukset): Yliopisto-opetus, erikoiskoulutukset fysioterapeuteille sekä kliininen työkokemus (2011–2026).
 - [Ajanvaraus & Yhteystiedot](https://www.ftsakkinen.com/yhteystiedot): Vastaanottoajat Terveystalolla, Norre Työterveydessä sekä Hammasvahdissa.

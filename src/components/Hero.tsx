@@ -16,7 +16,7 @@ export default function Hero() {
       icon: Users,
     },
     {
-      label: "70+ Opetusvideota",
+      label: `${SITE_CONFIG.totalVideosCount} Opetusvideota`,
       sublabel: "Maksuttomat oppaat",
       icon: Video,
     },
