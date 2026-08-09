@@ -43,7 +43,7 @@ export default function DarkLocationMap({ title = "Vastaanottopisteet (Oulu & Ke
         <div className="absolute bottom-3 left-3 right-3 p-2.5 rounded-xl bg-[#000a18]/90 backdrop-blur-md border border-[#00AEEF]/40 flex items-center justify-between text-xs text-gray-200">
           <div className="flex items-center gap-2">
             <Navigation className="w-3.5 h-3.5 text-[#00AEEF]" />
-            <span className="font-semibold text-white">Lipunkantajantie 21 G, Oulu</span>
+            <span className="font-semibold text-white">Vastaanotot Oulussa &amp; Kempeleessä</span>
           </div>
           <span className="text-[10px] text-[#00AEEF]">Terveystalo • Norre • Hammasvahti</span>
         </div>

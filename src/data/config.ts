@@ -10,7 +10,7 @@ export const SITE_CONFIG = {
   
   // Official Contact Info
   clinicLocations: "Terveystalo, Norre, Hammasvahti (Oulu)",
-  streetAddress: "Lipunkantajantie 21 G, 90670 Oulu",
+  streetAddress: "Oulu, Suomi",
   contactEmail: "tiedottajanne@gmail.com",
   contactPhone: "041 327 4967",
   totalVideosCount: 68,

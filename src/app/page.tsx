@@ -71,7 +71,6 @@ export default async function HomePage() {
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Oulu",
-          "postalCode": "90670",
           "addressCountry": "FI"
         },
         "telephone": "+358413274967",
@@ -120,13 +119,12 @@ export default async function HomePage() {
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Oulu",
-        "postalCode": "90670",
         "addressCountry": "FI"
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": 65.0065,
-        "longitude": 25.5415
+        "latitude": 65.0121,
+        "longitude": 25.4688
       },
       "openingHours": [
         "Mo-Fr 08:00-16:00"
