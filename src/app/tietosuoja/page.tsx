@@ -13,12 +13,12 @@ export default function PrivacyPage() {
             <span>Oikeudelliset tiedot</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl font-display text-white tracking-wide">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-display text-white tracking-wide break-words">
             TIETOSUOJA JA <span className="text-[#00AEEF]">VASTUUVAPAUSLAUSUMA</span>
           </h1>
         </div>
 
-        <div className="p-8 rounded-3xl bg-[#000d21] border border-[#0C66B4]/40 space-y-8 text-gray-300 text-sm leading-relaxed">
+        <div className="p-4 sm:p-8 rounded-3xl bg-[#000d21] border border-[#0C66B4]/40 space-y-8 text-gray-300 text-sm leading-relaxed">
           
           {/* Medical Disclaimer */}
           <section className="space-y-3">

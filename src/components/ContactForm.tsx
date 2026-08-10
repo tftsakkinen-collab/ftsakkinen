@@ -52,7 +52,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="p-8 sm:p-10 rounded-3xl bg-[#000d21] border border-[#0C66B4] shadow-glow space-y-6">
+    <div className="p-4 sm:p-8 md:p-10 rounded-3xl bg-[#000d21] border border-[#0C66B4] shadow-glow space-y-6">
       <div className="space-y-2">
         <h2 className="text-2xl font-bold text-white tracking-wide">
           Lähetä yhteydenottopyyntö

@@ -136,7 +136,7 @@ export default function OireNavigaattori() {
             <span>Interaktiivinen Kuntoutusapu</span>
           </div>
 
-          <h2 className="font-display text-3xl sm:text-5xl text-white tracking-wide">
+          <h2 className="font-display text-2xl sm:text-4xl md:text-5xl text-white tracking-wide break-words">
             LÖYDÄ OMAT <span className="text-[#00AEEF]">KUNTOUTUSOHJEET</span>
           </h2>
 
@@ -153,21 +153,21 @@ export default function OireNavigaattori() {
               <button
                 key={sym.id}
                 onClick={() => setSelectedId(sym.id)}
-                className={`p-4 rounded-2xl text-left border transition-all duration-300 flex flex-col justify-between gap-3 ${
+                className={`p-3 sm:p-4 rounded-2xl text-left border transition-all duration-300 flex flex-col justify-between gap-2.5 ${
                   isActive
                     ? "bg-[#014489]/40 border-[#00AEEF] shadow-[0_0_20px_rgba(0,174,239,0.3)] scale-[1.02]"
                     : "bg-[#000d21] border-[#0C66B4]/30 hover:border-[#00AEEF]/50 text-gray-300"
                 }`}
               >
-                <div className="text-2xl">{sym.iconName}</div>
-                <div className="font-bold text-sm text-white">{sym.name}</div>
+                <div className="text-xl sm:text-2xl">{sym.iconName}</div>
+                <div className="font-bold text-xs sm:text-sm text-white leading-tight break-words">{sym.name}</div>
               </button>
             );
           })}
         </div>
 
         {/* Interactive Active Content Box */}
-        <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-b from-[#000d21] to-[#00050f] border border-[#00AEEF]/40 shadow-glow grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+        <div className="p-4 sm:p-8 rounded-3xl bg-gradient-to-b from-[#000d21] to-[#00050f] border border-[#00AEEF]/40 shadow-glow grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
           
           {/* Col 1: Summary & PDF Download */}
           <div className="space-y-6 flex flex-col justify-between h-full">

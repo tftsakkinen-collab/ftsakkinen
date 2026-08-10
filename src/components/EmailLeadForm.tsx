@@ -64,7 +64,7 @@ export default function EmailLeadForm({
     setIsLoading(true);
 
     try {
-      await fetch("/api/lead", {
+      const res = await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -75,11 +75,18 @@ export default function EmailLeadForm({
           videos: bonusVideos.map(v => ({ title: v.title, url: v.youtubeUrl })),
         }),
       });
+
+      const data = await res.json();
+      if (res.ok && data.success) {
+        setIsSubmitted(true);
+      } else {
+        alert(data.error || "Virhe ilmoittautumisen lähetyksessä. Yritä uudelleen.");
+      }
     } catch (err) {
       console.error("API error:", err);
+      alert("Yhteysvirhe ilmoittautumista lähetettäessä. Yritä uudelleen.");
     } finally {
       setIsLoading(false);
-      setIsSubmitted(true);
     }
   };
 
@@ -101,7 +108,7 @@ export default function EmailLeadForm({
             <span>Maksuton Liidipalkkio &amp; Erikoisvideot</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-display text-white tracking-wide leading-tight max-w-4xl mx-auto">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-display text-white tracking-wide leading-tight max-w-4xl mx-auto break-words">
             NÄMÄ 4 ERIKOISVIDEO-OPASTA AUKEEVAT HETI KUN LIITYT LISTALLE:
           </h2>
 
@@ -158,7 +165,7 @@ export default function EmailLeadForm({
             </div>
 
             {/* Form Box */}
-            <form onSubmit={handleSubmit} className="p-8 sm:p-10 rounded-3xl bg-[#000d21]/95 border-2 border-[#00AEEF] space-y-6 shadow-[0_0_50px_rgba(0,174,239,0.3)] backdrop-blur-md">
+            <form onSubmit={handleSubmit} className="p-4 sm:p-8 md:p-10 rounded-3xl bg-[#000d21]/95 border-2 border-[#00AEEF] space-y-6 shadow-[0_0_50px_rgba(0,174,239,0.3)] backdrop-blur-md">
               <div className="flex items-center gap-2 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
                 <Gift className="w-4 h-4 text-[#00AEEF]" />
                 <span>Liity sähköpostilistalle – Avaa 4 erikoisvideota &amp; Drive-oppaat</span>

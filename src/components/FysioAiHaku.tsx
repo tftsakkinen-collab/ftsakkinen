@@ -27,9 +27,9 @@ export default function FysioAiHaku() {
   };
 
   return (
-    <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#000d21] via-[#014489]/30 to-[#000d21] border border-[#00AEEF]/50 shadow-glow space-y-6">
+    <div className="p-4 sm:p-8 rounded-3xl bg-gradient-to-r from-[#000d21] via-[#014489]/30 to-[#000d21] border border-[#00AEEF]/50 shadow-glow space-y-6">
       <div className="flex items-center gap-3">
-        <div className="w-10 h-10 rounded-xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center">
+        <div className="w-10 h-10 rounded-xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center shrink-0">
           <Bot className="w-5 h-5" />
         </div>
         <div>
@@ -37,11 +37,11 @@ export default function FysioAiHaku() {
             <Sparkles className="w-3.5 h-3.5" />
             <span>Fysio-AI Hakubotti</span>
           </div>
-          <h3 className="text-xl font-bold text-white">Etsi Jannen Videokirjastosta</h3>
+          <h3 className="text-lg sm:text-xl font-bold text-white">Etsi Jannen Videokirjastosta</h3>
         </div>
       </div>
 
-      <form onSubmit={handleSearch} className="relative flex items-center gap-2">
+      <form onSubmit={handleSearch} className="relative flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
         <div className="relative flex-1">
           <Search className="w-4 h-4 text-gray-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
           <input

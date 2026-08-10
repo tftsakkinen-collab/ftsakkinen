@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Outfit, Roboto } from "next/font/google";
+import { Outfit, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -12,8 +12,8 @@ const outfit = Outfit({
   display: "swap",
 });
 
-const roboto = Roboto({
-  weight: ["300", "400", "500", "700"],
+const inter = Inter({
+  weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
   variable: "--font-roboto",
   display: "swap",
@@ -46,7 +46,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fi" className={`${outfit.variable} ${roboto.variable}`}>
+    <html lang="fi" className={`${outfit.variable} ${inter.variable}`}>
       <body className="min-h-screen flex flex-col bg-[#000a18] text-white selection:bg-[#00AEEF] selection:text-black">
         <Navbar />
         <main className="flex-grow">{children}</main>

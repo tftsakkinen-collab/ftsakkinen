@@ -37,7 +37,7 @@ export default function KyynarpaaApuvalinePage() {
           <span>Kuntoutusapuväline • Kyynärvarsitreenari</span>
         </div>
 
-        <h1 className="text-4xl sm:text-6xl font-display text-white tracking-wide leading-tight">
+        <h1 className="text-2xl sm:text-4xl lg:text-6xl font-display text-white tracking-wide leading-tight break-words">
           TENNIS- JA GOLFKYYNÄRPÄÄN <span className="text-[#00AEEF]">KUNTOUTUSAPUVÄLINE</span>
         </h1>
 

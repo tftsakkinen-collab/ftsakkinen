@@ -37,7 +37,7 @@ export default function ContactPage() {
     <div className="py-16 bg-[#000a18] min-h-screen text-gray-200">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="text-center space-y-4">
-          <h1 className="text-4xl sm:text-5xl font-display text-white tracking-wide">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-display text-white tracking-wide break-words">
             YHTEYSTIEDOT &amp; <span className="text-[#00AEEF]">AJANVARAUS</span>
           </h1>
           <p className="text-gray-300 text-base max-w-xl mx-auto">
@@ -50,7 +50,7 @@ export default function ContactPage() {
           
           {/* Info Card Column */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="p-8 rounded-3xl bg-[#000d21] border border-[#0C66B4] shadow-glow space-y-6">
+            <div className="p-4 sm:p-8 rounded-3xl bg-[#000d21] border border-[#0C66B4] shadow-glow space-y-6">
               <h2 className="text-xl font-bold text-white flex items-center gap-2">
                 <Building2 className="w-5 h-5 text-[#00AEEF]" />
                 Tiedottajanne Oy

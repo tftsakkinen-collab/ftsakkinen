@@ -39,7 +39,7 @@ export default function VideoLibraryClient({ videos, categories }: VideoLibraryC
             <span>KAIKKI {videos.length} KUNTOUTUS- &amp; OPETUSVIDEOTA</span>
           </div>
 
-          <h1 className="text-4xl sm:text-6xl font-display text-white tracking-wide">
+          <h1 className="text-2xl sm:text-4xl lg:text-6xl font-display text-white tracking-wide break-words">
             OMT-FYSIOTERAPEUTIN <span className="text-[#00AEEF]">KOKO VIDEOKIRJASTO</span>
           </h1>
 

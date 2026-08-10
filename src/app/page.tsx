@@ -54,7 +54,7 @@ export const metadata: Metadata = {
 
 export default async function HomePage() {
   const videos = await fetchYouTubeVideos();
-  const featuredVideos = videos.slice(0, 6);
+  const featuredVideos = videos.slice(0, 3);
 
   // 5. ORGANIZATION, PERSON & LOCALBUSINESS JSON-LD SCHEMA FOR HOMEPAGE
   const jsonLd = [
@@ -236,8 +236,6 @@ export default async function HomePage() {
       {/* 2. Aihekoostesivujen Pikalinkit (Top Symptoms) */}
       <section className="py-12 bg-[#000d21] border-b border-[#0C66B4]/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-          <FysioAiHaku />
-
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
               <div className="inline-flex items-center gap-2 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
@@ -275,31 +273,31 @@ export default async function HomePage() {
       <AboutSection />
 
       {/* 4. Featured Clinical Videos Grid */}
-      <section className="py-20 bg-[#000a18] border-b border-[#0C66B4]/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <section className="py-16 bg-[#000a18] border-b border-[#0C66B4]/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div className="space-y-3">
               <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#0C66B4]/20 border border-[#00AEEF]/40 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
                 <PlayCircle className="w-4 h-4" />
                 <span>Kliiniset Ohjevideot</span>
               </div>
-              <h2 className="text-3xl sm:text-5xl font-display text-white tracking-wide">
+              <h2 className="text-3xl sm:text-4xl font-display text-white tracking-wide">
                 SUOSITUIMMAT <span className="text-[#00AEEF]">KUNTOUTUSVIDEOT</span>
               </h2>
-              <p className="text-gray-300 text-sm sm:text-base max-w-xl">
+              <p className="text-gray-300 text-sm max-w-xl">
                 Täsmällisiä liikeohjeita ja tutkittua tietoa purentaelimistön, leukanivelen ja rankaperäisten kipujen itsehoitoon.
               </p>
             </div>
             <Link
               href="/videot"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#000d21] border border-[#00AEEF] text-[#00AEEF] font-semibold text-sm hover:bg-[#00AEEF] hover:text-[#000a18] transition-all shadow-glow self-start md:self-auto"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#000d21] border border-[#00AEEF] text-[#00AEEF] font-semibold text-xs hover:bg-[#00AEEF] hover:text-[#000a18] transition-all shadow-glow self-start md:self-auto"
             >
-              <span>Selaa Kaikkia Videoita</span>
+              <span>Selaa Kaikkia 70 Videota</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {featuredVideos.map((video) => (
               <VideoCard key={video.id} video={video} />
             ))}
@@ -313,10 +311,7 @@ export default async function HomePage() {
       {/* 6. Professional Training & Workshops */}
       <TrainingsSection />
 
-      {/* 7. Real Professional & Student Testimonials */}
-      <TestimonialsSection />
-
-      {/* 8. Free Self-Care Guide Lead Magnet */}
+      {/* 7. Free Self-Care Guide Lead Magnet */}
       <section className="py-16 bg-[#000d21] border-b border-[#0C66B4]/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <EmailLeadForm
@@ -326,7 +321,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* 9. Appointment Booking CTA Section */}
+      {/* 8. Appointment Booking CTA Section */}
       <AppointmentBookingSection />
     </div>
   );

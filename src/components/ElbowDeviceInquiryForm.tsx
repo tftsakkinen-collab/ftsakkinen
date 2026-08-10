@@ -62,7 +62,7 @@ export default function ElbowDeviceInquiryForm({
             <span>Kyynärvarsitreenari • Hankintalomake</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-display text-white tracking-wide leading-tight">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-display text-white tracking-wide leading-tight break-words">
             {title}
           </h2>
 
@@ -72,7 +72,7 @@ export default function ElbowDeviceInquiryForm({
         </div>
 
         {!isSubmitted ? (
-          <form onSubmit={handleSubmit} className="p-8 sm:p-10 rounded-3xl bg-[#000d21]/90 border border-[#0C66B4]/60 space-y-6 shadow-glow backdrop-blur-md">
+          <form onSubmit={handleSubmit} className="p-4 sm:p-8 md:p-10 rounded-3xl bg-[#000d21]/90 border border-[#0C66B4]/60 space-y-6 shadow-glow backdrop-blur-md">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="text-xs font-bold text-gray-300 uppercase tracking-wider">

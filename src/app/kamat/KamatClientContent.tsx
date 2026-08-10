@@ -55,7 +55,7 @@ export default function KamatClientContent() {
             <span>Suositellut Välineet &amp; Varusteet</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl font-display text-white tracking-wide">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-display text-white tracking-wide break-words">
             SUOSITELTUT <span className="text-[#00AEEF]">KUNTOUTUSVÄLINEET &amp; VARUSTEET</span>
           </h1>
 
@@ -65,7 +65,7 @@ export default function KamatClientContent() {
         </div>
 
         {/* Amazon & Affiliate Disclaimer Box */}
-        <div className="p-5 rounded-2xl bg-[#000d21] border border-[#0C66B4]/60 space-y-2 text-sm text-gray-300">
+        <div className="p-4 sm:p-5 rounded-2xl bg-[#000d21] border border-[#0C66B4]/60 space-y-2 text-sm text-gray-300">
           <div className="flex items-center gap-2 font-bold text-[#00AEEF]">
             <Info className="w-4 h-4 shrink-0" />
             <span>Avoimuus- &amp; Kumppanuusilmoitus (Affiliate Disclaimer)</span>
@@ -123,7 +123,7 @@ export default function KamatClientContent() {
             return (
               <div
                 key={item.id}
-                className="p-6 rounded-2xl bg-[#000d21] border border-[#0C66B4]/50 hover:border-[#00AEEF] transition-all flex flex-col justify-between space-y-4 group"
+                className="p-4 sm:p-6 rounded-2xl bg-[#000d21] border border-[#0C66B4]/50 hover:border-[#00AEEF] transition-all flex flex-col justify-between space-y-4 group"
               >
                 <div className="space-y-3">
                   <div className="flex items-start justify-between gap-2">

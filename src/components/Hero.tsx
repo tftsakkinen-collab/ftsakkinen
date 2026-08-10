@@ -54,7 +54,7 @@ export default function Hero() {
             </div>
 
             {/* Main Title */}
-            <h1 className="text-4xl sm:text-6xl lg:text-6xl font-display font-normal text-white tracking-wide leading-[1.1]">
+            <h1 className="text-2xl sm:text-4xl lg:text-6xl font-display font-normal text-white tracking-wide leading-[1.15] break-words">
               ERIKOISTUNUT <span className="text-[#00AEEF]">PURENTAELIMISTÖN (TMD)</span> JA TUKI- JA LIIKUNTAELIMISTÖN FYSIOTERAPIAAN
             </h1>
 
@@ -66,15 +66,15 @@ export default function Hero() {
             {/* Authority Pills */}
             <div className="pt-2 flex flex-wrap items-center gap-3 text-xs text-gray-300">
               <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#000d21] border border-[#0C66B4]/50">
-                <ShieldCheck className="w-4 h-4 text-[#00AEEF]" />
+                <ShieldCheck className="w-4 h-4 text-[#00AEEF] shrink-0" />
                 <span>Valvira / Terhikki -rekisteröity laillistettu OMT-fysioterapeutti</span>
               </div>
               <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#000d21] border border-[#0C66B4]/50">
-                <GraduationCap className="w-4 h-4 text-[#00AEEF]" />
+                <GraduationCap className="w-4 h-4 text-[#00AEEF] shrink-0" />
                 <span>Oulun yliopisto (Hammaslääketiede 2017–)</span>
               </div>
               <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#000d21] border border-[#0C66B4]/50">
-                <Award className="w-4 h-4 text-[#00AEEF]" />
+                <Award className="w-4 h-4 text-[#00AEEF] shrink-0" />
                 <span>SOMTY OMT-Erikoistunut</span>
               </div>
             </div>
@@ -83,7 +83,7 @@ export default function Hero() {
             <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
               <Link
                 href="/ilmaisopas"
-                className="px-8 py-4 rounded-xl bg-[#00AEEF] text-black font-bold text-base hover:bg-[#33C2F5] transition-all shadow-glow flex items-center justify-center gap-2 group"
+                className="px-8 py-4 rounded-xl bg-[#00AEEF] text-black font-bold text-base hover:bg-[#33C2F5] transition-all shadow-glow flex items-center justify-center gap-2 group text-center"
               >
                 <span>Lataa Ilmaiset Oppaat</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -91,7 +91,7 @@ export default function Hero() {
 
               <Link
                 href="/videot"
-                className="px-8 py-4 rounded-xl bg-[#000d21] border border-[#0C66B4] text-white font-bold text-base hover:border-[#00AEEF] hover:bg-[#001533] transition-all flex items-center justify-center gap-2"
+                className="px-8 py-4 rounded-xl bg-[#000d21] border border-[#0C66B4] text-white font-bold text-base hover:border-[#00AEEF] hover:bg-[#001533] transition-all flex items-center justify-center gap-2 text-center"
               >
                 <Play className="w-4 h-4 text-[#00AEEF] fill-[#00AEEF]" />
                 <span>Katso {SITE_CONFIG.totalVideosCount} Ilmaista Videota</span>
@@ -100,11 +100,11 @@ export default function Hero() {
 
             {/* Trust Micro-Bullet */}
             <div className="pt-2 flex flex-wrap items-center gap-4 text-xs text-gray-400">
-              <span className="flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-[#00AEEF]" /> Valvira / Terhikki -rekisteröity</span>
+              <span className="flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-[#00AEEF] shrink-0" /> Valvira / Terhikki -rekisteröity</span>
               <span>•</span>
-              <span className="flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-[#00AEEF]" /> Tiedottajanne Oy</span>
+              <span className="flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-[#00AEEF] shrink-0" /> Tiedottajanne Oy</span>
               <span>•</span>
-              <span className="flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-[#00AEEF]" /> YouTube: @ft_sakkinen</span>
+              <span className="flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-[#00AEEF] shrink-0" /> YouTube: @ft_sakkinen</span>
             </div>
 
           </div>
@@ -125,10 +125,10 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#000a18] via-transparent to-transparent opacity-80" />
 
                 {/* Floating Bio Card */}
-                <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-[#000d21]/90 backdrop-blur-md border border-[#0C66B4]/60 space-y-1">
-                  <h3 className="text-lg font-bold text-white">Janne Säkkinen</h3>
-                  <p className="text-xs text-[#00AEEF] font-mono">OMT-Fysioterapeutti &amp; Luennoitsija</p>
-                  <p className="text-[11px] text-gray-300 leading-tight">
+                <div className="absolute bottom-2 left-2 right-2 sm:bottom-4 sm:left-4 sm:right-4 p-2.5 sm:p-4 rounded-2xl bg-[#000d21]/90 backdrop-blur-md border border-[#0C66B4]/60 space-y-1">
+                  <h3 className="text-base sm:text-lg font-bold text-white">Janne Säkkinen</h3>
+                  <p className="text-[11px] sm:text-xs text-[#00AEEF] font-mono">OMT-Fysioterapeutti &amp; Luennoitsija</p>
+                  <p className="text-[10px] sm:text-[11px] text-gray-300 leading-tight">
                     Tiedottajanne Oy • Erityisosaamisena purentaelimistön fysioterapia (TMD) &amp; TULE-vaivat.
                   </p>
                 </div>
@@ -139,19 +139,19 @@ export default function Hero() {
         </div>
 
         {/* 2. USKOTTAVUUSLUVUT (CREDIBILITY STATS BAR) */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 sm:p-8 rounded-3xl bg-[#000d21] border border-[#0C66B4]/50 shadow-panel">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 p-3 sm:p-6 md:p-8 rounded-3xl bg-[#000d21] border border-[#0C66B4]/50 shadow-panel">
           {stats.map((stat, idx) => {
             const Icon = stat.icon;
             return (
-              <div key={idx} className="flex items-center gap-3.5 p-2">
-                <div className="w-10 h-10 rounded-xl bg-[#014489]/40 border border-[#00AEEF]/40 text-[#00AEEF] flex items-center justify-center shrink-0">
-                  <Icon className="w-5 h-5" />
+              <div key={idx} className="flex items-center gap-2 sm:gap-3.5 p-1.5 sm:p-2 min-w-0">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-[#014489]/40 border border-[#00AEEF]/40 text-[#00AEEF] flex items-center justify-center shrink-0">
+                  <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
-                <div>
-                  <div className="text-base sm:text-lg font-bold text-white leading-tight font-display">
+                <div className="min-w-0 flex-1">
+                  <div className="text-xs sm:text-base md:text-lg font-bold text-white leading-tight font-display break-words">
                     {stat.label}
                   </div>
-                  <div className="text-xs text-gray-400">
+                  <div className="text-[10px] sm:text-xs text-gray-400 leading-tight">
                     {stat.sublabel}
                   </div>
                 </div>

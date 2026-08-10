@@ -137,7 +137,7 @@ export default function AboutPage() {
               <span>Ammatillinen Tausta &amp; Osaaminen</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl font-display text-white tracking-wide leading-tight">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-display text-white tracking-wide leading-tight break-words">
               JANNE SÄKKINEN <span className="text-[#00AEEF]">— OMT-FYSIOTERAPEUTTI</span>
             </h1>
 
@@ -188,7 +188,7 @@ export default function AboutPage() {
         </div>
 
         {/* Section: Why I do this work & Work Philosophy */}
-        <div className="space-y-10 p-8 sm:p-10 rounded-3xl bg-[#000d21] border border-[#0C66B4]/60 shadow-panel">
+        <div className="space-y-10 p-4 sm:p-8 md:p-10 rounded-3xl bg-[#000d21] border border-[#0C66B4]/60 shadow-panel">
           
           <div className="space-y-4">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#014489]/40 border border-[#00AEEF]/40 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
