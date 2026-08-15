@@ -6,7 +6,10 @@
     "source": "YouTube / Beacons",
     "platform": "YouTube",
     "locale": "fi",
-    "date_added": "2026-07-27"
+    "date_added": "2026-07-27",
+    "delivered": true,
+    "delivered_at": "2026-08-15T08:25:36.619Z",
+    "resend_id": "7ec0aa75-c693-4d5f-89f7-b6f76ac86001"
   },
   {
     "first_name": "Jarno",
@@ -15,6 +18,81 @@
     "source": "YouTube / Beacons",
     "platform": "YouTube",
     "locale": "fi",
-    "date_added": "2026-07-27"
+    "date_added": "2026-07-27",
+    "delivered": true,
+    "delivered_at": "2026-08-15T08:25:37.316Z",
+    "resend_id": "49d03382-1f72-4a4e-aaf4-80212baa69dd"
+  },
+  {
+    "first_name": "Nanna",
+    "last_name": "",
+    "email": "nannaniinakatariina@gmail.com",
+    "source": "Kotisivut / ftsakkinen.com",
+    "platform": "Website",
+    "locale": "fi",
+    "date_added": "2026-08-11",
+    "delivered": true,
+    "delivered_at": "2026-08-15T08:25:38.008Z",
+    "resend_id": "2bcb04d6-a023-4885-8a50-60a422ba3d37"
+  },
+  {
+    "first_name": "Henna",
+    "last_name": "Yli-Suvanto",
+    "email": "henna.yli.suvanto@gmail.com",
+    "source": "Kotisivut / ftsakkinen.com",
+    "platform": "Website",
+    "locale": "fi",
+    "date_added": "2026-08-11",
+    "delivered": true,
+    "delivered_at": "2026-08-15T08:25:38.713Z",
+    "resend_id": "8345f1a7-745f-4506-a6b6-6141f15f3e5c"
+  },
+  {
+    "first_name": "Mia",
+    "last_name": "",
+    "email": "vinkumia@gmail.com",
+    "source": "Kotisivut / ftsakkinen.com",
+    "platform": "Website",
+    "locale": "fi",
+    "date_added": "2026-08-15",
+    "delivered": true,
+    "delivered_at": "2026-08-15T08:28:12.000Z",
+    "resend_id": "08d6442a-d4bd-475f-94e1-62c6f6f42a5e"
+  },
+  {
+    "first_name": "Sini",
+    "last_name": "Annala",
+    "email": "annala.sini@gmail.com",
+    "source": "Kotisivut / ftsakkinen.com",
+    "platform": "Website",
+    "locale": "fi",
+    "date_added": "2026-08-15",
+    "delivered": true,
+    "delivered_at": "2026-08-15T14:26:15.000Z",
+    "resend_id": "43182965-9428-4cf3-9d11-a5a6d1857c68"
+  },
+  {
+    "first_name": "Jouni",
+    "last_name": "",
+    "email": "jouni@arctictantricas.com",
+    "source": "Kotisivut / ftsakkinen.com",
+    "platform": "Website",
+    "locale": "fi",
+    "date_added": "2026-08-15",
+    "delivered": true,
+    "delivered_at": "2026-08-15T14:26:20.000Z",
+    "resend_id": "1fd75d6b-8802-48f3-9eaa-9d030d4bcf7e"
+  },
+  {
+    "first_name": "Aija",
+    "last_name": "Nikander",
+    "email": "aija.nikander@gmail.com",
+    "source": "Kotisivut / ftsakkinen.com",
+    "platform": "Website",
+    "locale": "fi",
+    "date_added": "2026-08-15",
+    "delivered": true,
+    "delivered_at": "2026-08-15T17:01:05.000Z",
+    "resend_id": "ee9d3b9b-0fcc-42e3-9c2c-e291114f3221"
   }
 ]

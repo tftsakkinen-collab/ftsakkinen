@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import AboutSection from "@/components/AboutSection";
+import FeaturedMediaSection from "@/components/FeaturedMediaSection";
 import VideoCard from "@/components/VideoCard";
 import EmailLeadForm from "@/components/EmailLeadForm";
 import TrainingsSection from "@/components/TrainingsSection";
@@ -100,7 +101,39 @@ export default async function HomePage() {
         "https://www.tiktok.com/@sakkinenjanne",
         "https://beacons.ai/sakkinenjanne",
         "https://www.ptsakkinen.com",
-        "https://www.ftsakkinen.com"
+        "https://www.ftsakkinen.com",
+        "https://www.apu.fi/artikkelit/pakarakipu-pahenee-istuessa-kokeile-naita-fysioterapeutin-suosittelemia-harjoitteita",
+        "https://www.kaleva.fi/jos-naama-pysyy-peruslukemilla-venyttelet-oikein-t/12341018",
+        "https://www.linkedin.com/posts/janne-s%C3%A4kkinen-4868bb221_ly%C3%B6tiin-mervi-niippan-kanssa-p%C3%A4%C3%A4t-yhteen-share-7440686206058790912-YuRP/"
+      ],
+      "subjectOf": [
+        {
+          "@type": "NewsArticle",
+          "headline": "Pakarakipu pahenee istuessa? Kokeile näitä fysioterapeutin suosittelemia harjoitteita",
+          "url": "https://www.apu.fi/artikkelit/pakarakipu-pahenee-istuessa-kokeile-naita-fysioterapeutin-suosittelemia-harjoitteita",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Apu.fi / A-lehdet"
+          }
+        },
+        {
+          "@type": "NewsArticle",
+          "headline": "Jos naama pysyy peruslukemilla, venyttelet oikein",
+          "url": "https://www.kaleva.fi/jos-naama-pysyy-peruslukemilla-venyttelet-oikein-t/12341018",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Kaleva Media"
+          }
+        },
+        {
+          "@type": "SocialMediaPosting",
+          "headline": "Asiantuntijayhteistyö: Fysioterapian & Kuntoutuksen Kehittäminen",
+          "url": "https://www.linkedin.com/posts/janne-s%C3%A4kkinen-4868bb221_ly%C3%B6tiin-mervi-niippan-kanssa-p%C3%A4%C3%A4t-yhteen-share-7440686206058790912-YuRP/",
+          "publisher": {
+            "@type": "Organization",
+            "name": "LinkedIn"
+          }
+        }
       ]
     },
     {
@@ -271,6 +304,9 @@ export default async function HomePage() {
 
       {/* 3. About & Credentials Overview */}
       <AboutSection />
+
+      {/* 3b. Featured Media & Articles */}
+      <FeaturedMediaSection />
 
       {/* 4. Featured Clinical Videos Grid */}
       <section className="py-16 bg-[#000a18] border-b border-[#0C66B4]/30">

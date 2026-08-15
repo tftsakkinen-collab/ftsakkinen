@@ -26,7 +26,7 @@ export async function POST(request: Request) {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            from: "FT Sakkinen Kotisivut <onboarding@resend.dev>",
+            from: "FT Sakkinen Kotisivut <info@ftsakkinen.com>",
             to: [recipientEmail],
             subject: `Uusi yhteydenotto kotisivuilta: ${name || email}`,
             tags: [
@@ -59,7 +59,7 @@ export async function POST(request: Request) {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            from: "FT Janne Säkkinen <onboarding@resend.dev>",
+            from: "FT Janne Säkkinen <janne@ftsakkinen.com>",
             to: [email],
             subject: `Kiitos yhteydenotostasi${name ? `, ${name}` : ""}!`,
             tags: [

@@ -1,6 +1,7 @@
 import TrainingsSection from "@/components/TrainingsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import BeaconsWidget from "@/components/BeaconsWidget";
+import LeukanivelCourseCard from "@/components/LeukanivelCourseCard";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -35,8 +36,12 @@ export default function KoulutuksetPage() {
   return (
     <div className="py-12 bg-[#000a18] min-h-screen space-y-12">
       <TrainingsSection />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <LeukanivelCourseCard />
+      </div>
       <TestimonialsSection />
       <BeaconsWidget />
     </div>
   );
 }
+

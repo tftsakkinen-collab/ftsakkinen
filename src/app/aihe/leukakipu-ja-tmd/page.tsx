@@ -1,5 +1,6 @@
 import { FALLBACK_VIDEOS } from "@/data/videos";
 import VideoCard from "@/components/VideoCard";
+import LeukanivelCourseCard from "@/components/LeukanivelCourseCard";
 import Link from "next/link";
 import { BookOpen, Sparkles, Home, ChevronRight, Download } from "lucide-react";
 import Script from "next/script";
@@ -137,7 +138,7 @@ export default function LeukakipuTopicPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         {/* Breadcrumb Navigation */}
         <nav className="flex items-center gap-2 text-xs text-gray-400">
@@ -181,6 +182,11 @@ export default function LeukakipuTopicPage() {
               <p key={idx}>{p}</p>
             ))}
           </div>
+        </div>
+
+        {/* Stripe Course Purchase Module */}
+        <div className="pt-4 pb-4">
+          <LeukanivelCourseCard />
         </div>
 
         {/* Videos Grid */}
