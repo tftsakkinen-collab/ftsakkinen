@@ -54,28 +54,28 @@ export default function LeukanivelCourseCard() {
         <div className="lg:col-span-7 space-y-6">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#00AEEF]/10 border border-[#00AEEF]/40 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
             <Sparkles className="w-4 h-4 text-[#00AEEF]" />
-            <span>Koulutusmateriaali &amp; Opas</span>
+            <span>Terveydenhuollon Ammattilaisille (SOTE &amp; Fysioterapeutit)</span>
           </div>
 
           <div className="space-y-3">
             <h2 className="text-2xl sm:text-4xl font-display text-white tracking-wide leading-tight">
-              LEUKANIVELEN &amp; PURENTAELIMISTÖN <span className="text-[#00AEEF]">(TMD)</span> KOULUTUSMATERIAALI
+              SOTE- &amp; TERVEYSAMMATTILAISTEN <span className="text-[#00AEEF]">TMD-ERIKOISKOULUTUSMATERIAALI</span>
             </h2>
             <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-              Syventävä OMT-fysioterapian luentomateriaali leukanivelen toimintahäiriöistä, tutkimisesta, manuaalisesta terapiasta ja harjoitteista.
+              Syventävä OMT-fysioterapian erikoiskoulutuspaketti ja luentomateriaalit fysioterapeuteille, osteopaateille, hammaslääkäreille ja SOTE-ammattilaisille.
             </p>
           </div>
 
           {/* Included Items */}
           <div className="space-y-3 pt-2">
-            <h3 className="text-xs uppercase font-bold text-gray-400 tracking-wider">Materiaali sisältää:</h3>
+            <h3 className="text-xs uppercase font-bold text-gray-400 tracking-wider">Ammattilaispaketti sisältää:</h3>
             <ul className="space-y-3 text-sm text-gray-200">
               <li className="flex items-start gap-3">
                 <div className="p-1 rounded bg-[#00AEEF]/20 text-[#00AEEF] mt-0.5">
                   <FileText className="w-4 h-4" />
                 </div>
                 <div>
-                  <span className="font-semibold text-white">Kattavat PDF-luentodiat:</span> Teoria, anatomia, TMD-luokittelu ja kliiniset tutkimustekniikat.
+                  <span className="font-semibold text-white">Kattavat PDF-luentodiat &amp; tutkimuskaavakkeet:</span> Teoria, anatomia, TMD-luokittelu, leukanivelen palpaatio ja erotusdiagnostiikka.
                 </div>
               </li>
               <li className="flex items-start gap-3">
@@ -83,7 +83,7 @@ export default function LeukanivelCourseCard() {
                   <Video className="w-4 h-4" />
                 </div>
                 <div>
-                  <span className="font-semibold text-white">Opetusvideolinkki (YouTube):</span> Suora pääsy luentodioihin liittyviin opetus- ja tekniikkavideoihin.
+                  <span className="font-semibold text-white">HD-Opetusvideot &amp; Tekniikkaoppaat:</span> Hands-on manuaalisen terapian otteet, liikehoidot ja kliiniset harjoiteprogressiot vastaanottotyöhön.
                 </div>
               </li>
               <li className="flex items-start gap-3">
@@ -91,7 +91,7 @@ export default function LeukanivelCourseCard() {
                   <CheckCircle2 className="w-4 h-4 text-emerald-400" />
                 </div>
                 <div>
-                  <span className="font-semibold text-white">Välitön digitaalinen toimitus:</span> Pääsy materiaaleihin heti maksun jälkeen.
+                  <span className="font-semibold text-white">Välitön digitaalinen toimitus:</span> Valvira/SOTE-yhteensopivat materiaalit käyttöön heti maksun jälkeen.
                 </div>
               </li>
             </ul>
