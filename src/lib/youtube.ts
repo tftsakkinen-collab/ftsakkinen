@@ -71,12 +71,18 @@ export async function fetchYouTubeVideos(): Promise<Video[]> {
       const published = publishedMatch ? publishedMatch[1].split("T")[0] : "";
       const thumbnailUrl = thumbnailMatch ? thumbnailMatch[1] : `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
 
-      // HARD FILTER: DISCARD ALL SHORTS (#shorts in title or description or /shorts/ in URL)
+      // HARD FILTER: DISCARD ALL SHORTS, REELS, VERTICAL VIDEOS & COMMUNITY POSTS
+      const isCommunityPost = !videoId || entry.includes("yt:community") || entry.includes("/community/");
       const isShort = title.toLowerCase().includes("#shorts") || 
+                      title.toLowerCase().includes("#short") || 
                       description.toLowerCase().includes("#shorts") ||
+                      description.toLowerCase().includes("#short") ||
+                      title.toLowerCase().includes("shorts") ||
+                      title.toLowerCase().includes("#reels") ||
+                      title.toLowerCase().includes("#tiktok") ||
                       entry.includes("/shorts/");
 
-      if (!isShort && videoId) {
+      if (!isCommunityPost && !isShort && videoId) {
         let categoryId = "tule-vaivat";
         const fallbackMatch = FALLBACK_VIDEOS.find(fv => fv.id === videoId);
         if (fallbackMatch && fallbackMatch.categoryId) {

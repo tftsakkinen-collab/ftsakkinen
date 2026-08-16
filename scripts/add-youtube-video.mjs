@@ -15,6 +15,12 @@ if (!videoUrlOrId) {
   process.exit(0);
 }
 
+if (videoUrlOrId.includes("/shorts/") || videoUrlOrId.includes("#shorts")) {
+  console.error("⛔ HUOMIO: Pystyvideot / YouTube Shorts -videot ja community-postaukset on suodatettu pois kotisivuilta.");
+  console.error("Kotisivulle lisätään ainoastaan vaakasuuntaisia pitkiä opasvideoita.");
+  process.exit(1);
+}
+
 function extractYoutubeId(urlOrId) {
   if (urlOrId.length === 11 && !urlOrId.includes("/")) {
     return urlOrId;
