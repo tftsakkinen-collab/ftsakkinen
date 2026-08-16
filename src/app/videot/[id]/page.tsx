@@ -7,6 +7,7 @@ import { notFound } from "next/navigation";
 import Script from "next/script";
 import VideoCard from "@/components/VideoCard";
 import TranscriptViewer from "@/components/TranscriptViewer";
+import GatedVideoPlayer from "@/components/GatedVideoPlayer";
 import type { Metadata } from "next";
 
 export async function generateStaticParams() {
@@ -297,22 +298,8 @@ export default async function SingleVideoPage(props: { params: Promise<{ id: str
           </p>
         </div>
 
-        {/* Responsive YouTube Embed Container */}
-        <div className="space-y-3">
-          <div className="flex items-center gap-2 text-xs font-bold text-white uppercase tracking-wider">
-            <Play className="w-4 h-4 text-[#00AEEF]" />
-            <span>Katso opetusvideo</span>
-          </div>
-          <div className="relative aspect-video rounded-2xl bg-black border border-[#0C66B4] overflow-hidden shadow-glow">
-            <iframe
-              src={`https://www.youtube.com/embed/${video.youtubeId}?autoplay=0`}
-              title={video.title}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-full"
-            />
-          </div>
-        </div>
+        {/* Responsive YouTube Embed / Gated Video Player */}
+        <GatedVideoPlayer video={video} />
 
         {/* Full Text / Video Transcript Section with Expandable View & 100% HTML for Crawlers */}
         <TranscriptViewer transcript={video.transcript || video.promiseDescription} />
