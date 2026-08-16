@@ -24,6 +24,7 @@ const FysioAiHaku = dynamicImport(() => import("@/components/FysioAiHaku"), {
 });
 
 import SymptomIntake from "@/components/SymptomIntake";
+import GoogleReviewsSection from "@/components/GoogleReviewsSection";
 
 export const dynamic = "force-dynamic";
 
@@ -346,6 +347,7 @@ export default async function HomePage() {
       </section>
 
       {/* 5. Direct Patient Testimonials */}
+      <GoogleReviewsSection />
       <PatientTestimonialsSection />
 
       {/* 6. Professional Training & Workshops */}

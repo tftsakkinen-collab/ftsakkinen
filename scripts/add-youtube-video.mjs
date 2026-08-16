@@ -87,15 +87,16 @@ async function fetchMetadataAndProcess() {
   if (fs.existsSync(videosPath)) {
     try {
       let content = fs.readFileSync(videosPath, "utf-8");
-      if (content.includes(`youtubeId": "${youtubeId}"`) || content.includes(`id": "${youtubeId}"`)) {
+      if (content.includes(`"youtubeId": "${youtubeId}"`) || content.includes(`"id": "${youtubeId}"`)) {
         console.log(`ℹ Video ID "${youtubeId}" on jo olemassa tiedostossa videos.ts.`);
       } else {
-        const insertPos = content.indexOf("export const FALLBACK_VIDEOS: Video[] = [");
+        const targetMarker = "export const FALLBACK_VIDEOS: Video[] = [";
+        const insertPos = content.indexOf(targetMarker);
         if (insertPos !== -1) {
-          const bracketPos = content.indexOf("[", insertPos);
+          const bracketPos = insertPos + targetMarker.length;
           const newEntryJson = JSON.stringify(newVideoEntry, null, 2);
           const formattedEntry = `\n  ${newEntryJson.split("\n").join("\n  ")},`;
-          content = content.slice(0, bracketPos + 1) + formattedEntry + content.slice(bracketPos + 1);
+          content = content.slice(0, bracketPos) + formattedEntry + content.slice(bracketPos);
           fs.writeFileSync(videosPath, content, "utf-8");
           console.log(`✔ Lisätty uusi video tiedostoon src/data/videos.ts!`);
         }

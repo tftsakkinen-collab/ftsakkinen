@@ -13,7 +13,7 @@ export interface Video {
   isShort?: boolean;
 }
 
-export const FALLBACK_VIDEOS: Video[
+export const FALLBACK_VIDEOS: Video[] = [
   {
     "id": "P1lZdpluD64",
     "youtubeId": "P1lZdpluD64",
@@ -26,7 +26,7 @@ export const FALLBACK_VIDEOS: Video[
     "pairVideoId": "P1lZdpluD64",
     "pairUrl": "https://www.ptsakkinen.com/videos/P1lZdpluD64",
     "isShort": false
-  },] = [
+  },
   {
     "id": "8H_k0lrebJ0",
     "youtubeId": "8H_k0lrebJ0",
