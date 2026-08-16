@@ -40,7 +40,7 @@ export default function TrainingsSection() {
     <section className="py-20 bg-[#000d21] border-b border-[#0C66B4]/30 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
         
-        {/* Section 0: Featured Online Masterclass (FoxStudy) */}
+        {/* Section 0: Domestic Suomenkielinen Verkkokoulutus (Tulossa Stripe-maksulla) */}
         <div className="relative rounded-3xl bg-gradient-to-br from-[#00122e] via-[#000a18] to-[#001838] border-2 border-[#00AEEF]/60 p-8 sm:p-12 shadow-[0_0_40px_rgba(0,174,239,0.25)] space-y-8 overflow-hidden group">
           {/* Subtle glow effect */}
           <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#00AEEF]/10 rounded-full blur-3xl pointer-events-none group-hover:bg-[#00AEEF]/20 transition-all duration-500" />
@@ -49,25 +49,25 @@ export default function TrainingsSection() {
             <div className="flex flex-wrap items-center gap-3">
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00AEEF]/20 border border-[#00AEEF] text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
                 <Sparkles className="w-3.5 h-3.5" />
-                Kansainvälinen Online-Masterclass
+                Suomenkielinen Koulutuspaketti (Tulossa)
               </span>
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#014489]/40 border border-[#0C66B4] text-gray-200 text-xs font-semibold">
                 <Video className="w-3.5 h-3.5 text-[#00AEEF]" />
-                Yhteistyössä FoxStudyn kanssa
+                Tiedottajanne Oy
               </span>
             </div>
             <span className="text-xs font-mono text-[#00AEEF] bg-[#000a18] px-3 py-1 rounded-md border border-[#0C66B4]/50">
-              Terveydenhuollon Ammattilaisille
+              SOTE- &amp; Terveysammattilaisille
             </span>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-8 space-y-4">
               <h2 className="text-2xl sm:text-4xl font-display text-[#ffffff] tracking-wide leading-tight">
-                Kraniomandibulaarinen dysfunktio (CMD): <span className="text-[#00AEEF]">Arviointi &amp; Hoito</span>
+                SOTE- &amp; TMD-Verkkomasterclass: <span className="text-[#00AEEF]">Purentaelimistö &amp; Kliininen Ergonomia</span>
               </h2>
               <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
-                Kattava verkkomasterclass fysioterapeuteille, osteopaateille, manuaalisille terapeuteille ja hammaslääkäreille. Opi näyttöön perustuvat tutkimusmenetelmät, leukanivelen biomekaniikka ja kliiniset hoitotekniikat purentaelimistön toimintahäiriöihin (CMD/TMD).
+                Kattava suomenkielinen erikoiskoulutus ja kliininen materiaalipaketti fysioterapeuteille, osteopaateille, hammaslääkäreille ja SOTE-ammattilaisille. Verkkomaksut ja ilmoittautuminen avautuvat pian (Stripe-integraatio tulossa).
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
@@ -81,27 +81,25 @@ export default function TrainingsSection() {
                 </div>
                 <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-200">
                   <CheckCircle2 className="w-4 h-4 text-[#00AEEF] shrink-0" />
-                  <span>100 % Online &amp; omaan tahtiin opiskeltava</span>
+                  <span>Kliiniset oppaat &amp; Valvira-yhteensopivat materiaalit</span>
                 </div>
                 <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-200">
                   <CheckCircle2 className="w-4 h-4 text-[#00AEEF] shrink-0" />
-                  <span>Käytännön kliiniset sovellukset vastaanotolle</span>
+                  <span>Helppo Stripe-verkkomaksu &amp; instant pääsy</span>
                 </div>
               </div>
             </div>
 
             <div className="lg:col-span-4 flex flex-col items-stretch lg:items-end justify-center gap-4">
               <a
-                href="https://www.foxstudy.de/en/onlinekurs/craniomandibulaere-dysfunktion-cmd-assessment-behandlung/"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#yhteystiedot"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-[#00AEEF] text-black font-bold text-base hover:bg-[#33C2F5] transition-all shadow-[0_0_20px_rgba(0,174,239,0.5)] group/btn text-center"
               >
-                <span>Katso &amp; Ilmoittaudu FoxStudyssa</span>
-                <ExternalLink className="w-5 h-5 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+                <span>Kysy ennakkotietoja koulutuksesta</span>
+                <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
               </a>
               <p className="text-[11px] text-gray-400 text-center lg:text-right">
-                Isännöity ja sertifioitu FoxStudy-alustalla
+                Suora Stripe-korttimaksu &amp; ePassi / Smartum tulossa
               </p>
             </div>
           </div>
