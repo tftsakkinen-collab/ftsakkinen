@@ -20,8 +20,17 @@ if (fs.existsSync(subscribersPath)) {
   }
 }
 
+let githubToken = process.env.GITHUB_TOKEN;
+const envPath = path.join(__dirname, "../.env.local");
+if (!githubToken && fs.existsSync(envPath)) {
+  const envContent = fs.readFileSync(envPath, "utf-8");
+  const match = envContent.match(/GITHUB_TOKEN=([^\r\n]+)/);
+  if (match) {
+    githubToken = match[1].trim();
+  }
+}
+
 async function syncWithGitHub() {
-  const githubToken = process.env.GITHUB_TOKEN;
   const owner = "tftsakkinen-collab";
   const repo = "ftsakkinen";
   const filePath = "src/data/subscribers.json";
