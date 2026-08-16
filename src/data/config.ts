@@ -1,43 +1,22 @@
-import { FALLBACK_VIDEOS } from "./videos";
-
 export const SITE_CONFIG = {
-  brandName: "FT Säkkinen",
-  companyName: "Tiedottajanne Oy",
-  businessId: "3305813-7",
-  domain: "ftsakkinen.com",
-  sisterSiteName: "PT Sakkinen (English)",
-  sisterSiteUrl: "https://www.ptsakkinen.com",
+  name: "FT Janne Säkkinen | OMT-Fysioterapeutti Oulu",
   authorName: "Janne Säkkinen",
-  authorTitle: "Janne Säkkinen",
-  
-  // Official Contact Info
-  clinicLocations: "Terveystalo, Norre, Hammasvahti (Oulu)",
-  streetAddress: "Oulu, Suomi",
-  contactEmail: "tiedottajanne@gmail.com",
+  authorTitle: "OMT-Fysioterapeutti, Terveystieteiden B.Sc.",
+  companyName: "FT Janne Säkkinen - OMT-Fysioterapia",
+  contactEmail: "tftsakkinen@gmail.com",
   contactPhone: "041 327 4967",
-  totalVideosCount: FALLBACK_VIDEOS.length,
-  
-  // Social Media Handles
-  youtubeUrl: "https://www.youtube.com/@ft_sakkinen",
-  youtubeHandle: "@ft_sakkinen",
-  youtubeChannelId: "UCz0XuTDgzskIDlzSrZFxsBg",
-
+  location: "Biologintie 5, 90570 Oulu",
+  bookingUrl: "https://www.ftsakkinen.com/yhteystiedot",
+  googleReviewUrl: "https://g.page/r/CVR0tsbHUY-CEBM/review",
+  youtubeFtSakkinen: "https://www.youtube.com/@ft_sakkinen",
+  youtubePtSakkinen: "https://www.youtube.com/@pt_sakkinen",
+  youtubeTiedottajanne: "https://www.youtube.com/@tiedottajanne",
   instagramUrl: "https://www.instagram.com/sakkinenjanne",
-  instagramHandle: "@sakkinenjanne",
-
   tiktokUrl: "https://www.tiktok.com/@sakkinenjanne",
-  tiktokHandle: "@sakkinenjanne",
-
-  beaconsUrl: "https://beacons.ai/sakkinenjanne",
-  googleDriveUrl: "https://drive.google.com/drive/folders/162_8pH138FX1KLJjpIZRYqabWjL-Dnlr?usp=sharing",
-  googleReviewUrl: "https://search.google.com/local/writereview?placeid=TiedottajanneOy_FTSakkinen",
-  
-  // Authority Proofs
-  authorityProofs: {
-    teaching: "Oulun yliopiston lääketieteellinen tiedekunta / Hammaslääketiede (2017–)",
-    credentials: "OMT-Fysioterapeutti (SOMTY), Terveystieteiden B.Sc., Elektroniikka-asentaja",
-    valvira: "Laillistettu terveydenhuollon ammattihenkilö (Valvira / Terhikki -rekisteröity OMT-fysioterapeutti)",
-    appointments: "Tiedottajanne Oy — OMT-Fysioterapia & Koulutuspalvelut",
-    qualification: "OMT-Fysioterapeutti (SOMTY 2018–2020)",
+  totalVideosCount: 120,
+  stats: {
+    youtubeViews: "1,1M+",
+    youtubeSubscribers: "5 380+",
+    experienceYears: "15+",
   },
 };
