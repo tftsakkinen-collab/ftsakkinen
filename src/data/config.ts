@@ -30,6 +30,7 @@ export const SITE_CONFIG = {
 
   beaconsUrl: "https://beacons.ai/sakkinenjanne",
   googleDriveUrl: "https://drive.google.com/drive/folders/162_8pH138FX1KLJjpIZRYqabWjL-Dnlr?usp=sharing",
+  googleReviewUrl: "https://search.google.com/local/writereview?placeid=TiedottajanneOy_FTSakkinen",
   
   // Authority Proofs
   authorityProofs: {

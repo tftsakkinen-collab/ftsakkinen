@@ -1,6 +1,7 @@
 "use client";
 
 import { Star, MessageSquare, ExternalLink, CheckCircle2 } from "lucide-react";
+import { SITE_CONFIG } from "@/data/config";
 
 interface Review {
   author: string;
@@ -42,7 +43,7 @@ const REVIEWS: Review[] = [
 ];
 
 export default function GoogleReviewsSection() {
-  const googleReviewUrl = "https://search.google.com/local/writereview?placeid=ChIJ8_z3_z0Fkw0R30f0w2f0w2f"; // Direct Google review link fallback
+  const googleReviewUrl = SITE_CONFIG.googleReviewUrl;
 
   return (
     <section className="py-16 bg-[#000a18] border-b border-[#0C66B4]/30 relative">
