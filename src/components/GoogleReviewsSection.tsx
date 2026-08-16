@@ -56,8 +56,8 @@ export default function GoogleReviewsSection() {
               <Star className="w-4 h-4 fill-current text-[#00AEEF]" />
               <span>5.0 / 5.0 ★ Google &amp; Asiakaspalautteet</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-display text-white tracking-wide">
-              ASIAKKAIDEN &amp; KOULUTETTAVIEN <span className="text-[#00AEEF]">KOKEMUKSIA</span>
+            <h2 className="text-3xl sm:text-4xl font-display font-medium text-white tracking-normal">
+              Asiakkaiden ja koulutettavien <span className="text-[#00AEEF]">kokemuksia</span>
             </h2>
             <p className="text-gray-300 text-sm max-w-2xl">
               Tutustu aitoihin potilas- ja koulutusasiakaspalautteisiin purentafysioterapiasta, TULE-kuntoutuksesta ja lääketieteellisistä luennoista.

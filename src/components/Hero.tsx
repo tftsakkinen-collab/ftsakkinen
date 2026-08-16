@@ -54,8 +54,8 @@ export default function Hero() {
             </div>
 
             {/* Main Title */}
-            <h1 className="text-2xl sm:text-4xl lg:text-6xl font-display font-normal text-white tracking-wide leading-[1.15] break-words">
-              ERIKOISTUNUT <span className="text-[#00AEEF]">PURENTAELIMISTÖN (TMD)</span> JA TUKI- JA LIIKUNTAELIMISTÖN FYSIOTERAPIAAN
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-display font-medium text-white tracking-normal leading-[1.2] break-words">
+              Erikoistunut <span className="text-[#00AEEF]">purentaelimistön (TMD)</span> ja tuki- ja liikuntaelimistön fysioterapiaan
             </h1>
 
             {/* Subtitle / Promise */}
@@ -75,7 +75,7 @@ export default function Hero() {
               </div>
               <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#000d21] border border-[#0C66B4]/50">
                 <Award className="w-4 h-4 text-[#00AEEF] shrink-0" />
-                <span>SOMTY OMT-Erikoistunut</span>
+                <span>SOMTY OMT-erikoistunut</span>
               </div>
             </div>
 
@@ -85,7 +85,7 @@ export default function Hero() {
                 href="/ilmaisopas"
                 className="px-8 py-4 rounded-xl bg-[#00AEEF] text-black font-bold text-base hover:bg-[#33C2F5] transition-all shadow-glow flex items-center justify-center gap-2 group text-center"
               >
-                <span>Lataa Ilmaiset Oppaat</span>
+                <span>Lataa ilmaiset oppaat</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
 
@@ -94,7 +94,7 @@ export default function Hero() {
                 className="px-8 py-4 rounded-xl bg-[#000d21] border border-[#0C66B4] text-white font-bold text-base hover:border-[#00AEEF] hover:bg-[#001533] transition-all flex items-center justify-center gap-2 text-center"
               >
                 <Play className="w-4 h-4 text-[#00AEEF] fill-[#00AEEF]" />
-                <span>Katso {SITE_CONFIG.totalVideosCount} Ilmaista Videota</span>
+                <span>Katso {SITE_CONFIG.totalVideosCount} ilmaista videota</span>
               </Link>
             </div>
 
