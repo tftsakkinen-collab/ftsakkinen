@@ -23,6 +23,8 @@ const FysioAiHaku = dynamicImport(() => import("@/components/FysioAiHaku"), {
   ssr: true,
 });
 
+import SymptomIntake from "@/components/SymptomIntake";
+
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
@@ -263,6 +265,8 @@ export default async function HomePage() {
 
       {/* 1. Hero Section + Credibility Statistics Bar */}
       <Hero />
+
+      <SymptomIntake />
 
       <OireNavigaattori />
 
