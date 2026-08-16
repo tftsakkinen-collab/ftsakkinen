@@ -94,5 +94,27 @@
     "delivered": true,
     "delivered_at": "2026-08-15T17:01:05.000Z",
     "resend_id": "ee9d3b9b-0fcc-42e3-9c2c-e291114f3221"
+  },
+  {
+    "first_name": "Riitta",
+    "last_name": "Nakari",
+    "email": "riitta.nakari49@gmail.com",
+    "source": "Kotisivut / ftsakkinen.com",
+    "platform": "Website",
+    "locale": "fi",
+    "date_added": "2026-08-16",
+    "delivered": true,
+    "delivered_at": "2026-08-16T04:38:00.000Z"
+  },
+  {
+    "first_name": "Iia",
+    "last_name": "",
+    "email": "bjorkelj@gmail.com",
+    "source": "Kotisivut / ftsakkinen.com",
+    "platform": "Website",
+    "locale": "fi",
+    "date_added": "2026-08-16",
+    "delivered": true,
+    "delivered_at": "2026-08-16T13:18:00.000Z"
   }
 ]
