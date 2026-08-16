@@ -3,7 +3,89 @@ import { SITE_CONFIG } from "@/data/config";
 import fs from "fs";
 import path from "path";
 
+async function saveSubscriberToGithub(newEntry: any) {
+  const githubToken = process.env.GITHUB_TOKEN;
+  if (!githubToken) {
+    console.warn("⚠️ GITHUB_TOKEN missing in environment variables. Cannot write subscriber to GitHub.");
+    return;
+  }
+
+  try {
+    const owner = "tftsakkinen-collab";
+    const repo = "ftsakkinen";
+    const filePath = "src/data/subscribers.json";
+    const url = `https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`;
+
+    const getRes = await fetch(url, {
+      headers: {
+        Authorization: `Bearer ${githubToken}`,
+        Accept: "application/vnd.github.v3+json",
+        "User-Agent": "ftsakkinen-app"
+      }
+    });
+
+    let currentContent: any[] = [];
+    let sha = "";
+
+    if (getRes.ok) {
+      const fileData = await getRes.json();
+      sha = fileData.sha;
+      const decoded = Buffer.from(fileData.content, "base64").toString("utf-8");
+      currentContent = JSON.parse(decoded);
+    }
+
+    const existingIndex = currentContent.findIndex((s: any) => s.email.toLowerCase() === newEntry.email.toLowerCase());
+    if (existingIndex >= 0) {
+      currentContent[existingIndex] = { ...currentContent[existingIndex], ...newEntry };
+    } else {
+      currentContent.push(newEntry);
+    }
+
+    const updatedBase64 = Buffer.from(JSON.stringify(currentContent, null, 2), "utf-8").toString("base64");
+
+    const putRes = await fetch(url, {
+      method: "PUT",
+      headers: {
+        Authorization: `Bearer ${githubToken}`,
+        Accept: "application/vnd.github.v3+json",
+        "Content-Type": "application/json",
+        "User-Agent": "ftsakkinen-app"
+      },
+      body: JSON.stringify({
+        message: `auto(lead): new subscriber ${newEntry.email}`,
+        content: updatedBase64,
+        sha: sha || undefined
+      })
+    });
+
+    if (putRes.ok) {
+      console.log(`✔ Subscriber ${newEntry.email} saved to GitHub subscribers.json!`);
+    } else {
+      const errText = await putRes.text();
+      console.error("✖ GitHub API save failed:", putRes.status, errText);
+    }
+  } catch (err) {
+    console.warn("Could not save subscriber to GitHub:", err);
+  }
+}
+
 function saveSubscriberLocally(name: string, email: string, source: string = "Website", locale: string = "fi") {
+  const nameParts = (name || "").trim().split(" ");
+  const firstName = nameParts[0] || "";
+  const lastName = nameParts.slice(1).join(" ") || "";
+
+  const newEntry = {
+    first_name: firstName,
+    last_name: lastName,
+    email: email,
+    source: `Kotisivut / ftsakkinen.com (${source})`,
+    platform: "Website",
+    locale: locale,
+    date_added: new Date().toISOString().split("T")[0],
+    delivered: true,
+    delivered_at: new Date().toISOString()
+  };
+
   try {
     const filePath = path.join(process.cwd(), "src/data/subscribers.json");
     let subscribers: any[] = [];
@@ -11,22 +93,8 @@ function saveSubscriberLocally(name: string, email: string, source: string = "We
       const content = fs.readFileSync(filePath, "utf-8");
       subscribers = JSON.parse(content);
     }
-    const nameParts = (name || "").trim().split(" ");
-    const firstName = nameParts[0] || "";
-    const lastName = nameParts.slice(1).join(" ") || "";
 
     const existingIndex = subscribers.findIndex((s: any) => s.email.toLowerCase() === email.toLowerCase());
-    const newEntry = {
-      first_name: firstName,
-      last_name: lastName,
-      email: email,
-      source: `Kotisivut / ftsakkinen.com (${source})`,
-      platform: "Website",
-      locale: locale,
-      date_added: new Date().toISOString().split("T")[0],
-      delivered: true,
-      delivered_at: new Date().toISOString()
-    };
 
     if (existingIndex >= 0) {
       subscribers[existingIndex] = { ...subscribers[existingIndex], ...newEntry };
@@ -38,6 +106,9 @@ function saveSubscriberLocally(name: string, email: string, source: string = "We
   } catch (err) {
     console.warn("Could not write to subscribers.json (may be read-only env):", err);
   }
+
+  // Also trigger GitHub sync in background if GITHUB_TOKEN configured
+  saveSubscriberToGithub(newEntry).catch(e => console.warn("GitHub subscriber sync background error:", e));
 }
 
 export async function POST(request: Request) {
