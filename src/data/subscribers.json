@@ -116,5 +116,16 @@
     "date_added": "2026-08-16",
     "delivered": true,
     "delivered_at": "2026-08-16T13:18:00.000Z"
+  },
+  {
+    "first_name": "Helena",
+    "last_name": "",
+    "email": "helena.haggstrom@gmail.com",
+    "source": "Kotisivut / ftsakkinen.com (videoBonusLead)",
+    "platform": "Website",
+    "locale": "fi",
+    "date_added": "2026-08-17",
+    "delivered": true,
+    "delivered_at": "2026-08-17T08:27:41.377Z"
   }
 ]
