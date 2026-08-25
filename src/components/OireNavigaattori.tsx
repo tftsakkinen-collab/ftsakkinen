@@ -213,7 +213,7 @@ export default function OireNavigaattori() {
                 {activeSymptom.recommendedVideos.map((vid) => (
                   <Link
                     key={vid.id}
-                    href={`/videot/${vid.id}`}
+                    href="/ilmaisopas"
                     className="p-4 rounded-2xl bg-[#000814] border border-[#0C66B4]/40 hover:border-[#00AEEF] hover:bg-[#000d21] transition-all flex items-start gap-3 group"
                   >
                     <div className="w-8 h-8 rounded-lg bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-[#00AEEF] group-hover:text-black transition-all">
@@ -223,7 +223,7 @@ export default function OireNavigaattori() {
                       <h4 className="text-xs font-bold text-white group-hover:text-[#00AEEF] transition-colors leading-snug">
                         {vid.title}
                       </h4>
-                      <span className="text-[10px] text-gray-400">Katso harjoitusohjeet →</span>
+                      <span className="text-[10px] text-[#00AEEF] font-semibold">🔒 Avaa sähköpostilla →</span>
                     </div>
                   </Link>
                 ))}
