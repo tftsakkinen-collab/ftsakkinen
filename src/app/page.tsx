@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import AboutSection from "@/components/AboutSection";
+import ClinicalApproachSection from "@/components/ClinicalApproachSection";
 import FeaturedMediaSection from "@/components/FeaturedMediaSection";
 import VideoCard from "@/components/VideoCard";
 import EmailLeadForm from "@/components/EmailLeadForm";
@@ -310,7 +311,10 @@ export default async function HomePage() {
       {/* 3. About & Credentials Overview */}
       <AboutSection />
 
-      {/* 3b. Featured Media & Articles */}
+      {/* 3b. Comprehensive Clinical Approach Trifecta Section */}
+      <ClinicalApproachSection />
+
+      {/* 3c. Featured Media & Articles */}
       <FeaturedMediaSection />
 
       {/* 4. Featured Clinical Videos Grid */}
