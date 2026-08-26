@@ -1,8 +1,24 @@
-# Architectural Decision & Changelog (04_DECISION_CHANGELOG.md)
+# Architectural Decisions & Changelog (04_DECISION_CHANGELOG.md)
 
-## [2026-08-26] Comprehensive UI/UX Overhaul & Health-Tech Design System Transformation
+## [2026-08-26] Header & Navigation Bar De-Cluttering & Architectural Streamlining
 
 ### 1. Context & Objective
+The desktop and mobile navigation header had become overcrowded with 10 direct links and multiple action elements in a single horizontal bar. Refactored into a high-end, minimalist multi-tier architecture.
+
+### 2. Architecture & Design Decisions
+- **Top Minimalist Utility Bar:** Extracted clinic location badge (`● OMT-vastaanotto Oulussa & Kempeleessä`), direct phone contact (`041 327 4967`), language selector (`EN / FI`), and quick PDF link into a subtle top utility bar.
+- **Streamlined Primary Navigation:** Main sticky bar now showcases only core primary routes (`Etusivu`, `Palvelut & Kuntoutus`, `Sisällöt & Media`, `Tietoa minusta`, `Yhteystiedot`).
+- **Interactive Glassmorphic Dropdowns:** Grouped secondary pages into rich dropdown panels for Services (Valmennukset, Koulutukset, Kyynärpää-apuvaline, Kuntoutusvälineet) and Media (Videokirjasto, Ilmaiset Kuntoutusoppaat, Aihekoosteet) with icons and descriptions.
+- **Action-Oriented CTA:** Placed high-converting "Varaa vastaanotto" appointment booking button on the right with calendar icon and cyan glow aura.
+- **Spacious Mobile Drawer:** Replaced flat mobile link list with structured, well-spaced category sections and dual quick-action CTA buttons.
+
+### 3. Verification
+- 100% route and link preservation (zero broken links).
+- Zero TypeScript / compilation errors.
+
+---
+
+## [2026-08-26] Comprehensive UI/UX Overhaul & Health-Tech Design System Transformation
 Executed a full-scale, world-class UI/UX architecture elevation for the **FT Säkkinen / PT Sakkinen** digital platform. Preserved 100% of the clinical content, Valvira/SOMTY accreditations, media embeds, contact details (`041 327 4967`, `tiedottajanne@gmail.com`, `Tiedottajanne Oy`), and bilingual relation with `ptsakkinen.com`.
 
 ### 2. Architecture & Design Decisions
