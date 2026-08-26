@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import AboutSection from "@/components/AboutSection";
 import FeaturedMediaSection from "@/components/FeaturedMediaSection";
+import MediaPodcastShowcase from "@/components/MediaPodcastShowcase";
 import VideoCard from "@/components/VideoCard";
 import EmailLeadForm from "@/components/EmailLeadForm";
 import TrainingsSection from "@/components/TrainingsSection";
@@ -310,6 +311,9 @@ export default async function HomePage() {
 
       {/* 3. About & Credentials Overview */}
       <AboutSection />
+
+      {/* 3b. Dedicated Media & Podcast Showcase Hub */}
+      <MediaPodcastShowcase />
 
       {/* 3c. Featured Media & Articles */}
       <FeaturedMediaSection />
