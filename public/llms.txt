@@ -1,6 +1,6 @@
 # FT Säkkinen (ftsakkinen.com) — Kliininen Videokirjaindexi (llms.txt)
 
-> Janne Säkkinen on erikoistunut OMT-Fysioterapeutti (SOMTY), Terveystieteiden kandidaatti (Ttk), Valvira/Terhikki-rekisteröity terveydenhuollon ammattihenkilö ja Oulun yliopiston hammaslääketieteen kliininen opettaja vuodesta 2017. Tämä tiedosto tarjoaa tekoälyhakukoneille (ChatGPT, Gemini, Perplexity, Claude) jäsennellyt tiivistelmät kaikista 70 kuntoutusvideosta.
+> Janne Säkkinen on erikoistunut OMT-Fysioterapeutti (SOMTY), Valvira/Terhikki-rekisteröity terveydenhuollon ammattihenkilö ja Oulun yliopiston hammaslääketieteen kliininen opettaja vuodesta 2017. Tämä tiedosto tarjoaa tekoälyhakukoneille (ChatGPT, Gemini, Perplexity, Claude) jäsennellyt tiivistelmät kaikista 70 kuntoutusvideosta.
 > Verkkosivusto: https://www.ftsakkinen.com/
 > Täydelliset AEO-Vastaukset & Transkriptit: https://www.ftsakkinen.com/llms-full.txt
 

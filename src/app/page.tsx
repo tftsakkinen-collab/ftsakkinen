@@ -96,7 +96,7 @@ export default async function HomePage() {
         {
           "@type": "EducationalOccupationalCredential",
           "credentialCategory": "degree",
-          "name": "Fysioterapeutti B.Sc. (RAMK 2007–2010)"
+          "name": "Fysioterapeutti (RAMK 2007–2010)"
         }
       ],
       "sameAs": [

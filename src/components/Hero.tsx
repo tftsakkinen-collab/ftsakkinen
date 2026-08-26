@@ -54,7 +54,7 @@ export default function Hero() {
             {/* Clean Authoritative Top Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider backdrop-blur-md shadow-[0_0_15px_rgba(0,174,239,0.2)]">
               <Sparkles className="w-4 h-4 text-[#00AEEF]" />
-              <span>Terveystieteiden B.Sc. • Laillistettu OMT-Fysioterapeutti</span>
+              <span>Laillistettu OMT-Fysioterapeutti • Purentaelimistön Asiantuntija</span>
             </div>
 
             {/* Main Title */}
