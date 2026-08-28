@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Category } from "@/data/categories";
 import { Video } from "@/data/videos";
 import VideoCard from "@/components/VideoCard";
-import { PlayCircle, Search } from "lucide-react";
+import { PlayCircle, Search, Sparkles, Filter } from "lucide-react";
 
 interface VideoLibraryClientProps {
   videos: Video[];
@@ -29,41 +29,44 @@ export default function VideoLibraryClient({ videos, categories }: VideoLibraryC
   });
 
   return (
-    <div className="py-12 md:py-20 bg-[#000a18] min-h-screen text-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <div className="py-12 md:py-20 bg-[#000814] min-h-screen text-slate-200 relative overflow-hidden">
+      {/* Background Subtle Lighting */}
+      <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#00AEEF]/5 rounded-full blur-[170px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 relative z-10">
         
         {/* Header Section */}
         <div className="text-center max-w-4xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0C66B4]/20 border border-[#00AEEF]/40 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
-            <PlayCircle className="w-4 h-4" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+            <PlayCircle className="w-4 h-4 text-[#00AEEF]" />
             <span>KAIKKI {videos.length} KUNTOUTUS- &amp; OPETUSVIDEOTA</span>
           </div>
 
-          <h1 className="text-2xl sm:text-4xl lg:text-6xl font-display text-white tracking-wide break-words">
-            OMT-FYSIOTERAPEUTIN <span className="text-[#00AEEF]">KOKO VIDEOKIRJASTO</span>
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-display font-extrabold text-white tracking-tight leading-tight break-words">
+            OMT-FYSIOTERAPEUTIN <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00AEEF] to-[#38bdf8]">KOKO VIDEOKIRJASTO</span>
           </h1>
 
-          <p className="text-gray-300 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto">
-            Tutustu OMT-fysioterapeutti Janne Säkkisen kaikkiin {videos.length} julkaistuun fysioterapiavideoon ja AEO-optimattuihin blogiartikkeleihin. Videot on jaoteltu kolmeen pääosa-alueeseen.
+          <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto font-normal">
+            Tutustu OMT-fysioterapeutti Janne Säkkisen kaikkiin {videos.length} julkaistuun fysioterapiavideoon ja AEO-optimoituihin oppaisiin. Videot on jaoteltu kolmeen pääosa-alueeseen.
           </p>
         </div>
 
         {/* Filter Controls & Search Bar */}
-        <div className="space-y-6">
+        <div className="space-y-6 max-w-4xl mx-auto">
           {/* Search bar */}
-          <div className="max-w-md mx-auto relative">
-            <Search className="w-5 h-5 text-gray-400 absolute left-4 top-1/2 -translate-y-1/2" />
+          <div className="relative max-w-xl mx-auto">
+            <Search className="w-5 h-5 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2" />
             <input
               type="text"
               placeholder={`Etsi ${videos.length} videon joukosta (esim. leuka, niska, tulehdus)...`}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-4 py-3.5 rounded-xl bg-[#000d21] border border-[#0C66B4] text-white placeholder-gray-400 focus:outline-none focus:border-[#00AEEF] focus:ring-1 focus:ring-[#00AEEF] text-sm font-sans"
+              className="w-full pl-12 pr-4 py-4 rounded-2xl bg-[#00122e] border-2 border-[#0C66B4]/60 text-white placeholder-slate-400 focus:outline-none focus:border-[#00AEEF] focus:ring-2 focus:ring-[#00AEEF]/20 text-sm font-sans shadow-lg transition-all"
             />
           </div>
 
           {/* 3 Main Category Filter Tabs */}
-          <div className="flex items-center justify-start md:justify-center gap-3 overflow-x-auto pb-4 scrollbar-none">
+          <div className="flex items-center justify-start md:justify-center gap-3 overflow-x-auto pb-2 scrollbar-none">
             {categories.map((cat) => {
               const active = selectedCategory === cat.id;
               let count = videos.length;
@@ -75,15 +78,15 @@ export default function VideoLibraryClient({ videos, categories }: VideoLibraryC
                 <button
                   key={cat.id}
                   onClick={() => setSelectedCategory(cat.id)}
-                  className={`px-5 py-3 rounded-xl text-xs sm:text-sm font-semibold transition-all whitespace-nowrap border shrink-0 flex items-center gap-2 ${
+                  className={`px-5 py-3 rounded-2xl text-xs sm:text-sm font-bold transition-all duration-300 whitespace-nowrap border shrink-0 flex items-center gap-2 cursor-pointer ${
                     active
-                      ? "bg-[#00AEEF] text-black border-[#00AEEF] shadow-glow"
-                      : "bg-[#000d21] text-gray-300 border-[#0C66B4]/50 hover:border-[#00AEEF] hover:text-white"
+                      ? "bg-gradient-to-r from-[#00AEEF] to-[#38bdf8] text-[#000a18] border-[#00AEEF] shadow-[0_0_20px_rgba(0,174,239,0.4)]"
+                      : "bg-[#00122e] text-slate-300 border-[#0C66B4]/50 hover:border-[#00AEEF] hover:text-white"
                   }`}
                 >
                   <span>{cat.name}</span>
                   <span className={`px-2 py-0.5 rounded-full text-[11px] font-bold ${
-                    active ? "bg-black/20 text-black" : "bg-[#014489] text-[#00AEEF]"
+                    active ? "bg-black/20 text-[#000a18]" : "bg-[#014489] text-[#00AEEF]"
                   }`}>
                     {count}
                   </span>
@@ -95,23 +98,23 @@ export default function VideoLibraryClient({ videos, categories }: VideoLibraryC
 
         {/* Dynamic Display Mode */}
         {selectedCategory === "kaikki" && searchQuery === "" ? (
-          <div className="space-y-16">
+          <div className="space-y-20">
             
             {/* Section 1: Purenta & TMD */}
-            <section className="space-y-6 pt-4 border-t border-[#0C66B4]/30">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <section className="space-y-8 pt-6 border-t border-[#0C66B4]/30">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                 <div className="space-y-1">
-                  <h2 className="text-2xl sm:text-3xl font-display text-white flex items-center gap-3">
-                    <span className="w-8 h-8 rounded-lg bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center text-sm font-bold">1</span>
+                  <h2 className="text-2xl sm:text-3xl font-display font-extrabold text-white flex items-center gap-3">
+                    <span className="w-8 h-8 rounded-xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center text-sm font-bold border border-[#00AEEF]/40">1</span>
                     PURENTA &amp; TMD ({purentaVideos.length} videota)
                   </h2>
-                  <p className="text-xs sm:text-sm text-gray-400">
+                  <p className="text-xs sm:text-sm text-slate-300 font-normal">
                     Purentalihasten kireys, leukanivelen naksahdus, bruksismi ja kasvojen kiputilat.
                   </p>
                 </div>
                 <button
                   onClick={() => setSelectedCategory("purenta-tmd")}
-                  className="text-xs text-[#00AEEF] hover:underline font-semibold self-start sm:self-auto"
+                  className="text-xs text-[#00AEEF] hover:text-[#38bdf8] font-bold self-start sm:self-auto cursor-pointer"
                 >
                   Suodata vain Purenta &amp; TMD →
                 </button>
@@ -125,20 +128,20 @@ export default function VideoLibraryClient({ videos, categories }: VideoLibraryC
             </section>
 
             {/* Section 2: Ergonomia */}
-            <section className="space-y-6 pt-8 border-t border-[#0C66B4]/30">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <section className="space-y-8 pt-8 border-t border-[#0C66B4]/30">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                 <div className="space-y-1">
-                  <h2 className="text-2xl sm:text-3xl font-display text-white flex items-center gap-3">
-                    <span className="w-8 h-8 rounded-lg bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center text-sm font-bold">2</span>
+                  <h2 className="text-2xl sm:text-3xl font-display font-extrabold text-white flex items-center gap-3">
+                    <span className="w-8 h-8 rounded-xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center text-sm font-bold border border-[#00AEEF]/40">2</span>
                     ERGONOMIA ({ergonomiaVideos.length} videota)
                   </h2>
-                  <p className="text-xs sm:text-sm text-gray-400">
+                  <p className="text-xs sm:text-sm text-slate-300 font-normal">
                     Suun terveydenhuollon ja etätyön ergonomia, taukojumpat ja asennonhallinta.
                   </p>
                 </div>
                 <button
                   onClick={() => setSelectedCategory("ergonomia")}
-                  className="text-xs text-[#00AEEF] hover:underline font-semibold self-start sm:self-auto"
+                  className="text-xs text-[#00AEEF] hover:text-[#38bdf8] font-bold self-start sm:self-auto cursor-pointer"
                 >
                   Suodata vain Ergonomia →
                 </button>
@@ -152,20 +155,20 @@ export default function VideoLibraryClient({ videos, categories }: VideoLibraryC
             </section>
 
             {/* Section 3: TULE-vaivat */}
-            <section className="space-y-6 pt-8 border-t border-[#0C66B4]/30">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <section className="space-y-8 pt-8 border-t border-[#0C66B4]/30">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                 <div className="space-y-1">
-                  <h2 className="text-2xl sm:text-3xl font-display text-white flex items-center gap-3">
-                    <span className="w-8 h-8 rounded-lg bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center text-sm font-bold">3</span>
+                  <h2 className="text-2xl sm:text-3xl font-display font-extrabold text-white flex items-center gap-3">
+                    <span className="w-8 h-8 rounded-xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center text-sm font-bold border border-[#00AEEF]/40">3</span>
                     TULE-VAIVAT ({tuleVideos.length} videota)
                   </h2>
-                  <p className="text-xs sm:text-sm text-gray-400">
+                  <p className="text-xs sm:text-sm text-slate-300 font-normal">
                     Tulehdus, niska-hartiaseutu, selkäkivut, olkapään ahtaus, polvi ja lonkka.
                   </p>
                 </div>
                 <button
                   onClick={() => setSelectedCategory("tule-vaivat")}
-                  className="text-xs text-[#00AEEF] hover:underline font-semibold self-start sm:self-auto"
+                  className="text-xs text-[#00AEEF] hover:text-[#38bdf8] font-bold self-start sm:self-auto cursor-pointer"
                 >
                   Suodata vain TULE-vaivat →
                 </button>
@@ -181,16 +184,16 @@ export default function VideoLibraryClient({ videos, categories }: VideoLibraryC
           </div>
         ) : (
           /* Filtered Grid View */
-          <div className="space-y-6">
-            <div className="flex items-center justify-between text-xs text-gray-400 border-b border-[#0C66B4]/30 pb-3">
-              <span>Näytetään {filteredVideos.length} videota</span>
+          <div className="space-y-8">
+            <div className="flex items-center justify-between text-xs text-slate-400 border-b border-[#0C66B4]/30 pb-4">
+              <span className="font-semibold text-white">Näytetään {filteredVideos.length} videota</span>
               {(selectedCategory !== "kaikki" || searchQuery !== "") && (
                 <button
                   onClick={() => {
                     setSelectedCategory("kaikki");
                     setSearchQuery("");
                   }}
-                  className="text-[#00AEEF] hover:underline font-semibold"
+                  className="text-[#00AEEF] hover:underline font-bold cursor-pointer"
                 >
                   Näytä kaikki 70 videota
                 </button>
@@ -204,14 +207,14 @@ export default function VideoLibraryClient({ videos, categories }: VideoLibraryC
                 ))}
               </div>
             ) : (
-              <div className="text-center py-16 bg-[#000d21] rounded-2xl border border-[#0C66B4]/30 space-y-3">
-                <p className="text-gray-300 font-medium">Ei hakuehtoja vastaavia videoita.</p>
+              <div className="text-center py-16 bg-[#00122e] rounded-3xl border border-[#0C66B4]/40 space-y-4">
+                <p className="text-slate-300 font-medium">Ei hakuehtoja vastaavia videoita.</p>
                 <button
                   onClick={() => {
                     setSelectedCategory("kaikki");
                     setSearchQuery("");
                   }}
-                  className="px-4 py-2 rounded-lg bg-[#00AEEF] text-black font-bold text-xs"
+                  className="px-5 py-2.5 rounded-xl bg-[#00AEEF] text-[#000a18] font-bold text-xs shadow-glow-sm cursor-pointer"
                 >
                   Näytä kaikki 70 videota
                 </button>

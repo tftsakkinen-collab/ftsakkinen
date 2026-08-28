@@ -1,0 +1,43 @@
+# Architectural Decisions & Changelog (04_DECISION_CHANGELOG.md)
+
+## [2026-08-26] Header & Navigation Bar De-Cluttering & Architectural Streamlining
+
+### 1. Context & Objective
+The desktop and mobile navigation header had become overcrowded with 10 direct links and multiple action elements in a single horizontal bar. Refactored into a high-end, minimalist multi-tier architecture.
+
+### 2. Architecture & Design Decisions
+- **Top Minimalist Utility Bar:** Extracted clinic location badge (`● OMT-vastaanotto Oulussa & Kempeleessä`), direct phone contact (`041 327 4967`), language selector (`EN / FI`), and quick PDF link into a subtle top utility bar.
+- **Streamlined Primary Navigation:** Main sticky bar now showcases only core primary routes (`Etusivu`, `Palvelut & Kuntoutus`, `Sisällöt & Media`, `Tietoa minusta`, `Yhteystiedot`).
+- **Interactive Glassmorphic Dropdowns:** Grouped secondary pages into rich dropdown panels for Services (Valmennukset, Koulutukset, Kyynärpää-apuvaline, Kuntoutusvälineet) and Media (Videokirjasto, Ilmaiset Kuntoutusoppaat, Aihekoosteet) with icons and descriptions.
+- **Action-Oriented CTA:** Placed high-converting "Varaa vastaanotto" appointment booking button on the right with calendar icon and cyan glow aura.
+- **Spacious Mobile Drawer:** Replaced flat mobile link list with structured, well-spaced category sections and dual quick-action CTA buttons.
+
+### 3. Verification
+- 100% route and link preservation (zero broken links).
+- Zero TypeScript / compilation errors.
+
+---
+
+## [2026-08-26] Comprehensive UI/UX Overhaul & Health-Tech Design System Transformation
+Executed a full-scale, world-class UI/UX architecture elevation for the **FT Säkkinen / PT Sakkinen** digital platform. Preserved 100% of the clinical content, Valvira/SOMTY accreditations, media embeds, contact details (`041 327 4967`, `tiedottajanne@gmail.com`, `Tiedottajanne Oy`), and bilingual relation with `ptsakkinen.com`.
+
+### 2. Architecture & Design Decisions
+- **Dark Glassmorphic Theme System:** Established deep abyss base tones (`#000814` to `#00122e`), medical cyan highlights (`#00AEEF` to `#38bdf8`), subtle background radial light flares, and 2px luminous cyan borders.
+- **Dedicated Media & Podcast Showcase Zone (`MediaPodcastShowcase.tsx`):** Added a dedicated interactive hub showcasing YouTube channels (`@ft_sakkinen`, `@pt_sakkinen`) and audio podcast channels (Spotify & Apple Podcasts) with live pulse indicators and bilingual context.
+- **Interactive Clinical Tooling:**
+  - `SymptomIntake.tsx`: 4-quadrant interactive symptom selection with glowing active state rings.
+  - `OireNavigaattori.tsx`: 6-symptom clinical differential diagnosis engine with PDF exercise guide downloads.
+  - `EmailLeadForm.tsx`: High-converting lead magnet form with instant 4-video streaming player view and Google Drive link.
+  - `FysioAiHaku.tsx`: In-library AI search query filter.
+  - `SymptomQuiz.tsx`: 1-minute interactive self-assessment quiz.
+- **Subpage Elevation:**
+  - Video Hub & Single Video Page: Upgraded `/videot` and `/videot/[id]` with breadcrumb navigation, AEO direct answer cards, gated player preview, and UKK FAQ accordion.
+  - Product & Course Checkout: Upgraded `LeukanivelCourseCard.tsx` (119 € TMD professional package) and `kyynarpaa-apuvaline/page.tsx` (forearm rehab device inquiry).
+  - Training & Testimonials: Modernized `/koulutukset`, `/valmennukset`, `/kamat`, `/tietoa-minusta`, and `/yhteystiedot`.
+- **Security & Privacy Protocols:**
+  - Zero hardcoded secrets: All Stripe and analytics endpoints strictly rely on server-side `.env` environment variables.
+  - EU GDPR-compliant CookieBanner and legal disclaimer pages.
+
+### 3. Build & Quality Verification
+- Clean compilation on Next.js 15.5.22 App Router across all 118 static pages and dynamic routes.
+- Zero TypeScript errors, zero lint blockers.

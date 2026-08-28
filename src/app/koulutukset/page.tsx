@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 
 export default function KoulutuksetPage() {
   return (
-    <div className="py-12 bg-[#000a18] min-h-screen space-y-12">
+    <div className="py-12 bg-[#000814] min-h-screen space-y-16">
       <TrainingsSection />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <LeukanivelCourseCard />

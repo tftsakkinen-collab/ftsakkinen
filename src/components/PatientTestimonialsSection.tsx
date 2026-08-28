@@ -1,4 +1,4 @@
-import { HeartPulse, Quote, Star } from "lucide-react";
+import { HeartPulse, Quote, Star, Sparkles } from "lucide-react";
 
 export default function PatientTestimonialsSection() {
   const patientReviews = [
@@ -47,19 +47,22 @@ export default function PatientTestimonialsSection() {
   ];
 
   return (
-    <section className="py-20 bg-[#000a18] border-b border-[#0C66B4]/30 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section className="py-20 bg-gradient-to-b from-[#000814] via-[#001026] to-[#000814] border-b border-[#0C66B4]/30 relative overflow-hidden">
+      {/* Background Glow */}
+      <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-[#00AEEF]/5 rounded-full blur-[140px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14 relative z-10">
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0C66B4]/20 border border-[#00AEEF]/40 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
-            <HeartPulse className="w-4 h-4" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+            <HeartPulse className="w-4 h-4 text-[#00AEEF]" />
             <span>Aitoja Potilaskokemuksia</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-display text-white tracking-wide">
-            HOITOPOTILAIDEN <span className="text-[#00AEEF]">KOKEMUKSIA</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-white tracking-tight leading-tight">
+            HOITOPOTILAIDEN <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00AEEF] to-[#38bdf8]">KOKEMUKSIA</span>
           </h2>
 
-          <p className="text-sm sm:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed font-normal">
             Katso miten Janne Säkkisen OMT-fysioterapia, leukanivelhoito ja täsmälliset kuntoutusoppaat ovat auttaneet potilaita leukanivelen, purennan ja rankavaivojen hoidossa.
           </p>
         </div>
@@ -68,7 +71,7 @@ export default function PatientTestimonialsSection() {
           {patientReviews.map((review, idx) => (
             <div
               key={idx}
-              className="p-6 sm:p-8 rounded-3xl bg-[#000d21] border border-[#0C66B4]/40 hover:border-[#00AEEF] transition-all space-y-4 shadow-panel flex flex-col justify-between group text-center items-center"
+              className="p-6 sm:p-8 rounded-3xl bg-[#00122e]/90 border border-[#0C66B4]/50 hover:border-[#00AEEF] transition-all duration-300 space-y-5 shadow-xl flex flex-col justify-between group text-center items-center backdrop-blur-md hover:-translate-y-1"
             >
               <div className="space-y-4 w-full flex flex-col items-center">
                 <div className="flex items-center justify-center gap-1 text-amber-400">
@@ -77,16 +80,16 @@ export default function PatientTestimonialsSection() {
                   ))}
                 </div>
 
-                <p className="text-sm text-gray-200 leading-relaxed italic text-center break-words">
+                <p className="text-xs sm:text-sm text-slate-200 leading-relaxed italic text-center break-words font-normal">
                   "{review.review}"
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-[#0C66B4]/30 space-y-1 w-full text-center">
+              <div className="pt-4 border-t border-[#0C66B4]/30 space-y-1.5 w-full text-center">
                 <div className="text-sm font-bold text-white group-hover:text-[#00AEEF] transition-colors text-center">
                   {review.name}
                 </div>
-                <div className="text-xs text-[#00AEEF] font-medium text-center">
+                <div className="text-xs text-[#00AEEF] font-semibold text-center px-2 py-0.5 rounded-full bg-[#014489]/30 inline-block border border-[#00AEEF]/20">
                   {review.condition}
                 </div>
               </div>

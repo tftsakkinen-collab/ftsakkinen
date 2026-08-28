@@ -2,7 +2,7 @@ import { FALLBACK_VIDEOS, Video } from "@/data/videos";
 import { getAllVideos, getVideoById } from "@/lib/youtube";
 import { CATEGORIES } from "@/data/categories";
 import Link from "next/link";
-import { ArrowLeft, Download, Sparkles, Globe, Play, ChevronRight, HelpCircle, Home } from "lucide-react";
+import { ArrowLeft, Download, Sparkles, Globe, Play, ChevronRight, HelpCircle, Home, ArrowUpRight } from "lucide-react";
 import { notFound } from "next/navigation";
 import Script from "next/script";
 import VideoCard from "@/components/VideoCard";
@@ -100,7 +100,7 @@ export default async function SingleVideoPage(props: { params: Promise<{ id: str
   // Dynamic video-specific FAQ items
   const cleanTitle = video.title.trim();
   
-  // Fix Category Genitive Grammar (Task 3)
+  // Fix Category Genitive Grammar
   const formatCategoryGenitiveFI = (catId: string) => {
     if (catId === "purenta-tmd") return "purentaelimistön ja TMD:n";
     if (catId === "ergonomia") return "ergonomian";
@@ -108,7 +108,7 @@ export default async function SingleVideoPage(props: { params: Promise<{ id: str
   };
   const categoryGenitive = formatCategoryGenitiveFI(video.categoryId);
 
-  // Content type detection for non-exercise videos (Task 2)
+  // Content type detection for non-exercise videos
   const videoText = (video.title + " " + video.promiseDescription).toLowerCase();
   let contentType = "exercise";
   if (videoText.includes("ruoka") || videoText.includes("ravinto") || videoText.includes("ravitsemus") || videoText.includes("syö") || videoText.includes("ruokavalio")) {
@@ -228,7 +228,10 @@ export default async function SingleVideoPage(props: { params: Promise<{ id: str
   ];
 
   return (
-    <div className="py-12 bg-[#000a18] min-h-screen text-gray-200">
+    <div className="py-12 md:py-16 bg-[#000814] min-h-screen text-slate-200 relative overflow-hidden">
+      {/* Background Glow */}
+      <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-[#00AEEF]/5 rounded-full blur-[160px] pointer-events-none" />
+
       {/* Inject Video-Specific AEO Structured JSON-LD Data */}
       <Script
         id={`json-ld-schemas-${video.id}`}
@@ -236,49 +239,50 @@ export default async function SingleVideoPage(props: { params: Promise<{ id: str
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 relative z-10">
         
         {/* Top Navigation & Language Switcher */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2">
           <Link
             href="/videot"
-            className="inline-flex items-center gap-2 text-sm text-[#00AEEF] hover:underline font-medium"
+            className="inline-flex items-center gap-2 text-sm text-[#00AEEF] hover:text-[#38bdf8] font-semibold transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Takaisin videokirjastoon</span>
           </Link>
         </div>
+
         <div className="space-y-4">
           {/* Visible Breadcrumb Navigation (Murupolku) - Directly Above Title */}
-          <nav aria-label="Murupolku" className="flex flex-wrap items-center gap-2 text-xs text-gray-400 font-medium pb-1">
+          <nav aria-label="Murupolku" className="flex flex-wrap items-center gap-2 text-xs text-slate-400 font-medium pb-1">
             <Link href="/" className="hover:text-[#00AEEF] flex items-center gap-1 transition-colors">
               <Home className="w-3.5 h-3.5" />
               <span>Etusivu</span>
             </Link>
-            <ChevronRight className="w-3.5 h-3.5 text-gray-600 shrink-0" />
+            <ChevronRight className="w-3.5 h-3.5 text-slate-600 shrink-0" />
             <Link href="/videot" className="hover:text-[#00AEEF] transition-colors">
               Videot
             </Link>
-            <ChevronRight className="w-3.5 h-3.5 text-gray-600 shrink-0" />
+            <ChevronRight className="w-3.5 h-3.5 text-slate-600 shrink-0" />
             <span className="text-[#00AEEF] font-semibold truncate max-w-[150px] sm:max-w-none">
               {category?.name || "Fysioterapia"}
             </span>
-            <ChevronRight className="w-3.5 h-3.5 text-gray-600 shrink-0" />
-            <span className="text-gray-300 truncate max-w-[200px] sm:max-w-xs font-normal">
+            <ChevronRight className="w-3.5 h-3.5 text-slate-600 shrink-0" />
+            <span className="text-slate-300 truncate max-w-[200px] sm:max-w-xs font-normal">
               {video.title}
             </span>
           </nav>
 
-          <div className="inline-block px-3 py-1 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-semibold uppercase tracking-wider">
+          <div className="inline-block px-3.5 py-1 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
             {category?.name || "Fysioterapia"}
           </div>
 
-          <h1 className="text-3xl sm:text-5xl font-display text-white tracking-wide leading-tight">
+          <h1 className="text-3xl sm:text-5xl font-display font-extrabold text-white tracking-tight leading-tight">
             {video.title}
           </h1>
 
           {/* Author E-E-A-T Badge */}
-          <div className="flex flex-wrap items-center gap-3 pt-2 text-xs text-gray-400 border-b border-[#0C66B4]/30 pb-4">
+          <div className="flex flex-wrap items-center gap-3 pt-2 text-xs text-slate-400 border-b border-[#0C66B4]/30 pb-4">
             <span className="font-semibold text-white">Kirjoittanut Janne Säkkinen</span>
             <span>•</span>
             <span>OMT-fysioterapeutti, Oulun yliopiston kouluttaja</span>
@@ -288,12 +292,12 @@ export default async function SingleVideoPage(props: { params: Promise<{ id: str
         </div>
 
         {/* AEO Direct Answer Box */}
-        <div className="p-6 rounded-2xl bg-gradient-to-r from-[#000d21] via-[#014489]/30 to-[#000d21] border border-[#00AEEF]/50 shadow-panel space-y-3">
+        <div className="p-6 sm:p-7 rounded-3xl bg-gradient-to-r from-[#00122e] via-[#00183c] to-[#00122e] border-2 border-[#00AEEF]/50 shadow-2xl shadow-cyan-950/30 space-y-3 backdrop-blur-md">
           <div className="flex items-center gap-2 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
-            <Sparkles className="w-4 h-4" />
+            <Sparkles className="w-4 h-4 text-[#00AEEF]" />
             <span>AEO-Tiivistelmä / Suora Vastaus</span>
           </div>
-          <p className="text-base text-gray-200 leading-relaxed font-medium">
+          <p className="text-base text-slate-200 leading-relaxed font-medium">
             {video.promiseDescription}
           </p>
         </div>
@@ -305,8 +309,8 @@ export default async function SingleVideoPage(props: { params: Promise<{ id: str
         <TranscriptViewer transcript={video.transcript || video.promiseDescription} />
 
         {/* FAQ Section & FAQPage Schema */}
-        <div className="space-y-6 pt-6 border-t border-[#0C66B4]/30">
-          <div className="flex items-center gap-2 text-white font-display text-2xl">
+        <div className="space-y-6 pt-8 border-t border-[#0C66B4]/30">
+          <div className="flex items-center gap-3 text-white font-display text-2xl font-bold">
             <HelpCircle className="w-6 h-6 text-[#00AEEF]" />
             <h2>Usein Kysytyt Kysymykset (UKK)</h2>
           </div>
@@ -315,12 +319,12 @@ export default async function SingleVideoPage(props: { params: Promise<{ id: str
             {faqItems.map((faq, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-[#000d21] border border-[#0C66B4]/40 space-y-2"
+                className="p-6 rounded-2xl bg-[#00122e]/80 border border-[#0C66B4]/50 space-y-2 hover:border-[#00AEEF]/50 transition-colors shadow-sm"
               >
-                <h3 className="text-base font-bold text-white flex items-start gap-2">
+                <h3 className="text-base font-bold text-white flex items-start gap-2 leading-snug">
                   <span className="text-[#00AEEF]">Q:</span> {faq.question}
                 </h3>
-                <p className="text-sm text-gray-300 leading-relaxed pl-6">
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed pl-6 font-normal">
                   {faq.answer}
                 </p>
               </div>
@@ -330,10 +334,10 @@ export default async function SingleVideoPage(props: { params: Promise<{ id: str
 
         {/* Cross-linking: Related Videos in Same Category */}
         {relatedVideos.length > 0 && (
-          <div className="space-y-6 pt-8 border-t border-[#0C66B4]/30">
+          <div className="space-y-6 pt-10 border-t border-[#0C66B4]/30">
             <div className="flex items-center justify-between">
               <h3 className="text-xl font-bold text-white">Liittyvät fysioterapiavideot ja -aiheet</h3>
-              <Link href="/videot" className="text-xs text-[#00AEEF] hover:underline flex items-center gap-1">
+              <Link href="/videot" className="text-xs text-[#00AEEF] hover:underline flex items-center gap-1 font-semibold">
                 <span>Katso kaikki</span>
                 <ChevronRight className="w-3.5 h-3.5" />
               </Link>
@@ -348,23 +352,28 @@ export default async function SingleVideoPage(props: { params: Promise<{ id: str
         )}
 
         {/* Lead Magnet CTA Card */}
-        <div className="p-8 rounded-3xl bg-gradient-to-r from-[#000d21] via-[#014489]/40 to-[#000d21] border border-[#00AEEF]/50 shadow-glow space-y-4 text-center">
-          <div className="w-12 h-12 rounded-xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center mx-auto">
-            <Download className="w-6 h-6" />
+        <div className="p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-[#00122e] via-[#014489]/30 to-[#00122e] border-2 border-[#00AEEF]/50 shadow-2xl shadow-cyan-950/40 space-y-5 text-center backdrop-blur-md">
+          <div className="w-14 h-14 rounded-2xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center mx-auto shadow-sm">
+            <Download className="w-7 h-7" />
           </div>
-          <h3 className="text-2xl font-bold text-white">Lataa ilmaiset kuntoutusoppaat PDF-muodossa</h3>
-          <p className="text-sm text-gray-300 max-w-lg mx-auto">
-            Saat heti pääsyn Janne Säkkisen viralliseen Google Drive -kansioon, johon päivitetään täsmälliset liike- ja kuntoutusoppaat.
-          </p>
-          <Link
-            href="/ilmaisopas"
-            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-[#00AEEF] text-black font-bold text-sm hover:bg-[#33C2F5] transition-all shadow-glow"
-          >
-            <span>Siirry tilaamaan oppaat (Google Drive)</span>
-          </Link>
+          <div className="space-y-2">
+            <h3 className="text-2xl sm:text-3xl font-display font-extrabold text-white tracking-tight">Lataa ilmaiset kuntoutusoppaat PDF-muodossa</h3>
+            <p className="text-sm text-slate-300 max-w-lg mx-auto leading-relaxed font-normal">
+              Saat heti pääsyn Janne Säkkisen viralliseen Google Drive -kansioon, johon päivitetään täsmälliset liike- ja kuntoutusoppaat.
+            </p>
+          </div>
+          <div>
+            <Link
+              href="/ilmaisopas"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-[#00AEEF] to-[#38bdf8] text-[#000a18] font-bold text-sm hover:from-white hover:to-slate-100 transition-all duration-300 shadow-[0_0_20px_rgba(0,174,239,0.4)]"
+            >
+              <span>Siirry tilaamaan oppaat (Google Drive)</span>
+              <ArrowUpRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
 
-        <p className="text-xs text-gray-400 italic pt-2">
+        <p className="text-xs text-slate-400 italic pt-2 leading-relaxed">
           Lääketieteellinen vastuuvapauslauseke: Tämä artikkeli on tarkoitettu vain koulutus- ja informaatiotarkoitukseen. Se ei korvaa terveydenhuollon ammattilaisen tekemää diagnoosia, yksilöllistä fysioterapia-arviota tai lääkärin hoitosuunnitelmaa.
         </p>
 

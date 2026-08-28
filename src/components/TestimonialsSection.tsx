@@ -41,19 +41,22 @@ export default function TestimonialsSection() {
   ];
 
   return (
-    <section className="py-20 bg-[#000a18] border-b border-[#0C66B4]/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section className="py-20 bg-[#000814] border-b border-[#0C66B4]/30 relative overflow-hidden">
+      {/* Background Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#00AEEF]/5 rounded-full blur-[160px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 relative z-10">
         
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0C66B4]/20 border border-[#00AEEF]/40 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
-            <MessageSquareQuote className="w-4 h-4" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+            <MessageSquareQuote className="w-4 h-4 text-[#00AEEF]" />
             <span>Aitoja koulutus- ja luentopalautteita</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-display text-white tracking-wide">
-            AITOJA PALAUTTEITA <span className="text-[#00AEEF]">KOULUTUKSISTA JA LUENNOILTA</span>
+          <h2 className="text-3xl sm:text-5xl font-display font-extrabold text-white tracking-tight leading-tight">
+            AITOJA PALAUTTEITA <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00AEEF] to-[#38bdf8]">KOULUTUKSISTA JA LUENNOILTA</span>
           </h2>
-          <p className="text-gray-300 text-base">
+          <p className="text-slate-300 text-base sm:text-lg font-normal leading-relaxed">
             Osallistujien ja opiskelijoiden antamia suoria palautteita Leukanivelen terapia -koulutuksista, Oulun yliopiston luennoilta ja ammattilaisseminaareista.
           </p>
         </div>
@@ -62,31 +65,31 @@ export default function TestimonialsSection() {
           {realTestimonials.map((item, idx) => (
             <div
               key={idx}
-              className="p-8 rounded-3xl bg-[#000d21] border border-[#0C66B4]/60 flex flex-col justify-between space-y-6 shadow-panel hover:border-[#00AEEF] transition-all text-center items-center"
+              className="p-8 rounded-3xl bg-[#00122e] border-2 border-[#0C66B4]/50 flex flex-col justify-between space-y-6 shadow-2xl shadow-cyan-950/30 hover:border-[#00AEEF] transition-all duration-300 text-center items-center backdrop-blur-md hover:-translate-y-1"
             >
               <div className="space-y-4 w-full flex flex-col items-center">
                 <div className="flex flex-col items-center gap-2 w-full">
-                  <span className="text-xs font-bold text-[#00AEEF] uppercase tracking-wider text-center">
+                  <span className="text-xs font-bold text-[#00AEEF] bg-[#014489]/40 px-3 py-1 rounded-full uppercase tracking-wider text-center border border-[#00AEEF]/30">
                     {item.category}
                   </span>
-                  <div className="flex items-center justify-center gap-1 text-[#00AEEF]">
+                  <div className="flex items-center justify-center gap-1 text-amber-400 pt-1">
                     {[...Array(item.rating)].map((_, i) => (
-                      <Star key={i} className="w-3.5 h-3.5 fill-current" />
+                      <Star key={i} className="w-4 h-4 fill-current" />
                     ))}
                   </div>
                 </div>
 
-                <p className="text-sm text-gray-200 italic leading-relaxed text-center break-words">
-                  "{item.text}"
+                <p className="text-sm text-slate-200 italic leading-relaxed text-center break-words font-normal">
+                  &quot;{item.text}&quot;
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-[#0C66B4]/30 flex items-center justify-center gap-2 text-xs text-gray-300 w-full text-center">
-                <UserCheck className="w-3.5 h-3.5 text-[#00AEEF] shrink-0" />
-                <span className="font-semibold text-white break-words text-center">
+              <div className="pt-4 border-t border-[#0C66B4]/40 flex items-center justify-center gap-2 text-xs text-slate-300 w-full text-center font-medium">
+                <UserCheck className="w-4 h-4 text-[#00AEEF] shrink-0" />
+                <span className="font-bold text-white break-words text-center">
                   {item.target}
                 </span>
-                <CheckCircle2 className="w-4 h-4 text-[#00AEEF] shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
               </div>
             </div>
           ))}

@@ -11,7 +11,7 @@ export function PersonPhysicianSchema() {
         "givenName": "Janne",
         "familyName": "Säkkinen",
         "jobTitle": "OMT-Fysioterapeutti & Ergonomiakouluttaja",
-        "description": "Erikoistunut OMT-Fysioterapeutti (SOMTY), Terveystieteiden kandidaatti (Ttk, Oulun yliopisto), Valvira/Terhikki-rekisteröity terveydenhuollon ammattihenkilö ja Oulun yliopiston hammaslääketieteen kliininen opettaja vuodesta 2017.",
+        "description": "Erikoistunut OMT-Fysioterapeutti (SOMTY), Valvira/Terhikki-rekisteröity terveydenhuollon ammattihenkilö ja Oulun yliopiston hammaslääketieteen kliininen opettaja vuodesta 2017.",
         "url": "https://www.ftsakkinen.com/tietoa-minusta",
         "image": "https://www.ftsakkinen.com/janne-sakkinen.jpg",
         "worksFor": {
@@ -42,11 +42,6 @@ export function PersonPhysicianSchema() {
             "@type": "EducationalOccupationalCredential",
             "credentialCategory": "certification",
             "name": "SOMTY Sertifioitu OMT-Fysioterapeutti"
-          },
-          {
-            "@type": "EducationalOccupationalCredential",
-            "credentialCategory": "degree",
-            "name": "Terveystieteiden kandidaatti (Ttk)"
           }
         ],
         "knowsAbout": [

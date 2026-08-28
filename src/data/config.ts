@@ -1,7 +1,7 @@
 export const SITE_CONFIG = {
   name: "FT Janne Säkkinen | OMT-Fysioterapeutti Oulu",
   authorName: "Janne Säkkinen",
-  authorTitle: "OMT-Fysioterapeutti, Fysioterapeutti AMK",
+  authorTitle: "Laillistettu OMT-Fysioterapeutti, Fysioterapeutti AMK",
   companyName: "FT Janne Säkkinen - OMT-Fysioterapia",
   domain: "ftsakkinen.com",
   contactEmail: "tftsakkinen@gmail.com",

@@ -1,7 +1,7 @@
 import Hero from "@/components/Hero";
 import AboutSection from "@/components/AboutSection";
-import ClinicalApproachSection from "@/components/ClinicalApproachSection";
 import FeaturedMediaSection from "@/components/FeaturedMediaSection";
+import MediaPodcastShowcase from "@/components/MediaPodcastShowcase";
 import VideoCard from "@/components/VideoCard";
 import EmailLeadForm from "@/components/EmailLeadForm";
 import TrainingsSection from "@/components/TrainingsSection";
@@ -9,7 +9,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import PatientTestimonialsSection from "@/components/PatientTestimonialsSection";
 import AppointmentBookingSection from "@/components/AppointmentBookingSection";
 import Link from "next/link";
-import { ArrowRight, PlayCircle, BookOpen } from "lucide-react";
+import { ArrowRight, PlayCircle, BookOpen, ArrowUpRight } from "lucide-react";
 import { fetchYouTubeVideos } from "@/lib/youtube";
 import { PersonPhysicianSchema } from "@/components/JsonLdSchemas";
 import type { Metadata } from "next";
@@ -61,7 +61,7 @@ export default async function HomePage() {
   const videos = await fetchYouTubeVideos();
   const featuredVideos = videos.slice(0, 3);
 
-  // 5. ORGANIZATION, PERSON & LOCALBUSINESS JSON-LD SCHEMA FOR HOMEPAGE
+  // ORGANIZATION, PERSON & LOCALBUSINESS JSON-LD SCHEMA FOR HOMEPAGE
   const jsonLd = [
     {
       "@context": "https://schema.org",
@@ -96,7 +96,7 @@ export default async function HomePage() {
         {
           "@type": "EducationalOccupationalCredential",
           "credentialCategory": "degree",
-          "name": "Fysioterapeutti B.Sc. (RAMK 2007–2010)"
+          "name": "Fysioterapeutti (RAMK 2007–2010)"
         }
       ],
       "sameAs": [
@@ -273,7 +273,7 @@ export default async function HomePage() {
       <OireNavigaattori />
 
       {/* 2. Aihekoostesivujen Pikalinkit (Top Symptoms) */}
-      <section className="py-12 bg-[#000d21] border-b border-[#0C66B4]/30">
+      <section className="py-16 bg-gradient-to-b from-[#000814] to-[#001026] border-b border-[#0C66B4]/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
@@ -281,12 +281,13 @@ export default async function HomePage() {
                 <BookOpen className="w-4 h-4" />
                 <span>Oirealueet &amp; Tietopankit</span>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-display text-white">
-                TUTUSTU <span className="text-[#00AEEF]">AIHEKOOSTESIVUIHIN</span>
+              <h2 className="text-2xl sm:text-3xl font-display font-extrabold text-white tracking-tight mt-1">
+                TUTUSTU <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00AEEF] to-[#38bdf8]">AIHEKOOSTESIVUIHIN</span>
               </h2>
             </div>
-            <Link href="/videot" className="text-xs text-[#00AEEF] hover:underline font-semibold">
-              Katso kaikki 70 videota →
+            <Link href="/videot" className="text-xs text-[#00AEEF] hover:text-[#38bdf8] font-bold flex items-center gap-1">
+              <span>Katso kaikki 70 videota</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
             </Link>
           </div>
 
@@ -295,13 +296,13 @@ export default async function HomePage() {
               <Link
                 key={idx}
                 href={`/aihe/${t.slug}`}
-                className="p-5 rounded-2xl bg-[#000a18] border border-[#0C66B4]/50 hover:border-[#00AEEF] transition-all space-y-2 group"
+                className="p-5 rounded-2xl bg-[#00122e]/90 border border-[#0C66B4]/50 hover:border-[#00AEEF] transition-all duration-300 space-y-2 group shadow-sm hover:-translate-y-1"
               >
                 <h3 className="text-base font-bold text-white group-hover:text-[#00AEEF] transition-colors flex items-center justify-between">
                   <span>{t.title}</span>
                   <ArrowRight className="w-4 h-4 text-[#00AEEF] transform group-hover:translate-x-1 transition-transform" />
                 </h3>
-                <p className="text-xs text-gray-400 leading-relaxed">{t.desc}</p>
+                <p className="text-xs text-slate-300 leading-relaxed font-normal">{t.desc}</p>
               </Link>
             ))}
           </div>
@@ -311,31 +312,31 @@ export default async function HomePage() {
       {/* 3. About & Credentials Overview */}
       <AboutSection />
 
-      {/* 3b. Comprehensive Clinical Approach Trifecta Section */}
-      <ClinicalApproachSection />
+      {/* 3b. Dedicated Media & Podcast Showcase Hub */}
+      <MediaPodcastShowcase />
 
       {/* 3c. Featured Media & Articles */}
       <FeaturedMediaSection />
 
       {/* 4. Featured Clinical Videos Grid */}
-      <section className="py-16 bg-[#000a18] border-b border-[#0C66B4]/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <section className="py-20 bg-[#000814] border-b border-[#0C66B4]/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div className="space-y-3">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#0C66B4]/20 border border-[#00AEEF]/40 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
-                <PlayCircle className="w-4 h-4" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+                <PlayCircle className="w-4 h-4 text-[#00AEEF]" />
                 <span>Kliiniset Ohjevideot</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl font-display text-white tracking-wide">
-                SUOSITUIMMAT <span className="text-[#00AEEF]">KUNTOUTUSVIDEOT</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-white tracking-tight leading-tight">
+                SUOSITUIMMAT <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00AEEF] to-[#38bdf8]">KUNTOUTUSVIDEOT</span>
               </h2>
-              <p className="text-gray-300 text-sm max-w-xl">
+              <p className="text-slate-300 text-sm sm:text-base max-w-xl font-normal">
                 Täsmällisiä liikeohjeita ja tutkittua tietoa purentaelimistön, leukanivelen ja rankaperäisten kipujen itsehoitoon.
               </p>
             </div>
             <Link
               href="/videot"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#000d21] border border-[#00AEEF] text-[#00AEEF] font-semibold text-xs hover:bg-[#00AEEF] hover:text-[#000a18] transition-all shadow-glow self-start md:self-auto"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#00AEEF] to-[#38bdf8] text-[#000a18] font-bold text-xs sm:text-sm hover:from-white hover:to-slate-100 transition-all duration-300 shadow-[0_0_20px_rgba(0,174,239,0.4)] self-start md:self-auto"
             >
               <span>Selaa Kaikkia 70 Videota</span>
               <ArrowRight className="w-4 h-4" />
@@ -358,7 +359,7 @@ export default async function HomePage() {
       <TrainingsSection />
 
       {/* 7. Free Self-Care Guide Lead Magnet */}
-      <section className="py-16 bg-[#000d21] border-b border-[#0C66B4]/30">
+      <section className="py-16 bg-[#000814] border-b border-[#0C66B4]/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <EmailLeadForm
             title="LIITY SÄHKÖPOSTILISTALLE & SAAT ILMAISET LISÄOHJEET"

@@ -2,7 +2,7 @@ import { FALLBACK_VIDEOS, Video } from "@/data/videos";
 import { FI_TOPIC_VIDEOS_MAP } from "@/data/topicVideosMap";
 import VideoCard from "@/components/VideoCard";
 import Link from "next/link";
-import { ArrowLeft, BookOpen, Sparkles, Home, ChevronRight, Download } from "lucide-react";
+import { ArrowLeft, BookOpen, Sparkles, Home, ChevronRight, Download, ArrowUpRight } from "lucide-react";
 import { notFound } from "next/navigation";
 import Script from "next/script";
 import type { Metadata } from "next";
@@ -321,91 +321,94 @@ export default async function TopicHubPage(props: { params: Promise<{ slug: stri
   ];
 
   return (
-    <div className="py-12 bg-[#000a18] min-h-screen text-gray-200">
+    <div className="py-12 md:py-16 bg-[#000814] min-h-screen text-slate-200 relative overflow-hidden">
+      {/* Background Subtle Lighting */}
+      <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#00AEEF]/5 rounded-full blur-[170px] pointer-events-none" />
+
       <Script
         id={`json-ld-topic-${topic.slug}`}
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 relative z-10">
         
         {/* Breadcrumbs */}
-        <nav aria-label="Murupolku" className="flex flex-wrap items-center gap-2 text-xs text-gray-400 font-medium">
+        <nav aria-label="Murupolku" className="flex flex-wrap items-center gap-2 text-xs text-slate-400 font-medium">
           <Link href="/" className="hover:text-[#00AEEF] flex items-center gap-1 transition-colors">
             <Home className="w-3.5 h-3.5" />
             <span>Etusivu</span>
           </Link>
-          <ChevronRight className="w-3.5 h-3.5 text-gray-600 shrink-0" />
+          <ChevronRight className="w-3.5 h-3.5 text-slate-600 shrink-0" />
           <Link href="/videot" className="hover:text-[#00AEEF] transition-colors">
             Videot &amp; Aiheet
           </Link>
-          <ChevronRight className="w-3.5 h-3.5 text-gray-600 shrink-0" />
+          <ChevronRight className="w-3.5 h-3.5 text-slate-600 shrink-0" />
           <span className="text-[#00AEEF] font-semibold">{topic.title}</span>
         </nav>
 
         {/* Top Header */}
         <div className="space-y-4">
-          <div className="inline-block px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-semibold uppercase tracking-wider">
+          <div className="inline-block px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
             Kliininen Aihekooste &amp; Tietopankki
           </div>
 
-          <h1 className="text-3xl sm:text-5xl font-display text-white tracking-wide leading-tight">
+          <h1 className="text-3xl sm:text-5xl font-display font-extrabold text-white tracking-tight leading-tight">
             {topic.title}
           </h1>
 
-          <p className="text-base sm:text-lg text-gray-300 leading-relaxed font-medium">
+          <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
             {topic.introSummary}
           </p>
         </div>
 
         {/* Written Synthesis Article */}
-        <article className="p-8 rounded-3xl bg-[#000d21] border border-[#0C66B4]/50 space-y-6 text-sm sm:text-base leading-relaxed text-gray-200 shadow-panel">
-          <div className="flex items-center gap-2 text-white font-display text-2xl border-b border-[#0C66B4]/30 pb-3">
+        <article className="p-6 sm:p-8 md:p-10 rounded-3xl bg-[#00122e] border-2 border-[#0C66B4]/60 space-y-6 text-sm sm:text-base leading-relaxed text-slate-200 shadow-2xl shadow-cyan-950/30 backdrop-blur-md">
+          <div className="flex items-center gap-2 text-white font-display text-2xl font-bold border-b border-[#0C66B4]/30 pb-3">
             <BookOpen className="w-6 h-6 text-[#00AEEF]" />
             <h2>OMT-Fysioterapeutin Kliininen Synteesi</h2>
           </div>
 
           {resolvedSlug === "leukakipu-ja-tmd" && (
-            <div className="relative aspect-[16/9] rounded-2xl overflow-hidden border border-[#0C66B4]/60 my-4 shadow-panel">
+            <div className="relative aspect-[16/9] rounded-2xl overflow-hidden border border-[#0C66B4]/60 my-4 shadow-xl">
               <img src="/janne-tmd-intraoral.jpg" alt="Purentaelimistön OMT-fysioterapia" className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#000d21] via-transparent to-transparent opacity-80" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#000814] via-transparent to-transparent opacity-80" />
               <span className="absolute bottom-3 left-4 text-xs font-bold text-white">Kuva: Purentaelimistön (TMD) manuaalinen käsittely vastaanotolla</span>
             </div>
           )}
 
           {resolvedSlug === "niskakipu-ja-paansarky" && (
-            <div className="relative aspect-[16/9] rounded-2xl overflow-hidden border border-[#0C66B4]/60 my-4 shadow-panel">
+            <div className="relative aspect-[16/9] rounded-2xl overflow-hidden border border-[#0C66B4]/60 my-4 shadow-xl">
               <img src="/janne-cervical-treatment.jpg" alt="Yläniskarangan OMT-käsittely" className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#000d21] via-transparent to-transparent opacity-80" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#000814] via-transparent to-transparent opacity-80" />
               <span className="absolute bottom-3 left-4 text-xs font-bold text-white">Kuva: Yläniskarangan OMT-mobilisaatio ja cervikogeenisen päänsäryn hoito</span>
             </div>
           )}
 
           {resolvedSlug === "ergonomia-ja-tyohyvinvointi" && (
-            <div className="relative aspect-[16/9] rounded-2xl overflow-hidden border border-[#0C66B4]/60 my-4 shadow-panel">
+            <div className="relative aspect-[16/9] rounded-2xl overflow-hidden border border-[#0C66B4]/60 my-4 shadow-xl">
               <img src="/janne-workstation.jpg" alt="Ergonomia ja etätyö" className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#000d21] via-transparent to-transparent opacity-80" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#000814] via-transparent to-transparent opacity-80" />
               <span className="absolute bottom-3 left-4 text-xs font-bold text-white">Kuva: Kliininen ergonomia ja digityöterveysvastaanotto</span>
             </div>
           )}
 
           {topic.synthesisHtml.map((paragraph, idx) => (
-            <p key={idx} className="leading-relaxed">
+            <p key={idx} className="leading-relaxed font-normal text-slate-300">
               {paragraph}
             </p>
           ))}
         </article>
 
         {resolvedSlug === "tenniskyynarpaa-ja-golfkyynarpaa" && (
-          <div className="p-6 rounded-3xl bg-[#000d21] border border-[#00AEEF] flex flex-col sm:flex-row items-center justify-between gap-4 shadow-glow">
+          <div className="p-6 sm:p-8 rounded-3xl bg-[#00122e] border-2 border-[#00AEEF] flex flex-col sm:flex-row items-center justify-between gap-4 shadow-2xl shadow-cyan-950/40">
             <div>
               <h3 className="text-xl font-bold text-white">Kiinnostunut opetusvideoiden kuntoutusapuvälineestä?</h3>
-              <p className="text-xs text-gray-300">Tennis- ja golfkyynärpään täsmäapuvälineen hankintakyselyt ja ennakkotiedustelut.</p>
+              <p className="text-xs text-slate-300 mt-1 font-normal">Tennis- ja golfkyynärpään täsmäapuvälineen hankintakyselyt ja ennakkotiedustelut.</p>
             </div>
             <Link
               href="/kyynarpaa-apuvaline"
-              className="px-6 py-3 rounded-xl bg-[#00AEEF] text-black font-bold text-sm hover:bg-white transition-all shadow-glow shrink-0"
+              className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#00AEEF] to-[#38bdf8] text-[#000a18] font-bold text-sm hover:from-white hover:to-slate-100 transition-all shadow-[0_0_20px_rgba(0,174,239,0.4)] shrink-0"
             >
               Täytä hankintakysely →
             </Link>
@@ -415,7 +418,7 @@ export default async function TopicHubPage(props: { params: Promise<{ slug: stri
         {/* Video Grid Section */}
         <div className="space-y-6 pt-6 border-t border-[#0C66B4]/30">
           <div className="flex items-center justify-between">
-            <h2 className="text-2xl font-display text-white flex items-center gap-2">
+            <h2 className="text-2xl font-display font-extrabold text-white flex items-center gap-2">
               <Sparkles className="w-5 h-5 text-[#00AEEF]" />
               <span>Aiheeseen Liittyvät Opetusvideot ({topicVideos.length} videota)</span>
             </h2>
@@ -429,20 +432,23 @@ export default async function TopicHubPage(props: { params: Promise<{ slug: stri
         </div>
 
         {/* CTA Lead Magnet */}
-        <div className="p-8 rounded-3xl bg-gradient-to-r from-[#000d21] via-[#014489]/40 to-[#000d21] border border-[#00AEEF]/50 shadow-glow space-y-4 text-center">
-          <div className="w-12 h-12 rounded-xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center mx-auto">
-            <Download className="w-6 h-6" />
+        <div className="p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-[#00122e] via-[#014489]/30 to-[#00122e] border-2 border-[#00AEEF]/50 shadow-2xl shadow-cyan-950/40 space-y-4 text-center backdrop-blur-md">
+          <div className="w-14 h-14 rounded-2xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center mx-auto shadow-sm">
+            <Download className="w-7 h-7" />
           </div>
-          <h3 className="text-2xl font-bold text-white">Lataa aihealueen harjoiteohjeet PDF-muodossa</h3>
-          <p className="text-sm text-gray-300 max-w-lg mx-auto">
+          <h3 className="text-2xl sm:text-3xl font-display font-extrabold text-white tracking-tight">Lataa aihealueen harjoiteohjeet PDF-muodossa</h3>
+          <p className="text-sm text-slate-300 max-w-lg mx-auto leading-relaxed font-normal">
             Saat heti pääsyn Janne Säkkisen viralliseen Google Drive -kansioon, johon päivitetään täsmälliset liike- ja kuntoutusoppaat.
           </p>
-          <Link
-            href="/ilmaisopas"
-            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-[#00AEEF] text-black font-bold text-sm hover:bg-[#33C2F5] transition-all shadow-glow"
-          >
-            <span>Lataa oppaat (Google Drive)</span>
-          </Link>
+          <div>
+            <Link
+              href="/ilmaisopas"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-[#00AEEF] to-[#38bdf8] text-[#000a18] font-bold text-sm hover:from-white hover:to-slate-100 transition-all duration-300 shadow-[0_0_20px_rgba(0,174,239,0.4)]"
+            >
+              <span>Lataa oppaat (Google Drive)</span>
+              <ArrowUpRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
 
       </div>

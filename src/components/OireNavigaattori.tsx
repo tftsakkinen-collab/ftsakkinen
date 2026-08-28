@@ -10,7 +10,9 @@ import {
   ArrowRight,
   Sparkles,
   ChevronRight,
-  ShieldCheck
+  ShieldCheck,
+  CheckCircle2,
+  Lock
 } from "lucide-react";
 
 export interface SymptomTopic {
@@ -126,21 +128,24 @@ export default function OireNavigaattori() {
   const activeSymptom = SYMPTOM_DATA.find((s) => s.id === selectedId) || SYMPTOM_DATA[0];
 
   return (
-    <div className="py-12 bg-gradient-to-b from-[#000a18] via-[#000d21] to-[#000a18] border-y border-[#0C66B4]/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+    <section className="py-16 sm:py-20 bg-gradient-to-b from-[#000814] via-[#00122e]/60 to-[#000814] border-y border-[#0C66B4]/30 relative overflow-hidden">
+      {/* Background Subtle Flare */}
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-[#00AEEF]/5 rounded-full blur-[160px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 relative z-10">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0C66B4]/20 border border-[#00AEEF]/40 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
+        <div className="text-center max-w-3xl mx-auto space-y-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
             <Activity className="w-4 h-4 text-[#00AEEF]" />
             <span>Interaktiivinen Kuntoutusapu</span>
           </div>
 
-          <h2 className="font-display text-2xl sm:text-4xl md:text-5xl text-white tracking-wide break-words">
-            LÖYDÄ OMAT <span className="text-[#00AEEF]">KUNTOUTUSOHJEET</span>
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight break-words">
+            LÖYDÄ OMAT <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00AEEF] to-[#38bdf8]">KUNTOUTUSOHJEET</span>
           </h2>
 
-          <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
+          <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
             Valitse oirealueesi alta nähdäksesi Janne Säkkisen suosittelemat täsmävideot, sopivat apuvälineet ja ilmaiset hoito-oppaat.
           </p>
         </div>
@@ -153,47 +158,51 @@ export default function OireNavigaattori() {
               <button
                 key={sym.id}
                 onClick={() => setSelectedId(sym.id)}
-                className={`p-3 sm:p-4 rounded-2xl text-left border transition-all duration-300 flex flex-col justify-between gap-2.5 ${
+                className={`p-3.5 sm:p-4 rounded-2xl text-left border transition-all duration-300 flex flex-col justify-between gap-3 cursor-pointer group relative overflow-hidden ${
                   isActive
-                    ? "bg-[#014489]/40 border-[#00AEEF] shadow-[0_0_20px_rgba(0,174,239,0.3)] scale-[1.02]"
-                    : "bg-[#000d21] border-[#0C66B4]/30 hover:border-[#00AEEF]/50 text-gray-300"
+                    ? "bg-[#00183c] border-[#00AEEF] shadow-[0_0_20px_rgba(0,174,239,0.3)] ring-1 ring-[#00AEEF] scale-[1.02]"
+                    : "bg-[#000d21] border-[#0C66B4]/30 hover:border-[#00AEEF]/50 hover:bg-[#00122e] text-slate-300"
                 }`}
               >
-                <div className="text-xl sm:text-2xl">{sym.iconName}</div>
-                <div className="font-bold text-xs sm:text-sm text-white leading-tight break-words">{sym.name}</div>
+                <div className="text-2xl sm:text-3xl filter drop-shadow">{sym.iconName}</div>
+                <div className={`font-bold text-xs sm:text-sm leading-tight break-words transition-colors ${
+                  isActive ? "text-[#00AEEF]" : "text-white group-hover:text-[#00AEEF]"
+                }`}>
+                  {sym.name}
+                </div>
               </button>
             );
           })}
         </div>
 
         {/* Interactive Active Content Box */}
-        <div className="p-4 sm:p-8 rounded-3xl bg-gradient-to-b from-[#000d21] to-[#00050f] border border-[#00AEEF]/40 shadow-glow grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+        <div className="p-6 sm:p-8 md:p-10 rounded-3xl bg-gradient-to-b from-[#00122e] to-[#000a18] border-2 border-[#00AEEF]/40 shadow-2xl shadow-cyan-950/40 grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
           
           {/* Col 1: Summary & PDF Download */}
-          <div className="space-y-6 flex flex-col justify-between h-full">
+          <div className="space-y-6 flex flex-col justify-between h-full p-5 sm:p-6 rounded-2xl bg-[#000814]/80 border border-[#0C66B4]/40">
             <div className="space-y-4">
-              <div className="flex items-center gap-2 text-[#00AEEF] text-xs font-bold uppercase tracking-wider h-6">
+              <div className="flex items-center gap-2 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
                 <Activity className="w-4 h-4 text-[#00AEEF]" />
                 <span>Oirealueen Kuvaus</span>
               </div>
               <div className="flex items-center gap-3">
-                <span className="text-3xl">{activeSymptom.iconName}</span>
-                <h3 className="text-2xl font-bold text-white">{activeSymptom.name}</h3>
+                <span className="text-3xl filter drop-shadow">{activeSymptom.iconName}</span>
+                <h3 className="text-xl sm:text-2xl font-bold text-white">{activeSymptom.name}</h3>
               </div>
-              <p className="text-sm text-gray-300 leading-relaxed">
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
                 {activeSymptom.summary}
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl bg-[#014489]/20 border border-[#00AEEF]/40 space-y-3">
+            <div className="p-4 rounded-xl bg-[#014489]/20 border border-[#00AEEF]/40 space-y-3">
               <div className="flex items-center gap-2 text-xs font-bold text-[#00AEEF] uppercase tracking-wider">
                 <Download className="w-4 h-4" />
                 <span>Ilmainen Kuntoutusopas</span>
               </div>
-              <p className="text-xs text-gray-200 font-semibold">{activeSymptom.pdfGuide}</p>
+              <p className="text-xs text-slate-200 font-semibold">{activeSymptom.pdfGuide}</p>
               <Link
                 href="/ilmaisopas"
-                className="w-full py-2.5 px-4 rounded-xl bg-[#00AEEF] text-black font-bold text-xs hover:bg-[#33C2F5] transition-all flex items-center justify-center gap-2 shadow-glow"
+                className="w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-[#00AEEF] to-[#38bdf8] text-[#000a18] font-bold text-xs hover:from-white hover:to-slate-100 transition-all duration-300 flex items-center justify-center gap-2 shadow-glow-sm"
               >
                 <span>Lataa PDF-Opas</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -202,9 +211,9 @@ export default function OireNavigaattori() {
           </div>
 
           {/* Col 2: Clinical Video Recommendations */}
-          <div className="space-y-4 flex flex-col justify-between h-full">
+          <div className="space-y-4 flex flex-col justify-between h-full p-5 sm:p-6 rounded-2xl bg-[#000814]/80 border border-[#0C66B4]/40">
             <div className="space-y-4">
-              <div className="flex items-center gap-2 text-[#00AEEF] text-xs font-bold uppercase tracking-wider h-6">
+              <div className="flex items-center gap-2 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
                 <Play className="w-4 h-4" />
                 <span>Suositellut Opetusvideot</span>
               </div>
@@ -214,16 +223,19 @@ export default function OireNavigaattori() {
                   <Link
                     key={vid.id}
                     href="/ilmaisopas"
-                    className="p-4 rounded-2xl bg-[#000814] border border-[#0C66B4]/40 hover:border-[#00AEEF] hover:bg-[#000d21] transition-all flex items-start gap-3 group"
+                    className="p-4 rounded-xl bg-[#001026] border border-[#0C66B4]/40 hover:border-[#00AEEF] hover:bg-[#00183c] transition-all duration-300 flex items-start gap-3 group"
                   >
                     <div className="w-8 h-8 rounded-lg bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-[#00AEEF] group-hover:text-black transition-all">
                       <Play className="w-4 h-4 fill-current" />
                     </div>
                     <div>
-                      <h4 className="text-xs font-bold text-white group-hover:text-[#00AEEF] transition-colors leading-snug">
+                      <h4 className="text-xs sm:text-sm font-bold text-white group-hover:text-[#00AEEF] transition-colors leading-snug">
                         {vid.title}
                       </h4>
-                      <span className="text-[10px] text-[#00AEEF] font-semibold">🔒 Avaa sähköpostilla →</span>
+                      <span className="text-[11px] text-[#00AEEF] font-semibold flex items-center gap-1 mt-1">
+                        <Lock className="w-3 h-3" />
+                        <span>Avaa sähköpostilla →</span>
+                      </span>
                     </div>
                   </Link>
                 ))}
@@ -232,9 +244,9 @@ export default function OireNavigaattori() {
           </div>
 
           {/* Col 3: Recommended Rehab Tools */}
-          <div className="space-y-4 flex flex-col justify-between h-full">
+          <div className="space-y-4 flex flex-col justify-between h-full p-5 sm:p-6 rounded-2xl bg-[#000814]/80 border border-[#0C66B4]/40">
             <div className="space-y-4">
-              <div className="flex items-center gap-2 text-amber-400 text-xs font-bold uppercase tracking-wider h-6">
+              <div className="flex items-center gap-2 text-amber-400 text-xs font-bold uppercase tracking-wider">
                 <ShoppingBag className="w-4 h-4" />
                 <span>Suositellut Apuvälineet</span>
               </div>
@@ -243,19 +255,19 @@ export default function OireNavigaattori() {
                 {activeSymptom.recommendedGear.map((gear, idx) => (
                   <div
                     key={idx}
-                    className="p-4 rounded-2xl bg-[#000814] border border-[#0C66B4]/40 space-y-2"
+                    className="p-4 rounded-xl bg-[#001026] border border-[#0C66B4]/40 space-y-2 hover:border-amber-400/50 transition-all"
                   >
                     <div className="flex items-center justify-between">
-                      <span className="text-xs font-bold text-white">{gear.name}</span>
+                      <span className="text-xs font-bold text-white leading-snug">{gear.name}</span>
                       <Link
                         href={gear.url}
-                        className="text-[11px] text-[#00AEEF] font-semibold hover:underline flex items-center gap-1"
+                        className="text-[11px] text-[#00AEEF] font-semibold hover:underline flex items-center gap-1 shrink-0 ml-2"
                       >
                         <span>Tutustu</span>
                         <ArrowRight className="w-3 h-3" />
                       </Link>
                     </div>
-                    <p className="text-[11px] text-gray-400 italic leading-tight">
+                    <p className="text-[11px] text-slate-400 italic leading-tight">
                       "{gear.note}"
                     </p>
                   </div>
@@ -266,6 +278,6 @@ export default function OireNavigaattori() {
 
         </div>
       </div>
-    </div>
+    </section>
   );
 }
