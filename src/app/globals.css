@@ -8,16 +8,22 @@
 html {
   scroll-behavior: smooth;
   color-scheme: dark;
+  overflow-x: clip;
+  max-width: 100vw;
 }
 
 body {
   background-color: #000a18;
   color: #f1f5f9;
   font-family: var(--font-sans), system-ui, sans-serif;
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100vw;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  overflow-x: clip;
 }
 
 h1, h2, h3, h4, h5, h6 {
