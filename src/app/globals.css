@@ -2,10 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --font-heading: var(--font-heading, 'Outfit', system-ui, sans-serif);
-  --font-sans: var(--font-sans, 'Inter', system-ui, sans-serif);
-}
+@import "../design-system/tokens.css";
+@import "../design-system/glass.css";
 
 html {
   scroll-behavior: smooth;
