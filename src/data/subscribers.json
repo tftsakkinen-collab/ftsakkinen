@@ -138,5 +138,16 @@
     "date_added": "2026-08-18",
     "delivered": true,
     "delivered_at": "2026-08-18T23:31:20.545Z"
+  },
+  {
+    "first_name": "Tiedottajanne",
+    "last_name": "",
+    "email": "tiedottajanne@gmail.com",
+    "source": "Kotisivut / ftsakkinen.com (videoBonusLead)",
+    "platform": "Website",
+    "locale": "fi",
+    "date_added": "2026-08-29",
+    "delivered": true,
+    "delivered_at": "2026-08-29T16:48:56.776Z"
   }
 ]
