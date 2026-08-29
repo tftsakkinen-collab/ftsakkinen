@@ -312,13 +312,10 @@ export default async function HomePage() {
       {/* 3. About & Credentials Overview */}
       <AboutSection />
 
-      {/* 3b. Dedicated Media & Podcast Showcase Hub */}
+      {/* 4. Dedicated Media & Podcast Showcase Hub */}
       <MediaPodcastShowcase />
 
-      {/* 3c. Featured Media & Articles */}
-      <FeaturedMediaSection />
-
-      {/* 4. Featured Clinical Videos Grid */}
+      {/* 5. Featured Clinical Videos Grid */}
       <section className="py-20 bg-[#000814] border-b border-[#0C66B4]/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
@@ -351,14 +348,11 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* 5. Direct Patient Testimonials */}
+      {/* 6. Direct Patient Testimonials & Google Reviews */}
       <GoogleReviewsSection />
       <PatientTestimonialsSection />
 
-      {/* 6. Professional Training & Workshops */}
-      <TrainingsSection />
-
-      {/* 7. Free Self-Care Guide Lead Magnet */}
+      {/* 7. Free Self-Care Guide & Booking Section */}
       <section className="py-16 bg-[#000814] border-b border-[#0C66B4]/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <EmailLeadForm
@@ -368,7 +362,6 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* 8. Appointment Booking CTA Section */}
       <AppointmentBookingSection />
     </div>
   );
