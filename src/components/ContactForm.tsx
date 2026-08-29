@@ -62,8 +62,11 @@ export default function ContactForm() {
           Lähetä yhteydenottopyyntö
         </h2>
         <p className="text-slate-300 text-sm font-normal">
-          Täytä alla oleva lomake. Janne vastaa viestiisi mahdollisimman pian.
+          Täytä alla oleva lomake yleisiä kysymyksiä, luentoja ja koulutustiedusteluja varten.
         </p>
+        <div className="p-3 rounded-xl bg-[#014489]/30 border border-[#00AEEF]/40 text-[#67e8f9] text-xs font-semibold">
+          💡 <strong>Huomaa:</strong> Ajanvaraus tapahtuu vain kumppaneidemme (Terveystalo, Norre, Hammasvahti) kautta. Puhelimitse emme ota ajanvarauksia.
+        </div>
       </div>
 
       {status === "success" ? (

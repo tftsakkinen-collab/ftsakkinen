@@ -2,8 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "../design-system/base.css";
 @import "../design-system/tokens.css";
 @import "../design-system/glass.css";
+@import "../design-system/mobile.css";
 
 html {
   scroll-behavior: smooth;

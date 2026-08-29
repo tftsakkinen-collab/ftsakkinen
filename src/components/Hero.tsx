@@ -46,7 +46,7 @@ export default function Hero() {
       <div className="absolute top-1/3 right-10 w-[450px] h-[450px] bg-[#014489]/20 rounded-full blur-[170px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-16">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
           {/* Text Content (7 cols) */}
           <div className="lg:col-span-7 space-y-6 text-left">

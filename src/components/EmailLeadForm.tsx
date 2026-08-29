@@ -1,22 +1,29 @@
 "use client";
 
 import { useState } from "react";
-import { Download, CheckCircle2, ShieldCheck, Sparkles, ExternalLink, Play, Video, Gift, FolderDown, ArrowUpRight } from "lucide-react";
+import { Download, CheckCircle2, ShieldCheck, Sparkles, ExternalLink, Play, Gift, FolderDown, AlertCircle, RefreshCw } from "lucide-react";
 import { SITE_CONFIG } from "@/data/config";
 
 interface EmailLeadFormProps {
   title?: string;
   subtitle?: string;
+  lang?: "fi" | "en";
 }
+
+type FormState = "idle" | "sending" | "success" | "error";
 
 export default function EmailLeadForm({
   title = "LIITY SÄHKÖPOSTILISTALLE & SAAT VÄLITTÖMÄSTI 4 ERIKOISVIDEO-OPASTA",
   subtitle = "Syötä etunimesi ja sähköpostiosoitteesi. Saat heti VÄLITTÖMÄN pääsyn neljään exklusiiviseen video-oppaaseen sekä Janne Säkkisen ilmaisille kuntoutusmateriaaleille.",
+  lang = "fi"
 }: EmailLeadFormProps) {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [state, setState] = useState<FormState>("idle");
+  const [emailError, setEmailError] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const driveFolderUrl = process.env.NEXT_PUBLIC_GUIDE_FOLDER_URL || SITE_CONFIG.googleDriveUrl || "https://drive.google.com/drive/folders/1_ftsakkinen_guides";
 
   const bonusVideos = [
     {
@@ -31,7 +38,7 @@ export default function EmailLeadForm({
     {
       id: "exfFQ0iRLiI",
       title: "2. Vaikean Vamman Tutkiminen ja Hoito",
-      desc: "Näin OMT-fysioterapeutti tutkii ja hoitaa perusteellisesti haastavia tuki- ja liikuntaelimistön vammoja.",
+      desc: "Näin OMT-fysioterapeutti tutkii ja hoitaa perusteellisesti haastavia tuki- ja liikuntaelimistön vamvoja.",
       youtubeUrl: "https://www.youtube.com/watch?v=exfFQ0iRLiI",
       embedUrl: "https://www.youtube-nocookie.com/embed/exfFQ0iRLiI",
       thumbnail: "https://img.youtube.com/vi/exfFQ0iRLiI/mqdefault.jpg",
@@ -57,41 +64,62 @@ export default function EmailLeadForm({
     },
   ];
 
+  const validateEmail = (val: string) => {
+    const isValid = /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(val.trim());
+    if (!val) {
+      setEmailError(lang === "en" ? "Email is required" : "Sähköposti vaaditaan");
+      return false;
+    } else if (!isValid) {
+      setEmailError(lang === "en" ? "Please enter a valid email address" : "Syötä toimiva sähköpostiosoite (esim. matti@esimerkki.fi)");
+      return false;
+    }
+    setEmailError("");
+    return true;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email) return;
+    if (!validateEmail(email) || !name.trim()) return;
 
-    setIsLoading(true);
+    setState("sending");
+    setErrorMessage("");
 
     try {
       const res = await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          name,
-          email,
-          locale: "fi",
-          type: "videoBonusLead",
-          videos: bonusVideos.map(v => ({ title: v.title, url: v.youtubeUrl })),
+          name: name.trim(),
+          email: email.trim(),
+          lang,
         }),
       });
 
-      const data = await res.json();
-      if (res.ok && data.success) {
-        setIsSubmitted(true);
+      const json = await res.json().catch(() => ({ success: false }));
+
+      if (res.ok && json.success === true) {
+        setState("success");
       } else {
-        alert(data.error || "Virhe ilmoittautumisen lähetyksessä. Yritä uudelleen.");
+        setState("error");
+        setErrorMessage(
+          lang === "en"
+            ? "Something went wrong. Please try again or email tiedottajanne@gmail.com"
+            : "Lähetys epäonnistui. Yritä uudelleen tai kirjoita meille: tiedottajanne@gmail.com"
+        );
       }
     } catch (err) {
-      console.error("API error:", err);
-      alert("Yhteysvirhe ilmoittautumista lähetettäessä. Yritä uudelleen.");
-    } finally {
-      setIsLoading(false);
+      console.error("API Error:", err);
+      setState("error");
+      setErrorMessage(
+        lang === "en"
+          ? "Something went wrong. Please try again or email tiedottajanne@gmail.com"
+          : "Lähetys epäonnistui. Yritä uudelleen tai kirjoita meille: tiedottajanne@gmail.com"
+      );
     }
   };
 
   return (
-    <section id="ilmaisopas-form" className="py-20 bg-gradient-to-b from-[#000814] via-[#001433]/70 to-[#000814] border-b border-[#0C66B4]/30 relative overflow-hidden">
+    <section id="ilmaisopas-form" className="py-16 md:py-24 bg-gradient-to-b from-[#000814] via-[#001433]/70 to-[#000814] border-b border-[#0C66B4]/30 relative overflow-hidden">
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[750px] h-[750px] bg-[#00AEEF]/10 rounded-full blur-[170px] pointer-events-none" />
 
@@ -117,9 +145,9 @@ export default function EmailLeadForm({
           </p>
         </div>
 
-        {!isSubmitted ? (
+        {state !== "success" ? (
           <div className="space-y-10">
-            {/* Showcase Cards with Real Thumbnails & Lock Badges */}
+            {/* Showcase Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {bonusVideos.map((video, idx) => (
                 <div key={idx} className="rounded-3xl bg-[#00122e]/95 border-2 border-[#0C66B4]/50 overflow-hidden space-y-4 shadow-xl hover:border-[#00AEEF] transition-all duration-300 group flex flex-col justify-between backdrop-blur-md hover:-translate-y-1">
@@ -164,6 +192,25 @@ export default function EmailLeadForm({
               ))}
             </div>
 
+            {/* Error Message Box */}
+            {state === "error" && (
+              <div className="p-5 rounded-2xl bg-red-950/80 border-2 border-red-500 text-white flex items-start gap-3.5 shadow-lg">
+                <AlertCircle className="w-6 h-6 text-red-400 shrink-0 mt-0.5" />
+                <div className="space-y-2 flex-1">
+                  <h4 className="font-bold text-sm text-red-200">Virhe sähköpostin lähetyksessä</h4>
+                  <p className="text-xs text-slate-200 leading-relaxed">{errorMessage}</p>
+                  <button
+                    type="button"
+                    onClick={() => setState("idle")}
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-red-500 hover:bg-red-400 text-white font-bold text-xs transition-all cursor-pointer min-h-[44px]"
+                  >
+                    <RefreshCw className="w-4 h-4" />
+                    <span>Yritä uudelleen</span>
+                  </button>
+                </div>
+              </div>
+            )}
+
             {/* Form Box */}
             <form onSubmit={handleSubmit} className="p-6 sm:p-8 md:p-10 rounded-3xl bg-[#00122e]/95 border-2 border-[#00AEEF] space-y-6 shadow-[0_0_50px_rgba(0,174,239,0.3)] backdrop-blur-md">
               <div className="flex items-center gap-2 text-[#67e8f9] text-xs font-bold uppercase tracking-wider">
@@ -182,7 +229,8 @@ export default function EmailLeadForm({
                     placeholder="Matti"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full px-4 py-3.5 rounded-xl bg-[#000814] border border-[#0C66B4]/60 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-[#00AEEF] focus:ring-1 focus:ring-[#00AEEF] transition-all"
+                    disabled={state === "sending"}
+                    className="w-full px-4 py-3.5 min-h-[44px] rounded-xl bg-[#000814] border border-[#0C66B4]/60 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-[#00AEEF] focus:ring-1 focus:ring-[#00AEEF] transition-all disabled:opacity-50"
                   />
                 </div>
 
@@ -195,19 +243,31 @@ export default function EmailLeadForm({
                     required
                     placeholder="matti@esimerkki.fi"
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="w-full px-4 py-3.5 rounded-xl bg-[#000814] border border-[#0C66B4]/60 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-[#00AEEF] focus:ring-1 focus:ring-[#00AEEF] transition-all"
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                      if (emailError) validateEmail(e.target.value);
+                    }}
+                    onBlur={(e) => validateEmail(e.target.value)}
+                    disabled={state === "sending"}
+                    className={`w-full px-4 py-3.5 min-h-[44px] rounded-xl bg-[#000814] border text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-1 transition-all disabled:opacity-50 ${
+                      emailError
+                        ? "border-red-500 focus:border-red-500 focus:ring-red-500"
+                        : "border-[#0C66B4]/60 focus:border-[#00AEEF] focus:ring-[#00AEEF]"
+                    }`}
                   />
+                  {emailError && (
+                    <p className="text-xs text-red-400 font-semibold">{emailError}</p>
+                  )}
                 </div>
               </div>
 
               <button
                 type="submit"
-                disabled={isLoading}
-                className="w-full py-4 px-8 rounded-xl bg-gradient-to-r from-[#00AEEF] to-[#38bdf8] text-[#000a18] font-bold text-base hover:from-white hover:to-slate-100 transition-all duration-300 shadow-[0_0_25px_rgba(0,174,239,0.5)] flex items-center justify-center gap-3 group cursor-pointer"
+                disabled={state === "sending"}
+                className="w-full py-4 px-8 min-h-[48px] rounded-xl bg-gradient-to-r from-[#00AEEF] to-[#38bdf8] text-[#000a18] font-bold text-base hover:from-white hover:to-slate-100 transition-all duration-300 shadow-[0_0_25px_rgba(0,174,239,0.5)] flex items-center justify-center gap-3 group cursor-pointer disabled:opacity-50"
               >
                 <Download className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                <span>{isLoading ? "Käsitellään..." : "Liity listalle & Avaa 4 erikoisvideota (Välitön pääsy)"}</span>
+                <span>{state === "sending" ? "Lähetetään..." : "Liity listalle & Avaa 4 erikoisvideota (Välitön pääsy)"}</span>
               </button>
 
               <div className="flex flex-wrap items-center justify-center gap-6 pt-2 text-xs text-slate-400 font-medium">
@@ -223,7 +283,7 @@ export default function EmailLeadForm({
             </form>
           </div>
         ) : (
-          /* Instant Unlock View */
+          /* Instant Unlock Success View */
           <div className="p-8 sm:p-12 rounded-3xl bg-[#00122e] border-2 border-[#00AEEF] space-y-10 shadow-[0_0_50px_rgba(0,174,239,0.3)]">
             <div className="text-center space-y-4">
               <div className="w-16 h-16 rounded-full bg-[#00AEEF]/20 text-[#67e8f9] flex items-center justify-center mx-auto border border-[#00AEEF]/50 shadow-[0_0_20px_rgba(0,174,239,0.5)]">
@@ -234,7 +294,7 @@ export default function EmailLeadForm({
                 Kiitos liittymisestä{name ? `, ${name}` : ""}!
               </h3>
               <p className="text-slate-300 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
-                Sähköpostiosoitteesi <strong className="text-[#67e8f9]">{email}</strong> on lisätty listalle. Videolinkit on lähetetty sähköpostiisi, ja voit lisäksi katsoa kaikki 4 erikoisvideota tästä suoraan:
+                Sähköpostiosoitteesi <strong className="text-[#67e8f9]">{email}</strong> on lisätty listalle. Linkki lähetettiin myös sähköpostiisi, ja voit katsoa kaikki 4 erikoisvideota tästä suoraan:
               </p>
             </div>
 
@@ -269,7 +329,7 @@ export default function EmailLeadForm({
                     href={video.youtubeUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-[#014489]/40 border border-[#0C66B4] text-white font-semibold text-xs hover:border-[#00AEEF] hover:text-[#67e8f9] transition-all w-full text-center mt-2"
+                    className="inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-[#014489]/40 border border-[#0C66B4] text-white font-semibold text-xs hover:border-[#00AEEF] hover:text-[#67e8f9] transition-all w-full text-center mt-2 min-h-[44px]"
                   >
                     <span>Katso YouTubessa</span>
                     <ExternalLink className="w-3.5 h-3.5" />
@@ -284,15 +344,15 @@ export default function EmailLeadForm({
                 <FolderDown className="w-6 h-6 text-[#67e8f9] shrink-0" />
                 <div>
                   <h4 className="text-sm font-bold text-white">Haluatko myös ladattavat PDF-kuntoutusoppaat?</h4>
-                  <p className="text-xs text-slate-300">Google Drive -kansiosta löydät kaikki Janne Säkkisen kirjalliset ohjeet.</p>
+                  <p className="text-xs text-slate-300">Google Drive -kansiosta löydät kaikki Janne Säkkisen kirjalliset ohjeet. Linkki lähetettiin myös sähköpostiisi.</p>
                 </div>
               </div>
 
               <a
-                href={SITE_CONFIG.googleDriveUrl}
+                href={driveFolderUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#00AEEF] to-[#38bdf8] text-[#000a18] font-bold text-xs sm:text-sm hover:from-white hover:to-slate-100 transition-all shadow-glow-sm"
+                className="shrink-0 inline-flex items-center gap-2 px-6 py-3 min-h-[48px] rounded-xl bg-gradient-to-r from-[#00AEEF] to-[#38bdf8] text-[#000a18] font-bold text-xs sm:text-sm hover:from-white hover:to-slate-100 transition-all shadow-glow-sm cursor-pointer"
               >
                 <span>Avaa Google Drive -oppaat</span>
                 <ExternalLink className="w-4 h-4" />
@@ -305,4 +365,3 @@ export default function EmailLeadForm({
     </section>
   );
 }
-
