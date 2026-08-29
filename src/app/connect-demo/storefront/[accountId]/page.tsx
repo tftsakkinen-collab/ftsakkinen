@@ -86,13 +86,13 @@ export default function StorefrontPage({ params }: { params: Promise<{ accountId
           <div>
             <Link
               href={`/connect-demo?accountId=${accountId}`}
-              className="inline-flex items-center gap-1.5 text-xs text-[#00AEEF] hover:underline mb-2"
+              className="inline-flex items-center gap-1.5 text-xs text-[#67e8f9] hover:underline mb-2"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
               <span>Palaa Connect Dashboardiin</span>
             </Link>
             <h1 className="text-3xl font-display text-white tracking-wide">
-              KAUPPASIVU <span className="text-[#00AEEF]">(STOREFRONT)</span>
+              KAUPPASIVU <span className="text-[#67e8f9]">(STOREFRONT)</span>
             </h1>
             <p className="text-xs font-mono text-gray-400 mt-1">
               Connected Account: <span className="text-white">{accountId}</span>
@@ -114,7 +114,7 @@ export default function StorefrontPage({ params }: { params: Promise<{ accountId
         {/* Product Listing */}
         {loading ? (
           <div className="py-20 text-center space-y-3">
-            <Loader2 className="w-10 h-10 text-[#00AEEF] animate-spin mx-auto" />
+            <Loader2 className="w-10 h-10 text-[#67e8f9] animate-spin mx-auto" />
             <p className="text-gray-400 text-sm">Haetaan kaupan tuotteita Stripe Connect API:sta...</p>
           </div>
         ) : products.length === 0 ? (
@@ -145,7 +145,7 @@ export default function StorefrontPage({ params }: { params: Promise<{ accountId
                 >
                   <div className="space-y-3">
                     <div className="flex items-center justify-between">
-                      <span className="text-[10px] uppercase font-mono text-[#00AEEF] bg-[#000814] px-2 py-0.5 rounded border border-[#0C66B4]/40">
+                      <span className="text-[10px] uppercase font-mono text-[#67e8f9] bg-[#000814] px-2 py-0.5 rounded border border-[#0C66B4]/40">
                         {product.id}
                       </span>
                     </div>
@@ -160,7 +160,7 @@ export default function StorefrontPage({ params }: { params: Promise<{ accountId
                     <div className="flex items-baseline justify-between">
                       <span className="text-xs text-gray-400">Hinta:</span>
                       <span className="text-2xl font-bold text-white">
-                        {unitAmount} <span className="text-[#00AEEF] text-lg">{currency === "EUR" ? "€" : currency}</span>
+                        {unitAmount} <span className="text-[#67e8f9] text-lg">{currency === "EUR" ? "€" : currency}</span>
                       </span>
                     </div>
 

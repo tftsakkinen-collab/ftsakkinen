@@ -91,7 +91,7 @@ export default function GatedVideoPlayer({ video }: GatedVideoPlayerProps) {
         )}
 
         <div className="flex items-center gap-2 text-xs font-bold text-white uppercase tracking-wider">
-          <Play className="w-4 h-4 text-[#00AEEF]" />
+          <Play className="w-4 h-4 text-[#67e8f9]" />
           <span>Katso opetusvideo</span>
         </div>
 
@@ -122,12 +122,12 @@ export default function GatedVideoPlayer({ video }: GatedVideoPlayerProps) {
       <div className="relative z-10 space-y-6 max-w-2xl mx-auto text-center">
         {/* Header badges */}
         <div className="flex flex-wrap items-center justify-center gap-3">
-          <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#00AEEF]/20 border border-[#00AEEF] text-[#00AEEF] text-xs font-bold uppercase tracking-wider shadow-glow">
+          <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#00AEEF]/20 border border-[#00AEEF] text-[#67e8f9] text-xs font-bold uppercase tracking-wider shadow-glow">
             <Lock className="w-3.5 h-3.5" />
             Sähköpostilistalaisten Erikoisvideo
           </span>
           <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#014489]/40 border border-[#0C66B4] text-gray-200 text-xs font-semibold">
-            <Sparkles className="w-3.5 h-3.5 text-[#00AEEF]" />
+            <Sparkles className="w-3.5 h-3.5 text-[#67e8f9]" />
             100 % Ilmainen Pääsy
           </span>
         </div>
@@ -135,7 +135,7 @@ export default function GatedVideoPlayer({ video }: GatedVideoPlayerProps) {
         {/* Title and description */}
         <div className="space-y-3">
           <h2 className="text-2xl sm:text-3xl font-display text-white tracking-wide leading-tight">
-            Tämä video on varattu <span className="text-[#00AEEF]">sähköpostilistan tilaajille</span>
+            Tämä video on varattu <span className="text-[#67e8f9]">sähköpostilistan tilaajille</span>
           </h2>
           <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
             Syötä sähköpostiosoitteesi alla, niin saat välittömän katseluoikeuden tähän 17 minuutin teho-oppaaseen sekä suoran katselulinkin sähköpostiisi!
@@ -145,19 +145,19 @@ export default function GatedVideoPlayer({ video }: GatedVideoPlayerProps) {
         {/* Benefits checklist */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-left pt-2 text-xs text-gray-200 bg-[#000a18]/60 p-4 rounded-xl border border-[#0C66B4]/40">
           <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-[#00AEEF] shrink-0" />
+            <CheckCircle2 className="w-4 h-4 text-[#67e8f9] shrink-0" />
             <span>Välitön videon katselu tällä sivulla</span>
           </div>
           <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-[#00AEEF] shrink-0" />
+            <CheckCircle2 className="w-4 h-4 text-[#67e8f9] shrink-0" />
             <span>Suora katselulinkki sähköpostiisi</span>
           </div>
           <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-[#00AEEF] shrink-0" />
+            <CheckCircle2 className="w-4 h-4 text-[#67e8f9] shrink-0" />
             <span>Google Drive PDF-kuntoutusoppaat</span>
           </div>
           <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-[#00AEEF] shrink-0" />
+            <CheckCircle2 className="w-4 h-4 text-[#67e8f9] shrink-0" />
             <span>Ei roskapostia • Voit perua milloin vain</span>
           </div>
         </div>
@@ -193,7 +193,7 @@ export default function GatedVideoPlayer({ video }: GatedVideoPlayerProps) {
         </form>
 
         <div className="flex items-center justify-center gap-2 text-[11px] text-gray-400 pt-1">
-          <ShieldCheck className="w-3.5 h-3.5 text-[#00AEEF]" />
+          <ShieldCheck className="w-3.5 h-3.5 text-[#67e8f9]" />
           <span>Tietosi ovat turvassa • FT Säkkinen / Tiedottajanne Oy</span>
         </div>
       </div>

@@ -48,8 +48,8 @@ export default function TestimonialsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 relative z-10">
         
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
-            <MessageSquareQuote className="w-4 h-4 text-[#00AEEF]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#67e8f9] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+            <MessageSquareQuote className="w-4 h-4 text-[#67e8f9]" />
             <span>Aitoja koulutus- ja luentopalautteita</span>
           </div>
 
@@ -69,7 +69,7 @@ export default function TestimonialsSection() {
             >
               <div className="space-y-4 w-full flex flex-col items-center">
                 <div className="flex flex-col items-center gap-2 w-full">
-                  <span className="text-xs font-bold text-[#00AEEF] bg-[#014489]/40 px-3 py-1 rounded-full uppercase tracking-wider text-center border border-[#00AEEF]/30">
+                  <span className="text-xs font-bold text-[#67e8f9] bg-[#014489]/40 px-3 py-1 rounded-full uppercase tracking-wider text-center border border-[#00AEEF]/30">
                     {item.category}
                   </span>
                   <div className="flex items-center justify-center gap-1 text-amber-400 pt-1">
@@ -85,7 +85,7 @@ export default function TestimonialsSection() {
               </div>
 
               <div className="pt-4 border-t border-[#0C66B4]/40 flex items-center justify-center gap-2 text-xs text-slate-300 w-full text-center font-medium">
-                <UserCheck className="w-4 h-4 text-[#00AEEF] shrink-0" />
+                <UserCheck className="w-4 h-4 text-[#67e8f9] shrink-0" />
                 <span className="font-bold text-white break-words text-center">
                   {item.target}
                 </span>

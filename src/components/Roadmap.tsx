@@ -27,12 +27,12 @@ export default function Roadmap() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0C66B4]/20 border border-[#00AEEF]/40 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0C66B4]/20 border border-[#00AEEF]/40 text-[#67e8f9] text-xs font-bold uppercase tracking-wider">
             <CheckCircle2 className="w-4 h-4" />
             <span>Kuntoutusprosessi</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-display text-white tracking-wide">
-            KUNTOUTUKSEN <span className="text-[#00AEEF]">3-VAIHEINEN ETENEMISPOLKU</span>
+            KUNTOUTUKSEN <span className="text-[#67e8f9]">3-VAIHEINEN ETENEMISPOLKU</span>
           </h2>
           <p className="text-gray-300 text-base">
             Selkeä ja turvallinen etenemistapa jokaisessa verkkovalmennuksessa ja fysioterapiaohjeessa.
@@ -48,10 +48,10 @@ export default function Roadmap() {
                 className="p-8 rounded-3xl bg-[#000a18] border border-[#0C66B4] relative space-y-4 shadow-panel hover:border-[#00AEEF] transition-all group"
               >
                 <div className="flex items-center justify-between">
-                  <div className="w-12 h-12 rounded-2xl bg-[#014489]/50 border border-[#00AEEF]/50 text-[#00AEEF] flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-2xl bg-[#014489]/50 border border-[#00AEEF]/50 text-[#67e8f9] flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Icon className="w-6 h-6" />
                   </div>
-                  <span className="font-display text-4xl text-[#00AEEF]/40 group-hover:text-[#00AEEF] transition-colors">
+                  <span className="font-display text-4xl text-[#67e8f9]/40 group-hover:text-[#67e8f9] transition-colors">
                     {step.number}
                   </span>
                 </div>

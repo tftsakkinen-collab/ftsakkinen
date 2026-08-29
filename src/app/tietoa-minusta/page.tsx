@@ -127,15 +127,15 @@ export default function AboutPage() {
                 className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#000814] via-transparent to-transparent opacity-75" />
-              <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 p-4 rounded-2xl bg-[#000e24]/90 border border-[#00AEEF]/60 backdrop-blur-xl flex items-center gap-3 text-[#00AEEF] text-xs font-bold shadow-lg">
-                <Award className="w-5 h-5 shrink-0 text-[#00AEEF]" />
+              <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 p-4 rounded-2xl bg-[#000e24]/90 border border-[#00AEEF]/60 backdrop-blur-xl flex items-center gap-3 text-[#67e8f9] text-xs font-bold shadow-lg">
+                <Award className="w-5 h-5 shrink-0 text-[#67e8f9]" />
                 <span>OMT-Fysioterapeutti &amp; Työfysioterapeutti</span>
               </div>
             </div>
           </div>
 
           <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#67e8f9] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
               <User className="w-4 h-4" />
               <span>Ammatillinen Tausta &amp; Osaaminen</span>
             </div>
@@ -156,9 +156,9 @@ export default function AboutPage() {
                 Olen työskennellyt ergonomia-asiantuntijana ja vierailevana luennoitsijana Oulun yliopiston hammaslääketieteen yksikössä yli 7 vuoden ajan (2017–). Tässä roolissa olen kehittänyt suun terveydenhuollon työergonomian käytäntöjä ja jakanut asiantuntemustani uusille terveydenhuollon ammattilaisille.
               </p>
               <div className="p-4 rounded-2xl bg-[#00122e] border border-[#0C66B4]/50 text-xs text-slate-300 flex items-start gap-3 mt-3">
-                <Globe className="w-5 h-5 text-[#00AEEF] shrink-0 mt-0.5" />
+                <Globe className="w-5 h-5 text-[#67e8f9] shrink-0 mt-0.5" />
                 <p>
-                  <strong>Kansainvälinen nimen kirjoitusasu:</strong> Englanninkielisellä sivustollani (<strong><a href="https://www.ptsakkinen.com" className="text-[#00AEEF] hover:underline">ptsakkinen.com</a></strong>) käytän nimen kirjoitusasua <em>"PT Janne Sakkinen"</em> ilman ääkkösiä kansainvälisen luettavuuden helpottamiseksi.
+                  <strong>Kansainvälinen nimen kirjoitusasu:</strong> Englanninkielisellä sivustollani (<strong><a href="https://www.ptsakkinen.com" className="text-[#67e8f9] hover:underline">ptsakkinen.com</a></strong>) käytän nimen kirjoitusasua <em>"PT Janne Sakkinen"</em> ilman ääkkösiä kansainvälisen luettavuuden helpottamiseksi.
                 </p>
               </div>
             </div>
@@ -166,21 +166,21 @@ export default function AboutPage() {
             {/* Quick Proof Badges */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
               <div className="p-5 rounded-2xl bg-[#00122e] border border-[#0C66B4]/60 flex items-start gap-3.5 shadow-sm hover:border-[#00AEEF]/50 transition-colors">
-                <GraduationCap className="w-6 h-6 text-[#00AEEF] shrink-0 mt-0.5" />
+                <GraduationCap className="w-6 h-6 text-[#67e8f9] shrink-0 mt-0.5" />
                 <div>
                   <h3 className="text-white font-bold text-sm">Yliopisto-opettaja (2017–)</h3>
                   <p className="text-xs text-slate-400 mt-1 leading-relaxed">Oulun yliopisto, Hammaslääketiede (yli 7 vuotta)</p>
                 </div>
               </div>
               <div className="p-5 rounded-2xl bg-[#00122e] border border-[#0C66B4]/60 flex items-start gap-3.5 shadow-sm hover:border-[#00AEEF]/50 transition-colors">
-                <ShieldCheck className="w-6 h-6 text-[#00AEEF] shrink-0 mt-0.5" />
+                <ShieldCheck className="w-6 h-6 text-[#67e8f9] shrink-0 mt-0.5" />
                 <div>
                   <h3 className="text-white font-bold text-sm">OMT-Erikoistuminen</h3>
                   <p className="text-xs text-slate-400 mt-1 leading-relaxed">SOMTY 2.5 vuotta (2018–2020)</p>
                 </div>
               </div>
               <div className="p-5 rounded-2xl bg-[#00122e] border border-[#00AEEF]/60 flex items-start gap-3.5 sm:col-span-2 shadow-sm hover:border-[#00AEEF] transition-colors">
-                <FileCheck className="w-6 h-6 text-[#00AEEF] shrink-0 mt-0.5" />
+                <FileCheck className="w-6 h-6 text-[#67e8f9] shrink-0 mt-0.5" />
                 <div>
                   <h3 className="text-white font-bold text-sm">Valvira &amp; Terhikki -Rekisteröinti</h3>
                   <p className="text-xs text-slate-300 mt-1 leading-relaxed">Laillistettu terveydenhuollon ammattihenkilö (Valvira / Terhikki -rekisteröity OMT-fysioterapeutti)</p>
@@ -194,7 +194,7 @@ export default function AboutPage() {
         <div className="space-y-10 p-6 sm:p-8 md:p-12 rounded-3xl bg-gradient-to-b from-[#00122e] to-[#000a18] border border-[#0C66B4]/60 shadow-2xl shadow-cyan-950/30">
           
           <div className="space-y-4">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/40 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/40 text-[#67e8f9] text-xs font-bold uppercase tracking-wider">
               <Compass className="w-4 h-4" />
               <span>Miksi teen tätä työtä</span>
             </div>
@@ -219,13 +219,13 @@ export default function AboutPage() {
           {/* Cards: Trust & Collaboration */}
           <div className="pt-8 border-t border-[#0C66B4]/30 space-y-6">
             <h3 className="text-xl font-display font-bold text-white flex items-center gap-2">
-              <HeartHandshake className="w-5 h-5 text-[#00AEEF]" />
+              <HeartHandshake className="w-5 h-5 text-[#67e8f9]" />
               <span>Luottamus &amp; Yhteistyö</span>
             </h3>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="p-6 sm:p-7 rounded-2xl bg-[#000814] border border-[#0C66B4]/50 space-y-3 hover:border-[#00AEEF]/50 transition-colors shadow-sm">
-                <div className="w-10 h-10 rounded-xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl bg-[#00AEEF]/20 text-[#67e8f9] flex items-center justify-center">
                   <HeartHandshake className="w-5 h-5" />
                 </div>
                 <h4 className="text-base font-bold text-white">Ratkaisukeskeinen Ote</h4>
@@ -235,7 +235,7 @@ export default function AboutPage() {
               </div>
 
               <div className="p-6 sm:p-7 rounded-2xl bg-[#000814] border border-[#0C66B4]/50 space-y-3 hover:border-[#00AEEF]/50 transition-colors shadow-sm">
-                <div className="w-10 h-10 rounded-xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl bg-[#00AEEF]/20 text-[#67e8f9] flex items-center justify-center">
                   <Target className="w-5 h-5" />
                 </div>
                 <h4 className="text-base font-bold text-white">Ammattilaisten &amp; Potilaiden Voimauttaminen</h4>
@@ -316,13 +316,13 @@ export default function AboutPage() {
           {/* Education */}
           <div className="space-y-6">
             <h2 className="text-2xl font-display font-bold text-white flex items-center gap-2">
-              <GraduationCap className="w-6 h-6 text-[#00AEEF]" />
+              <GraduationCap className="w-6 h-6 text-[#67e8f9]" />
               <span>Koulutustausta &amp; Tutkinnot</span>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {CV_DATA_FI.degrees.map((deg, idx) => (
                 <div key={idx} className="p-6 rounded-2xl bg-[#00122e] border border-[#0C66B4]/50 space-y-2.5 shadow-sm hover:border-[#00AEEF]/50 transition-colors">
-                  <span className="text-xs font-mono text-[#00AEEF] px-2.5 py-1 rounded-md bg-[#014489]/30 inline-block border border-[#00AEEF]/20">
+                  <span className="text-xs font-mono text-[#67e8f9] px-2.5 py-1 rounded-md bg-[#014489]/30 inline-block border border-[#00AEEF]/20">
                     {deg.duration}
                   </span>
                   <h3 className="text-base font-bold text-white pt-1 leading-snug">{deg.degree}</h3>
@@ -336,7 +336,7 @@ export default function AboutPage() {
           {/* Work Experience */}
           <div className="space-y-6">
             <h2 className="text-2xl font-display font-bold text-white flex items-center gap-2">
-              <Briefcase className="w-6 h-6 text-[#00AEEF]" />
+              <Briefcase className="w-6 h-6 text-[#67e8f9]" />
               <span>Työhistoria &amp; Kliininen Kokemus</span>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -345,7 +345,7 @@ export default function AboutPage() {
                   <div>
                     <div className="flex items-center justify-between gap-2">
                       <h3 className="text-base font-bold text-white leading-snug">{work.title}</h3>
-                      <span className="text-xs font-mono text-[#00AEEF] bg-[#000814] px-2.5 py-1 rounded-md border border-[#0C66B4]/40 shrink-0">
+                      <span className="text-xs font-mono text-[#67e8f9] bg-[#000814] px-2.5 py-1 rounded-md border border-[#0C66B4]/40 shrink-0">
                         {work.period}
                       </span>
                     </div>
@@ -359,7 +359,7 @@ export default function AboutPage() {
           {/* Certifications */}
           <div className="space-y-6">
             <h2 className="text-2xl font-display font-bold text-white flex items-center gap-2">
-              <Award className="w-6 h-6 text-[#00AEEF]" />
+              <Award className="w-6 h-6 text-[#67e8f9]" />
               <span>Täydennyskoulutukset &amp; Sertifikaatit</span>
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -367,7 +367,7 @@ export default function AboutPage() {
                 <div key={idx} className="p-4 sm:p-5 rounded-2xl bg-[#00122e]/80 border border-[#0C66B4]/40 space-y-1 hover:border-[#00AEEF]/50 transition-all">
                   <div className="flex items-center justify-between text-xs gap-2">
                     <span className="font-bold text-white leading-snug">{cert.title}</span>
-                    <span className="text-[#00AEEF] font-mono shrink-0">{cert.year}</span>
+                    <span className="text-[#67e8f9] font-mono shrink-0">{cert.year}</span>
                   </div>
                   <p className="text-[11px] text-slate-400">{cert.instructorOrOrg}</p>
                 </div>

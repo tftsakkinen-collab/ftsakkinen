@@ -47,7 +47,7 @@ function KiitosContent() {
   if (loading) {
     return (
       <div className="min-h-[70vh] flex flex-col items-center justify-center space-y-4">
-        <Loader2 className="w-10 h-10 text-[#00AEEF] animate-spin" />
+        <Loader2 className="w-10 h-10 text-[#67e8f9] animate-spin" />
         <p className="text-slate-300 font-medium">Vahvistetaan maksua ja alustetaan materiaaleja...</p>
       </div>
     );
@@ -112,7 +112,7 @@ function KiitosContent() {
             {/* Kortti 1: PDF Luentodiat */}
             <div className="p-6 rounded-3xl bg-[#000814] border border-[#0C66B4]/60 space-y-4 flex flex-col justify-between hover:border-[#00AEEF]/60 transition-colors shadow-lg">
               <div className="space-y-3">
-                <div className="w-12 h-12 rounded-2xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center border border-[#00AEEF]/30">
+                <div className="w-12 h-12 rounded-2xl bg-[#00AEEF]/20 text-[#67e8f9] flex items-center justify-center border border-[#00AEEF]/30">
                   <FileText className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold text-white">1. PDF-Luentodiat</h3>
@@ -165,7 +165,7 @@ function KiitosContent() {
           </div>
           <p>
             Jos sinulla on kysyttävää materiaaleista tai tarvitset apua, ota yhteyttä:{" "}
-            <a href="mailto:janne@ftsakkinen.com" className="text-[#00AEEF] underline font-medium">
+            <a href="mailto:janne@ftsakkinen.com" className="text-[#67e8f9] underline font-medium">
               janne@ftsakkinen.com
             </a>
           </p>
@@ -175,7 +175,7 @@ function KiitosContent() {
       <div className="text-center">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-slate-400 hover:text-[#00AEEF] text-sm transition-colors"
+          className="inline-flex items-center gap-2 text-slate-400 hover:text-[#67e8f9] text-sm transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Palaa FT Säkkinen -etusivulle</span>
@@ -190,7 +190,7 @@ export default function KiitosPage() {
     <div className="py-12 bg-[#000814] min-h-screen text-slate-200">
       <Suspense fallback={
         <div className="min-h-[70vh] flex items-center justify-center">
-          <Loader2 className="w-10 h-10 text-[#00AEEF] animate-spin" />
+          <Loader2 className="w-10 h-10 text-[#67e8f9] animate-spin" />
         </div>
       }>
         <KiitosContent />

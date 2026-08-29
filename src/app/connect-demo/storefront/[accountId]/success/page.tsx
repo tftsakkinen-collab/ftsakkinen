@@ -18,7 +18,7 @@ export default function StorefrontSuccessPage({ params }: { params: Promise<{ ac
         <div className="space-y-2">
           <h1 className="text-2xl font-bold text-white">Ostos Onnistui!</h1>
           <p className="text-xs text-gray-300">
-            Maksu suoritettu onnistuneesti kauppiaalle (Connected Account: <span className="font-mono text-[#00AEEF]">{accountId}</span>).
+            Maksu suoritettu onnistuneesti kauppiaalle (Connected Account: <span className="font-mono text-[#67e8f9]">{accountId}</span>).
           </p>
         </div>
 

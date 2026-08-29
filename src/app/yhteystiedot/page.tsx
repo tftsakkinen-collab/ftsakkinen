@@ -40,8 +40,8 @@ export default function ContactPage() {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 relative z-10">
         <div className="text-center space-y-4 max-w-2xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
-            <MessageSquare className="w-4 h-4 text-[#00AEEF]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#67e8f9] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+            <MessageSquare className="w-4 h-4 text-[#67e8f9]" />
             <span>Ota Yhteyttä &amp; Asiantuntijapalvelut</span>
           </div>
 
@@ -60,26 +60,26 @@ export default function ContactPage() {
           <div className="lg:col-span-5 space-y-6">
             <div className="p-6 sm:p-8 rounded-3xl bg-[#00122e] border-2 border-[#0C66B4]/60 shadow-2xl shadow-cyan-950/30 space-y-6 backdrop-blur-md">
               <h2 className="text-xl font-display font-bold text-white flex items-center gap-2">
-                <Building2 className="w-5 h-5 text-[#00AEEF]" />
+                <Building2 className="w-5 h-5 text-[#67e8f9]" />
                 <span>Tiedottajanne Oy</span>
               </h2>
               <div className="space-y-4 text-sm text-slate-300">
                 <div className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 text-[#00AEEF] shrink-0 mt-0.5" />
+                  <MapPin className="w-5 h-5 text-[#67e8f9] shrink-0 mt-0.5" />
                   <div>
                     <span className="font-bold text-white block">Vastaanotot Oulussa:</span>
                     <span className="text-xs text-slate-400">Terveystalo, Norre Työterveys &amp; Hammasvahti</span>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Mail className="w-5 h-5 text-[#00AEEF] shrink-0" />
-                  <a href="mailto:tiedottajanne@gmail.com" className="hover:text-[#00AEEF] text-white font-semibold transition-colors">
+                  <Mail className="w-5 h-5 text-[#67e8f9] shrink-0" />
+                  <a href="mailto:tiedottajanne@gmail.com" className="hover:text-[#67e8f9] text-white font-semibold transition-colors">
                     tiedottajanne@gmail.com
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Phone className="w-5 h-5 text-[#00AEEF] shrink-0" />
-                  <a href="tel:+358413274967" className="hover:text-[#00AEEF] text-white font-semibold transition-colors">
+                  <Phone className="w-5 h-5 text-[#67e8f9] shrink-0" />
+                  <a href="tel:+358413274967" className="hover:text-[#67e8f9] text-white font-semibold transition-colors">
                     041 327 4967
                   </a>
                 </div>

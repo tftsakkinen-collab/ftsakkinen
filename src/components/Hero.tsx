@@ -52,8 +52,8 @@ export default function Hero() {
           <div className="lg:col-span-7 space-y-6 text-left">
             
             {/* Clean Authoritative Top Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider backdrop-blur-md shadow-[0_0_15px_rgba(0,174,239,0.2)]">
-              <Sparkles className="w-4 h-4 text-[#00AEEF]" />
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#67e8f9] text-xs font-bold uppercase tracking-wider backdrop-blur-md shadow-[0_0_15px_rgba(0,174,239,0.2)]">
+              <Sparkles className="w-4 h-4 text-[#67e8f9]" />
               <span>Laillistettu OMT-Fysioterapeutti • Purentaelimistön Asiantuntija</span>
             </div>
 
@@ -70,15 +70,15 @@ export default function Hero() {
             {/* Authority Pills */}
             <div className="pt-2 flex flex-wrap items-center gap-2.5 text-xs text-slate-300">
               <div className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#00122e] border border-[#0C66B4]/60 shadow-sm">
-                <ShieldCheck className="w-4 h-4 text-[#00AEEF] shrink-0" />
+                <ShieldCheck className="w-4 h-4 text-[#67e8f9] shrink-0" />
                 <span>Valvira / Terhikki -rekisteröity OMT-fysioterapeutti</span>
               </div>
               <div className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#00122e] border border-[#0C66B4]/60 shadow-sm">
-                <GraduationCap className="w-4 h-4 text-[#00AEEF] shrink-0" />
+                <GraduationCap className="w-4 h-4 text-[#67e8f9] shrink-0" />
                 <span>Oulun yliopiston opettaja (Hammaslääketiede 2017–)</span>
               </div>
               <div className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#00122e] border border-[#0C66B4]/60 shadow-sm">
-                <Award className="w-4 h-4 text-[#00AEEF] shrink-0" />
+                <Award className="w-4 h-4 text-[#67e8f9] shrink-0" />
                 <span>SOMTY OMT -erikoistumiskoulutus</span>
               </div>
             </div>
@@ -97,7 +97,7 @@ export default function Hero() {
                 href="/videot"
                 className="px-8 py-4 rounded-xl bg-[#00122e] border border-[#0C66B4] text-white font-bold text-base hover:border-[#00AEEF] hover:bg-[#014489]/30 hover:shadow-[0_0_20px_rgba(0,174,239,0.25)] transition-all duration-300 flex items-center justify-center gap-2 text-center"
               >
-                <Play className="w-4 h-4 text-[#00AEEF] fill-[#00AEEF]" />
+                <Play className="w-4 h-4 text-[#67e8f9] fill-[#00AEEF]" />
                 <span>Katso {SITE_CONFIG.totalVideosCount} ilmaista videota</span>
               </Link>
             </div>
@@ -130,7 +130,7 @@ export default function Hero() {
 
                 {/* Floating Top Badges */}
                 <div className="absolute top-3 left-3 right-3 flex items-center justify-between gap-2">
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#000e24]/90 backdrop-blur-md border border-[#00AEEF]/40 text-[#00AEEF] text-[11px] font-bold shadow-md">
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#000e24]/90 backdrop-blur-md border border-[#00AEEF]/40 text-[#67e8f9] text-[11px] font-bold shadow-md">
                     <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                     <span>Vastaanotto Oulussa &amp; Etänä</span>
                   </div>
@@ -145,9 +145,9 @@ export default function Hero() {
                 <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 p-4 rounded-2xl bg-[#000e24]/95 backdrop-blur-xl border border-[#0C66B4]/70 space-y-1 shadow-2xl">
                   <div className="flex items-center justify-between">
                     <h3 className="text-base sm:text-lg font-bold text-white leading-snug">Janne Säkkinen</h3>
-                    <span className="text-[10px] uppercase font-bold text-[#00AEEF] bg-[#014489]/40 border border-[#00AEEF]/30 px-2 py-0.5 rounded-md">OMT</span>
+                    <span className="text-[10px] uppercase font-bold text-[#67e8f9] bg-[#014489]/40 border border-[#00AEEF]/30 px-2 py-0.5 rounded-md">OMT</span>
                   </div>
-                  <p className="text-[11px] sm:text-xs text-[#00AEEF] font-semibold">OMT-Fysioterapeutti &amp; Luennoitsija</p>
+                  <p className="text-[11px] sm:text-xs text-[#67e8f9] font-semibold">OMT-Fysioterapeutti &amp; Luennoitsija</p>
                   <p className="text-[10px] sm:text-[11px] text-slate-300 leading-tight font-normal">
                     Tiedottajanne Oy • Erityisosaamisena purentaelimistön fysioterapia (TMD) &amp; TULE-vaivat.
                   </p>
@@ -164,11 +164,11 @@ export default function Hero() {
             const Icon = stat.icon;
             return (
               <div key={idx} className="flex items-center gap-3 sm:gap-4 p-2 sm:p-3 rounded-2xl bg-[#000814]/60 border border-[#0C66B4]/40 hover:border-[#00AEEF]/50 transition-all duration-300 min-w-0 group">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-[#014489]/40 border border-[#00AEEF]/40 text-[#00AEEF] flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:shadow-[0_0_15px_rgba(0,174,239,0.4)] transition-all">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-[#014489]/40 border border-[#00AEEF]/40 text-[#67e8f9] flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:shadow-[0_0_15px_rgba(0,174,239,0.4)] transition-all">
                   <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <div className="min-w-0 flex-1">
-                  <div className="text-xs sm:text-base md:text-lg font-extrabold text-white leading-tight font-display break-words group-hover:text-[#00AEEF] transition-colors">
+                  <div className="text-xs sm:text-base md:text-lg font-extrabold text-white leading-tight font-display break-words group-hover:text-[#67e8f9] transition-colors">
                     {stat.label}
                   </div>
                   <div className="text-[10px] sm:text-xs text-slate-400 leading-tight mt-0.5 font-medium">

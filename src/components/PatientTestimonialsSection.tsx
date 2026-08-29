@@ -53,8 +53,8 @@ export default function PatientTestimonialsSection() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14 relative z-10">
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
-            <HeartPulse className="w-4 h-4 text-[#00AEEF]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#67e8f9] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+            <HeartPulse className="w-4 h-4 text-[#67e8f9]" />
             <span>Aitoja Potilaskokemuksia</span>
           </div>
 
@@ -86,10 +86,10 @@ export default function PatientTestimonialsSection() {
               </div>
 
               <div className="pt-4 border-t border-[#0C66B4]/30 space-y-1.5 w-full text-center">
-                <div className="text-sm font-bold text-white group-hover:text-[#00AEEF] transition-colors text-center">
+                <div className="text-sm font-bold text-white group-hover:text-[#67e8f9] transition-colors text-center">
                   {review.name}
                 </div>
-                <div className="text-xs text-[#00AEEF] font-semibold text-center px-2 py-0.5 rounded-full bg-[#014489]/30 inline-block border border-[#00AEEF]/20">
+                <div className="text-xs text-[#67e8f9] font-semibold text-center px-2 py-0.5 rounded-full bg-[#014489]/30 inline-block border border-[#00AEEF]/20">
                   {review.condition}
                 </div>
               </div>

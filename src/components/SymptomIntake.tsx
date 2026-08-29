@@ -68,7 +68,7 @@ export default function SymptomIntake() {
         
         {/* Title */}
         <div className="text-center space-y-3 max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#67e8f9] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Älykäs Oirekartoitus</span>
           </div>
@@ -100,11 +100,11 @@ export default function SymptomIntake() {
                 
                 <div className="space-y-2.5">
                   <div className="text-3xl filter drop-shadow">{item.icon}</div>
-                  <h3 className="text-base font-bold text-white leading-snug group-hover:text-[#00AEEF] transition-colors">{item.title}</h3>
+                  <h3 className="text-base font-bold text-white leading-snug group-hover:text-[#67e8f9] transition-colors">{item.title}</h3>
                   <p className="text-xs text-slate-300 leading-relaxed font-normal">{item.description}</p>
                 </div>
 
-                <div className="flex items-center justify-between pt-2 border-t border-white/5 text-xs font-bold text-[#00AEEF]">
+                <div className="flex items-center justify-between pt-2 border-t border-white/5 text-xs font-bold text-[#67e8f9]">
                   <span className="flex items-center gap-1.5">
                     <Activity className="w-3.5 h-3.5" />
                     {isSelected ? "Valittu oire" : "Katso täsmäohjeet"}
@@ -120,8 +120,8 @@ export default function SymptomIntake() {
         <div className="rounded-3xl bg-gradient-to-b from-[#001433] to-[#000a18] border-2 border-[#00AEEF]/50 p-6 md:p-8 space-y-6 shadow-2xl shadow-cyan-950/40 relative">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b border-[#0C66B4]/30 pb-5">
             <div>
-              <div className="flex items-center gap-2 text-xs font-bold text-[#00AEEF] uppercase tracking-wider mb-1">
-                <CheckCircle2 className="w-4 h-4 text-[#00AEEF]" />
+              <div className="flex items-center gap-2 text-xs font-bold text-[#67e8f9] uppercase tracking-wider mb-1">
+                <CheckCircle2 className="w-4 h-4 text-[#67e8f9]" />
                 <span>Suositeltu Fysioterapiaopas</span>
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-white">{activeOption.videoTitle}</h3>

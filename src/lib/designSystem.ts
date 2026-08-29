@@ -25,8 +25,8 @@ export const DESIGN_TOKENS = {
     innerBox: "p-4 rounded-xl bg-[#00050f] border border-[#0C66B4]/30",
   },
   badge: {
-    cyan: "inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0C66B4]/20 border border-[#00AEEF]/40 text-[#00AEEF] text-xs font-bold uppercase tracking-wider",
-    tag: "text-[11px] font-semibold tracking-wider text-[#00AEEF] uppercase bg-[#0C66B4]/20 px-2.5 py-1 rounded-md border border-[#00AEEF]/30",
+    cyan: "inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0C66B4]/20 border border-[#00AEEF]/40 text-[#67e8f9] text-xs font-bold uppercase tracking-wider",
+    tag: "text-[11px] font-semibold tracking-wider text-[#67e8f9] uppercase bg-[#0C66B4]/20 px-2.5 py-1 rounded-md border border-[#00AEEF]/30",
   },
   button: {
     primary: "py-3 px-6 rounded-xl bg-[#00AEEF] text-black font-bold text-sm hover:bg-[#33C2F5] transition-all shadow-[0_0_15px_rgba(0,174,239,0.4)] flex items-center justify-center gap-2",

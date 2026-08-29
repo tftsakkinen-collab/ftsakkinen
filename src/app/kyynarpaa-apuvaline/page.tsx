@@ -35,8 +35,8 @@ export default function KyynarpaaApuvalinePage() {
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 text-center relative z-10">
         
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
-          <PackageCheck className="w-4 h-4 text-[#00AEEF]" />
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#67e8f9] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+          <PackageCheck className="w-4 h-4 text-[#67e8f9]" />
           <span>Kuntoutusapuväline • Kyynärvarsitreenari</span>
         </div>
 
@@ -51,7 +51,7 @@ export default function KyynarpaaApuvalinePage() {
         {/* Feature Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 text-left max-w-2xl mx-auto">
           <div className="p-6 sm:p-7 rounded-3xl bg-[#00122e] border border-[#0C66B4]/50 space-y-3 shadow-panel hover:border-[#00AEEF]/50 transition-colors">
-            <div className="w-10 h-10 rounded-xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center border border-[#00AEEF]/30">
+            <div className="w-10 h-10 rounded-xl bg-[#00AEEF]/20 text-[#67e8f9] flex items-center justify-center border border-[#00AEEF]/30">
               <Repeat className="w-5 h-5" />
             </div>
             <h3 className="text-base font-bold text-white leading-snug">Sisä- ja ulkokierto vastuksella</h3>
@@ -61,7 +61,7 @@ export default function KyynarpaaApuvalinePage() {
           </div>
 
           <div className="p-6 sm:p-7 rounded-3xl bg-[#00122e] border border-[#0C66B4]/50 space-y-3 shadow-panel hover:border-[#00AEEF]/50 transition-colors">
-            <div className="w-10 h-10 rounded-xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center border border-[#00AEEF]/30">
+            <div className="w-10 h-10 rounded-xl bg-[#00AEEF]/20 text-[#67e8f9] flex items-center justify-center border border-[#00AEEF]/30">
               <ShieldCheck className="w-5 h-5" />
             </div>
             <h3 className="text-base font-bold text-white leading-snug">Toimitus kotiin</h3>

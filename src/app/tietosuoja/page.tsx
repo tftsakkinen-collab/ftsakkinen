@@ -11,8 +11,8 @@ export default function PrivacyPage() {
         
         {/* Header */}
         <div className="space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
-            <FileText className="w-4 h-4 text-[#00AEEF]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#67e8f9] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+            <FileText className="w-4 h-4 text-[#67e8f9]" />
             <span>Oikeudelliset tiedot</span>
           </div>
 
@@ -26,7 +26,7 @@ export default function PrivacyPage() {
           {/* Medical Disclaimer */}
           <section className="space-y-3">
             <h2 className="text-xl font-display font-bold text-white flex items-center gap-2">
-              <ShieldCheck className="w-5 h-5 text-[#00AEEF]" />
+              <ShieldCheck className="w-5 h-5 text-[#67e8f9]" />
               <span>1. Lääketieteellinen vastuuvapauslausuma (Medical Disclaimer)</span>
             </h2>
             <p>

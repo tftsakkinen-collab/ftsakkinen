@@ -103,8 +103,8 @@ export default function EmailLeadForm({
               <img src="/logo-whitebg.png" alt="FT Säkkinen logo" className="w-full h-full object-contain rounded-full" />
             </div>
           </div>
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
-            <Sparkles className="w-4 h-4 text-[#00AEEF]" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#67e8f9] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+            <Sparkles className="w-4 h-4 text-[#67e8f9]" />
             <span>Maksuton Liidipalkkio &amp; Erikoisvideot</span>
           </div>
 
@@ -132,12 +132,12 @@ export default function EmailLeadForm({
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#000d21] via-black/40 to-transparent" />
                       
-                      <div className="absolute top-2.5 left-2.5 px-2.5 py-1 rounded-full bg-[#000814]/90 border border-[#00AEEF]/50 text-[#00AEEF] text-[10px] font-bold uppercase tracking-wider backdrop-blur-md">
+                      <div className="absolute top-2.5 left-2.5 px-2.5 py-1 rounded-full bg-[#000814]/90 border border-[#00AEEF]/50 text-[#67e8f9] text-[10px] font-bold uppercase tracking-wider backdrop-blur-md">
                         {video.badge}
                       </div>
 
                       <div className="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-between text-xs text-white font-medium bg-[#000814]/85 backdrop-blur-md px-3 py-1.5 rounded-xl border border-[#0C66B4]/40">
-                        <span className="flex items-center gap-1.5 text-[#00AEEF] font-bold text-[11px]">
+                        <span className="flex items-center gap-1.5 text-[#67e8f9] font-bold text-[11px]">
                           <Play className="w-3.5 h-3.5 fill-[#00AEEF]" />
                           Erikoisvideo #{idx + 1}
                         </span>
@@ -146,7 +146,7 @@ export default function EmailLeadForm({
                     </div>
 
                     <div className="p-4 space-y-2">
-                      <h3 className="text-sm font-bold text-white leading-snug group-hover:text-[#00AEEF] transition-colors">
+                      <h3 className="text-sm font-bold text-white leading-snug group-hover:text-[#67e8f9] transition-colors">
                         {video.title}
                       </h3>
                       <p className="text-xs text-slate-300 leading-relaxed font-normal">
@@ -156,7 +156,7 @@ export default function EmailLeadForm({
                   </div>
 
                   <div className="px-4 pb-4">
-                    <div className="w-full py-2 px-3 rounded-xl bg-[#014489]/25 border border-[#0C66B4]/40 text-center text-[11px] text-[#00AEEF] font-semibold">
+                    <div className="w-full py-2 px-3 rounded-xl bg-[#014489]/25 border border-[#0C66B4]/40 text-center text-[11px] text-[#67e8f9] font-semibold">
                       ✔ Saatavilla heti liittymisen jälkeen
                     </div>
                   </div>
@@ -166,8 +166,8 @@ export default function EmailLeadForm({
 
             {/* Form Box */}
             <form onSubmit={handleSubmit} className="p-6 sm:p-8 md:p-10 rounded-3xl bg-[#00122e]/95 border-2 border-[#00AEEF] space-y-6 shadow-[0_0_50px_rgba(0,174,239,0.3)] backdrop-blur-md">
-              <div className="flex items-center gap-2 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
-                <Gift className="w-4 h-4 text-[#00AEEF]" />
+              <div className="flex items-center gap-2 text-[#67e8f9] text-xs font-bold uppercase tracking-wider">
+                <Gift className="w-4 h-4 text-[#67e8f9]" />
                 <span>Liity sähköpostilistalle – Avaa 4 erikoisvideota &amp; Drive-oppaat</span>
               </div>
 
@@ -212,7 +212,7 @@ export default function EmailLeadForm({
 
               <div className="flex flex-wrap items-center justify-center gap-6 pt-2 text-xs text-slate-400 font-medium">
                 <span className="flex items-center gap-1.5">
-                  <ShieldCheck className="w-4 h-4 text-[#00AEEF]" />
+                  <ShieldCheck className="w-4 h-4 text-[#67e8f9]" />
                   Suorat videolinkit sähköpostiisi
                 </span>
                 <span>•</span>
@@ -226,7 +226,7 @@ export default function EmailLeadForm({
           /* Instant Unlock View */
           <div className="p-8 sm:p-12 rounded-3xl bg-[#00122e] border-2 border-[#00AEEF] space-y-10 shadow-[0_0_50px_rgba(0,174,239,0.3)]">
             <div className="text-center space-y-4">
-              <div className="w-16 h-16 rounded-full bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center mx-auto border border-[#00AEEF]/50 shadow-[0_0_20px_rgba(0,174,239,0.5)]">
+              <div className="w-16 h-16 rounded-full bg-[#00AEEF]/20 text-[#67e8f9] flex items-center justify-center mx-auto border border-[#00AEEF]/50 shadow-[0_0_20px_rgba(0,174,239,0.5)]">
                 <CheckCircle2 className="w-10 h-10" />
               </div>
 
@@ -234,7 +234,7 @@ export default function EmailLeadForm({
                 Kiitos liittymisestä{name ? `, ${name}` : ""}!
               </h3>
               <p className="text-slate-300 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
-                Sähköpostiosoitteesi <strong className="text-[#00AEEF]">{email}</strong> on lisätty listalle. Videolinkit on lähetetty sähköpostiisi, ja voit lisäksi katsoa kaikki 4 erikoisvideota tästä suoraan:
+                Sähköpostiosoitteesi <strong className="text-[#67e8f9]">{email}</strong> on lisätty listalle. Videolinkit on lähetetty sähköpostiisi, ja voit lisäksi katsoa kaikki 4 erikoisvideota tästä suoraan:
               </p>
             </div>
 
@@ -253,7 +253,7 @@ export default function EmailLeadForm({
                       />
                     </div>
                     <div>
-                      <span className="text-[10px] font-bold text-[#00AEEF] uppercase tracking-wider block">
+                      <span className="text-[10px] font-bold text-[#67e8f9] uppercase tracking-wider block">
                         Osa {idx + 1} / 4
                       </span>
                       <h4 className="text-sm font-bold text-white leading-snug mt-1">
@@ -269,7 +269,7 @@ export default function EmailLeadForm({
                     href={video.youtubeUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-[#014489]/40 border border-[#0C66B4] text-white font-semibold text-xs hover:border-[#00AEEF] hover:text-[#00AEEF] transition-all w-full text-center mt-2"
+                    className="inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-[#014489]/40 border border-[#0C66B4] text-white font-semibold text-xs hover:border-[#00AEEF] hover:text-[#67e8f9] transition-all w-full text-center mt-2"
                   >
                     <span>Katso YouTubessa</span>
                     <ExternalLink className="w-3.5 h-3.5" />
@@ -281,7 +281,7 @@ export default function EmailLeadForm({
             {/* Extra Google Drive Link */}
             <div className="pt-6 border-t border-[#0C66B4]/40 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
               <div className="flex items-center gap-3">
-                <FolderDown className="w-6 h-6 text-[#00AEEF] shrink-0" />
+                <FolderDown className="w-6 h-6 text-[#67e8f9] shrink-0" />
                 <div>
                   <h4 className="text-sm font-bold text-white">Haluatko myös ladattavat PDF-kuntoutusoppaat?</h4>
                   <p className="text-xs text-slate-300">Google Drive -kansiosta löydät kaikki Janne Säkkisen kirjalliset ohjeet.</p>

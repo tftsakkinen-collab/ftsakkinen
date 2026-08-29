@@ -50,16 +50,16 @@ export default function TrainingsSection() {
 
           <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#0C66B4]/40 pb-6 relative z-10">
             <div className="flex flex-wrap items-center gap-3">
-              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/50 border border-[#00AEEF] text-[#00AEEF] text-xs font-bold uppercase tracking-wider shadow-sm">
+              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/50 border border-[#00AEEF] text-[#67e8f9] text-xs font-bold uppercase tracking-wider shadow-sm">
                 <Sparkles className="w-3.5 h-3.5" />
                 Suomenkielinen Koulutuspaketti (Tulossa)
               </span>
               <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#001026] border border-[#0C66B4] text-slate-200 text-xs font-semibold">
-                <Video className="w-3.5 h-3.5 text-[#00AEEF]" />
+                <Video className="w-3.5 h-3.5 text-[#67e8f9]" />
                 Tiedottajanne Oy
               </span>
             </div>
-            <span className="text-xs font-mono text-[#00AEEF] bg-[#000814] px-3.5 py-1.5 rounded-xl border border-[#0C66B4]/60 shadow-inner">
+            <span className="text-xs font-mono text-[#67e8f9] bg-[#000814] px-3.5 py-1.5 rounded-xl border border-[#0C66B4]/60 shadow-inner">
               SOTE- &amp; Terveysammattilaisille
             </span>
           </div>
@@ -75,19 +75,19 @@ export default function TrainingsSection() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                 <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-200">
-                  <CheckCircle2 className="w-4 h-4 text-[#00AEEF] shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-[#67e8f9] shrink-0" />
                   <span>Erotusdiagnostiikka &amp; leukanivelen palpaatio</span>
                 </div>
                 <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-200">
-                  <CheckCircle2 className="w-4 h-4 text-[#00AEEF] shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-[#67e8f9] shrink-0" />
                   <span>Manuaalinen terapia &amp; harjoiteprogressiot</span>
                 </div>
                 <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-200">
-                  <CheckCircle2 className="w-4 h-4 text-[#00AEEF] shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-[#67e8f9] shrink-0" />
                   <span>Kliiniset oppaat &amp; Valvira-yhteensopivat materiaalit</span>
                 </div>
                 <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-200">
-                  <CheckCircle2 className="w-4 h-4 text-[#00AEEF] shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-[#67e8f9] shrink-0" />
                   <span>Helppo Stripe-verkkomaksu &amp; instant pääsy</span>
                 </div>
               </div>
@@ -111,8 +111,8 @@ export default function TrainingsSection() {
         {/* Section 1: What Workshops & Lectures Janne Teaches */}
         <div className="space-y-12">
           <div className="text-center max-w-3xl mx-auto space-y-4">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
-              <GraduationCap className="w-4 h-4 text-[#00AEEF]" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#67e8f9] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+              <GraduationCap className="w-4 h-4 text-[#67e8f9]" />
               <span>Opetustyö &amp; Luennointi</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-white tracking-tight leading-tight">
@@ -131,14 +131,14 @@ export default function TrainingsSection() {
                   key={idx}
                   className="p-8 rounded-3xl bg-[#00122e]/90 border border-[#0C66B4]/50 space-y-5 shadow-xl hover:border-[#00AEEF] hover:-translate-y-1.5 transition-all duration-300 group backdrop-blur-md"
                 >
-                  <div className="w-12 h-12 rounded-2xl bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] flex items-center justify-center group-hover:scale-110 group-hover:shadow-[0_0_15px_rgba(0,174,239,0.4)] transition-all">
+                  <div className="w-12 h-12 rounded-2xl bg-[#014489]/40 border border-[#00AEEF]/50 text-[#67e8f9] flex items-center justify-center group-hover:scale-110 group-hover:shadow-[0_0_15px_rgba(0,174,239,0.4)] transition-all">
                     <Icon className="w-6 h-6" />
                   </div>
                   <div className="space-y-1.5">
-                    <span className="text-xs font-bold text-[#00AEEF] uppercase tracking-wider block">
+                    <span className="text-xs font-bold text-[#67e8f9] uppercase tracking-wider block">
                       {item.target}
                     </span>
-                    <h3 className="text-xl font-bold text-white tracking-tight leading-snug group-hover:text-[#00AEEF] transition-colors">
+                    <h3 className="text-xl font-bold text-white tracking-tight leading-snug group-hover:text-[#67e8f9] transition-colors">
                       {item.title}
                     </h3>
                   </div>
@@ -154,8 +154,8 @@ export default function TrainingsSection() {
         {/* Section 2: Top CV Highlights */}
         <div className="pt-12 border-t border-[#0C66B4]/30 space-y-12">
           <div className="text-center max-w-3xl mx-auto space-y-4">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
-              <Briefcase className="w-4 h-4 text-[#00AEEF]" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#67e8f9] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+              <Briefcase className="w-4 h-4 text-[#67e8f9]" />
               <span>Ansioluettelo &amp; Kliininen Kokemus</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-white tracking-tight leading-tight">
@@ -168,7 +168,7 @@ export default function TrainingsSection() {
             {/* Degrees & Basic Education */}
             <div className="lg:col-span-6 space-y-6">
               <h3 className="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
-                <GraduationCap className="w-6 h-6 text-[#00AEEF]" />
+                <GraduationCap className="w-6 h-6 text-[#67e8f9]" />
                 <span>Tutkinnot &amp; Erikoistuminen</span>
               </h3>
 
@@ -178,7 +178,7 @@ export default function TrainingsSection() {
                     key={idx}
                     className="p-6 rounded-2xl bg-[#00122e]/90 border border-[#0C66B4]/50 space-y-2 hover:border-[#00AEEF]/60 transition-all shadow-sm"
                   >
-                    <div className="flex items-center justify-between text-xs text-[#00AEEF] font-mono">
+                    <div className="flex items-center justify-between text-xs text-[#67e8f9] font-mono">
                       <span>{deg.duration}</span>
                       <ShieldCheck className="w-4 h-4" />
                     </div>
@@ -192,7 +192,7 @@ export default function TrainingsSection() {
             {/* Clinical Work Experience */}
             <div className="lg:col-span-6 space-y-6">
               <h3 className="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
-                <Briefcase className="w-6 h-6 text-[#00AEEF]" />
+                <Briefcase className="w-6 h-6 text-[#67e8f9]" />
                 <span>Kliininen Työkokemus</span>
               </h3>
 
@@ -206,7 +206,7 @@ export default function TrainingsSection() {
                       <h4 className="text-base font-bold text-white leading-snug">{work.title}</h4>
                       <p className="text-xs sm:text-sm text-slate-300">{work.organization}</p>
                     </div>
-                    <span className="text-xs font-mono text-[#00AEEF] px-2 py-1 rounded bg-[#000814] border border-[#0C66B4]/40 shrink-0">{work.period}</span>
+                    <span className="text-xs font-mono text-[#67e8f9] px-2 py-1 rounded bg-[#000814] border border-[#0C66B4]/40 shrink-0">{work.period}</span>
                   </div>
                 ))}
               </div>
@@ -219,8 +219,8 @@ export default function TrainingsSection() {
         <div className="pt-12 border-t border-[#0C66B4]/30 space-y-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div>
-              <div className="inline-flex items-center gap-2 text-[#00AEEF] text-xs font-bold uppercase tracking-widest">
-                <FileCheck className="w-4 h-4 text-[#00AEEF]" />
+              <div className="inline-flex items-center gap-2 text-[#67e8f9] text-xs font-bold uppercase tracking-widest">
+                <FileCheck className="w-4 h-4 text-[#67e8f9]" />
                 <span>Pätevyydet &amp; Erikoistumiset</span>
               </div>
               <h3 className="text-2xl sm:text-3xl font-display font-extrabold text-white tracking-tight mt-1">
@@ -235,11 +235,11 @@ export default function TrainingsSection() {
                 key={idx}
                 className="p-4 sm:p-5 rounded-2xl bg-[#00122e]/80 border border-[#0C66B4]/40 flex items-start gap-3.5 transition-all duration-300 hover:border-[#00AEEF] hover:bg-[#00183c]"
               >
-                <CheckCircle2 className="w-5 h-5 text-[#00AEEF] shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-5 h-5 text-[#67e8f9] shrink-0 mt-0.5" />
                 <div className="space-y-1">
                   <h4 className="text-xs sm:text-sm font-bold text-white leading-snug">{cert.title}</h4>
                   <p className="text-[11px] text-slate-400">{cert.instructorOrOrg}</p>
-                  <span className="text-[10px] font-mono text-[#00AEEF] block">{cert.year}</span>
+                  <span className="text-[10px] font-mono text-[#67e8f9] block">{cert.year}</span>
                 </div>
               </div>
             ))}
@@ -265,7 +265,7 @@ export default function TrainingsSection() {
 
             <Link
               href="/tietoa-minusta"
-              className="inline-flex items-center gap-2 px-6 py-4 rounded-xl bg-[#00122e] border border-[#0C66B4]/60 text-white font-bold text-sm hover:border-[#00AEEF] hover:text-[#00AEEF] transition-all duration-300"
+              className="inline-flex items-center gap-2 px-6 py-4 rounded-xl bg-[#00122e] border border-[#0C66B4]/60 text-white font-bold text-sm hover:border-[#00AEEF] hover:text-[#67e8f9] transition-all duration-300"
             >
               <span>Lue koko ammatillinen filosofia &amp; tausta</span>
               <ArrowRight className="w-4 h-4" />

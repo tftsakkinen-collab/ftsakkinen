@@ -42,7 +42,7 @@ export default function SymptomQuiz() {
                 <img src="/logo.jpg" alt="Logo" className="w-full h-full object-contain rounded-xl" />
               </div>
             </div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#67e8f9] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
               <Sparkles className="w-3.5 h-3.5" />
               <span>1 Minuutin Interaktiivinen Oiretesti</span>
             </div>
@@ -74,7 +74,7 @@ export default function SymptomQuiz() {
                     className="p-5 rounded-2xl bg-[#000814] border border-[#0C66B4]/60 text-white font-semibold text-sm hover:border-[#00AEEF] hover:bg-[#014489]/20 transition-all text-left flex items-center justify-between group cursor-pointer shadow-sm hover:-translate-y-0.5"
                   >
                     <span>{item.label}</span>
-                    <ArrowRight className="w-4 h-4 text-[#00AEEF] group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-4 h-4 text-[#67e8f9] group-hover:translate-x-1 transition-transform" />
                   </button>
                 ))}
               </div>
@@ -108,14 +108,14 @@ export default function SymptomQuiz() {
           {/* Quiz Result View */}
           {submitted && (
             <div className="space-y-6 text-center animate-fadeIn">
-              <div className="inline-flex items-center gap-2 text-[#00AEEF] font-bold text-sm">
+              <div className="inline-flex items-center gap-2 text-[#67e8f9] font-bold text-sm">
                 <CheckCircle2 className="w-5 h-5 text-emerald-400" />
                 <span>Testi suoritettu! Suosituksesi on valmis.</span>
               </div>
 
               <div className="p-6 sm:p-8 rounded-2xl bg-[#000814] border border-[#00AEEF]/50 text-left space-y-4 shadow-xl">
                 <h4 className="text-xl font-display font-bold text-white">
-                  Suositeltu kuntoutuspolku: <span className="text-[#00AEEF]">{symptom}</span>
+                  Suositeltu kuntoutuspolku: <span className="text-[#67e8f9]">{symptom}</span>
                 </h4>
                 <p className="text-sm text-slate-300 leading-relaxed font-normal">
                   Perustuen valitsemaasi oirealueeseen ({symptom}, kesto: {duration}), suosittelemme aloittamaan tutustumalla <strong className="text-white">ilmaisiin opas-PDF-materiaaleihin</strong> sekä katsomalla täsmävideot aiheesta.
@@ -132,7 +132,7 @@ export default function SymptomQuiz() {
 
                   <Link
                     href="/videot"
-                    className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-[#014489]/30 border border-[#00AEEF]/50 text-[#00AEEF] font-bold text-sm hover:bg-[#00AEEF] hover:text-[#000a18] transition-all flex items-center justify-center gap-2"
+                    className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-[#014489]/30 border border-[#00AEEF]/50 text-[#67e8f9] font-bold text-sm hover:bg-[#00AEEF] hover:text-[#000a18] transition-all flex items-center justify-center gap-2"
                   >
                     <Play className="w-4 h-4" />
                     <span>Katso Ilmaiset Videot</span>
@@ -142,7 +142,7 @@ export default function SymptomQuiz() {
 
               <button
                 onClick={handleReset}
-                className="inline-flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-[#00AEEF] transition-colors cursor-pointer"
+                className="inline-flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-[#67e8f9] transition-colors cursor-pointer"
               >
                 <RefreshCw className="w-3.5 h-3.5" />
                 <span>Tee testi uudelleen</span>

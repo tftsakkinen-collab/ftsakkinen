@@ -52,8 +52,8 @@ export default function LeukanivelCourseCard() {
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         {/* Left Info Column */}
         <div className="lg:col-span-7 space-y-6">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
-            <Sparkles className="w-4 h-4 text-[#00AEEF]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#67e8f9] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+            <Sparkles className="w-4 h-4 text-[#67e8f9]" />
             <span>Terveydenhuollon Ammattilaisille (SOTE &amp; Fysioterapeutit)</span>
           </div>
 
@@ -71,7 +71,7 @@ export default function LeukanivelCourseCard() {
             <h3 className="text-xs uppercase font-bold text-slate-400 tracking-wider">Ammattilaispaketti sisältää:</h3>
             <ul className="space-y-3.5 text-sm text-slate-200">
               <li className="flex items-start gap-3">
-                <div className="p-1.5 rounded-xl bg-[#00AEEF]/20 text-[#00AEEF] mt-0.5 border border-[#00AEEF]/30">
+                <div className="p-1.5 rounded-xl bg-[#00AEEF]/20 text-[#67e8f9] mt-0.5 border border-[#00AEEF]/30">
                   <FileText className="w-4 h-4" />
                 </div>
                 <div>
@@ -79,7 +79,7 @@ export default function LeukanivelCourseCard() {
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <div className="p-1.5 rounded-xl bg-[#00AEEF]/20 text-[#00AEEF] mt-0.5 border border-[#00AEEF]/30">
+                <div className="p-1.5 rounded-xl bg-[#00AEEF]/20 text-[#67e8f9] mt-0.5 border border-[#00AEEF]/30">
                   <Video className="w-4 h-4" />
                 </div>
                 <div>
@@ -87,7 +87,7 @@ export default function LeukanivelCourseCard() {
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <div className="p-1.5 rounded-xl bg-[#00AEEF]/20 text-[#00AEEF] mt-0.5 border border-[#00AEEF]/30">
+                <div className="p-1.5 rounded-xl bg-[#00AEEF]/20 text-[#67e8f9] mt-0.5 border border-[#00AEEF]/30">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400" />
                 </div>
                 <div>
@@ -104,7 +104,7 @@ export default function LeukanivelCourseCard() {
             <span className="text-xs uppercase font-bold text-slate-400 tracking-wider">Hinta (yksittäinen henkilö)</span>
             <div className="flex items-baseline justify-center gap-1">
               <span className="text-4xl sm:text-5xl font-display font-extrabold text-white">119</span>
-              <span className="text-2xl font-bold text-[#00AEEF]">€</span>
+              <span className="text-2xl font-bold text-[#67e8f9]">€</span>
               <span className="text-xs text-slate-400 ml-1 font-mono">(sis. ALV)</span>
             </div>
             <p className="text-xs text-slate-400 pt-1">Luo heti pääsyn PDF-dioihin ja opetusvideoon</p>

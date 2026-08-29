@@ -29,11 +29,11 @@ export default function FysioAiHaku() {
   return (
     <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#00122e] via-[#00183c] to-[#00122e] border-2 border-[#00AEEF]/50 shadow-2xl shadow-cyan-950/30 space-y-6 backdrop-blur-md">
       <div className="flex items-center gap-3">
-        <div className="w-11 h-11 rounded-2xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center shrink-0 border border-[#00AEEF]/30 shadow-sm">
-          <Bot className="w-6 h-6 text-[#00AEEF]" />
+        <div className="w-11 h-11 rounded-2xl bg-[#00AEEF]/20 text-[#67e8f9] flex items-center justify-center shrink-0 border border-[#00AEEF]/30 shadow-sm">
+          <Bot className="w-6 h-6 text-[#67e8f9]" />
         </div>
         <div>
-          <div className="flex items-center gap-2 text-xs font-bold text-[#00AEEF] uppercase tracking-wider">
+          <div className="flex items-center gap-2 text-xs font-bold text-[#67e8f9] uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Fysio-AI Hakubotti</span>
           </div>
@@ -72,11 +72,11 @@ export default function FysioAiHaku() {
                 href={`/videot/${vid.id}`}
                 className="p-4 rounded-2xl bg-[#000814] border border-[#0C66B4]/50 hover:border-[#00AEEF] transition-all flex items-start gap-3 group shadow-sm hover:-translate-y-0.5"
               >
-                <div className="p-2 rounded-xl bg-[#00AEEF]/20 text-[#00AEEF] group-hover:bg-[#00AEEF] group-hover:text-[#000814] transition-colors shrink-0 mt-0.5">
+                <div className="p-2 rounded-xl bg-[#00AEEF]/20 text-[#67e8f9] group-hover:bg-[#00AEEF] group-hover:text-[#000814] transition-colors shrink-0 mt-0.5">
                   <Play className="w-3.5 h-3.5 fill-current" />
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold text-white group-hover:text-[#00AEEF] transition-colors leading-snug">
+                  <h4 className="text-xs font-bold text-white group-hover:text-[#67e8f9] transition-colors leading-snug">
                     {vid.title}
                   </h4>
                   <p className="text-[11px] text-slate-400 line-clamp-2 mt-1 font-normal leading-relaxed">

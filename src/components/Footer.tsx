@@ -20,8 +20,8 @@ export default function Footer() {
                 <img src="/logo-whitebg.png" alt="FT Säkkinen logo" className="w-full h-full object-contain rounded-full" />
               </div>
               <div className="flex flex-col">
-                <span className="font-display text-xl font-bold text-white tracking-wide group-hover:text-[#00AEEF] transition-colors">
-                  FT SÄKKINEN<span className="text-[#00AEEF]">.</span>
+                <span className="font-display text-xl font-bold text-white tracking-wide group-hover:text-[#67e8f9] transition-colors">
+                  FT SÄKKINEN<span className="text-[#67e8f9]">.</span>
                 </span>
                 <span className="text-[10px] text-slate-400 font-medium uppercase tracking-widest -mt-1 font-sans">
                   OMT-Fysioterapeutti
@@ -37,22 +37,22 @@ export default function Footer() {
             <div className="p-4 rounded-2xl bg-[#00122e]/80 border border-[#0C66B4]/40 text-xs space-y-2 text-slate-300 shadow-sm">
               <div className="flex items-center justify-between">
                 <p className="font-bold text-white text-sm">{SITE_CONFIG.companyName}</p>
-                <span className="text-[10px] font-mono text-[#00AEEF] px-2 py-0.5 rounded bg-[#014489]/40 border border-[#00AEEF]/30">Y: 3305813-7</span>
+                <span className="text-[10px] font-mono text-[#67e8f9] px-2 py-0.5 rounded bg-[#014489]/40 border border-[#00AEEF]/30">Y: 3305813-7</span>
               </div>
-              <p className="text-[11px] text-[#00AEEF] font-semibold flex items-center gap-1.5">
+              <p className="text-[11px] text-[#67e8f9] font-semibold flex items-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 shrink-0" />
                 Valvira / Terhikki -rekisteröity OMT-fysioterapeutti
               </p>
               <p className="flex items-center gap-2 text-slate-300">
-                <MapPin className="w-3.5 h-3.5 text-[#00AEEF] shrink-0" />
+                <MapPin className="w-3.5 h-3.5 text-[#67e8f9] shrink-0" />
                 <span>{SITE_CONFIG.streetAddress}</span>
               </p>
               <p className="flex items-center gap-2 text-slate-300">
-                <Phone className="w-3.5 h-3.5 text-[#00AEEF] shrink-0" />
+                <Phone className="w-3.5 h-3.5 text-[#67e8f9] shrink-0" />
                 <a href={`tel:${SITE_CONFIG.contactPhone.replace(/\s+/g, "")}`} className="hover:text-white hover:underline transition-colors">{SITE_CONFIG.contactPhone}</a>
               </p>
               <p className="flex items-center gap-2 text-slate-300">
-                <Mail className="w-3.5 h-3.5 text-[#00AEEF] shrink-0" />
+                <Mail className="w-3.5 h-3.5 text-[#67e8f9] shrink-0" />
                 <a href={`mailto:${SITE_CONFIG.contactEmail}`} className="hover:text-white hover:underline transition-colors">{SITE_CONFIG.contactEmail}</a>
               </p>
             </div>
@@ -63,9 +63,9 @@ export default function Footer() {
                 href={SITE_CONFIG.sisterSiteUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-3 py-2 rounded-xl bg-[#00122e] border border-[#0C66B4]/50 text-xs font-semibold text-[#00AEEF] hover:text-white hover:border-[#00AEEF] hover:bg-[#014489]/40 transition-all duration-300 shadow-sm group/link"
+                className="inline-flex items-center gap-2 px-3 py-2 rounded-xl bg-[#00122e] border border-[#0C66B4]/50 text-xs font-semibold text-[#67e8f9] hover:text-white hover:border-[#00AEEF] hover:bg-[#014489]/40 transition-all duration-300 shadow-sm group/link"
               >
-                <Globe className="w-4 h-4 text-[#00AEEF]" />
+                <Globe className="w-4 h-4 text-[#67e8f9]" />
                 <span>Also available in English → ptsakkinen.com</span>
                 <ArrowUpRight className="w-3 h-3 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
               </a>
@@ -74,7 +74,7 @@ export default function Footer() {
 
           {/* Quick Links (Col 3) */}
           <div className="md:col-span-3 space-y-4">
-            <h4 className="text-xs font-bold text-[#00AEEF] uppercase tracking-wider flex items-center gap-1.5">
+            <h4 className="text-xs font-bold text-[#67e8f9] uppercase tracking-wider flex items-center gap-1.5">
               <span>Navigaatio</span>
             </h4>
             <ul className="space-y-2.5 text-xs font-medium">
@@ -94,7 +94,7 @@ export default function Footer() {
                   <Link
                     href={link.href}
                     className={`transition-all duration-200 hover:translate-x-1 inline-block ${
-                      link.highlight ? "text-[#00AEEF] font-semibold hover:text-[#38bdf8]" : "text-slate-300 hover:text-white"
+                      link.highlight ? "text-[#67e8f9] font-semibold hover:text-[#38bdf8]" : "text-slate-300 hover:text-white"
                     }`}
                   >
                     {link.name}
@@ -106,7 +106,7 @@ export default function Footer() {
 
           {/* Social Channels (Col 4) */}
           <div className="md:col-span-4 space-y-4">
-            <h4 className="text-xs font-bold text-[#00AEEF] uppercase tracking-wider">
+            <h4 className="text-xs font-bold text-[#67e8f9] uppercase tracking-wider">
               Viralliset Some-Kanavat
             </h4>
             <div className="flex flex-col space-y-2.5 text-xs">
@@ -122,7 +122,7 @@ export default function Footer() {
                   </div>
                   <span className="font-semibold">YouTube ({SITE_CONFIG.youtubeHandle})</span>
                 </div>
-                <ArrowUpRight className="w-3.5 h-3.5 text-slate-500 group-hover/soc:text-[#00AEEF] group-hover/soc:translate-x-0.5 transition-all" />
+                <ArrowUpRight className="w-3.5 h-3.5 text-slate-500 group-hover/soc:text-[#67e8f9] group-hover/soc:translate-x-0.5 transition-all" />
               </a>
 
               <a
@@ -137,7 +137,7 @@ export default function Footer() {
                   </div>
                   <span className="font-semibold">Instagram ({SITE_CONFIG.instagramHandle})</span>
                 </div>
-                <ArrowUpRight className="w-3.5 h-3.5 text-slate-500 group-hover/soc:text-[#00AEEF] group-hover/soc:translate-x-0.5 transition-all" />
+                <ArrowUpRight className="w-3.5 h-3.5 text-slate-500 group-hover/soc:text-[#67e8f9] group-hover/soc:translate-x-0.5 transition-all" />
               </a>
 
               <a
@@ -152,7 +152,7 @@ export default function Footer() {
                   </div>
                   <span className="font-semibold">TikTok ({SITE_CONFIG.tiktokHandle})</span>
                 </div>
-                <ArrowUpRight className="w-3.5 h-3.5 text-slate-500 group-hover/soc:text-[#00AEEF] group-hover/soc:translate-x-0.5 transition-all" />
+                <ArrowUpRight className="w-3.5 h-3.5 text-slate-500 group-hover/soc:text-[#67e8f9] group-hover/soc:translate-x-0.5 transition-all" />
               </a>
             </div>
           </div>
@@ -161,7 +161,7 @@ export default function Footer() {
 
         {/* Medical Disclaimer Box */}
         <div className="mt-12 p-5 rounded-2xl bg-[#00122e]/60 border border-[#0C66B4]/40 flex items-start gap-3.5">
-          <ShieldAlert className="w-5 h-5 text-[#00AEEF] shrink-0 mt-0.5" />
+          <ShieldAlert className="w-5 h-5 text-[#67e8f9] shrink-0 mt-0.5" />
           <div className="text-xs text-slate-400 space-y-1 leading-relaxed">
             <p className="font-semibold text-slate-200">Lääketieteellinen vastuuvapauslausuma:</p>
             <p>
@@ -177,8 +177,8 @@ export default function Footer() {
               <CheckCircle2 className="w-3.5 h-3.5 text-amber-400" />
               <span>Valvira / Terhikki</span>
             </div>
-            <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#00122e] border border-[#00AEEF]/40 text-[#00AEEF] text-[11px] font-medium">
-              <ShieldCheck className="w-3.5 h-3.5 text-[#00AEEF]" />
+            <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#00122e] border border-[#00AEEF]/40 text-[#67e8f9] text-[11px] font-medium">
+              <ShieldCheck className="w-3.5 h-3.5 text-[#67e8f9]" />
               <span className="text-slate-300">Rekisteröity OMT-Fysioterapeutti (SOMTY)</span>
             </div>
           </div>

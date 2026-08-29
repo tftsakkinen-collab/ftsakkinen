@@ -41,7 +41,7 @@ export default function TranscriptViewer({ transcript }: TranscriptViewerProps) 
     <div className="space-y-4">
       <div className="flex items-center justify-between border-b border-[#0C66B4]/30 pb-3">
         <div className="flex items-center gap-2 text-white font-display text-2xl">
-          <FileText className="w-6 h-6 text-[#00AEEF]" />
+          <FileText className="w-6 h-6 text-[#67e8f9]" />
           <h2>Videon transkripti ja täydellinen teksti</h2>
         </div>
         <span className="text-xs text-gray-400 font-mono">
@@ -70,7 +70,7 @@ export default function TranscriptViewer({ transcript }: TranscriptViewerProps) 
           <div className="pt-4 text-center border-t border-[#0C66B4]/30">
             <button
               onClick={() => setIsExpanded(true)}
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] hover:bg-[#00AEEF] hover:text-black font-semibold text-xs transition-all shadow-glow"
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#014489]/40 border border-[#00AEEF]/50 text-[#67e8f9] hover:bg-[#00AEEF] hover:text-black font-semibold text-xs transition-all shadow-glow"
             >
               <span>Näytä koko transkripti ({paragraphs.length - initialVisibleCount} lisäkappaletta)</span>
               <ChevronDown className="w-4 h-4" />

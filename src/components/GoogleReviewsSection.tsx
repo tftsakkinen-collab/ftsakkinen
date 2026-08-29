@@ -38,7 +38,7 @@ export default function GoogleReviewsSection() {
         {/* Header with Google Badge */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#0C66B4]/30 pb-8">
           <div className="space-y-3">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#67e8f9] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
               <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
               <span>5.0 / 5.0 ★ Google &amp; Asiakaspalautteet</span>
             </div>
@@ -77,7 +77,7 @@ export default function GoogleReviewsSection() {
                       <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
                     ))}
                   </div>
-                  <span className="px-3 py-1 rounded-full bg-[#014489]/40 border border-[#00AEEF]/30 text-[#00AEEF] text-[11px] font-semibold">
+                  <span className="px-3 py-1 rounded-full bg-[#014489]/40 border border-[#00AEEF]/30 text-[#67e8f9] text-[11px] font-semibold">
                     {rev.badge}
                   </span>
                 </div>
@@ -88,7 +88,7 @@ export default function GoogleReviewsSection() {
               </div>
 
               <div className="pt-4 border-t border-[#0C66B4]/30 flex items-center justify-between text-xs text-slate-400">
-                <span className="font-bold text-white group-hover:text-[#00AEEF] transition-colors">{rev.author}</span>
+                <span className="font-bold text-white group-hover:text-[#67e8f9] transition-colors">{rev.author}</span>
                 <span>{rev.date}</span>
               </div>
             </div>
@@ -99,13 +99,13 @@ export default function GoogleReviewsSection() {
         <div className="p-4 sm:p-5 rounded-2xl bg-[#00122e]/60 border border-[#0C66B4]/40 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-300 backdrop-blur-md">
           <div className="flex items-center gap-2">
             <span className="font-bold text-white">Suora lyhytlinkki potilaille:</span>{" "}
-            <code className="text-[#00AEEF] font-mono px-2 py-1 rounded bg-[#000814] border border-[#0C66B4]/40">ftsakkinen.com/arvostelu</code>
+            <code className="text-[#67e8f9] font-mono px-2 py-1 rounded bg-[#000814] border border-[#0C66B4]/40">ftsakkinen.com/arvostelu</code>
           </div>
           <a
             href={SITE_CONFIG.googleReviewUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#00AEEF] hover:underline font-semibold flex items-center gap-1.5"
+            className="text-[#67e8f9] hover:underline font-semibold flex items-center gap-1.5"
           >
             <span>Avaa Google-arvosteluikkuna</span>
             <ExternalLink className="w-3.5 h-3.5" />

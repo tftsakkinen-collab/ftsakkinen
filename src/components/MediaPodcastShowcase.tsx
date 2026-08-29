@@ -101,8 +101,8 @@ export default function MediaPodcastShowcase() {
         {/* Section Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
           <div className="space-y-4 max-w-2xl text-left">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
-              <Radio className="w-4 h-4 text-[#00AEEF] animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#67e8f9] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+              <Radio className="w-4 h-4 text-[#67e8f9] animate-pulse" />
               <span>Media &amp; Podcast Hub • Suomi &amp; Global</span>
             </div>
 
@@ -181,7 +181,7 @@ export default function MediaPodcastShowcase() {
 
                     <div className="flex items-center gap-2">
                       {item.highlightBadge && (
-                        <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#014489]/50 border border-[#00AEEF]/40 text-[#00AEEF]">
+                        <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#014489]/50 border border-[#00AEEF]/40 text-[#67e8f9]">
                           {item.highlightBadge}
                         </span>
                       )}
@@ -193,10 +193,10 @@ export default function MediaPodcastShowcase() {
 
                   {/* Title & Category */}
                   <div className="space-y-1">
-                    <span className="text-[11px] font-bold text-[#00AEEF] uppercase tracking-wider font-mono">
+                    <span className="text-[11px] font-bold text-[#67e8f9] uppercase tracking-wider font-mono">
                       {item.category}
                     </span>
-                    <h3 className="text-xl sm:text-2xl font-display font-extrabold text-white group-hover:text-[#00AEEF] transition-colors leading-snug">
+                    <h3 className="text-xl sm:text-2xl font-display font-extrabold text-white group-hover:text-[#67e8f9] transition-colors leading-snug">
                       {item.title}
                     </h3>
                   </div>
@@ -232,7 +232,7 @@ export default function MediaPodcastShowcase() {
         {/* Global Multi-Brand Relation Banner */}
         <div className="p-6 sm:p-8 rounded-3xl bg-[#000814] border-2 border-[#00AEEF]/40 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
           <div className="flex items-center gap-4 text-left">
-            <div className="w-12 h-12 rounded-2xl bg-[#014489]/40 border border-[#00AEEF]/40 text-[#00AEEF] flex items-center justify-center shrink-0">
+            <div className="w-12 h-12 rounded-2xl bg-[#014489]/40 border border-[#00AEEF]/40 text-[#67e8f9] flex items-center justify-center shrink-0">
               <Globe className="w-6 h-6" />
             </div>
             <div>
@@ -240,7 +240,7 @@ export default function MediaPodcastShowcase() {
                 Kaksikielinen Digitaalinen Alusta: FT Säkkinen &amp; PT Sakkinen
               </h4>
               <p className="text-xs sm:text-sm text-slate-300 font-normal">
-                Suomenkielinen OMT-vastaanotto Oulussa ja kansainvälinen englanninkielinen TMJ-brändi <span className="text-[#00AEEF] font-semibold">ptsakkinen.com</span>.
+                Suomenkielinen OMT-vastaanotto Oulussa ja kansainvälinen englanninkielinen TMJ-brändi <span className="text-[#67e8f9] font-semibold">ptsakkinen.com</span>.
               </p>
             </div>
           </div>
@@ -253,7 +253,7 @@ export default function MediaPodcastShowcase() {
               className="px-6 py-3 rounded-xl bg-[#00122e] border border-[#0C66B4] text-white hover:border-[#00AEEF] font-bold text-xs transition-all flex items-center gap-2 group"
             >
               <span>Visit ptsakkinen.com (EN)</span>
-              <ArrowRight className="w-4 h-4 text-[#00AEEF] group-hover:translate-x-0.5 transition-transform" />
+              <ArrowRight className="w-4 h-4 text-[#67e8f9] group-hover:translate-x-0.5 transition-transform" />
             </a>
           </div>
         </div>

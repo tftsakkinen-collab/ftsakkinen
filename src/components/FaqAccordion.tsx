@@ -33,8 +33,8 @@ export default function FaqAccordion() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 relative z-10">
         
         <div className="text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
-            <HelpCircle className="w-4 h-4 text-[#00AEEF]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#67e8f9] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+            <HelpCircle className="w-4 h-4 text-[#67e8f9]" />
             <span>Usein Kysyttyä</span>
           </div>
 
@@ -57,13 +57,13 @@ export default function FaqAccordion() {
               >
                 <button
                   onClick={() => setOpenIdx(isOpen ? null : idx)}
-                  className="w-full p-6 sm:p-7 text-left font-display font-bold text-base sm:text-lg text-white flex items-center justify-between gap-4 hover:text-[#00AEEF] transition-colors cursor-pointer"
+                  className="w-full p-6 sm:p-7 text-left font-display font-bold text-base sm:text-lg text-white flex items-center justify-between gap-4 hover:text-[#67e8f9] transition-colors cursor-pointer"
                 >
                   <span className="leading-snug">{faq.q}</span>
-                  <div className={`p-2 rounded-xl transition-colors shrink-0 ${isOpen ? "bg-[#00AEEF]/20 text-[#00AEEF]" : "text-slate-400"}`}>
+                  <div className={`p-2 rounded-xl transition-colors shrink-0 ${isOpen ? "bg-[#00AEEF]/20 text-[#67e8f9]" : "text-slate-400"}`}>
                     <ChevronDown
                       className={`w-5 h-5 transition-transform duration-300 ${
-                        isOpen ? "rotate-180 text-[#00AEEF]" : ""
+                        isOpen ? "rotate-180 text-[#67e8f9]" : ""
                       }`}
                     />
                   </div>

@@ -136,8 +136,8 @@ export default function OireNavigaattori() {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
-            <Activity className="w-4 h-4 text-[#00AEEF]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#67e8f9] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+            <Activity className="w-4 h-4 text-[#67e8f9]" />
             <span>Interaktiivinen Kuntoutusapu</span>
           </div>
 
@@ -166,7 +166,7 @@ export default function OireNavigaattori() {
               >
                 <div className="text-2xl sm:text-3xl filter drop-shadow">{sym.iconName}</div>
                 <div className={`font-bold text-xs sm:text-sm leading-tight break-words transition-colors ${
-                  isActive ? "text-[#00AEEF]" : "text-white group-hover:text-[#00AEEF]"
+                  isActive ? "text-[#67e8f9]" : "text-white group-hover:text-[#67e8f9]"
                 }`}>
                   {sym.name}
                 </div>
@@ -181,8 +181,8 @@ export default function OireNavigaattori() {
           {/* Col 1: Summary & PDF Download */}
           <div className="space-y-6 flex flex-col justify-between h-full p-5 sm:p-6 rounded-2xl bg-[#000814]/80 border border-[#0C66B4]/40">
             <div className="space-y-4">
-              <div className="flex items-center gap-2 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
-                <Activity className="w-4 h-4 text-[#00AEEF]" />
+              <div className="flex items-center gap-2 text-[#67e8f9] text-xs font-bold uppercase tracking-wider">
+                <Activity className="w-4 h-4 text-[#67e8f9]" />
                 <span>Oirealueen Kuvaus</span>
               </div>
               <div className="flex items-center gap-3">
@@ -195,7 +195,7 @@ export default function OireNavigaattori() {
             </div>
 
             <div className="p-4 rounded-xl bg-[#014489]/20 border border-[#00AEEF]/40 space-y-3">
-              <div className="flex items-center gap-2 text-xs font-bold text-[#00AEEF] uppercase tracking-wider">
+              <div className="flex items-center gap-2 text-xs font-bold text-[#67e8f9] uppercase tracking-wider">
                 <Download className="w-4 h-4" />
                 <span>Ilmainen Kuntoutusopas</span>
               </div>
@@ -213,7 +213,7 @@ export default function OireNavigaattori() {
           {/* Col 2: Clinical Video Recommendations */}
           <div className="space-y-4 flex flex-col justify-between h-full p-5 sm:p-6 rounded-2xl bg-[#000814]/80 border border-[#0C66B4]/40">
             <div className="space-y-4">
-              <div className="flex items-center gap-2 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
+              <div className="flex items-center gap-2 text-[#67e8f9] text-xs font-bold uppercase tracking-wider">
                 <Play className="w-4 h-4" />
                 <span>Suositellut Opetusvideot</span>
               </div>
@@ -225,14 +225,14 @@ export default function OireNavigaattori() {
                     href="/ilmaisopas"
                     className="p-4 rounded-xl bg-[#001026] border border-[#0C66B4]/40 hover:border-[#00AEEF] hover:bg-[#00183c] transition-all duration-300 flex items-start gap-3 group"
                   >
-                    <div className="w-8 h-8 rounded-lg bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-[#00AEEF] group-hover:text-black transition-all">
+                    <div className="w-8 h-8 rounded-lg bg-[#00AEEF]/20 text-[#67e8f9] flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-[#00AEEF] group-hover:text-black transition-all">
                       <Play className="w-4 h-4 fill-current" />
                     </div>
                     <div>
-                      <h4 className="text-xs sm:text-sm font-bold text-white group-hover:text-[#00AEEF] transition-colors leading-snug">
+                      <h4 className="text-xs sm:text-sm font-bold text-white group-hover:text-[#67e8f9] transition-colors leading-snug">
                         {vid.title}
                       </h4>
-                      <span className="text-[11px] text-[#00AEEF] font-semibold flex items-center gap-1 mt-1">
+                      <span className="text-[11px] text-[#67e8f9] font-semibold flex items-center gap-1 mt-1">
                         <Lock className="w-3 h-3" />
                         <span>Avaa sähköpostilla →</span>
                       </span>
@@ -261,7 +261,7 @@ export default function OireNavigaattori() {
                       <span className="text-xs font-bold text-white leading-snug">{gear.name}</span>
                       <Link
                         href={gear.url}
-                        className="text-[11px] text-[#00AEEF] font-semibold hover:underline flex items-center gap-1 shrink-0 ml-2"
+                        className="text-[11px] text-[#67e8f9] font-semibold hover:underline flex items-center gap-1 shrink-0 ml-2"
                       >
                         <span>Tutustu</span>
                         <ArrowRight className="w-3 h-3" />

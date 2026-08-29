@@ -118,7 +118,7 @@ export default function Navbar() {
       <div className="bg-[#00060f] border-b border-[#0C66B4]/30 py-1.5 px-4 sm:px-6 lg:px-8 text-[11px] text-slate-400 font-medium">
         <div className="max-w-[1440px] mx-auto flex items-center justify-between gap-4">
           <div className="flex items-center gap-4 truncate">
-            <span className="inline-flex items-center gap-1.5 text-[#00AEEF] font-semibold">
+            <span className="inline-flex items-center gap-1.5 text-[#67e8f9] font-semibold">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
               OMT-vastaanotto Oulussa &amp; Kempeleessä
             </span>
@@ -127,7 +127,7 @@ export default function Navbar() {
               href={`tel:${SITE_CONFIG.contactPhone.replace(/\s/g, "")}`}
               className="hidden md:inline-flex items-center gap-1 text-slate-300 hover:text-white transition-colors"
             >
-              <Phone className="w-3 h-3 text-[#00AEEF]" />
+              <Phone className="w-3 h-3 text-[#67e8f9]" />
               <span>{SITE_CONFIG.contactPhone}</span>
             </a>
           </div>
@@ -135,7 +135,7 @@ export default function Navbar() {
           <div className="flex items-center gap-3 shrink-0">
             <Link
               href="/ilmaisopas"
-              className="hidden sm:inline-flex items-center gap-1 text-[#00AEEF] hover:text-[#38bdf8] font-bold"
+              className="hidden sm:inline-flex items-center gap-1 text-[#67e8f9] hover:text-[#38bdf8] font-bold"
             >
               <Sparkles className="w-3 h-3" />
               <span>Ilmaiset PDF-oppaat</span>
@@ -148,7 +148,7 @@ export default function Navbar() {
               title="International English Site — ptsakkinen.com"
               className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-[#00122e] border border-[#0C66B4]/50 text-slate-200 hover:text-white hover:border-[#00AEEF] transition-all"
             >
-              <Globe className="w-3 h-3 text-[#00AEEF]" />
+              <Globe className="w-3 h-3 text-[#67e8f9]" />
               <span className="font-bold text-[10px]">EN</span>
               <span className="text-slate-500 font-normal">/ FI</span>
             </a>
@@ -171,8 +171,8 @@ export default function Navbar() {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="font-display text-xl sm:text-2xl font-extrabold tracking-wide text-white group-hover:text-[#00AEEF] transition-colors">
-                  FT SÄKKINEN<span className="text-[#00AEEF]">.</span>
+                <span className="font-display text-xl sm:text-2xl font-extrabold tracking-wide text-white group-hover:text-[#67e8f9] transition-colors">
+                  FT SÄKKINEN<span className="text-[#67e8f9]">.</span>
                 </span>
                 <span className="text-[10px] text-slate-400 font-semibold uppercase tracking-widest -mt-1 font-sans">
                   OMT-Fysioterapeutti
@@ -188,7 +188,7 @@ export default function Navbar() {
                 href="/"
                 className={`text-sm font-bold px-3.5 py-2 rounded-xl transition-all duration-200 whitespace-nowrap ${
                   pathname === "/"
-                    ? "text-[#00AEEF] bg-[#014489]/40 border border-[#00AEEF]/50 shadow-[0_0_12px_rgba(0,174,239,0.25)]"
+                    ? "text-[#67e8f9] bg-[#014489]/40 border border-[#00AEEF]/50 shadow-[0_0_12px_rgba(0,174,239,0.25)]"
                     : "text-slate-300 hover:text-white hover:bg-white/5"
                 }`}
               >
@@ -204,14 +204,14 @@ export default function Navbar() {
                   }}
                   className={`text-sm font-bold px-3.5 py-2 rounded-xl transition-all duration-200 whitespace-nowrap flex items-center gap-1.5 cursor-pointer ${
                     isServicesActive || servicesDropdownOpen
-                      ? "text-[#00AEEF] bg-[#014489]/40 border border-[#00AEEF]/50 shadow-[0_0_12px_rgba(0,174,239,0.25)]"
+                      ? "text-[#67e8f9] bg-[#014489]/40 border border-[#00AEEF]/50 shadow-[0_0_12px_rgba(0,174,239,0.25)]"
                       : "text-slate-300 hover:text-white hover:bg-white/5"
                   }`}
                 >
                   <span>Palvelut &amp; Kuntoutus</span>
                   <ChevronDown
                     className={`w-4 h-4 transition-transform duration-200 ${
-                      servicesDropdownOpen ? "rotate-180 text-[#00AEEF]" : "text-slate-400"
+                      servicesDropdownOpen ? "rotate-180 text-[#67e8f9]" : "text-slate-400"
                     }`}
                   />
                 </button>
@@ -232,11 +232,11 @@ export default function Navbar() {
                               : "hover:bg-white/5"
                           }`}
                         >
-                          <div className="p-2 rounded-lg bg-[#014489]/40 text-[#00AEEF] border border-[#00AEEF]/30 group-hover:scale-105 transition-transform shrink-0">
+                          <div className="p-2 rounded-lg bg-[#014489]/40 text-[#67e8f9] border border-[#00AEEF]/30 group-hover:scale-105 transition-transform shrink-0">
                             <Icon className="w-4 h-4" />
                           </div>
                           <div>
-                            <div className="text-sm font-bold text-white group-hover:text-[#00AEEF] transition-colors leading-snug">
+                            <div className="text-sm font-bold text-white group-hover:text-[#67e8f9] transition-colors leading-snug">
                               {item.name}
                             </div>
                             <div className="text-[11px] text-slate-400 leading-tight mt-0.5 font-normal">
@@ -259,14 +259,14 @@ export default function Navbar() {
                   }}
                   className={`text-sm font-bold px-3.5 py-2 rounded-xl transition-all duration-200 whitespace-nowrap flex items-center gap-1.5 cursor-pointer ${
                     isMediaActive || mediaDropdownOpen
-                      ? "text-[#00AEEF] bg-[#014489]/40 border border-[#00AEEF]/50 shadow-[0_0_12px_rgba(0,174,239,0.25)]"
+                      ? "text-[#67e8f9] bg-[#014489]/40 border border-[#00AEEF]/50 shadow-[0_0_12px_rgba(0,174,239,0.25)]"
                       : "text-slate-300 hover:text-white hover:bg-white/5"
                   }`}
                 >
                   <span>Sisällöt &amp; Media</span>
                   <ChevronDown
                     className={`w-4 h-4 transition-transform duration-200 ${
-                      mediaDropdownOpen ? "rotate-180 text-[#00AEEF]" : "text-slate-400"
+                      mediaDropdownOpen ? "rotate-180 text-[#67e8f9]" : "text-slate-400"
                     }`}
                   />
                 </button>
@@ -287,11 +287,11 @@ export default function Navbar() {
                               : "hover:bg-white/5"
                           }`}
                         >
-                          <div className="p-2 rounded-lg bg-[#014489]/40 text-[#00AEEF] border border-[#00AEEF]/30 group-hover:scale-105 transition-transform shrink-0">
+                          <div className="p-2 rounded-lg bg-[#014489]/40 text-[#67e8f9] border border-[#00AEEF]/30 group-hover:scale-105 transition-transform shrink-0">
                             <Icon className="w-4 h-4" />
                           </div>
                           <div>
-                            <div className="text-sm font-bold text-white group-hover:text-[#00AEEF] transition-colors leading-snug">
+                            <div className="text-sm font-bold text-white group-hover:text-[#67e8f9] transition-colors leading-snug">
                               {item.name}
                             </div>
                             <div className="text-[11px] text-slate-400 leading-tight mt-0.5 font-normal">
@@ -310,7 +310,7 @@ export default function Navbar() {
                 href="/tietoa-minusta"
                 className={`text-sm font-bold px-3.5 py-2 rounded-xl transition-all duration-200 whitespace-nowrap ${
                   pathname === "/tietoa-minusta"
-                    ? "text-[#00AEEF] bg-[#014489]/40 border border-[#00AEEF]/50 shadow-[0_0_12px_rgba(0,174,239,0.25)]"
+                    ? "text-[#67e8f9] bg-[#014489]/40 border border-[#00AEEF]/50 shadow-[0_0_12px_rgba(0,174,239,0.25)]"
                     : "text-slate-300 hover:text-white hover:bg-white/5"
                 }`}
               >
@@ -322,7 +322,7 @@ export default function Navbar() {
                 href="/yhteystiedot"
                 className={`text-sm font-bold px-3.5 py-2 rounded-xl transition-all duration-200 whitespace-nowrap ${
                   pathname === "/yhteystiedot"
-                    ? "text-[#00AEEF] bg-[#014489]/40 border border-[#00AEEF]/50 shadow-[0_0_12px_rgba(0,174,239,0.25)]"
+                    ? "text-[#67e8f9] bg-[#014489]/40 border border-[#00AEEF]/50 shadow-[0_0_12px_rgba(0,174,239,0.25)]"
                     : "text-slate-300 hover:text-white hover:bg-white/5"
                 }`}
               >
@@ -346,7 +346,7 @@ export default function Navbar() {
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Avaa navigointivalikko"
-              className="lg:hidden p-2.5 rounded-xl bg-[#00122e] border border-[#0C66B4]/60 text-white hover:text-[#00AEEF] hover:border-[#00AEEF] transition-all cursor-pointer"
+              className="lg:hidden p-2.5 rounded-xl bg-[#00122e] border border-[#0C66B4]/60 text-white hover:text-[#67e8f9] hover:border-[#00AEEF] transition-all cursor-pointer"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -375,7 +375,7 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
               className="w-full py-3 px-4 rounded-xl bg-[#00122e] border border-[#0C66B4] text-white font-semibold text-center text-xs flex items-center justify-center gap-2"
             >
-              <Sparkles className="w-4 h-4 text-[#00AEEF]" />
+              <Sparkles className="w-4 h-4 text-[#67e8f9]" />
               <span>Lataa ilmaiset PDF-kuntoutusoppaat</span>
             </Link>
           </div>
@@ -390,7 +390,7 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
               className={`px-3.5 py-2.5 rounded-xl text-sm font-semibold flex items-center justify-between ${
                 pathname === "/"
-                  ? "bg-[#014489]/50 text-[#00AEEF] border border-[#00AEEF]/50"
+                  ? "bg-[#014489]/50 text-[#67e8f9] border border-[#00AEEF]/50"
                   : "text-slate-200 hover:bg-white/5"
               }`}
             >
@@ -401,7 +401,7 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
               className={`px-3.5 py-2.5 rounded-xl text-sm font-semibold flex items-center justify-between ${
                 pathname === "/tietoa-minusta"
-                  ? "bg-[#014489]/50 text-[#00AEEF] border border-[#00AEEF]/50"
+                  ? "bg-[#014489]/50 text-[#67e8f9] border border-[#00AEEF]/50"
                   : "text-slate-200 hover:bg-white/5"
               }`}
             >
@@ -412,7 +412,7 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
               className={`px-3.5 py-2.5 rounded-xl text-sm font-semibold flex items-center justify-between ${
                 pathname === "/yhteystiedot"
-                  ? "bg-[#014489]/50 text-[#00AEEF] border border-[#00AEEF]/50"
+                  ? "bg-[#014489]/50 text-[#67e8f9] border border-[#00AEEF]/50"
                   : "text-slate-200 hover:bg-white/5"
               }`}
             >
@@ -432,7 +432,7 @@ export default function Navbar() {
                 onClick={() => setMobileMenuOpen(false)}
                 className={`px-3.5 py-2.5 rounded-xl text-sm font-semibold flex items-center justify-between ${
                   pathname === item.href
-                    ? "bg-[#014489]/50 text-[#00AEEF] border border-[#00AEEF]/50"
+                    ? "bg-[#014489]/50 text-[#67e8f9] border border-[#00AEEF]/50"
                     : "text-slate-200 hover:bg-white/5"
                 }`}
               >
@@ -454,7 +454,7 @@ export default function Navbar() {
                 onClick={() => setMobileMenuOpen(false)}
                 className={`px-3.5 py-2.5 rounded-xl text-sm font-semibold flex items-center justify-between ${
                   pathname === item.href
-                    ? "bg-[#014489]/50 text-[#00AEEF] border border-[#00AEEF]/50"
+                    ? "bg-[#014489]/50 text-[#67e8f9] border border-[#00AEEF]/50"
                     : "text-slate-200 hover:bg-white/5"
                 }`}
               >
@@ -472,7 +472,7 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className="w-full py-2.5 px-3 rounded-xl border border-[#0C66B4]/60 bg-[#00122e] text-slate-200 text-center text-xs font-semibold hover:border-[#00AEEF] flex items-center justify-center gap-2"
             >
-              <Globe className="w-3.5 h-3.5 text-[#00AEEF]" />
+              <Globe className="w-3.5 h-3.5 text-[#67e8f9]" />
               <span>Switch to English (ptsakkinen.com)</span>
             </a>
             <Link

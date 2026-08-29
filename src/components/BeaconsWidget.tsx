@@ -13,8 +13,8 @@ export default function BeaconsWidget() {
         <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-[#00122e] via-[#00183c] to-[#00122e] border-2 border-[#00AEEF]/50 shadow-2xl shadow-cyan-950/30 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center backdrop-blur-md">
           
           <div className="lg:col-span-8 space-y-4 text-left">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
-              <Sparkles className="w-4 h-4 text-[#00AEEF]" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#67e8f9] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+              <Sparkles className="w-4 h-4 text-[#67e8f9]" />
               <span>Ilmaiset Harjoitusoppaat PDF-muodossa</span>
             </div>
 
@@ -27,9 +27,9 @@ export default function BeaconsWidget() {
             </p>
 
             <div className="flex items-center gap-4 text-xs text-slate-400 pt-1 font-medium">
-              <span className="flex items-center gap-1.5"><ShieldCheck className="w-4 h-4 text-[#00AEEF]" /> Ei roskapostia</span>
+              <span className="flex items-center gap-1.5"><ShieldCheck className="w-4 h-4 text-[#67e8f9]" /> Ei roskapostia</span>
               <span>•</span>
-              <span className="flex items-center gap-1.5"><Download className="w-4 h-4 text-[#00AEEF]" /> Välitön Google Drive -pääsy</span>
+              <span className="flex items-center gap-1.5"><Download className="w-4 h-4 text-[#67e8f9]" /> Välitön Google Drive -pääsy</span>
             </div>
           </div>
 

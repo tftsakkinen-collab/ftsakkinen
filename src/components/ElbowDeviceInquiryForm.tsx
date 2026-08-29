@@ -57,8 +57,8 @@ export default function ElbowDeviceInquiryForm({
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-10">
         
         <div className="text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
-            <PackageCheck className="w-4 h-4 text-[#00AEEF]" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#67e8f9] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+            <PackageCheck className="w-4 h-4 text-[#67e8f9]" />
             <span>Kyynärvarsitreenari • Hankintalomake</span>
           </div>
 
@@ -157,7 +157,7 @@ export default function ElbowDeviceInquiryForm({
 
             <div className="flex items-center justify-center gap-6 pt-2 text-xs text-slate-400 font-medium">
               <span className="flex items-center gap-1.5">
-                <ShieldCheck className="w-4 h-4 text-[#00AEEF]" />
+                <ShieldCheck className="w-4 h-4 text-[#67e8f9]" />
                 Tiedot käsitellään luottamuksellisesti
               </span>
               <span>•</span>
@@ -166,14 +166,14 @@ export default function ElbowDeviceInquiryForm({
           </form>
         ) : (
           <div className="p-8 sm:p-12 rounded-3xl bg-[#00122e] border-2 border-[#00AEEF] space-y-6 text-center shadow-2xl shadow-cyan-950/40">
-            <div className="w-16 h-16 rounded-full bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center mx-auto border border-[#00AEEF]/40 shadow-[0_0_20px_rgba(0,174,239,0.5)]">
+            <div className="w-16 h-16 rounded-full bg-[#00AEEF]/20 text-[#67e8f9] flex items-center justify-center mx-auto border border-[#00AEEF]/40 shadow-[0_0_20px_rgba(0,174,239,0.5)]">
               <CheckCircle2 className="w-10 h-10" />
             </div>
 
             <div className="space-y-2">
               <h3 className="text-2xl sm:text-3xl font-display font-extrabold text-white">Kiitos tilauksestasi / tiedustelustasi!</h3>
               <p className="text-sm sm:text-base text-slate-300 max-w-md mx-auto leading-relaxed font-normal">
-                Yhteystietosi on vastaanotettu. Otamme sinuun yhteyttä sähköpostitse osoitteeseen <strong className="text-[#00AEEF]">{email}</strong> ja järjestämme apuvälineen toimituksen sinulle.
+                Yhteystietosi on vastaanotettu. Otamme sinuun yhteyttä sähköpostitse osoitteeseen <strong className="text-[#67e8f9]">{email}</strong> ja järjestämme apuvälineen toimituksen sinulle.
               </p>
             </div>
           </div>

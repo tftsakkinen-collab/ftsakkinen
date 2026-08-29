@@ -335,21 +335,21 @@ export default async function TopicHubPage(props: { params: Promise<{ slug: stri
         
         {/* Breadcrumbs */}
         <nav aria-label="Murupolku" className="flex flex-wrap items-center gap-2 text-xs text-slate-400 font-medium">
-          <Link href="/" className="hover:text-[#00AEEF] flex items-center gap-1 transition-colors">
+          <Link href="/" className="hover:text-[#67e8f9] flex items-center gap-1 transition-colors">
             <Home className="w-3.5 h-3.5" />
             <span>Etusivu</span>
           </Link>
           <ChevronRight className="w-3.5 h-3.5 text-slate-600 shrink-0" />
-          <Link href="/videot" className="hover:text-[#00AEEF] transition-colors">
+          <Link href="/videot" className="hover:text-[#67e8f9] transition-colors">
             Videot &amp; Aiheet
           </Link>
           <ChevronRight className="w-3.5 h-3.5 text-slate-600 shrink-0" />
-          <span className="text-[#00AEEF] font-semibold">{topic.title}</span>
+          <span className="text-[#67e8f9] font-semibold">{topic.title}</span>
         </nav>
 
         {/* Top Header */}
         <div className="space-y-4">
-          <div className="inline-block px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+          <div className="inline-block px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#67e8f9] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
             Kliininen Aihekooste &amp; Tietopankki
           </div>
 
@@ -365,7 +365,7 @@ export default async function TopicHubPage(props: { params: Promise<{ slug: stri
         {/* Written Synthesis Article */}
         <article className="p-6 sm:p-8 md:p-10 rounded-3xl bg-[#00122e] border-2 border-[#0C66B4]/60 space-y-6 text-sm sm:text-base leading-relaxed text-slate-200 shadow-2xl shadow-cyan-950/30 backdrop-blur-md">
           <div className="flex items-center gap-2 text-white font-display text-2xl font-bold border-b border-[#0C66B4]/30 pb-3">
-            <BookOpen className="w-6 h-6 text-[#00AEEF]" />
+            <BookOpen className="w-6 h-6 text-[#67e8f9]" />
             <h2>OMT-Fysioterapeutin Kliininen Synteesi</h2>
           </div>
 
@@ -419,7 +419,7 @@ export default async function TopicHubPage(props: { params: Promise<{ slug: stri
         <div className="space-y-6 pt-6 border-t border-[#0C66B4]/30">
           <div className="flex items-center justify-between">
             <h2 className="text-2xl font-display font-extrabold text-white flex items-center gap-2">
-              <Sparkles className="w-5 h-5 text-[#00AEEF]" />
+              <Sparkles className="w-5 h-5 text-[#67e8f9]" />
               <span>Aiheeseen Liittyvät Opetusvideot ({topicVideos.length} videota)</span>
             </h2>
           </div>
@@ -433,7 +433,7 @@ export default async function TopicHubPage(props: { params: Promise<{ slug: stri
 
         {/* CTA Lead Magnet */}
         <div className="p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-[#00122e] via-[#014489]/30 to-[#00122e] border-2 border-[#00AEEF]/50 shadow-2xl shadow-cyan-950/40 space-y-4 text-center backdrop-blur-md">
-          <div className="w-14 h-14 rounded-2xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center mx-auto shadow-sm">
+          <div className="w-14 h-14 rounded-2xl bg-[#00AEEF]/20 text-[#67e8f9] flex items-center justify-center mx-auto shadow-sm">
             <Download className="w-7 h-7" />
           </div>
           <h3 className="text-2xl sm:text-3xl font-display font-extrabold text-white tracking-tight">Lataa aihealueen harjoiteohjeet PDF-muodossa</h3>

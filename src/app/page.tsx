@@ -277,7 +277,7 @@ export default async function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
-              <div className="inline-flex items-center gap-2 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
+              <div className="inline-flex items-center gap-2 text-[#67e8f9] text-xs font-bold uppercase tracking-wider">
                 <BookOpen className="w-4 h-4" />
                 <span>Oirealueet &amp; Tietopankit</span>
               </div>
@@ -285,7 +285,7 @@ export default async function HomePage() {
                 TUTUSTU <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00AEEF] to-[#38bdf8]">AIHEKOOSTESIVUIHIN</span>
               </h2>
             </div>
-            <Link href="/videot" className="text-xs text-[#00AEEF] hover:text-[#38bdf8] font-bold flex items-center gap-1">
+            <Link href="/videot" className="text-xs text-[#67e8f9] hover:text-[#38bdf8] font-bold flex items-center gap-1">
               <span>Katso kaikki 70 videota</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </Link>
@@ -298,9 +298,9 @@ export default async function HomePage() {
                 href={`/aihe/${t.slug}`}
                 className="p-5 rounded-2xl bg-[#00122e]/90 border border-[#0C66B4]/50 hover:border-[#00AEEF] transition-all duration-300 space-y-2 group shadow-sm hover:-translate-y-1"
               >
-                <h3 className="text-base font-bold text-white group-hover:text-[#00AEEF] transition-colors flex items-center justify-between">
+                <h3 className="text-base font-bold text-white group-hover:text-[#67e8f9] transition-colors flex items-center justify-between">
                   <span>{t.title}</span>
-                  <ArrowRight className="w-4 h-4 text-[#00AEEF] transform group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 text-[#67e8f9] transform group-hover:translate-x-1 transition-transform" />
                 </h3>
                 <p className="text-xs text-slate-300 leading-relaxed font-normal">{t.desc}</p>
               </Link>
@@ -320,8 +320,8 @@ export default async function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div className="space-y-3">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
-                <PlayCircle className="w-4 h-4 text-[#00AEEF]" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#67e8f9] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+                <PlayCircle className="w-4 h-4 text-[#67e8f9]" />
                 <span>Kliiniset Ohjevideot</span>
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-white tracking-tight leading-tight">

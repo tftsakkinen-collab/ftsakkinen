@@ -45,8 +45,8 @@ export default function FeaturedMediaSection() {
         
         {/* Header Section */}
         <div className="text-center space-y-4 max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
-            <Newspaper className="w-4 h-4 text-[#00AEEF]" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#67e8f9] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+            <Newspaper className="w-4 h-4 text-[#67e8f9]" />
             <span>Asiantuntija Mediassa &amp; Julkaisuissa</span>
           </div>
 
@@ -69,8 +69,8 @@ export default function FeaturedMediaSection() {
               <div className="space-y-4">
                 {/* Header badges */}
                 <div className="flex items-center justify-between gap-2 border-b border-[#0C66B4]/30 pb-4">
-                  <span className="text-xs font-bold text-[#00AEEF] uppercase tracking-wider flex items-center gap-1.5">
-                    <Award className="w-3.5 h-3.5 text-[#00AEEF]" />
+                  <span className="text-xs font-bold text-[#67e8f9] uppercase tracking-wider flex items-center gap-1.5">
+                    <Award className="w-3.5 h-3.5 text-[#67e8f9]" />
                     {art.publisher}
                   </span>
                   <span className="px-2.5 py-1 rounded-full bg-[#014489]/40 border border-[#00AEEF]/30 text-[10px] font-semibold text-slate-300">
@@ -79,13 +79,13 @@ export default function FeaturedMediaSection() {
                 </div>
 
                 {/* Article Title */}
-                <h3 className="text-lg sm:text-xl font-bold text-white leading-snug group-hover:text-[#00AEEF] transition-colors">
+                <h3 className="text-lg sm:text-xl font-bold text-white leading-snug group-hover:text-[#67e8f9] transition-colors">
                   {art.title}
                 </h3>
 
                 {/* Pull Quote */}
                 <div className="p-4 rounded-2xl bg-[#000814]/90 border-l-4 border-[#00AEEF] text-xs text-slate-300 italic space-y-1 shadow-inner">
-                  <div className="flex items-center gap-1.5 text-[#00AEEF] font-bold not-italic text-[11px]">
+                  <div className="flex items-center gap-1.5 text-[#67e8f9] font-bold not-italic text-[11px]">
                     <Quote className="w-3 h-3" />
                     <span>Laina-tsitaatti artikkelista:</span>
                   </div>
@@ -117,8 +117,8 @@ export default function FeaturedMediaSection() {
         {/* SEO Trust Banner */}
         <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#00122e] via-[#000e24] to-[#00122e] border border-[#0C66B4]/50 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left shadow-xl backdrop-blur-md">
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-2xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center shrink-0">
-              <Sparkles className="w-6 h-6 text-[#00AEEF]" />
+            <div className="w-12 h-12 rounded-2xl bg-[#00AEEF]/20 text-[#67e8f9] flex items-center justify-center shrink-0">
+              <Sparkles className="w-6 h-6 text-[#67e8f9]" />
             </div>
             <div>
               <h4 className="text-base font-bold text-white">Tutkittua tietoa &amp; kliinistä asiantuntijuutta</h4>
@@ -127,7 +127,7 @@ export default function FeaturedMediaSection() {
           </div>
           <a
             href="/tietoa-minusta"
-            className="shrink-0 px-6 py-3 rounded-xl bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold hover:bg-[#00AEEF] hover:text-black transition-all duration-300 shadow-glow-sm"
+            className="shrink-0 px-6 py-3 rounded-xl bg-[#014489]/40 border border-[#00AEEF]/50 text-[#67e8f9] text-xs font-bold hover:bg-[#00AEEF] hover:text-black transition-all duration-300 shadow-glow-sm"
           >
             Lue lisää Jannen taustasta →
           </a>

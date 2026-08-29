@@ -199,11 +199,11 @@ function ConnectDashboardContent() {
     <div className="max-w-6xl mx-auto py-10 px-4 sm:px-6 space-y-10 text-gray-200">
       {/* Header */}
       <div className="border-b border-[#0C66B4]/40 pb-6 space-y-2">
-        <span className="px-3 py-1 rounded-full bg-[#00AEEF]/20 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
+        <span className="px-3 py-1 rounded-full bg-[#00AEEF]/20 text-[#67e8f9] text-xs font-bold uppercase tracking-wider">
           Stripe Connect V2 Dashboard Demo
         </span>
         <h1 className="text-3xl sm:text-4xl font-display text-white">
-          STRIPE CONNECT <span className="text-[#00AEEF]">KÄYTTÄJÄHALLINTA</span>
+          STRIPE CONNECT <span className="text-[#67e8f9]">KÄYTTÄJÄHALLINTA</span>
         </h1>
         <p className="text-gray-400 text-sm">
           Tällä sivulla voit luoda Connected Account -tilejä (V2 Core API), seurata onboarding-tilaa, hallinnoida tuotteita ja alustan tilauksia.
@@ -231,7 +231,7 @@ function ConnectDashboardContent() {
           {/* Section 1: Create Account */}
           <div className="p-6 rounded-2xl bg-[#000d21] border border-[#0C66B4]/60 space-y-4">
             <h2 className="text-xl font-bold text-white flex items-center gap-2">
-              <UserPlus className="w-5 h-5 text-[#00AEEF]" />
+              <UserPlus className="w-5 h-5 text-[#67e8f9]" />
               1. Luokse Uusi Connected Account (V2 API)
             </h2>
             <form onSubmit={handleCreateAccount} className="space-y-4 text-sm">
@@ -297,14 +297,14 @@ function ConnectDashboardContent() {
           <div className="p-6 rounded-2xl bg-[#000d21] border border-[#0C66B4]/60 space-y-4">
             <div className="flex items-center justify-between">
               <h2 className="text-xl font-bold text-white flex items-center gap-2">
-                <ShieldCheck className="w-5 h-5 text-[#00AEEF]" />
+                <ShieldCheck className="w-5 h-5 text-[#67e8f9]" />
                 2. Onboarding Status (Live API)
               </h2>
               {accountId && (
                 <button
                   onClick={() => fetchStatus(accountId)}
                   disabled={loadingStatus}
-                  className="text-xs text-[#00AEEF] hover:underline flex items-center gap-1"
+                  className="text-xs text-[#67e8f9] hover:underline flex items-center gap-1"
                 >
                   <RefreshCw className={`w-3.5 h-3.5 ${loadingStatus ? "animate-spin" : ""}`} />
                   Päivitä
@@ -316,7 +316,7 @@ function ConnectDashboardContent() {
               <p className="text-xs text-gray-400">Luo tili vasemmalta tai anna Account ID nähdäksesi onboarding-tilan.</p>
             ) : loadingStatus ? (
               <div className="py-6 text-center text-xs text-gray-400 flex items-center justify-center gap-2">
-                <Loader2 className="w-4 h-4 animate-spin text-[#00AEEF]" />
+                <Loader2 className="w-4 h-4 animate-spin text-[#67e8f9]" />
                 Haetaan tietoja suoraan Stripe V2 API:sta...
               </div>
             ) : accountStatus ? (
@@ -364,7 +364,7 @@ function ConnectDashboardContent() {
           {/* Section 3: Subscriptions & Billing Portal */}
           <div className="p-6 rounded-2xl bg-[#000d21] border border-[#0C66B4]/60 space-y-4">
             <h2 className="text-xl font-bold text-white flex items-center gap-2">
-              <CreditCard className="w-5 h-5 text-[#00AEEF]" />
+              <CreditCard className="w-5 h-5 text-[#67e8f9]" />
               3. Alustan Tilaus &amp; Billing Portal
             </h2>
             <p className="text-xs text-gray-400 leading-relaxed">
@@ -400,7 +400,7 @@ function ConnectDashboardContent() {
           <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#0C66B4]/40 pb-4">
             <div>
               <h2 className="text-2xl font-bold text-white flex items-center gap-2">
-                <PlusCircle className="w-6 h-6 text-[#00AEEF]" />
+                <PlusCircle className="w-6 h-6 text-[#67e8f9]" />
                 4. Lisää Tuote &amp; Avaa Kauppa (Storefront)
               </h2>
               <p className="text-xs text-gray-400">
@@ -474,7 +474,7 @@ export default function ConnectDashboardPage() {
     <div className="py-12 bg-[#000a18] min-h-screen text-gray-200">
       <Suspense fallback={
         <div className="min-h-[70vh] flex items-center justify-center">
-          <Loader2 className="w-10 h-10 text-[#00AEEF] animate-spin" />
+          <Loader2 className="w-10 h-10 text-[#67e8f9] animate-spin" />
         </div>
       }>
         <ConnectDashboardContent />

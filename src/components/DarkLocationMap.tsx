@@ -7,10 +7,10 @@ export default function DarkLocationMap({ title = "Vastaanottopisteet (Oulu & Ke
     <div className="p-5 rounded-3xl bg-[#000d21] border border-[#0C66B4]/60 space-y-4 shadow-panel">
       <div className="flex items-center justify-between">
         <span className="text-xs font-bold text-white uppercase tracking-wider flex items-center gap-2">
-          <MapPin className="w-4 h-4 text-[#00AEEF]" />
+          <MapPin className="w-4 h-4 text-[#67e8f9]" />
           <span>{title}</span>
         </span>
-        <span className="text-[10px] font-semibold text-[#00AEEF] bg-[#014489]/40 px-2.5 py-1 rounded-full border border-[#00AEEF]/40 shadow-[0_0_10px_rgba(0,174,239,0.3)]">
+        <span className="text-[10px] font-semibold text-[#67e8f9] bg-[#014489]/40 px-2.5 py-1 rounded-full border border-[#00AEEF]/40 shadow-[0_0_10px_rgba(0,174,239,0.3)]">
           Oulu &amp; Kempele
         </span>
       </div>
@@ -47,10 +47,10 @@ export default function DarkLocationMap({ title = "Vastaanottopisteet (Oulu & Ke
         {/* Location Badge Overlay */}
         <div className="absolute bottom-3 left-3 right-3 p-2.5 rounded-xl bg-[#000a18]/90 backdrop-blur-md border border-[#00AEEF]/40 flex items-center justify-between text-xs text-gray-200">
           <div className="flex items-center gap-2">
-            <Navigation className="w-3.5 h-3.5 text-[#00AEEF]" />
+            <Navigation className="w-3.5 h-3.5 text-[#67e8f9]" />
             <span className="font-semibold text-white">Vastaanotot Oulussa &amp; Kempeleessä</span>
           </div>
-          <span className="text-[10px] text-[#00AEEF]">Terveystalo • Norre • Hammasvahti</span>
+          <span className="text-[10px] text-[#67e8f9]">Terveystalo • Norre • Hammasvahti</span>
         </div>
       </div>
 

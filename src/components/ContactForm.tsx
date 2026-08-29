@@ -54,7 +54,7 @@ export default function ContactForm() {
   return (
     <div className="p-6 sm:p-8 md:p-10 rounded-3xl bg-[#00122e] border-2 border-[#0C66B4]/60 shadow-2xl shadow-cyan-950/30 space-y-6 backdrop-blur-md">
       <div className="space-y-2">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#014489]/40 border border-[#00AEEF]/40 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#014489]/40 border border-[#00AEEF]/40 text-[#67e8f9] text-xs font-bold uppercase tracking-wider">
           <Sparkles className="w-3.5 h-3.5" />
           <span>Suora Yhteydenotto</span>
         </div>
@@ -68,7 +68,7 @@ export default function ContactForm() {
 
       {status === "success" ? (
         <div className="p-6 sm:p-8 rounded-2xl bg-[#00AEEF]/10 border-2 border-[#00AEEF] text-white space-y-3 shadow-glow-sm">
-          <div className="flex items-center gap-3 text-[#00AEEF] font-bold text-lg">
+          <div className="flex items-center gap-3 text-[#67e8f9] font-bold text-lg">
             <CheckCircle2 className="w-6 h-6" />
             <span>Viestisi on lähetetty onnistuneesti!</span>
           </div>
@@ -77,7 +77,7 @@ export default function ContactForm() {
           </p>
           <button
             onClick={() => setStatus("idle")}
-            className="mt-2 text-xs font-bold text-[#00AEEF] underline hover:text-white cursor-pointer"
+            className="mt-2 text-xs font-bold text-[#67e8f9] underline hover:text-white cursor-pointer"
           >
             Lähetä toinen viesti →
           </button>

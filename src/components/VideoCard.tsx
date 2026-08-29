@@ -42,20 +42,20 @@ export default function VideoCard({ video }: VideoCardProps) {
           </div>
 
           {/* Category Tag */}
-          <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-[#000e24]/85 border border-[#00AEEF]/50 text-[#00AEEF] text-[11px] font-bold uppercase tracking-wider backdrop-blur-md shadow-sm">
+          <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-[#000e24]/85 border border-[#00AEEF]/50 text-[#67e8f9] text-[11px] font-bold uppercase tracking-wider backdrop-blur-md shadow-sm">
             {category?.name || "Fysioterapia"}
           </div>
 
           {/* Duration Badge */}
           <div className="absolute bottom-3 right-3 px-2.5 py-1 rounded-lg bg-black/80 text-slate-200 text-xs font-mono flex items-center gap-1.5 backdrop-blur-md border border-white/10">
-            <Clock className="w-3.5 h-3.5 text-[#00AEEF]" />
+            <Clock className="w-3.5 h-3.5 text-[#67e8f9]" />
             <span>{video.duration}</span>
           </div>
         </div>
 
         {/* Details */}
         <div className="p-5 sm:p-6 space-y-2.5 text-center flex flex-col items-center min-w-0">
-          <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-[#00AEEF] transition-colors leading-snug text-center break-words w-full line-clamp-2">
+          <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-[#67e8f9] transition-colors leading-snug text-center break-words w-full line-clamp-2">
             {video.title}
           </h3>
           <p className="text-xs sm:text-sm text-slate-300 line-clamp-2 leading-relaxed text-center font-normal">
@@ -68,7 +68,7 @@ export default function VideoCard({ video }: VideoCardProps) {
       <div className="px-5 pb-5 pt-1 sm:px-6 sm:pb-6 sm:pt-2">
         <Link
           href={`/videot/${video.id}`}
-          className="inline-flex items-center justify-center w-full py-3 rounded-xl bg-[#014489]/30 border border-[#0C66B4]/60 text-[#00AEEF] font-bold text-xs sm:text-sm hover:bg-[#00AEEF] hover:text-[#000a18] hover:border-[#00AEEF] transition-all duration-300 gap-2 text-center shadow-sm group/btn"
+          className="inline-flex items-center justify-center w-full py-3 rounded-xl bg-[#014489]/30 border border-[#0C66B4]/60 text-[#67e8f9] font-bold text-xs sm:text-sm hover:bg-[#00AEEF] hover:text-[#000a18] hover:border-[#00AEEF] transition-all duration-300 gap-2 text-center shadow-sm group/btn"
         >
           <span>Katso video &amp; ohjeet</span>
           <ArrowUpRight className="w-4 h-4 shrink-0 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />

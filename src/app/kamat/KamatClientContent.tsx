@@ -53,7 +53,7 @@ export default function KamatClientContent() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 relative z-10">
         {/* Header */}
         <div className="space-y-4 max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#67e8f9] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
             <ShoppingBag className="w-4 h-4" />
             <span>Suositellut Välineet &amp; Varusteet</span>
           </div>
@@ -69,7 +69,7 @@ export default function KamatClientContent() {
 
         {/* Amazon & Affiliate Disclaimer Box */}
         <div className="p-5 sm:p-6 rounded-3xl bg-[#00122e] border border-[#0C66B4]/60 space-y-2 text-sm text-slate-300 shadow-xl backdrop-blur-md">
-          <div className="flex items-center gap-2 font-bold text-[#00AEEF]">
+          <div className="flex items-center gap-2 font-bold text-[#67e8f9]">
             <Info className="w-4 h-4 shrink-0" />
             <span>Avoimuus- &amp; Kumppanuusilmoitus (Affiliate Disclaimer)</span>
           </div>
@@ -130,7 +130,7 @@ export default function KamatClientContent() {
               >
                 <div className="space-y-3">
                   <div className="flex items-start justify-between gap-2">
-                    <span className="text-[11px] font-bold text-[#00AEEF] bg-[#014489]/40 border border-[#00AEEF]/30 px-3 py-1 rounded-full uppercase tracking-wider">
+                    <span className="text-[11px] font-bold text-[#67e8f9] bg-[#014489]/40 border border-[#00AEEF]/30 px-3 py-1 rounded-full uppercase tracking-wider">
                       {GEAR_CATEGORIES.find((c) => c.id === item.category)?.label || item.category}
                     </span>
 
@@ -149,7 +149,7 @@ export default function KamatClientContent() {
                     </div>
                   </div>
 
-                  <h3 className="text-xl font-bold text-white group-hover:text-[#00AEEF] transition-colors leading-snug">
+                  <h3 className="text-xl font-bold text-white group-hover:text-[#67e8f9] transition-colors leading-snug">
                     {item.name}
                   </h3>
 
@@ -159,8 +159,8 @@ export default function KamatClientContent() {
 
                   {((item as any).whyIUseIt || item.recommendedReason) && (
                     <div className="p-3.5 rounded-2xl bg-[#000814] border border-[#0C66B4]/40 space-y-1">
-                      <div className="text-[11px] font-bold text-[#00AEEF] uppercase tracking-wider flex items-center gap-1">
-                        <Sparkles className="w-3 h-3 text-[#00AEEF]" />
+                      <div className="text-[11px] font-bold text-[#67e8f9] uppercase tracking-wider flex items-center gap-1">
+                        <Sparkles className="w-3 h-3 text-[#67e8f9]" />
                         <span>Kliininen Perustelu:</span>
                       </div>
                       <p className="text-xs text-slate-300 italic leading-relaxed">
@@ -190,7 +190,7 @@ export default function KamatClientContent() {
 
                   <button
                     onClick={() => handleCopyLink(item)}
-                    className="p-3 rounded-xl bg-[#000814] border border-[#0C66B4] text-slate-300 hover:text-[#00AEEF] hover:border-[#00AEEF] transition-colors cursor-pointer"
+                    className="p-3 rounded-xl bg-[#000814] border border-[#0C66B4] text-slate-300 hover:text-[#67e8f9] hover:border-[#00AEEF] transition-colors cursor-pointer"
                     title="Kopioi suora linkki"
                   >
                     {copiedId === item.id ? (

@@ -37,8 +37,8 @@ export default function VideoLibraryClient({ videos, categories }: VideoLibraryC
         
         {/* Header Section */}
         <div className="text-center max-w-4xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
-            <PlayCircle className="w-4 h-4 text-[#00AEEF]" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#67e8f9] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+            <PlayCircle className="w-4 h-4 text-[#67e8f9]" />
             <span>KAIKKI {videos.length} KUNTOUTUS- &amp; OPETUSVIDEOTA</span>
           </div>
 
@@ -86,7 +86,7 @@ export default function VideoLibraryClient({ videos, categories }: VideoLibraryC
                 >
                   <span>{cat.name}</span>
                   <span className={`px-2 py-0.5 rounded-full text-[11px] font-bold ${
-                    active ? "bg-black/20 text-[#000a18]" : "bg-[#014489] text-[#00AEEF]"
+                    active ? "bg-black/20 text-[#000a18]" : "bg-[#014489] text-[#67e8f9]"
                   }`}>
                     {count}
                   </span>
@@ -105,7 +105,7 @@ export default function VideoLibraryClient({ videos, categories }: VideoLibraryC
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                 <div className="space-y-1">
                   <h2 className="text-2xl sm:text-3xl font-display font-extrabold text-white flex items-center gap-3">
-                    <span className="w-8 h-8 rounded-xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center text-sm font-bold border border-[#00AEEF]/40">1</span>
+                    <span className="w-8 h-8 rounded-xl bg-[#00AEEF]/20 text-[#67e8f9] flex items-center justify-center text-sm font-bold border border-[#00AEEF]/40">1</span>
                     PURENTA &amp; TMD ({purentaVideos.length} videota)
                   </h2>
                   <p className="text-xs sm:text-sm text-slate-300 font-normal">
@@ -114,7 +114,7 @@ export default function VideoLibraryClient({ videos, categories }: VideoLibraryC
                 </div>
                 <button
                   onClick={() => setSelectedCategory("purenta-tmd")}
-                  className="text-xs text-[#00AEEF] hover:text-[#38bdf8] font-bold self-start sm:self-auto cursor-pointer"
+                  className="text-xs text-[#67e8f9] hover:text-[#38bdf8] font-bold self-start sm:self-auto cursor-pointer"
                 >
                   Suodata vain Purenta &amp; TMD →
                 </button>
@@ -132,7 +132,7 @@ export default function VideoLibraryClient({ videos, categories }: VideoLibraryC
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                 <div className="space-y-1">
                   <h2 className="text-2xl sm:text-3xl font-display font-extrabold text-white flex items-center gap-3">
-                    <span className="w-8 h-8 rounded-xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center text-sm font-bold border border-[#00AEEF]/40">2</span>
+                    <span className="w-8 h-8 rounded-xl bg-[#00AEEF]/20 text-[#67e8f9] flex items-center justify-center text-sm font-bold border border-[#00AEEF]/40">2</span>
                     ERGONOMIA ({ergonomiaVideos.length} videota)
                   </h2>
                   <p className="text-xs sm:text-sm text-slate-300 font-normal">
@@ -141,7 +141,7 @@ export default function VideoLibraryClient({ videos, categories }: VideoLibraryC
                 </div>
                 <button
                   onClick={() => setSelectedCategory("ergonomia")}
-                  className="text-xs text-[#00AEEF] hover:text-[#38bdf8] font-bold self-start sm:self-auto cursor-pointer"
+                  className="text-xs text-[#67e8f9] hover:text-[#38bdf8] font-bold self-start sm:self-auto cursor-pointer"
                 >
                   Suodata vain Ergonomia →
                 </button>
@@ -159,7 +159,7 @@ export default function VideoLibraryClient({ videos, categories }: VideoLibraryC
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                 <div className="space-y-1">
                   <h2 className="text-2xl sm:text-3xl font-display font-extrabold text-white flex items-center gap-3">
-                    <span className="w-8 h-8 rounded-xl bg-[#00AEEF]/20 text-[#00AEEF] flex items-center justify-center text-sm font-bold border border-[#00AEEF]/40">3</span>
+                    <span className="w-8 h-8 rounded-xl bg-[#00AEEF]/20 text-[#67e8f9] flex items-center justify-center text-sm font-bold border border-[#00AEEF]/40">3</span>
                     TULE-VAIVAT ({tuleVideos.length} videota)
                   </h2>
                   <p className="text-xs sm:text-sm text-slate-300 font-normal">
@@ -168,7 +168,7 @@ export default function VideoLibraryClient({ videos, categories }: VideoLibraryC
                 </div>
                 <button
                   onClick={() => setSelectedCategory("tule-vaivat")}
-                  className="text-xs text-[#00AEEF] hover:text-[#38bdf8] font-bold self-start sm:self-auto cursor-pointer"
+                  className="text-xs text-[#67e8f9] hover:text-[#38bdf8] font-bold self-start sm:self-auto cursor-pointer"
                 >
                   Suodata vain TULE-vaivat →
                 </button>
@@ -193,7 +193,7 @@ export default function VideoLibraryClient({ videos, categories }: VideoLibraryC
                     setSelectedCategory("kaikki");
                     setSearchQuery("");
                   }}
-                  className="text-[#00AEEF] hover:underline font-bold cursor-pointer"
+                  className="text-[#67e8f9] hover:underline font-bold cursor-pointer"
                 >
                   Näytä kaikki 70 videota
                 </button>

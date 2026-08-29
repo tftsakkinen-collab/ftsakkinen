@@ -24,8 +24,8 @@ export default function AboutSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#000a18] via-transparent to-transparent opacity-70" />
 
               {/* Authority Proof Banner on card */}
-              <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 p-3 rounded-2xl bg-[#000e24]/90 border border-[#00AEEF]/60 backdrop-blur-xl flex items-center justify-center gap-2 text-[#00AEEF] text-xs font-bold shadow-lg">
-                <Award className="w-4 h-4 shrink-0 text-[#00AEEF]" />
+              <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 p-3 rounded-2xl bg-[#000e24]/90 border border-[#00AEEF]/60 backdrop-blur-xl flex items-center justify-center gap-2 text-[#67e8f9] text-xs font-bold shadow-lg">
+                <Award className="w-4 h-4 shrink-0 text-[#67e8f9]" />
                 <span className="text-center">{SITE_CONFIG.authorityProofs.appointments}</span>
               </div>
             </div>
@@ -33,7 +33,7 @@ export default function AboutSection() {
 
           {/* Story & Content (7 cols) */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#67e8f9] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
               <Sparkles className="w-3.5 h-3.5" />
               <span>Asiantuntemukseni tausta</span>
             </div>
@@ -57,7 +57,7 @@ export default function AboutSection() {
             {/* Authority Badges Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
               <div className="p-5 rounded-2xl bg-[#00122e] border border-[#0C66B4]/50 flex items-start gap-3.5 shadow-sm hover:border-[#00AEEF]/50 transition-colors">
-                <UserCheck className="w-6 h-6 text-[#00AEEF] shrink-0 mt-0.5" />
+                <UserCheck className="w-6 h-6 text-[#67e8f9] shrink-0 mt-0.5" />
                 <div>
                   <h3 className="text-white font-bold text-sm">OMT-Fysioterapeutti (SOMTY 2018–2020)</h3>
                   <p className="text-xs text-slate-400 mt-1 leading-relaxed">Erikoistunut TMD-purentafysioterapiaan (2015) &amp; TULE-vaivoihin</p>
@@ -65,7 +65,7 @@ export default function AboutSection() {
               </div>
               
               <div className="p-5 rounded-2xl bg-[#00122e] border border-[#0C66B4]/50 flex items-start gap-3.5 shadow-sm hover:border-[#00AEEF]/50 transition-colors">
-                <Award className="w-6 h-6 text-[#00AEEF] shrink-0 mt-0.5" />
+                <Award className="w-6 h-6 text-[#67e8f9] shrink-0 mt-0.5" />
                 <div>
                   <h3 className="text-white font-bold text-sm">Akateeminen kouluttaja</h3>
                   <p className="text-xs text-slate-400 mt-1 leading-relaxed">{SITE_CONFIG.authorityProofs.teaching}</p>
@@ -73,7 +73,7 @@ export default function AboutSection() {
               </div>
 
               <div className="p-5 rounded-2xl bg-[#00122e] border border-[#00AEEF]/50 flex items-start gap-3.5 shadow-sm sm:col-span-2 hover:border-[#00AEEF] transition-colors">
-                <Stethoscope className="w-6 h-6 text-[#00AEEF] shrink-0 mt-0.5" />
+                <Stethoscope className="w-6 h-6 text-[#67e8f9] shrink-0 mt-0.5" />
                 <div>
                   <h3 className="text-white font-bold text-sm">Valvira &amp; Terhikki -rekisteröinti</h3>
                   <p className="text-xs text-slate-300 mt-1 leading-relaxed">{SITE_CONFIG.authorityProofs.valvira}</p>

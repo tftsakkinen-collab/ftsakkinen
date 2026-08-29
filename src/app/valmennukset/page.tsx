@@ -13,8 +13,8 @@ export default function ProgramsPage() {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#00AEEF] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
-            <GraduationCap className="w-4 h-4 text-[#00AEEF]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#67e8f9] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+            <GraduationCap className="w-4 h-4 text-[#67e8f9]" />
             <span>Verkkovalmennukset</span>
           </div>
 
@@ -37,7 +37,7 @@ export default function ProgramsPage() {
         {/* FAQ & Trust Box */}
         <div className="max-w-4xl mx-auto p-8 sm:p-10 rounded-3xl bg-[#00122e] border-2 border-[#0C66B4]/60 space-y-6 shadow-2xl shadow-cyan-950/30 backdrop-blur-md">
           <h2 className="text-2xl font-display font-bold text-white text-center flex items-center justify-center gap-2">
-            <HelpCircle className="w-6 h-6 text-[#00AEEF]" />
+            <HelpCircle className="w-6 h-6 text-[#67e8f9]" />
             <span>Usein kysytyt kysymykset</span>
           </h2>
 

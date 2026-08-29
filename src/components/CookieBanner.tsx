@@ -23,7 +23,7 @@ export default function CookieBanner() {
   return (
     <div className="fixed bottom-4 right-4 left-4 md:left-auto md:max-w-md z-50 bg-[#00122e]/95 border-2 border-[#00AEEF]/60 rounded-3xl p-6 shadow-2xl shadow-cyan-950/60 backdrop-blur-xl flex flex-col gap-3 text-xs text-slate-300">
       <div className="flex items-start justify-between gap-2">
-        <div className="flex items-center gap-2.5 font-bold text-[#00AEEF] text-sm">
+        <div className="flex items-center gap-2.5 font-bold text-[#67e8f9] text-sm">
           <div className="w-6 h-6 rounded-full overflow-hidden border border-[#00AEEF] bg-[#000814] p-0.5 shrink-0">
             <img src="/logo.jpg" alt="Logo" className="w-full h-full object-contain rounded-full" />
           </div>
