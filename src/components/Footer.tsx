@@ -185,7 +185,7 @@ export default function Footer() {
 
           <div className="flex flex-wrap items-center gap-4">
             <VisitorCounter siteKey="ftsakkinen_com" label="Sivuston kävijämäärä" />
-            <p className="text-slate-500">© {new Date().getFullYear()} {SITE_CONFIG.companyName}. Kaikki oikeudet pidätetään.</p>
+            <p className="text-slate-300">© {new Date().getFullYear()} {SITE_CONFIG.companyName}. Kaikki oikeudet pidätetään.</p>
           </div>
         </div>
       </div>

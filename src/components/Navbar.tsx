@@ -150,7 +150,7 @@ export default function Navbar() {
             >
               <Globe className="w-3 h-3 text-[#67e8f9]" />
               <span className="font-bold text-[10px]">EN</span>
-              <span className="text-slate-500 font-normal">/ FI</span>
+              <span className="text-slate-300 font-normal">/ FI</span>
             </a>
           </div>
         </div>
