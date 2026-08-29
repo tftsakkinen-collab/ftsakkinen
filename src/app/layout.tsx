@@ -8,14 +8,14 @@ import CookieBanner from "@/components/CookieBanner";
 const outfit = Outfit({
   subsets: ["latin"],
   weight: ["600", "700", "800", "900"],
-  variable: "--font-display-heading",
+  variable: "--font-heading",
   display: "swap",
 });
 
 const inter = Inter({
   weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
-  variable: "--font-roboto",
+  variable: "--font-sans",
   display: "swap",
 });
 
@@ -47,7 +47,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fi" className={`${outfit.variable} ${inter.variable}`}>
-      <body className="min-h-screen flex flex-col bg-[#000a18] text-white selection:bg-[#00AEEF] selection:text-black">
+      <body className="min-h-screen flex flex-col bg-[#000a18] text-white font-sans selection:bg-[#00AEEF] selection:text-black">
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer />
