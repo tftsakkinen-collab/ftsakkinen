@@ -20,9 +20,13 @@ export async function POST(req: Request) {
     const appsScriptUrl = process.env.APPS_SCRIPT_LEAD_URL || DEFAULT_APPS_SCRIPT_URL;
 
     const payload = {
-      tieto: `LIIDI (${lang === "en" ? "EN" : "FI"}): ${name} (${email}) - ${source || "ilmaisopas"}`,
+      tieto: `🔔 UUSI LIIDI SAAPUNUT SIVUSTOLTA!\nNimi: ${name}\nSähköposti: ${email}\nKieli: ${
+        lang === "en" ? "EN" : "FI"
+      }\nLähde: ${source || "ilmaisopas"}`,
       name,
       email,
+      recipient: "tiedottajanne@gmail.com",
+      subject: `🔔 Uusi sähköpostilistalle liittyminen: ${name} (${email})`,
       lang: lang === "en" ? "en" : "fi",
       secret: process.env.LEAD_SHARED_SECRET || "sakkinen-lead-secret",
       source: source || "ilmaisopas",
