@@ -122,14 +122,6 @@ export default function Navbar() {
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
               OMT-vastaanotto Oulussa &amp; Kempeleessä
             </span>
-            <span className="hidden md:inline text-slate-600">•</span>
-            <a
-              href={`tel:${SITE_CONFIG.contactPhone.replace(/\s/g, "")}`}
-              className="hidden md:inline-flex items-center gap-1 text-slate-300 hover:text-white transition-colors"
-            >
-              <Phone className="w-3 h-3 text-[#67e8f9]" />
-              <span>{SITE_CONFIG.contactPhone}</span>
-            </a>
           </div>
 
           <div className="flex items-center gap-3 shrink-0">
@@ -157,7 +149,7 @@ export default function Navbar() {
       </div>
 
       {/* 2. MAIN STICKY NAVIGATION BAR */}
-      <div className="glass-header border-b border-[#0C66B4]/40 backdrop-blur-xl bg-[#000814]/90">
+      <div className="bg-[#000814] border-b border-[#0C66B4]/60 shadow-xl">
         <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20 gap-4">
             
@@ -186,8 +178,8 @@ export default function Navbar() {
                 href="/"
                 className={`text-sm font-bold px-3.5 py-2.5 min-h-[44px] flex items-center rounded-xl transition-all duration-200 whitespace-nowrap ${
                   pathname === "/"
-                    ? "text-[#67e8f9] bg-[#014489]/40 border border-[#00AEEF]/50 shadow-[0_0_12px_rgba(0,174,239,0.25)]"
-                    : "text-[#f1f5f9] hover:text-[#67e8f9] hover:bg-white/5"
+                    ? "text-[#67e8f9] bg-[#014489]/60 border border-[#00AEEF]/70 shadow-[0_0_14px_rgba(0,174,239,0.35)]"
+                    : "text-slate-100 hover:text-[#67e8f9] hover:bg-white/10"
                 }`}
               >
                 Etusivu
@@ -202,14 +194,14 @@ export default function Navbar() {
                   }}
                   className={`text-sm font-bold px-3.5 py-2.5 min-h-[44px] rounded-xl transition-all duration-200 whitespace-nowrap flex items-center gap-1.5 cursor-pointer ${
                     isServicesActive || servicesDropdownOpen
-                      ? "text-[#67e8f9] bg-[#014489]/40 border border-[#00AEEF]/50 shadow-[0_0_12px_rgba(0,174,239,0.25)]"
-                      : "text-slate-300 hover:text-white hover:bg-white/5"
+                      ? "text-[#67e8f9] bg-[#014489]/60 border border-[#00AEEF]/70 shadow-[0_0_14px_rgba(0,174,239,0.35)]"
+                      : "text-slate-100 hover:text-[#67e8f9] hover:bg-white/10"
                   }`}
                 >
                   <span>Palvelut &amp; Kuntoutus</span>
                   <ChevronDown
                     className={`w-4 h-4 transition-transform duration-200 ${
-                      servicesDropdownOpen ? "rotate-180 text-[#67e8f9]" : "text-slate-400"
+                      servicesDropdownOpen ? "rotate-180 text-[#67e8f9]" : "text-[#67e8f9]"
                     }`}
                   />
                 </button>
@@ -257,14 +249,14 @@ export default function Navbar() {
                   }}
                   className={`text-sm font-bold px-3.5 py-2 rounded-xl transition-all duration-200 whitespace-nowrap flex items-center gap-1.5 cursor-pointer ${
                     isMediaActive || mediaDropdownOpen
-                      ? "text-[#67e8f9] bg-[#014489]/40 border border-[#00AEEF]/50 shadow-[0_0_12px_rgba(0,174,239,0.25)]"
-                      : "text-slate-300 hover:text-white hover:bg-white/5"
+                      ? "text-[#67e8f9] bg-[#014489]/60 border border-[#00AEEF]/70 shadow-[0_0_14px_rgba(0,174,239,0.35)]"
+                      : "text-slate-100 hover:text-[#67e8f9] hover:bg-white/10"
                   }`}
                 >
                   <span>Sisällöt &amp; Media</span>
                   <ChevronDown
                     className={`w-4 h-4 transition-transform duration-200 ${
-                      mediaDropdownOpen ? "rotate-180 text-[#67e8f9]" : "text-slate-400"
+                      mediaDropdownOpen ? "rotate-180 text-[#67e8f9]" : "text-[#67e8f9]"
                     }`}
                   />
                 </button>
@@ -308,8 +300,8 @@ export default function Navbar() {
                 href="/tietoa-minusta"
                 className={`text-sm font-bold px-3.5 py-2 rounded-xl transition-all duration-200 whitespace-nowrap ${
                   pathname === "/tietoa-minusta"
-                    ? "text-[#67e8f9] bg-[#014489]/40 border border-[#00AEEF]/50 shadow-[0_0_12px_rgba(0,174,239,0.25)]"
-                    : "text-slate-300 hover:text-white hover:bg-white/5"
+                    ? "text-[#67e8f9] bg-[#014489]/60 border border-[#00AEEF]/70 shadow-[0_0_14px_rgba(0,174,239,0.35)]"
+                    : "text-slate-100 hover:text-[#67e8f9] hover:bg-white/10"
                 }`}
               >
                 Tietoa minusta
@@ -320,8 +312,8 @@ export default function Navbar() {
                 href="/yhteystiedot"
                 className={`text-sm font-bold px-3.5 py-2 rounded-xl transition-all duration-200 whitespace-nowrap ${
                   pathname === "/yhteystiedot"
-                    ? "text-[#67e8f9] bg-[#014489]/40 border border-[#00AEEF]/50 shadow-[0_0_12px_rgba(0,174,239,0.25)]"
-                    : "text-slate-300 hover:text-white hover:bg-white/5"
+                    ? "text-[#67e8f9] bg-[#014489]/60 border border-[#00AEEF]/70 shadow-[0_0_14px_rgba(0,174,239,0.35)]"
+                    : "text-slate-100 hover:text-[#67e8f9] hover:bg-white/10"
                 }`}
               >
                 Yhteystiedot

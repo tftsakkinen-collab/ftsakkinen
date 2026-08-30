@@ -51,10 +51,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Health-tech Glassmorphism & Panel Classes */
 .glass-header {
-  background: color-mix(in oklab, var(--surface) 88%, transparent);
+  background: #000814 !important;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(12, 102, 180, 0.5);
 }
 
 .glass-card {
