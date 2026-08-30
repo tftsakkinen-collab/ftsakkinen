@@ -74,7 +74,7 @@ export default function Navbar() {
     {
       name: "Kyynärpää-apu väline",
       href: "/kyynarpaa-apuvaline",
-      description: "Innovatiivinen kuntoutuslaite tennis- ja golfkyynärpäälle.",
+      description: "Kuntoutuslaite tennis- ja golfkyynärpäälle.",
       icon: PackageCheck,
     },
     {
