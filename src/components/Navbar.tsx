@@ -174,7 +174,7 @@ export default function Navbar() {
                 <span className="font-display text-xl sm:text-2xl font-extrabold tracking-wide text-white group-hover:text-[#67e8f9] transition-colors">
                   FT SÄKKINEN<span className="text-[#67e8f9]">.</span>
                 </span>
-                <span className="text-[10px] text-slate-400 font-semibold uppercase tracking-widest -mt-1 font-sans">
+                <span className="text-[10px] text-[#e2e8f0] font-bold uppercase tracking-widest -mt-1 font-sans">
                   OMT-Fysioterapeutti
                 </span>
               </div>
@@ -187,7 +187,7 @@ export default function Navbar() {
                 className={`text-sm font-bold px-3.5 py-2.5 min-h-[44px] flex items-center rounded-xl transition-all duration-200 whitespace-nowrap ${
                   pathname === "/"
                     ? "text-[#67e8f9] bg-[#014489]/40 border border-[#00AEEF]/50 shadow-[0_0_12px_rgba(0,174,239,0.25)]"
-                    : "text-slate-300 hover:text-white hover:bg-white/5"
+                    : "text-[#f1f5f9] hover:text-[#67e8f9] hover:bg-white/5"
                 }`}
               >
                 Etusivu

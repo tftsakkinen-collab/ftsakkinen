@@ -2,7 +2,7 @@ import React from "react";
 
 interface BadgeProps {
   children: React.ReactNode;
-  variant?: "primary" | "surface" | "outline" | "lightBackground";
+  variant?: "primary" | "secondary" | "accent" | "surface" | "outline" | "lightBackground";
   className?: string;
 }
 
@@ -14,6 +14,10 @@ export const Badge: React.FC<BadgeProps> = ({
   const variants = {
     primary:
       "bg-[#014489]/40 border border-[#00AEEF]/50 text-[#67e8f9]",
+    secondary:
+      "bg-[var(--accent-quiet)] border border-[var(--border)] text-[var(--on-accent-quiet)]",
+    accent:
+      "bg-[var(--accent-quiet)] border border-[var(--border)] text-[var(--on-accent-quiet)]",
     surface:
       "bg-[var(--surface)] border border-[var(--border)] text-[var(--muted)]",
     outline:

@@ -5,9 +5,10 @@ import React, { useEffect, useRef, useState } from "react";
 interface RevealProps {
   children: React.ReactNode;
   className?: string;
+  delay?: number;
 }
 
-export const Reveal: React.FC<RevealProps> = ({ children, className = "" }) => {
+export const Reveal: React.FC<RevealProps> = ({ children, className = "", delay }) => {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(true);
 
