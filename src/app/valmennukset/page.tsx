@@ -1,5 +1,6 @@
 import { PROGRAMS } from "@/data/programs";
 import ProgramCard from "@/components/ProgramCard";
+import JawReliefGuideSection from "@/components/JawReliefGuideSection";
 import { GraduationCap, ShieldCheck, HelpCircle } from "lucide-react";
 import BeaconsWidget from "@/components/BeaconsWidget";
 
@@ -15,7 +16,7 @@ export default function ProgramsPage() {
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#67e8f9] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
             <GraduationCap className="w-4 h-4 text-[#67e8f9]" />
-            <span>Verkkovalmennukset</span>
+            <span>Verkkovalmennukset &amp; Täsmäoppaat</span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-display font-extrabold text-white tracking-tight leading-tight">
@@ -23,15 +24,23 @@ export default function ProgramsPage() {
           </h1>
 
           <p className="text-slate-300 text-base sm:text-lg font-normal leading-relaxed">
-            Kliiniseen kokemukseen ja tutkittuun tietoon pohjautuvat täsmäohjelmat vaivojen kotikuntoutukseen ovat parhaillaan valmisteilla. Tutustu tuleviin aiheisiin ja ota yhteyttä lisätietoja varten.
+            Kliiniseen kokemukseen ja tutkittuun tietoon pohjautuvat täsmäoppaat ja kotikuntoutusohjelmat leukanivelen, niskan ja tuki- ja liikuntaelimistön vaivoihin.
           </p>
         </div>
 
-        {/* Programs Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {PROGRAMS.map((prog) => (
-            <ProgramCard key={prog.id} program={prog} />
-          ))}
+        {/* Featured 29 € Product Section */}
+        <JawReliefGuideSection />
+
+        {/* Other Programs Grid */}
+        <div className="space-y-6">
+          <h2 className="text-2xl sm:text-3xl font-display font-extrabold text-white text-center">
+            TULEVAT <span className="text-[#67e8f9]">VERKKOVALMENNUKSET</span>
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {PROGRAMS.slice(1).map((prog) => (
+              <ProgramCard key={prog.id} program={prog} />
+            ))}
+          </div>
         </div>
 
         {/* FAQ & Trust Box */}
@@ -52,7 +61,7 @@ export default function ProgramsPage() {
             <div className="space-y-2 p-5 rounded-2xl bg-[#000814] border border-[#0C66B4]/50">
               <h3 className="font-bold text-white text-base">Miten maksaminen tapahtuu?</h3>
               <p className="text-xs text-slate-300 leading-relaxed font-normal">
-                Maksu suoritetaan turvallisesti suomalaisten verkkopankkien ja korttimaksujen kautta Paytrail-maksupalvelussa.
+                Maksu suoritetaan turvallisesti Stripe Checkout -maksupalvelun kautta (verkkopankit, korttimaksut, MobilePay, Apple Pay).
               </p>
             </div>
           </div>

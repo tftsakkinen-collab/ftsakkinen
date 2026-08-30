@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import JawReliefGuideSection from "@/components/JawReliefGuideSection";
 import {
   Sparkles,
   ArrowDown,
@@ -1109,6 +1110,9 @@ export default function PuristusPoisClient() {
 
         </div>
       </section>
+
+      {/* 14b. ERILLINEN 29 € TÄSMÄOPAS */}
+      <JawReliefGuideSection />
 
       {/* 15. TAKUU */}
       <section className="py-20 border-b border-[#0C66B4]/30 bg-[#000814]">

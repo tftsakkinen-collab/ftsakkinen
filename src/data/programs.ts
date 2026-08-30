@@ -11,6 +11,22 @@ export interface Program {
 
 export const PROGRAMS: Program[] = [
   {
+    id: "leukanivel-tasmakurssi-29",
+    name: "Eroon jäykästä leuasta (17 min Täsmäopas)",
+    promiseDescription: "Kattava ja käytännönläheinen 17 minuutin videokurssi & itsehoito-opas leuan kiputilojen ja jäykkyyden helpottamiseen kotikonstein.",
+    details: [
+      "Leukanivelen anatomia, toiminta ja ongelmien luokittelu",
+      "Nivel- ja lihasperäisten ongelmien erotus ja hoito",
+      "Suun sulkijalihakset: anatomia ja tutkiminen",
+      "Täsmälliset venyttely- ja huoltoharjoitteet",
+      "Käytännön hoito-ohjeet ja huomioitavat seikat kotihoitoon",
+    ],
+    pricePlaceholder: "29 €",
+    checkoutUrl: "https://buy.stripe.com/fZufZhgsYeUe01k7vT0Ny01",
+    badge: "Täsmävideokurssi",
+    isPlaceholder: false,
+  },
+  {
     id: "leukanivel-purenta-tmd",
     name: "Purentaelimistö & TMD-verkkovalmennus",
     promiseDescription: "Täydellinen leukanivelen, purentalihasten ja kasvojen kiputilojen strukturoitu kotikuntoutusohjelma.",
