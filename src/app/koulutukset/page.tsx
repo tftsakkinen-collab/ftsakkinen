@@ -1,12 +1,12 @@
 import TrainingsSection from "@/components/TrainingsSection";
+import ProfessionalTrainingSection from "@/components/ProfessionalTrainingSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import BeaconsWidget from "@/components/BeaconsWidget";
-import LeukanivelCourseCard from "@/components/LeukanivelCourseCard";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Koulutukset, Luennot & Työhistoria | FT Säkkinen",
-  description: "Tiedot OMT-fysioterapeutti Janne Säkkisen koulutustoiminnasta, Oulun yliopiston opetuksesta, työhistoriasta ja koulutuspalautteista.",
+  title: "Ammattilaisten TMD-Koulutukset & Luennot | FT Säkkinen",
+  description: "OMT-fysioterapeutti Janne Säkkisen 2 h 7 min Leukanivelen terapia -koulutus ammattilaisille (fysioterapeutit, osteopaatit, hammaslääkärit, SOTE-ammattilaiset).",
   alternates: {
     canonical: "https://www.ftsakkinen.com/koulutukset",
     languages: {
@@ -16,8 +16,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Koulutukset, Luennot & Työhistoria | FT Säkkinen",
-    description: "Tiedot OMT-fysioterapeutti Janne Säkkisen koulutustoiminnasta, Oulun yliopiston opetuksesta, työhistoriasta ja koulutuspalautteista.",
+    title: "Ammattilaisten TMD-Koulutukset & Luennot | FT Säkkinen",
+    description: "OMT-fysioterapeutti Janne Säkkisen 2 h 7 min Leukanivelen terapia -koulutus ammattilaisille.",
     url: "https://www.ftsakkinen.com/koulutukset",
     siteName: "FT Säkkinen - OMT-Fysioterapia",
     locale: "fi_FI",
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Koulutukset, Luennot & Työhistoria | FT Säkkinen",
-    description: "Tiedot OMT-fysioterapeutti Janne Säkkisen koulutustoiminnasta, Oulun yliopiston opetuksesta, työhistoriasta ja koulutuspalautteista.",
+    title: "Ammattilaisten TMD-Koulutukset & Luennot | FT Säkkinen",
+    description: "OMT-fysioterapeutti Janne Säkkisen 2 h 7 min Leukanivelen terapia -koulutus ammattilaisille.",
     images: ["https://www.ftsakkinen.com/janne-sakkinen.jpg"],
   },
 };
@@ -36,12 +36,12 @@ export default function KoulutuksetPage() {
   return (
     <div className="py-12 bg-[#000814] min-h-screen space-y-16">
       <TrainingsSection />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <LeukanivelCourseCard />
-      </div>
+      
+      {/* Featured 199 € Professional Training Section */}
+      <ProfessionalTrainingSection />
+
       <TestimonialsSection />
       <BeaconsWidget />
     </div>
   );
 }
-
