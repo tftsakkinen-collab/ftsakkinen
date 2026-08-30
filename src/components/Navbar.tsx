@@ -108,13 +108,13 @@ export default function Navbar() {
   const isMediaActive = mediaLinks.some((l) => pathname === l.href);
 
   return (
-    <header className="sticky top-0 z-50 bg-[#000814]/95 backdrop-blur-xl border-b border-[#0C66B4]/50 shadow-xl transition-all duration-300">
+    <header className="sticky top-0 z-50 bg-[#000814] border-b border-[#0C66B4] shadow-2xl transition-all duration-300">
       <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 gap-4">
           
           {/* Brand Logo */}
           <Link href="/" className="flex items-center gap-3 shrink-0 group">
-            <div className="relative w-11 h-11 rounded-full overflow-hidden border-2 border-[#00AEEF] bg-[#000d21] flex items-center justify-center shadow-[0_0_16px_rgba(0,174,239,0.7)] group-hover:scale-105 group-hover:shadow-[0_0_24px_rgba(0,174,239,0.9)] transition-all duration-300 p-0.5">
+            <div className="relative w-11 h-11 rounded-full overflow-hidden border-2 border-[#00AEEF] bg-[#000d21] flex items-center justify-center shadow-[0_0_16px_rgba(0,174,239,0.7)] group-hover:scale-105 transition-all duration-300 p-0.5">
               <img
                 src="/logo-whitebg.png?v=20260730"
                 alt="FT Säkkinen logo"
@@ -137,7 +137,7 @@ export default function Navbar() {
               href="/"
               className={`text-sm font-bold px-3 py-2 min-h-[44px] flex items-center rounded-xl transition-all duration-200 whitespace-nowrap ${
                 pathname === "/"
-                  ? "text-[#67e8f9] bg-[#014489]/60 border border-[#00AEEF]/70 shadow-[0_0_14px_rgba(0,174,239,0.35)]"
+                  ? "text-[#67e8f9] bg-[#014489] border border-[#00AEEF]"
                   : "text-slate-100 hover:text-[#67e8f9] hover:bg-white/10"
               }`}
             >
@@ -147,17 +147,17 @@ export default function Navbar() {
             {/* Highlighted Puristus Pois Link */}
             <Link
               href="/puristus-pois"
-              className={`text-sm font-extrabold px-3 py-2 min-h-[44px] flex items-center gap-1.5 rounded-xl transition-all duration-200 whitespace-nowrap ${
+              className={`text-sm font-extrabold px-3.5 py-2 min-h-[44px] flex items-center gap-1.5 rounded-xl transition-all duration-200 whitespace-nowrap ${
                 pathname === "/puristus-pois"
-                  ? "text-[#67e8f9] bg-[#014489]/80 border-2 border-[#00AEEF] shadow-[0_0_16px_rgba(0,174,239,0.5)]"
-                  : "text-[#67e8f9] bg-[#014489]/30 border border-[#00AEEF]/50 hover:bg-[#014489]/60 hover:text-white"
+                  ? "text-[#67e8f9] bg-[#014489] border-2 border-[#00AEEF]"
+                  : "text-[#67e8f9] bg-[#014489]/40 border border-[#00AEEF]/60 hover:bg-[#014489] hover:text-white"
               }`}
             >
               <Sparkles className="w-3.5 h-3.5 text-[#67e8f9]" />
               <span>Puristus Pois</span>
             </Link>
 
-            {/* Palvelut Dropdown */}
+            {/* Palvelut Dropdown (100% Solid Opaque Background) */}
             <div className="relative" ref={servicesRef}>
               <button
                 onClick={() => {
@@ -166,7 +166,7 @@ export default function Navbar() {
                 }}
                 className={`text-sm font-bold px-3 py-2 min-h-[44px] rounded-xl transition-all duration-200 whitespace-nowrap flex items-center gap-1.5 cursor-pointer ${
                   isServicesActive || servicesDropdownOpen
-                    ? "text-[#67e8f9] bg-[#014489]/60 border border-[#00AEEF]/70 shadow-[0_0_14px_rgba(0,174,239,0.35)]"
+                    ? "text-[#67e8f9] bg-[#014489] border border-[#00AEEF]"
                     : "text-slate-100 hover:text-[#67e8f9] hover:bg-white/10"
                 }`}
               >
@@ -179,7 +179,7 @@ export default function Navbar() {
               </button>
 
               {servicesDropdownOpen && (
-                <div className="absolute top-full left-0 mt-3 w-80 rounded-2xl bg-[#000e24]/98 border-2 border-[#00AEEF]/50 p-2.5 shadow-2xl shadow-cyan-950/60 backdrop-blur-2xl space-y-1 z-50">
+                <div className="absolute top-full left-0 mt-2 w-80 rounded-2xl bg-[#000d21] border-2 border-[#00AEEF] p-3 shadow-[0_20px_50px_rgba(0,0,0,0.95)] space-y-1.5 z-[100]">
                   {serviceLinks.map((item) => {
                     const Icon = item.icon;
                     const active = pathname === item.href;
@@ -190,11 +190,11 @@ export default function Navbar() {
                         onClick={() => setServicesDropdownOpen(false)}
                         className={`p-3 rounded-xl transition-all flex items-start gap-3 group ${
                           active
-                            ? "bg-[#014489]/50 border border-[#00AEEF]/50"
-                            : "hover:bg-white/5"
+                            ? "bg-[#014489] border border-[#00AEEF]"
+                            : "bg-[#001433] hover:bg-[#014489]/80 border border-[#0C66B4]/50"
                         }`}
                       >
-                        <div className={`p-2 rounded-lg shrink-0 ${item.highlight ? "bg-[#00AEEF] text-[#000a18]" : "bg-[#014489]/40 text-[#67e8f9] border border-[#00AEEF]/30"}`}>
+                        <div className={`p-2 rounded-lg shrink-0 ${item.highlight ? "bg-[#00AEEF] text-[#000a18]" : "bg-[#014489] text-[#67e8f9] border border-[#00AEEF]/40"}`}>
                           <Icon className="w-4 h-4" />
                         </div>
                         <div>
@@ -212,7 +212,7 @@ export default function Navbar() {
               )}
             </div>
 
-            {/* Videot & Oppaat Dropdown */}
+            {/* Videot & Oppaat Dropdown (100% Solid Opaque Background) */}
             <div className="relative" ref={mediaRef}>
               <button
                 onClick={() => {
@@ -221,7 +221,7 @@ export default function Navbar() {
                 }}
                 className={`text-sm font-bold px-3 py-2 min-h-[44px] rounded-xl transition-all duration-200 whitespace-nowrap flex items-center gap-1.5 cursor-pointer ${
                   isMediaActive || mediaDropdownOpen
-                    ? "text-[#67e8f9] bg-[#014489]/60 border border-[#00AEEF]/70 shadow-[0_0_14px_rgba(0,174,239,0.35)]"
+                    ? "text-[#67e8f9] bg-[#014489] border border-[#00AEEF]"
                     : "text-slate-100 hover:text-[#67e8f9] hover:bg-white/10"
                 }`}
               >
@@ -234,7 +234,7 @@ export default function Navbar() {
               </button>
 
               {mediaDropdownOpen && (
-                <div className="absolute top-full left-0 mt-3 w-80 rounded-2xl bg-[#000e24]/98 border-2 border-[#00AEEF]/50 p-2.5 shadow-2xl shadow-cyan-950/60 backdrop-blur-2xl space-y-1 z-50">
+                <div className="absolute top-full left-0 mt-2 w-80 rounded-2xl bg-[#000d21] border-2 border-[#00AEEF] p-3 shadow-[0_20px_50px_rgba(0,0,0,0.95)] space-y-1.5 z-[100]">
                   {mediaLinks.map((item) => {
                     const Icon = item.icon;
                     const active = pathname === item.href;
@@ -245,11 +245,11 @@ export default function Navbar() {
                         onClick={() => setMediaDropdownOpen(false)}
                         className={`p-3 rounded-xl transition-all flex items-start gap-3 group ${
                           active
-                            ? "bg-[#014489]/50 border border-[#00AEEF]/50"
-                            : "hover:bg-white/5"
+                            ? "bg-[#014489] border border-[#00AEEF]"
+                            : "bg-[#001433] hover:bg-[#014489]/80 border border-[#0C66B4]/50"
                         }`}
                       >
-                        <div className="p-2 rounded-lg bg-[#014489]/40 text-[#67e8f9] border border-[#00AEEF]/30 group-hover:scale-105 transition-transform shrink-0">
+                        <div className="p-2 rounded-lg bg-[#014489] text-[#67e8f9] border border-[#00AEEF]/40 shrink-0">
                           <Icon className="w-4 h-4" />
                         </div>
                         <div>
@@ -272,7 +272,7 @@ export default function Navbar() {
               href="/tietoa-minusta"
               className={`text-sm font-bold px-3 py-2 min-h-[44px] flex items-center rounded-xl transition-all duration-200 whitespace-nowrap ${
                 pathname === "/tietoa-minusta"
-                  ? "text-[#67e8f9] bg-[#014489]/60 border border-[#00AEEF]/70 shadow-[0_0_14px_rgba(0,174,239,0.35)]"
+                  ? "text-[#67e8f9] bg-[#014489] border border-[#00AEEF]"
                   : "text-slate-100 hover:text-[#67e8f9] hover:bg-white/10"
               }`}
             >
@@ -284,7 +284,7 @@ export default function Navbar() {
               href="/yhteystiedot"
               className={`text-sm font-bold px-3 py-2 min-h-[44px] flex items-center rounded-xl transition-all duration-200 whitespace-nowrap ${
                 pathname === "/yhteystiedot"
-                  ? "text-[#67e8f9] bg-[#014489]/60 border border-[#00AEEF]/70 shadow-[0_0_14px_rgba(0,174,239,0.35)]"
+                  ? "text-[#67e8f9] bg-[#014489] border border-[#00AEEF]"
                   : "text-slate-100 hover:text-[#67e8f9] hover:bg-white/10"
               }`}
             >
@@ -328,7 +328,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#000d21] border-b-2 border-[#00AEEF]/50 px-4 pt-4 pb-6 space-y-4 animate-in slide-in-from-top-3 duration-200">
+        <div className="lg:hidden bg-[#000d21] border-b-2 border-[#00AEEF] px-4 pt-4 pb-6 space-y-4 animate-in slide-in-from-top-3 duration-200">
           <nav className="flex flex-col space-y-2">
             <Link
               href="/"
@@ -341,7 +341,7 @@ export default function Navbar() {
             <Link
               href="/puristus-pois"
               onClick={() => setMobileMenuOpen(false)}
-              className="px-4 py-3 rounded-xl text-base font-extrabold text-[#67e8f9] bg-[#014489]/40 border border-[#00AEEF]/50 flex items-center gap-2"
+              className="px-4 py-3 rounded-xl text-base font-extrabold text-[#67e8f9] bg-[#014489] border border-[#00AEEF] flex items-center gap-2"
             >
               <Sparkles className="w-4 h-4 text-[#67e8f9]" />
               <span>Puristus Pois -Verkkokurssi</span>
