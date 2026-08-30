@@ -4,16 +4,24 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --font-roboto: var(--font-roboto, 'Roboto', system-ui, sans-serif);
+  --font-body: var(--font-roboto);
+  --font-display: var(--font-roboto);
+  --font-display-heading: var(--font-roboto);
+}
+
 html {
   scroll-behavior: smooth;
   overflow-x: clip;
   max-width: 100vw;
+  font-family: var(--font-roboto), system-ui, sans-serif;
 }
 
 body {
   background-color: var(--bg);
   color: var(--text);
-  font-family: var(--font-body), system-ui, sans-serif;
+  font-family: var(--font-roboto), system-ui, sans-serif;
   overflow-x: clip;
   max-width: 100vw;
   -webkit-font-smoothing: antialiased;
@@ -25,11 +33,15 @@ main {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-roboto), system-ui, sans-serif;
   overflow-wrap: break-word;
   word-break: break-word;
   hyphens: auto;
   letter-spacing: -0.015em;
+}
+
+button, input, select, textarea, a, p, span, li, td, th {
+  font-family: var(--font-roboto), system-ui, sans-serif;
 }
 
 /* Custom scrollbars */

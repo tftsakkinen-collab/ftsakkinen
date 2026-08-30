@@ -1,21 +1,14 @@
 import type { Metadata } from "next";
-import { Outfit, Inter } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CookieBanner from "@/components/CookieBanner";
 
-const outfit = Outfit({
-  subsets: ["latin"],
-  weight: ["600", "700", "800", "900"],
-  variable: "--font-display",
-  display: "swap",
-});
-
-const inter = Inter({
-  weight: ["300", "400", "500", "600", "700"],
-  subsets: ["latin"],
-  variable: "--font-body",
+const roboto = Roboto({
+  weight: ["300", "400", "500", "700", "900"],
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-roboto",
   display: "swap",
 });
 
@@ -46,8 +39,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fi" className={`${outfit.variable} ${inter.variable}`}>
-      <body className="min-h-screen flex flex-col bg-[var(--bg)] text-[var(--text)] font-sans antialiased selection:bg-[var(--accent)] selection:text-[var(--accent-ink)]">
+    <html lang="fi" className={roboto.variable}>
+      <body className={`${roboto.className} min-h-screen flex flex-col bg-[var(--bg)] text-[var(--text)] font-sans antialiased selection:bg-[var(--accent)] selection:text-[var(--accent-ink)]`}>
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer />
