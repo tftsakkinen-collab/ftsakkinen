@@ -148,19 +148,24 @@ export default function PuristusPoisClient() {
           </div>
 
           {/* Instructor Badge */}
-          <div className="pt-8 border-t border-[#0C66B4]/30 flex flex-col sm:flex-row items-center justify-center gap-4 text-xs text-slate-300 font-medium">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-full border border-[#00AEEF] overflow-hidden bg-black shrink-0">
-                <img src="/janne-sakkinen.jpg" alt="Janne Säkkinen" className="w-full h-full object-cover" />
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3 text-xs text-slate-200 font-medium bg-[#00122e] p-4 rounded-2xl border border-[#00AEEF]/40 max-w-3xl mx-auto shadow-md">
+            <div className="flex items-center gap-2.5">
+              <div className="w-10 h-10 rounded-full border-2 border-[#00AEEF] overflow-hidden bg-[#000814] shrink-0 shadow-[0_0_12px_rgba(0,174,239,0.5)]">
+                <img
+                  src="/janne-sakkinen.jpg"
+                  alt="Janne Säkkinen OMT-fysioterapeutti"
+                  className="w-full h-full object-cover object-[center_20%]"
+                />
               </div>
-              <span className="font-bold text-white">FT Säkkinen</span>
+              <div className="flex flex-col text-left">
+                <span className="font-bold text-white text-xs">Janne Säkkinen</span>
+                <span className="text-[10px] text-[#67e8f9] font-bold uppercase tracking-wider">OMT-fysioterapeutti</span>
+              </div>
             </div>
-            <span>·</span>
-            <span>Janne Säkkinen, OMT-fysioterapeutti</span>
-            <span>·</span>
-            <span>purentafysioterapiaan erikoistunut</span>
-            <span>·</span>
-            <span>luennoi hammaslääketieteessä Oulun yliopistossa</span>
+            <span className="text-slate-500 hidden sm:inline">•</span>
+            <span className="text-slate-300">Purentafysioterapiaan erikoistunut</span>
+            <span className="text-slate-500 hidden sm:inline">•</span>
+            <span className="text-slate-300">Luennoi hammaslääketieteessä Oulun yliopistossa</span>
           </div>
 
         </div>
@@ -711,9 +716,9 @@ export default function PuristusPoisClient() {
       <section className="py-20 border-b border-[#0C66B4]/30 bg-[#000814]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           
-          <div className="flex flex-col sm:flex-row items-center gap-6">
-            <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full border-2 border-[#00AEEF] overflow-hidden bg-black shrink-0 shadow-[0_0_25px_rgba(0,174,239,0.4)]">
-              <img src="/janne-sakkinen.jpg" alt="Janne Säkkinen OMT" className="w-full h-full object-cover" />
+          <div className="flex flex-col sm:flex-row items-center gap-6 p-6 rounded-3xl bg-[#00122e] border-2 border-[#00AEEF] shadow-xl">
+            <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full border-2 border-[#00AEEF] overflow-hidden bg-[#000814] shrink-0 shadow-[0_0_25px_rgba(0,174,239,0.5)]">
+              <img src="/janne-sakkinen.jpg" alt="Janne Säkkinen OMT" className="w-full h-full object-cover object-[center_20%]" />
             </div>
             <div>
               <span className="text-xs font-mono font-bold text-[#67e8f9] uppercase tracking-widest block">
