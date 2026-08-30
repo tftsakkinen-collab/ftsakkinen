@@ -151,7 +151,7 @@ export default function PuristusPoisClient() {
           <div className="pt-8 border-t border-[#0C66B4]/30 flex flex-col sm:flex-row items-center justify-center gap-4 text-xs text-slate-300 font-medium">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-full border border-[#00AEEF] overflow-hidden bg-black shrink-0">
-                <img src="/janne.jpg" alt="Janne Säkkinen" className="w-full h-full object-cover" />
+                <img src="/janne-sakkinen.jpg" alt="Janne Säkkinen" className="w-full h-full object-cover" />
               </div>
               <span className="font-bold text-white">FT Säkkinen</span>
             </div>
@@ -713,7 +713,7 @@ export default function PuristusPoisClient() {
           
           <div className="flex flex-col sm:flex-row items-center gap-6">
             <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full border-2 border-[#00AEEF] overflow-hidden bg-black shrink-0 shadow-[0_0_25px_rgba(0,174,239,0.4)]">
-              <img src="/janne.jpg" alt="Janne Säkkinen OMT" className="w-full h-full object-cover" />
+              <img src="/janne-sakkinen.jpg" alt="Janne Säkkinen OMT" className="w-full h-full object-cover" />
             </div>
             <div>
               <span className="text-xs font-mono font-bold text-[#67e8f9] uppercase tracking-widest block">
