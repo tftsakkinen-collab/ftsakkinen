@@ -9,21 +9,15 @@ import {
   Calendar,
   Globe,
   ChevronDown,
-  PlayCircle,
-  BookOpen,
   Sparkles,
-  Phone,
-  MapPin,
   Dumbbell,
   GraduationCap,
-  ShieldCheck,
   PackageCheck,
   Layers,
-  ArrowRight,
-  FileText,
   Video,
+  FileText,
+  Flame,
 } from "lucide-react";
-import { SITE_CONFIG } from "@/data/config";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -63,6 +57,13 @@ export default function Navbar() {
 
   const serviceLinks = [
     {
+      name: "Puristus Pois -Verkkokurssi",
+      href: "/puristus-pois",
+      description: "8 viikon täsmäohjelma leuan ja niskan jännitystiloihin.",
+      icon: Flame,
+      highlight: true,
+    },
+    {
       name: "Valmennukset",
       href: "/valmennukset",
       description: "Yksilölliset kotikuntoutusohjelmat ja fysioterapiavalmennukset.",
@@ -75,7 +76,7 @@ export default function Navbar() {
       icon: GraduationCap,
     },
     {
-      name: "Kyynärpää-apuvaline",
+      name: "Kyynärpää-apu väline",
       href: "/kyynarpaa-apuvaline",
       description: "Innovatiivinen kuntoutuslaite tennis- ja golfkyynärpäälle.",
       icon: PackageCheck,
@@ -101,340 +102,266 @@ export default function Navbar() {
       description: "Ladattavat PDF-oppaat ja leukanivelen ensiapuvideot.",
       icon: FileText,
     },
-    {
-      name: "Aihekoosteet (Tietopankki)",
-      href: "/#aihekoosteet",
-      description: "TMD, niska, selkä ja ergonomia teemakohtaisesti.",
-      icon: BookOpen,
-    },
   ];
 
   const isServicesActive = serviceLinks.some((l) => pathname === l.href);
   const isMediaActive = mediaLinks.some((l) => pathname === l.href);
 
   return (
-    <header className="sticky top-0 z-50 transition-all duration-300">
-      {/* 1. TOP MINIMALIST UTILITY BAR */}
-      <div className="bg-[#00060f] border-b border-[#0C66B4]/30 py-1.5 px-4 sm:px-6 lg:px-8 text-[11px] text-slate-400 font-medium">
-        <div className="max-w-[1440px] mx-auto flex items-center justify-between gap-4">
-          <div className="flex items-center gap-4 truncate">
-            <span className="inline-flex items-center gap-1.5 text-[#67e8f9] font-semibold">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              OMT-vastaanotto Oulussa &amp; Kempeleessä
-            </span>
-          </div>
+    <header className="sticky top-0 z-50 bg-[#000814]/95 backdrop-blur-xl border-b border-[#0C66B4]/50 shadow-xl transition-all duration-300">
+      <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20 gap-4">
+          
+          {/* Brand Logo */}
+          <Link href="/" className="flex items-center gap-3 shrink-0 group">
+            <div className="relative w-11 h-11 rounded-full overflow-hidden border-2 border-[#00AEEF] bg-[#000d21] flex items-center justify-center shadow-[0_0_16px_rgba(0,174,239,0.7)] group-hover:scale-105 group-hover:shadow-[0_0_24px_rgba(0,174,239,0.9)] transition-all duration-300 p-0.5">
+              <img
+                src="/logo-whitebg.png?v=20260730"
+                alt="FT Säkkinen logo"
+                className="w-full h-full object-contain rounded-full"
+              />
+            </div>
+            <div className="flex flex-col">
+              <span className="font-display text-xl sm:text-2xl font-extrabold tracking-wide text-white group-hover:text-[#67e8f9] transition-colors">
+                FT SÄKKINEN<span className="text-[#67e8f9]">.</span>
+              </span>
+              <span className="text-[10px] text-[#e2e8f0] font-bold uppercase tracking-widest -mt-1 font-sans">
+                OMT-Fysioterapeutti
+              </span>
+            </div>
+          </Link>
 
-          <div className="flex items-center gap-3 shrink-0">
+          {/* Streamlined Desktop Navigation */}
+          <nav className="hidden lg:flex items-center justify-center gap-1.5 xl:gap-3 px-2">
             <Link
-              href="/ilmaisopas"
-              className="hidden sm:inline-flex items-center gap-1 text-[#67e8f9] hover:text-[#38bdf8] font-bold"
+              href="/"
+              className={`text-sm font-bold px-3 py-2 min-h-[44px] flex items-center rounded-xl transition-all duration-200 whitespace-nowrap ${
+                pathname === "/"
+                  ? "text-[#67e8f9] bg-[#014489]/60 border border-[#00AEEF]/70 shadow-[0_0_14px_rgba(0,174,239,0.35)]"
+                  : "text-slate-100 hover:text-[#67e8f9] hover:bg-white/10"
+              }`}
             >
-              <Sparkles className="w-3 h-3" />
-              <span>Ilmaiset PDF-oppaat</span>
+              Etusivu
             </Link>
-            <span className="hidden sm:inline text-slate-600">•</span>
+
+            {/* Highlighted Puristus Pois Link */}
+            <Link
+              href="/puristus-pois"
+              className={`text-sm font-extrabold px-3 py-2 min-h-[44px] flex items-center gap-1.5 rounded-xl transition-all duration-200 whitespace-nowrap ${
+                pathname === "/puristus-pois"
+                  ? "text-[#67e8f9] bg-[#014489]/80 border-2 border-[#00AEEF] shadow-[0_0_16px_rgba(0,174,239,0.5)]"
+                  : "text-[#67e8f9] bg-[#014489]/30 border border-[#00AEEF]/50 hover:bg-[#014489]/60 hover:text-white"
+              }`}
+            >
+              <Sparkles className="w-3.5 h-3.5 text-[#67e8f9]" />
+              <span>Puristus Pois</span>
+            </Link>
+
+            {/* Palvelut Dropdown */}
+            <div className="relative" ref={servicesRef}>
+              <button
+                onClick={() => {
+                  setServicesDropdownOpen(!servicesDropdownOpen);
+                  setMediaDropdownOpen(false);
+                }}
+                className={`text-sm font-bold px-3 py-2 min-h-[44px] rounded-xl transition-all duration-200 whitespace-nowrap flex items-center gap-1.5 cursor-pointer ${
+                  isServicesActive || servicesDropdownOpen
+                    ? "text-[#67e8f9] bg-[#014489]/60 border border-[#00AEEF]/70 shadow-[0_0_14px_rgba(0,174,239,0.35)]"
+                    : "text-slate-100 hover:text-[#67e8f9] hover:bg-white/10"
+                }`}
+              >
+                <span>Palvelut</span>
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform duration-200 ${
+                    servicesDropdownOpen ? "rotate-180 text-[#67e8f9]" : "text-[#67e8f9]"
+                  }`}
+                />
+              </button>
+
+              {servicesDropdownOpen && (
+                <div className="absolute top-full left-0 mt-3 w-80 rounded-2xl bg-[#000e24]/98 border-2 border-[#00AEEF]/50 p-2.5 shadow-2xl shadow-cyan-950/60 backdrop-blur-2xl space-y-1 z-50">
+                  {serviceLinks.map((item) => {
+                    const Icon = item.icon;
+                    const active = pathname === item.href;
+                    return (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        onClick={() => setServicesDropdownOpen(false)}
+                        className={`p-3 rounded-xl transition-all flex items-start gap-3 group ${
+                          active
+                            ? "bg-[#014489]/50 border border-[#00AEEF]/50"
+                            : "hover:bg-white/5"
+                        }`}
+                      >
+                        <div className={`p-2 rounded-lg shrink-0 ${item.highlight ? "bg-[#00AEEF] text-[#000a18]" : "bg-[#014489]/40 text-[#67e8f9] border border-[#00AEEF]/30"}`}>
+                          <Icon className="w-4 h-4" />
+                        </div>
+                        <div>
+                          <div className="text-sm font-bold text-white group-hover:text-[#67e8f9] transition-colors leading-snug">
+                            {item.name}
+                          </div>
+                          <div className="text-[11px] text-slate-300 leading-tight mt-0.5 font-normal">
+                            {item.description}
+                          </div>
+                        </div>
+                      </Link>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+
+            {/* Videot & Oppaat Dropdown */}
+            <div className="relative" ref={mediaRef}>
+              <button
+                onClick={() => {
+                  setMediaDropdownOpen(!mediaDropdownOpen);
+                  setServicesDropdownOpen(false);
+                }}
+                className={`text-sm font-bold px-3 py-2 min-h-[44px] rounded-xl transition-all duration-200 whitespace-nowrap flex items-center gap-1.5 cursor-pointer ${
+                  isMediaActive || mediaDropdownOpen
+                    ? "text-[#67e8f9] bg-[#014489]/60 border border-[#00AEEF]/70 shadow-[0_0_14px_rgba(0,174,239,0.35)]"
+                    : "text-slate-100 hover:text-[#67e8f9] hover:bg-white/10"
+                }`}
+              >
+                <span>Videot &amp; Oppaat</span>
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform duration-200 ${
+                    mediaDropdownOpen ? "rotate-180 text-[#67e8f9]" : "text-[#67e8f9]"
+                  }`}
+                />
+              </button>
+
+              {mediaDropdownOpen && (
+                <div className="absolute top-full left-0 mt-3 w-80 rounded-2xl bg-[#000e24]/98 border-2 border-[#00AEEF]/50 p-2.5 shadow-2xl shadow-cyan-950/60 backdrop-blur-2xl space-y-1 z-50">
+                  {mediaLinks.map((item) => {
+                    const Icon = item.icon;
+                    const active = pathname === item.href;
+                    return (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        onClick={() => setMediaDropdownOpen(false)}
+                        className={`p-3 rounded-xl transition-all flex items-start gap-3 group ${
+                          active
+                            ? "bg-[#014489]/50 border border-[#00AEEF]/50"
+                            : "hover:bg-white/5"
+                        }`}
+                      >
+                        <div className="p-2 rounded-lg bg-[#014489]/40 text-[#67e8f9] border border-[#00AEEF]/30 group-hover:scale-105 transition-transform shrink-0">
+                          <Icon className="w-4 h-4" />
+                        </div>
+                        <div>
+                          <div className="text-sm font-bold text-white group-hover:text-[#67e8f9] transition-colors leading-snug">
+                            {item.name}
+                          </div>
+                          <div className="text-[11px] text-slate-300 leading-tight mt-0.5 font-normal">
+                            {item.description}
+                          </div>
+                        </div>
+                      </Link>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+
+            {/* Tietoa minusta */}
+            <Link
+              href="/tietoa-minusta"
+              className={`text-sm font-bold px-3 py-2 min-h-[44px] flex items-center rounded-xl transition-all duration-200 whitespace-nowrap ${
+                pathname === "/tietoa-minusta"
+                  ? "text-[#67e8f9] bg-[#014489]/60 border border-[#00AEEF]/70 shadow-[0_0_14px_rgba(0,174,239,0.35)]"
+                  : "text-slate-100 hover:text-[#67e8f9] hover:bg-white/10"
+              }`}
+            >
+              Tietoa minusta
+            </Link>
+
+            {/* Yhteystiedot */}
+            <Link
+              href="/yhteystiedot"
+              className={`text-sm font-bold px-3 py-2 min-h-[44px] flex items-center rounded-xl transition-all duration-200 whitespace-nowrap ${
+                pathname === "/yhteystiedot"
+                  ? "text-[#67e8f9] bg-[#014489]/60 border border-[#00AEEF]/70 shadow-[0_0_14px_rgba(0,174,239,0.35)]"
+                  : "text-slate-100 hover:text-[#67e8f9] hover:bg-white/10"
+              }`}
+            >
+              Yhteystiedot
+            </Link>
+          </nav>
+
+          {/* Desktop Right CTA & Language Switcher */}
+          <div className="hidden lg:flex items-center gap-3 shrink-0">
             <a
               href="https://www.ptsakkinen.com"
               target="_blank"
               rel="noopener noreferrer"
               title="International English Site — ptsakkinen.com"
-              className="inline-flex items-center gap-1.5 px-3 py-2 min-h-[44px] rounded-md bg-[#00122e] border border-[#0C66B4]/50 text-slate-200 hover:text-white hover:border-[#00AEEF] transition-all"
+              className="inline-flex items-center gap-1.5 px-3 py-2 min-h-[44px] rounded-lg bg-[#00122e] border border-[#0C66B4]/60 text-slate-200 hover:text-white hover:border-[#00AEEF] transition-all shadow-sm"
             >
-              <Globe className="w-3.5 h-3.5 text-[#67e8f9]" />
+              <Globe className="w-4 h-4 text-[#67e8f9]" />
               <span className="font-bold text-xs">EN</span>
               <span className="text-slate-300 font-normal text-xs">/ FI</span>
             </a>
-          </div>
-        </div>
-      </div>
 
-      {/* 2. MAIN STICKY NAVIGATION BAR */}
-      <div className="bg-[#000814] border-b border-[#0C66B4]/60 shadow-xl">
-        <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20 gap-4">
-            
-            {/* Brand Logo */}
-            <Link href="/" className="flex items-center gap-3 shrink-0 group">
-              <div className="relative w-11 h-11 rounded-full overflow-hidden border-2 border-[#00AEEF] bg-[#000d21] flex items-center justify-center shadow-[0_0_16px_rgba(0,174,239,0.7)] group-hover:scale-105 group-hover:shadow-[0_0_24px_rgba(0,174,239,0.9)] transition-all duration-300 p-0.5">
-                <img
-                  src="/logo-whitebg.png?v=20260730"
-                  alt="FT Säkkinen logo"
-                  className="w-full h-full object-contain rounded-full"
-                />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-display text-xl sm:text-2xl font-extrabold tracking-wide text-white group-hover:text-[#67e8f9] transition-colors">
-                  FT SÄKKINEN<span className="text-[#67e8f9]">.</span>
-                </span>
-                <span className="text-[10px] text-[#e2e8f0] font-bold uppercase tracking-widest -mt-1 font-sans">
-                  OMT-Fysioterapeutti
-                </span>
-              </div>
-            </Link>
-
-            {/* Streamlined Desktop Navigation */}
-            <nav className="hidden lg:flex items-center justify-center gap-2 xl:gap-4 px-2">
-              <Link
-                href="/"
-                className={`text-sm font-bold px-3.5 py-2.5 min-h-[44px] flex items-center rounded-xl transition-all duration-200 whitespace-nowrap ${
-                  pathname === "/"
-                    ? "text-[#67e8f9] bg-[#014489]/60 border border-[#00AEEF]/70 shadow-[0_0_14px_rgba(0,174,239,0.35)]"
-                    : "text-slate-100 hover:text-[#67e8f9] hover:bg-white/10"
-                }`}
-              >
-                Etusivu
-              </Link>
-
-              {/* Palvelut Dropdown */}
-              <div className="relative" ref={servicesRef}>
-                <button
-                  onClick={() => {
-                    setServicesDropdownOpen(!servicesDropdownOpen);
-                    setMediaDropdownOpen(false);
-                  }}
-                  className={`text-sm font-bold px-3.5 py-2.5 min-h-[44px] rounded-xl transition-all duration-200 whitespace-nowrap flex items-center gap-1.5 cursor-pointer ${
-                    isServicesActive || servicesDropdownOpen
-                      ? "text-[#67e8f9] bg-[#014489]/60 border border-[#00AEEF]/70 shadow-[0_0_14px_rgba(0,174,239,0.35)]"
-                      : "text-slate-100 hover:text-[#67e8f9] hover:bg-white/10"
-                  }`}
-                >
-                  <span>Palvelut &amp; Kuntoutus</span>
-                  <ChevronDown
-                    className={`w-4 h-4 transition-transform duration-200 ${
-                      servicesDropdownOpen ? "rotate-180 text-[#67e8f9]" : "text-[#67e8f9]"
-                    }`}
-                  />
-                </button>
-
-                {servicesDropdownOpen && (
-                  <div className="absolute top-full left-0 mt-3 w-80 rounded-2xl bg-[#000e24]/98 border-2 border-[#00AEEF]/50 p-2.5 shadow-2xl shadow-cyan-950/60 backdrop-blur-2xl space-y-1 z-50">
-                    {serviceLinks.map((item) => {
-                      const Icon = item.icon;
-                      const active = pathname === item.href;
-                      return (
-                        <Link
-                          key={item.href}
-                          href={item.href}
-                          onClick={() => setServicesDropdownOpen(false)}
-                          className={`p-3 rounded-xl transition-all flex items-start gap-3 group ${
-                            active
-                              ? "bg-[#014489]/50 border border-[#00AEEF]/50"
-                              : "hover:bg-white/5"
-                          }`}
-                        >
-                          <div className="p-2 rounded-lg bg-[#014489]/40 text-[#67e8f9] border border-[#00AEEF]/30 group-hover:scale-105 transition-transform shrink-0">
-                            <Icon className="w-4 h-4" />
-                          </div>
-                          <div>
-                            <div className="text-sm font-bold text-white group-hover:text-[#67e8f9] transition-colors leading-snug">
-                              {item.name}
-                            </div>
-                            <div className="text-[11px] text-slate-400 leading-tight mt-0.5 font-normal">
-                              {item.description}
-                            </div>
-                          </div>
-                        </Link>
-                      );
-                    })}
-                  </div>
-                )}
-              </div>
-
-              {/* Sisällöt & Media Dropdown */}
-              <div className="relative" ref={mediaRef}>
-                <button
-                  onClick={() => {
-                    setMediaDropdownOpen(!mediaDropdownOpen);
-                    setServicesDropdownOpen(false);
-                  }}
-                  className={`text-sm font-bold px-3.5 py-2 rounded-xl transition-all duration-200 whitespace-nowrap flex items-center gap-1.5 cursor-pointer ${
-                    isMediaActive || mediaDropdownOpen
-                      ? "text-[#67e8f9] bg-[#014489]/60 border border-[#00AEEF]/70 shadow-[0_0_14px_rgba(0,174,239,0.35)]"
-                      : "text-slate-100 hover:text-[#67e8f9] hover:bg-white/10"
-                  }`}
-                >
-                  <span>Sisällöt &amp; Media</span>
-                  <ChevronDown
-                    className={`w-4 h-4 transition-transform duration-200 ${
-                      mediaDropdownOpen ? "rotate-180 text-[#67e8f9]" : "text-[#67e8f9]"
-                    }`}
-                  />
-                </button>
-
-                {mediaDropdownOpen && (
-                  <div className="absolute top-full left-0 mt-3 w-80 rounded-2xl bg-[#000e24]/98 border-2 border-[#00AEEF]/50 p-2.5 shadow-2xl shadow-cyan-950/60 backdrop-blur-2xl space-y-1 z-50">
-                    {mediaLinks.map((item) => {
-                      const Icon = item.icon;
-                      const active = pathname === item.href;
-                      return (
-                        <Link
-                          key={item.href}
-                          href={item.href}
-                          onClick={() => setMediaDropdownOpen(false)}
-                          className={`p-3 rounded-xl transition-all flex items-start gap-3 group ${
-                            active
-                              ? "bg-[#014489]/50 border border-[#00AEEF]/50"
-                              : "hover:bg-white/5"
-                          }`}
-                        >
-                          <div className="p-2 rounded-lg bg-[#014489]/40 text-[#67e8f9] border border-[#00AEEF]/30 group-hover:scale-105 transition-transform shrink-0">
-                            <Icon className="w-4 h-4" />
-                          </div>
-                          <div>
-                            <div className="text-sm font-bold text-white group-hover:text-[#67e8f9] transition-colors leading-snug">
-                              {item.name}
-                            </div>
-                            <div className="text-[11px] text-slate-400 leading-tight mt-0.5 font-normal">
-                              {item.description}
-                            </div>
-                          </div>
-                        </Link>
-                      );
-                    })}
-                  </div>
-                )}
-              </div>
-
-              {/* Tietoa minusta */}
-              <Link
-                href="/tietoa-minusta"
-                className={`text-sm font-bold px-3.5 py-2 rounded-xl transition-all duration-200 whitespace-nowrap ${
-                  pathname === "/tietoa-minusta"
-                    ? "text-[#67e8f9] bg-[#014489]/60 border border-[#00AEEF]/70 shadow-[0_0_14px_rgba(0,174,239,0.35)]"
-                    : "text-slate-100 hover:text-[#67e8f9] hover:bg-white/10"
-                }`}
-              >
-                Tietoa minusta
-              </Link>
-
-              {/* Yhteystiedot */}
-              <Link
-                href="/yhteystiedot"
-                className={`text-sm font-bold px-3.5 py-2 rounded-xl transition-all duration-200 whitespace-nowrap ${
-                  pathname === "/yhteystiedot"
-                    ? "text-[#67e8f9] bg-[#014489]/60 border border-[#00AEEF]/70 shadow-[0_0_14px_rgba(0,174,239,0.35)]"
-                    : "text-slate-100 hover:text-[#67e8f9] hover:bg-white/10"
-                }`}
-              >
-                Yhteystiedot
-              </Link>
-
-            </nav>
-
-            {/* Desktop Action-Oriented Primary CTA */}
-            <div className="hidden lg:flex items-center gap-3 shrink-0">
-              <Link
-                href="/yhteystiedot"
-                className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#00AEEF] to-[#38bdf8] text-[#000a18] font-extrabold text-sm hover:from-white hover:to-slate-100 transition-all duration-300 shadow-[0_0_25px_rgba(0,174,239,0.5)] flex items-center gap-2 whitespace-nowrap cursor-pointer hover:scale-[1.02]"
-              >
-                <Calendar className="w-4 h-4 text-[#000a18]" />
-                <span>Varaa vastaanotto</span>
-              </Link>
-            </div>
-
-            {/* Mobile Menu Hamburger Button */}
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Avaa navigointivalikko"
-              className="lg:hidden p-2.5 rounded-xl bg-[#00122e] border border-[#0C66B4]/60 text-white hover:text-[#67e8f9] hover:border-[#00AEEF] transition-all cursor-pointer"
-            >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-
-          </div>
-        </div>
-      </div>
-
-      {/* 3. CLEAN MOBILE OVERLAY DRAWER */}
-      {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#000a18]/98 backdrop-blur-2xl border-b border-[#0C66B4]/60 px-4 pt-4 pb-8 space-y-6 shadow-2xl max-h-[85vh] overflow-y-auto">
-          
-          {/* Primary Quick CTA */}
-          <div className="grid grid-cols-1 gap-2.5">
             <Link
               href="/yhteystiedot"
-              onClick={() => setMobileMenuOpen(false)}
-              className="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-[#00AEEF] to-[#38bdf8] text-[#000a18] font-bold text-center text-sm shadow-[0_0_20px_rgba(0,174,239,0.5)] flex items-center justify-center gap-2"
+              className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#00AEEF] to-[#38bdf8] text-[#000a18] font-extrabold text-sm hover:from-white hover:to-slate-100 transition-all duration-300 shadow-[0_0_25px_rgba(0,174,239,0.5)] flex items-center gap-2 whitespace-nowrap cursor-pointer hover:scale-[1.02]"
             >
-              <Calendar className="w-4 h-4" />
-              <span>Varaa vastaanottoaika</span>
-            </Link>
-
-            <Link
-              href="/ilmaisopas"
-              onClick={() => setMobileMenuOpen(false)}
-              className="w-full py-3 px-4 rounded-xl bg-[#00122e] border border-[#0C66B4] text-white font-semibold text-center text-xs flex items-center justify-center gap-2"
-            >
-              <Sparkles className="w-4 h-4 text-[#67e8f9]" />
-              <span>Lataa ilmaiset PDF-kuntoutusoppaat</span>
+              <Calendar className="w-4 h-4 text-[#000a18]" />
+              <span>Varaa vastaanotto</span>
             </Link>
           </div>
 
-          {/* Primary Navigation Links */}
-          <div className="space-y-1">
-            <div className="px-2 pb-1 text-[11px] font-bold uppercase tracking-wider text-slate-400">
-              Pääsivut
-            </div>
+          {/* Mobile Menu Hamburger Button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Avaa navigointivalikko"
+            className="lg:hidden p-2.5 rounded-xl bg-[#00122e] border border-[#0C66B4]/60 text-white hover:text-[#67e8f9] hover:border-[#00AEEF] transition-all cursor-pointer min-w-[44px] min-h-[44px] flex items-center justify-center"
+          >
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Drawer */}
+      {mobileMenuOpen && (
+        <div className="lg:hidden bg-[#000d21] border-b-2 border-[#00AEEF]/50 px-4 pt-4 pb-6 space-y-4 animate-in slide-in-from-top-3 duration-200">
+          <nav className="flex flex-col space-y-2">
             <Link
               href="/"
               onClick={() => setMobileMenuOpen(false)}
-              className={`px-3.5 py-2.5 rounded-xl text-sm font-semibold flex items-center justify-between ${
-                pathname === "/"
-                  ? "bg-[#014489]/50 text-[#67e8f9] border border-[#00AEEF]/50"
-                  : "text-slate-200 hover:bg-white/5"
-              }`}
+              className="px-4 py-3 rounded-xl text-base font-bold text-slate-100 hover:bg-white/10 hover:text-[#67e8f9] transition-all"
             >
-              <span>Etusivu</span>
+              Etusivu
             </Link>
+            
             <Link
-              href="/tietoa-minusta"
+              href="/puristus-pois"
               onClick={() => setMobileMenuOpen(false)}
-              className={`px-3.5 py-2.5 rounded-xl text-sm font-semibold flex items-center justify-between ${
-                pathname === "/tietoa-minusta"
-                  ? "bg-[#014489]/50 text-[#67e8f9] border border-[#00AEEF]/50"
-                  : "text-slate-200 hover:bg-white/5"
-              }`}
+              className="px-4 py-3 rounded-xl text-base font-extrabold text-[#67e8f9] bg-[#014489]/40 border border-[#00AEEF]/50 flex items-center gap-2"
             >
-              <span>Tietoa minusta</span>
+              <Sparkles className="w-4 h-4 text-[#67e8f9]" />
+              <span>Puristus Pois -Verkkokurssi</span>
             </Link>
-            <Link
-              href="/yhteystiedot"
-              onClick={() => setMobileMenuOpen(false)}
-              className={`px-3.5 py-2.5 rounded-xl text-sm font-semibold flex items-center justify-between ${
-                pathname === "/yhteystiedot"
-                  ? "bg-[#014489]/50 text-[#67e8f9] border border-[#00AEEF]/50"
-                  : "text-slate-200 hover:bg-white/5"
-              }`}
-            >
-              <span>Yhteystiedot</span>
-            </Link>
-          </div>
 
-          {/* Palvelut & Kuntoutus */}
-          <div className="space-y-1 pt-2 border-t border-[#0C66B4]/30">
-            <div className="px-2 pb-1 text-[11px] font-bold uppercase tracking-wider text-slate-400">
-              Palvelut &amp; Koulutukset
+            <div className="pt-2 pb-1 border-t border-[#0C66B4]/30 text-xs font-bold text-[#67e8f9] uppercase tracking-wider px-2">
+              Palvelut &amp; Valmennukset
             </div>
             {serviceLinks.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`px-3.5 py-2.5 rounded-xl text-sm font-semibold flex items-center justify-between ${
-                  pathname === item.href
-                    ? "bg-[#014489]/50 text-[#67e8f9] border border-[#00AEEF]/50"
-                    : "text-slate-200 hover:bg-white/5"
-                }`}
+                className="px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-200 hover:bg-white/10 hover:text-white transition-all flex items-center gap-2"
               >
                 <span>{item.name}</span>
-                <ArrowRight className="w-3.5 h-3.5 text-slate-500" />
               </Link>
             ))}
-          </div>
 
-          {/* Sisällöt & Media */}
-          <div className="space-y-1 pt-2 border-t border-[#0C66B4]/30">
-            <div className="px-2 pb-1 text-[11px] font-bold uppercase tracking-wider text-slate-400">
+            <div className="pt-2 pb-1 border-t border-[#0C66B4]/30 text-xs font-bold text-[#67e8f9] uppercase tracking-wider px-2">
               Videot &amp; Oppaat
             </div>
             {mediaLinks.map((item) => (
@@ -442,41 +369,51 @@ export default function Navbar() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`px-3.5 py-2.5 rounded-xl text-sm font-semibold flex items-center justify-between ${
-                  pathname === item.href
-                    ? "bg-[#014489]/50 text-[#67e8f9] border border-[#00AEEF]/50"
-                    : "text-slate-200 hover:bg-white/5"
-                }`}
+                className="px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-200 hover:bg-white/10 hover:text-white transition-all flex items-center gap-2"
               >
                 <span>{item.name}</span>
-                <ArrowRight className="w-3.5 h-3.5 text-slate-500" />
               </Link>
             ))}
-          </div>
 
-          {/* Footer Utility Switcher */}
-          <div className="pt-3 border-t border-[#0C66B4]/30 flex flex-col gap-2">
+            <div className="pt-2 border-t border-[#0C66B4]/30" />
+            <Link
+              href="/tietoa-minusta"
+              onClick={() => setMobileMenuOpen(false)}
+              className="px-4 py-2.5 rounded-xl text-base font-bold text-slate-100 hover:bg-white/10 hover:text-[#67e8f9] transition-all"
+            >
+              Tietoa minusta
+            </Link>
+            <Link
+              href="/yhteystiedot"
+              onClick={() => setMobileMenuOpen(false)}
+              className="px-4 py-2.5 rounded-xl text-base font-bold text-slate-100 hover:bg-white/10 hover:text-[#67e8f9] transition-all"
+            >
+              Yhteystiedot
+            </Link>
+          </nav>
+
+          <div className="pt-2 flex flex-col gap-3">
             <a
               href="https://www.ptsakkinen.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full py-2.5 px-3 rounded-xl border border-[#0C66B4]/60 bg-[#00122e] text-slate-200 text-center text-xs font-semibold hover:border-[#00AEEF] flex items-center justify-center gap-2"
+              className="w-full py-3 rounded-xl border border-[#0C66B4]/60 bg-[#00122e] text-slate-200 text-center text-sm font-bold hover:border-[#00AEEF] transition-all flex items-center justify-center gap-2 min-h-[44px]"
             >
-              <Globe className="w-3.5 h-3.5 text-[#67e8f9]" />
-              <span>Switch to English (ptsakkinen.com)</span>
+              <Globe className="w-4 h-4 text-[#67e8f9]" />
+              <span>International English Site (ptsakkinen.com)</span>
             </a>
+
             <Link
-              href="/tietosuoja"
+              href="/yhteystiedot"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-center text-[11px] text-slate-400 hover:text-slate-200 py-1"
+              className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#00AEEF] to-[#38bdf8] text-[#000a18] font-extrabold text-center text-base hover:from-white hover:to-slate-100 transition-all shadow-glow flex items-center justify-center gap-2 min-h-[48px]"
             >
-              Tietosuoja &amp; Vastuuvapauslauseke
+              <Calendar className="w-5 h-5 text-[#000a18]" />
+              <span>Varaa vastaanotto</span>
             </Link>
           </div>
-
         </div>
       )}
     </header>
   );
 }
-
