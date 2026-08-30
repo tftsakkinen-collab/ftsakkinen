@@ -17,6 +17,7 @@ import {
   Video,
   FileText,
   Flame,
+  UserCheck,
 } from "lucide-react";
 
 export default function Navbar() {
@@ -57,23 +58,18 @@ export default function Navbar() {
 
   const serviceLinks = [
     {
-      name: "Puristus Pois -Verkkokurssi",
+      name: "Eroon jäykästä leuasta (29 €)",
+      href: "/valmennukset",
+      description: "17 minuutin täsmävideokurssi & kotihoito-opas.",
+      icon: Video,
+      highlight: false,
+    },
+    {
+      name: "Puristus Pois (49 € / 149 €)",
       href: "/puristus-pois",
       description: "8 viikon täsmäohjelma leuan ja niskan jännitystiloihin.",
       icon: Flame,
       highlight: true,
-    },
-    {
-      name: "Valmennukset",
-      href: "/valmennukset",
-      description: "Yksilölliset kotikuntoutusohjelmat ja fysioterapiavalmennukset.",
-      icon: Dumbbell,
-    },
-    {
-      name: "Koulutukset & Luennot",
-      href: "/koulutukset",
-      description: "Purentaelimistön (TMD) ammattilaiskoulutukset ja kurssit.",
-      icon: GraduationCap,
     },
     {
       name: "Kyynärpää-apu väline",
@@ -131,46 +127,24 @@ export default function Navbar() {
             </div>
           </Link>
 
-          {/* Streamlined Desktop Navigation */}
-          <nav className="hidden lg:flex items-center justify-center gap-1.5 xl:gap-3 px-2">
-            <Link
-              href="/"
-              className={`text-sm font-bold px-3 py-2 min-h-[44px] flex items-center rounded-xl transition-all duration-200 whitespace-nowrap ${
-                pathname === "/"
-                  ? "text-[#67e8f9] bg-[#014489] border border-[#00AEEF]"
-                  : "text-slate-100 hover:text-[#67e8f9] hover:bg-white/10"
-              }`}
-            >
-              Etusivu
-            </Link>
-
-            {/* Highlighted Puristus Pois Link */}
-            <Link
-              href="/puristus-pois"
-              className={`text-sm font-extrabold px-3.5 py-2 min-h-[44px] flex items-center gap-1.5 rounded-xl transition-all duration-200 whitespace-nowrap ${
-                pathname === "/puristus-pois"
-                  ? "text-[#67e8f9] bg-[#014489] border-2 border-[#00AEEF]"
-                  : "text-[#67e8f9] bg-[#014489]/40 border border-[#00AEEF]/60 hover:bg-[#014489] hover:text-white"
-              }`}
-            >
-              <Sparkles className="w-3.5 h-3.5 text-[#67e8f9]" />
-              <span>Puristus Pois</span>
-            </Link>
-
-            {/* Palvelut Dropdown (100% Solid Opaque Background) */}
+          {/* Streamlined Desktop Navigation with 3-Second Blueprint Split */}
+          <nav className="hidden lg:flex items-center justify-center gap-2 xl:gap-3 px-2">
+            
+            {/* 1. Primary Consumer Door: Itsehoito */}
             <div className="relative" ref={servicesRef}>
               <button
                 onClick={() => {
                   setServicesDropdownOpen(!servicesDropdownOpen);
                   setMediaDropdownOpen(false);
                 }}
-                className={`text-sm font-bold px-3 py-2 min-h-[44px] rounded-xl transition-all duration-200 whitespace-nowrap flex items-center gap-1.5 cursor-pointer ${
+                className={`text-sm font-extrabold px-3.5 py-2 min-h-[44px] rounded-xl transition-all duration-200 whitespace-nowrap flex items-center gap-1.5 cursor-pointer ${
                   isServicesActive || servicesDropdownOpen
                     ? "text-[#67e8f9] bg-[#014489] border border-[#00AEEF]"
                     : "text-slate-100 hover:text-[#67e8f9] hover:bg-white/10"
                 }`}
               >
-                <span>Palvelut</span>
+                <Sparkles className="w-4 h-4 text-[#67e8f9]" />
+                <span>Itsehoito &amp; Kivunlievitys</span>
                 <ChevronDown
                   className={`w-4 h-4 transition-transform duration-200 ${
                     servicesDropdownOpen ? "rotate-180 text-[#67e8f9]" : "text-[#67e8f9]"
@@ -212,7 +186,23 @@ export default function Navbar() {
               )}
             </div>
 
-            {/* Videot & Oppaat Dropdown (100% Solid Opaque Background) */}
+            {/* 2. Primary B2B Door: Ammattilaisille (Distinct B2B Badge Styling) */}
+            <Link
+              href="/koulutukset"
+              className={`text-sm font-extrabold px-3.5 py-2 min-h-[44px] flex items-center gap-2 rounded-xl transition-all duration-200 whitespace-nowrap ${
+                pathname === "/koulutukset"
+                  ? "text-amber-300 bg-amber-500/30 border-2 border-amber-400"
+                  : "text-amber-200 bg-amber-500/15 border border-amber-500/40 hover:bg-amber-500/25 hover:text-white"
+              }`}
+            >
+              <GraduationCap className="w-4 h-4 text-amber-400" />
+              <span>Ammattilaisille</span>
+              <span className="text-[10px] font-mono font-bold uppercase bg-amber-500/30 text-amber-300 px-1.5 py-0.5 rounded border border-amber-500/40">
+                B2B
+              </span>
+            </Link>
+
+            {/* Videot & Oppaat Dropdown */}
             <div className="relative" ref={mediaRef}>
               <button
                 onClick={() => {
@@ -279,17 +269,6 @@ export default function Navbar() {
               Tietoa minusta
             </Link>
 
-            {/* Yhteystiedot */}
-            <Link
-              href="/yhteystiedot"
-              className={`text-sm font-bold px-3 py-2 min-h-[44px] flex items-center rounded-xl transition-all duration-200 whitespace-nowrap ${
-                pathname === "/yhteystiedot"
-                  ? "text-[#67e8f9] bg-[#014489] border border-[#00AEEF]"
-                  : "text-slate-100 hover:text-[#67e8f9] hover:bg-white/10"
-              }`}
-            >
-              Yhteystiedot
-            </Link>
           </nav>
 
           {/* Desktop Right CTA & Language Switcher */}
@@ -331,24 +310,25 @@ export default function Navbar() {
         <div className="lg:hidden bg-[#000d21] border-b-2 border-[#00AEEF] px-4 pt-4 pb-6 space-y-4 animate-in slide-in-from-top-3 duration-200">
           <nav className="flex flex-col space-y-2">
             <Link
-              href="/"
-              onClick={() => setMobileMenuOpen(false)}
-              className="px-4 py-3 rounded-xl text-base font-bold text-slate-100 hover:bg-white/10 hover:text-[#67e8f9] transition-all"
-            >
-              Etusivu
-            </Link>
-            
-            <Link
               href="/puristus-pois"
               onClick={() => setMobileMenuOpen(false)}
               className="px-4 py-3 rounded-xl text-base font-extrabold text-[#67e8f9] bg-[#014489] border border-[#00AEEF] flex items-center gap-2"
             >
               <Sparkles className="w-4 h-4 text-[#67e8f9]" />
-              <span>Puristus Pois -Verkkokurssi</span>
+              <span>Puristus Pois (49 € / 149 €)</span>
+            </Link>
+
+            <Link
+              href="/koulutukset"
+              onClick={() => setMobileMenuOpen(false)}
+              className="px-4 py-3 rounded-xl text-base font-extrabold text-amber-300 bg-amber-500/20 border border-amber-500/40 flex items-center gap-2"
+            >
+              <GraduationCap className="w-4 h-4 text-amber-400" />
+              <span>Ammattilaisille (199 € B2B)</span>
             </Link>
 
             <div className="pt-2 pb-1 border-t border-[#0C66B4]/30 text-xs font-bold text-[#67e8f9] uppercase tracking-wider px-2">
-              Palvelut &amp; Valmennukset
+              Itsehoito &amp; Valmennukset
             </div>
             {serviceLinks.map((item) => (
               <Link
