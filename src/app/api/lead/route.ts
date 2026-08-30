@@ -20,16 +20,34 @@ export async function POST(req: Request) {
     const appsScriptUrl = process.env.APPS_SCRIPT_LEAD_URL || DEFAULT_APPS_SCRIPT_URL;
 
     const payload = {
+      // General log text & notification
       tieto: `🔔 UUSI LIIDI SAAPUNUT SIVUSTOLTA!\nNimi: ${name}\nSähköposti: ${email}\nKieli: ${
         lang === "en" ? "EN" : "FI"
       }\nLähde: ${source || "ilmaisopas"}`,
+
+      // Standard English fields
       name,
       email,
+      lang: lang === "en" ? "en" : "fi",
+      source: source || "ilmaisopas",
+
+      // Finnish alias fields for Apps Script compatibility
+      etunimi: name,
+      nimi: name,
+      sahkoposti: email,
+      kieli: lang === "en" ? "en" : "fi",
+      lahde: source || "ilmaisopas",
+
+      // Sheet & Action specs
+      action: "addLead",
+      sheet: "Liidit",
+      tab: "Liidit",
+      sheetName: "Liidit",
+
+      // Email notification params
       recipient: "tiedottajanne@gmail.com",
       subject: `🔔 Uusi sähköpostilistalle liittyminen: ${name} (${email})`,
-      lang: lang === "en" ? "en" : "fi",
       secret: process.env.LEAD_SHARED_SECRET || "sakkinen-lead-secret",
-      source: source || "ilmaisopas",
       ua: req.headers.get("user-agent") || "",
     };
 
