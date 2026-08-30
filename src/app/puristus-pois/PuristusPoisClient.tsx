@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import {
   Sparkles,
@@ -23,13 +23,30 @@ import {
   Award,
 } from "lucide-react";
 
-export default function PuristusPoisClient() {
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
+// Centralized configuration variables
+const PILOT_SPOTS = 10;
+const PILOT_PRICE = "49 €";
+const STRIPE_URL =
+  process.env.NEXT_PUBLIC_STRIPE_PURISTUS_POIS_URL ||
+  "https://buy.stripe.com/test_placeholder_puristuspois";
 
-  const handleCheckout = () => {
-    // Redirect to checkout or contact for pilot group spot reservation
-    window.location.href = "https://buy.stripe.com/test_placeholder_puristuspois";
-  };
+export default function PuristusPoisClient() {
+  // First FAQ item open by default per UX review recommendation
+  const [openFaq, setOpenFaq] = useState<number | null>(0);
+  const [showMobileCta, setShowMobileCta] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Show sticky mobile CTA after scrolling past initial hero (approx 600px)
+      if (window.scrollY > 600) {
+        setShowMobileCta(true);
+      } else {
+        setShowMobileCta(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const toggleFaq = (idx: number) => {
     setOpenFaq(openFaq === idx ? null : idx);
@@ -89,7 +106,7 @@ export default function PuristusPoisClient() {
   ];
 
   return (
-    <div className="bg-[#000814] text-slate-100 min-h-screen font-sans selection:bg-[#00AEEF] selection:text-black">
+    <div className="bg-[#000814] text-slate-100 min-h-screen font-sans selection:bg-[#00AEEF] selection:text-black pb-16 lg:pb-0">
       
       {/* 1. HERO */}
       <section className="relative py-20 lg:py-32 border-b border-[#0C66B4]/30 overflow-hidden bg-gradient-to-b from-[#000814] via-[#00122e] to-[#000814]">
@@ -143,7 +160,7 @@ export default function PuristusPoisClient() {
               className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-[#00AEEF] to-[#38bdf8] text-[#000a18] font-extrabold text-base hover:from-white hover:to-slate-100 transition-all duration-300 shadow-[0_0_30px_rgba(0,174,239,0.5)] flex items-center justify-center gap-2 cursor-pointer min-h-[52px]"
             >
               <Flame className="w-5 h-5 text-[#000a18]" />
-              <span>Pilottiryhmä — 49 € · 10 paikkaa</span>
+              <span>Pilottiryhmä — {PILOT_PRICE} · {PILOT_SPOTS} paikkaa</span>
             </a>
           </div>
 
@@ -422,7 +439,7 @@ export default function PuristusPoisClient() {
             <ul className="space-y-3 text-slate-200 text-sm">
               <li className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-[#67e8f9] shrink-0 mt-0.5" />
-                <span><strong className="text-white">Viisi minuuttia päivässä.</strong> Ei koskaan enempää. Yksi asia kerrallaan.</span>
+                <span><strong className="text-white">Noin viisi minuuttia päivässä.</strong> Yksi asia kerrallaan — ei koskaan montaa uutta asiaa samana päivänä.</span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-[#67e8f9] shrink-0 mt-0.5" />
@@ -819,7 +836,7 @@ export default function PuristusPoisClient() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-emerald-400 font-bold">✓</span>
-                  <span>Sinulla on viisi minuuttia päivässä</span>
+                  <span>Sinulla on noin viisi minuuttia päivässä</span>
                 </li>
               </ul>
             </div>
@@ -949,7 +966,7 @@ export default function PuristusPoisClient() {
               PILOTTIRYHMÄN ERIKOISHINTA
             </span>
             <h2 className="text-3xl sm:text-5xl font-extrabold text-white">
-              Ensimmäinen ryhmä: 49 €
+              Ensimmäinen ryhmä: {PILOT_PRICE}
             </h2>
             <p className="text-base text-slate-300 font-medium">
               Ja kerron suoraan, miksi se on noin halpa.
@@ -977,7 +994,7 @@ export default function PuristusPoisClient() {
             <ol className="list-decimal list-inside space-y-2 text-sm text-slate-200">
               <li><strong className="text-white">Maksat paikkasi</strong> (Stripe — kortti tai MobilePay).</li>
               <li><strong className="text-white">Saat heti vahvistussähköpostin</strong> ja työkirjan PDF:nä.</li>
-              <li><strong className="text-white">Kun kymmenen paikkaa on täynnä</strong>, ilmoitan aloituspäivän — ja päivä 1 lähtee liikkeelle.</li>
+              <li><strong className="text-white">Kun {PILOT_SPOTS} paikkaa on täynnä</strong>, ilmoitan aloituspäivän — ja päivä 1 lähtee liikkeelle.</li>
             </ol>
             <p className="text-xs text-slate-400 italic pt-2">
               Aloitus on kaikilla sama päivä. Se on tarkoituksellista: te kuljette samaa päivää samaan aikaan, ja siksi yhteisössä on jotain mistä puhua.
@@ -987,7 +1004,7 @@ export default function PuristusPoisClient() {
           {/* Includes List */}
           <div className="p-8 rounded-3xl bg-[#00183d] border-2 border-[#00AEEF] space-y-6 shadow-2xl">
             <h3 className="text-xl font-bold text-white border-b border-[#0C66B4]/50 pb-4">
-              Mitä 49 € sisältää
+              Mitä {PILOT_PRICE} sisältää
             </h3>
             
             <ul className="space-y-3 text-sm text-slate-200">
@@ -1033,10 +1050,10 @@ export default function PuristusPoisClient() {
                 Kertamaksu. Ei jatkuvaa veloitusta.
               </p>
               <div className="p-4 rounded-xl bg-amber-500/20 border border-amber-500/50 text-amber-200 text-xs font-bold">
-                Paikkoja: 10. Ei markkinointinumero — se on se määrä, jonka kanssa minä ehdin oikeasti vastata jokaiselle. Ensimmäinen ryhmä saa enemmän minun aikaani kuin yksikään myöhempi ryhmä.
+                Paikkoja: {PILOT_SPOTS}. Ei markkinointinumero — se on se määrä, jonka kanssa minä ehdin oikeasti vastata jokaiselle. Ensimmäinen ryhmä saa enemmän minun aikaani kuin yksikään myöhempi ryhmä.
               </div>
               <p className="text-xs font-bold text-[#67e8f9]">
-                Kun kymmenen paikkaa on täynnä, myynti sulkeutuu ja kurssi käynnistyy.
+                Kun {PILOT_SPOTS} paikkaa on täynnä, myynti sulkeutuu ja kurssi käynnistyy.
               </p>
             </div>
 
@@ -1049,14 +1066,15 @@ export default function PuristusPoisClient() {
               </p>
             </div>
 
-            {/* Checkout Button */}
-            <button
-              onClick={handleCheckout}
+            {/* Stripe Payment CTA Link (CTA HINTA) */}
+            <a
+              href={STRIPE_URL}
+              data-cta="hinta"
               className="w-full py-4 px-8 rounded-xl bg-gradient-to-r from-[#00AEEF] to-[#38bdf8] text-[#000a18] font-extrabold text-lg hover:from-white hover:to-slate-100 transition-all shadow-[0_0_35px_rgba(0,174,239,0.6)] flex items-center justify-center gap-3 cursor-pointer min-h-[52px]"
             >
               <CreditCard className="w-6 h-6 text-[#000a18]" />
-              <span>Ota paikkasi — 49 €</span>
-            </button>
+              <span>Ota paikkasi — {PILOT_PRICE}</span>
+            </a>
 
             <div className="flex items-center justify-center gap-4 text-xs text-slate-400 font-medium">
               <span className="flex items-center gap-1">
@@ -1066,7 +1084,7 @@ export default function PuristusPoisClient() {
               <span>•</span>
               <span>14 päivän takuu</span>
               <span>•</span>
-              <span>10 paikkaa</span>
+              <span>{PILOT_SPOTS} paikkaa</span>
             </div>
 
           </div>
@@ -1081,7 +1099,7 @@ export default function PuristusPoisClient() {
           <div className="p-8 rounded-3xl bg-[#001433] border-2 border-emerald-500/60 space-y-4">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold">
               <ShieldCheck className="w-4 h-4 text-emerald-400" />
-              <span>100 % RISKITTÖMÄT EHODOT</span>
+              <span>100 % RISKITTÖMÄT EHDOT</span>
             </div>
 
             <h2 className="text-2xl sm:text-4xl font-extrabold text-white">
@@ -1163,7 +1181,7 @@ export default function PuristusPoisClient() {
               Mutta sinä tiedät, mistä oireesi tulevat. Sinä tiedät, mitä tehdä kun ne alkavat. Ja sinä tiedät, milloin asia ei kuulu sinulle vaan lääkärille.
             </p>
             <p className="text-2xl sm:text-3xl font-extrabold text-[#67e8f9] pt-2">
-              Sinä lakkaat olemasta oman kehosi arvoituksen edessä avuton.
+              Sinä lakkaat olemasta oman kehosi arvoituksen edessäavuton.
             </p>
             <p className="text-sm text-slate-300 italic pt-2">
               Se on se, mitä yritän saada aikaan jokaisella vastaanotolla, jonka pidän.
@@ -1171,21 +1189,41 @@ export default function PuristusPoisClient() {
           </div>
 
           <div className="pt-6 space-y-4">
-            <button
-              onClick={handleCheckout}
+            {/* Stripe Payment CTA Link (CTA LOPPU) */}
+            <a
+              href={STRIPE_URL}
+              data-cta="loppu"
               className="w-full sm:w-auto px-10 py-5 rounded-2xl bg-gradient-to-r from-[#00AEEF] to-[#38bdf8] text-[#000a18] font-extrabold text-xl hover:from-white hover:to-slate-100 transition-all duration-300 shadow-[0_0_40px_rgba(0,174,239,0.7)] cursor-pointer inline-flex items-center justify-center gap-3 min-h-[56px]"
             >
               <Flame className="w-6 h-6 text-[#000a18]" />
-              <span>Ota paikkasi — 49 €</span>
-            </button>
+              <span>Ota paikkasi — {PILOT_PRICE}</span>
+            </a>
 
             <p className="text-xs text-slate-400 font-medium">
-              14 päivän takuu · kertamaksu · materiaali pysyy sinulla · 10 paikkaa
+              14 päivän takuu · kertamaksu · materiaali pysyy sinulla · {PILOT_SPOTS} paikkaa
             </p>
           </div>
 
         </div>
       </section>
+
+      {/* Sticky Mobile Bottom CTA Bar */}
+      {showMobileCta && (
+        <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#000814]/95 border-t border-[#00AEEF]/60 p-3 backdrop-blur-xl shadow-[0_-10px_30px_rgba(0,0,0,0.8)] flex items-center justify-between gap-3 animate-in slide-in-from-bottom duration-300">
+          <div className="flex flex-col pl-1">
+            <span className="text-xs text-slate-300 font-medium">Pilottiryhmä ({PILOT_SPOTS} paikkaa)</span>
+            <span className="text-sm font-extrabold text-[#67e8f9]">{PILOT_PRICE} · Kertamaksu</span>
+          </div>
+          <a
+            href={STRIPE_URL}
+            data-cta="mobiili"
+            className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#00AEEF] to-[#38bdf8] text-[#000a18] font-extrabold text-sm shadow-[0_0_15px_rgba(0,174,239,0.5)] flex items-center gap-1.5 shrink-0"
+          >
+            <CreditCard className="w-4 h-4 text-[#000a18]" />
+            <span>Ota paikkasi</span>
+          </a>
+        </div>
+      )}
 
     </div>
   );
