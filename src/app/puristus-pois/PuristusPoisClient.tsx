@@ -23,12 +23,11 @@ import {
   Award,
 } from "lucide-react";
 
-// Centralized configuration variables
+// Centralized campaign configuration variables
 const PILOT_SPOTS = 10;
-const PILOT_PRICE = "49 €";
-const STRIPE_URL =
-  process.env.NEXT_PUBLIC_STRIPE_PURISTUS_POIS_URL ||
-  "https://buy.stripe.com/test_placeholder_puristuspois";
+const CAMPAIGN_PRICE = "49 €";
+const REGULAR_PRICE = "149 €";
+const STRIPE_URL = "https://buy.stripe.com/fZuaEX5OkdQag0i9E10Ny00";
 
 export default function PuristusPoisClient() {
   // First FAQ item open by default per UX review recommendation
@@ -114,9 +113,10 @@ export default function PuristusPoisClient() {
         
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-8">
           
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#014489]/40 border border-[#00AEEF]/50 text-[#67e8f9] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
-            <Sparkles className="w-4 h-4 text-[#67e8f9]" />
-            <span>Kahdeksan Viikon Valmennusohjelma</span>
+          {/* Scarcity Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/20 border border-amber-500/50 text-amber-300 text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+            <Sparkles className="w-4 h-4 text-amber-400" />
+            <span>Rajoitettu erä: {PILOT_SPOTS} kpl · Founding Member</span>
           </div>
 
           <div className="space-y-4">
@@ -156,11 +156,12 @@ export default function PuristusPoisClient() {
             </a>
 
             <a
-              href="#hinta"
+              href={STRIPE_URL}
+              data-cta="hero"
               className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-[#00AEEF] to-[#38bdf8] text-[#000a18] font-extrabold text-base hover:from-white hover:to-slate-100 transition-all duration-300 shadow-[0_0_30px_rgba(0,174,239,0.5)] flex items-center justify-center gap-2 cursor-pointer min-h-[52px]"
             >
               <Flame className="w-5 h-5 text-[#000a18]" />
-              <span>Pilottiryhmä — {PILOT_PRICE} · {PILOT_SPOTS} paikkaa</span>
+              <span>Lunasta paikkasi nyt ({CAMPAIGN_PRICE})</span>
             </a>
           </div>
 
@@ -957,23 +958,61 @@ export default function PuristusPoisClient() {
         </div>
       </section>
 
-      {/* 14. HINTA */}
+      {/* 14. HINTA JA FOUNDING MEMBER KAMPANJA */}
       <section id="hinta" className="py-20 border-b border-[#0C66B4]/30 bg-[#000d21]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
           
           <div className="text-center space-y-4">
-            <span className="text-xs font-mono font-bold text-[#67e8f9] uppercase tracking-widest block">
-              PILOTTIRYHMÄN ERIKOISHINTA
-            </span>
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/20 border border-amber-500/50 text-amber-300 text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+              <Sparkles className="w-4 h-4 text-amber-400" />
+              <span>Rajoitettu erä: {PILOT_SPOTS} kpl</span>
+            </div>
             <h2 className="text-3xl sm:text-5xl font-extrabold text-white">
-              Ensimmäinen ryhmä: {PILOT_PRICE}
+              Founding Member -erikoishinta
             </h2>
-            <p className="text-base text-slate-300 font-medium">
-              Ja kerron suoraan, miksi se on noin halpa.
+            <p className="text-base sm:text-lg text-slate-200 font-medium max-w-2xl mx-auto">
+              Ensimmäiset {PILOT_SPOTS} paikkaa varmistavat kurssin julkaisun erikoishintaan.
             </p>
           </div>
 
-          <div className="p-6 sm:p-8 rounded-3xl bg-[#001433] border-2 border-[#00AEEF]/60 space-y-4 text-slate-200 text-sm sm:text-base leading-relaxed">
+          {/* Pricing Display Box */}
+          <div className="p-8 rounded-3xl bg-[#00183d] border-2 border-[#00AEEF] text-center space-y-4 shadow-2xl">
+            <div className="flex items-baseline justify-center gap-4 py-2">
+              <span className="text-5xl sm:text-7xl font-display font-extrabold text-[#67e8f9]">
+                {CAMPAIGN_PRICE}
+              </span>
+              <span className="text-2xl sm:text-3xl font-bold text-slate-400 line-through">
+                {REGULAR_PRICE}
+              </span>
+            </div>
+
+            <div className="p-4 rounded-xl bg-amber-500/20 border border-amber-500/50 text-amber-200 text-xs sm:text-sm font-bold max-w-xl mx-auto">
+              Vain 10 ensimmäiselle mukaan lähtijälle – hinta nousee heti {REGULAR_PRICE} euroon paikkojen täytyttyä.
+            </div>
+
+            {/* Direct Stripe Payment Link */}
+            <a
+              href={STRIPE_URL}
+              data-cta="hinta"
+              className="w-full py-4 px-8 rounded-xl bg-gradient-to-r from-[#00AEEF] to-[#38bdf8] text-[#000a18] font-extrabold text-lg sm:text-xl hover:from-white hover:to-slate-100 transition-all shadow-[0_0_35px_rgba(0,174,239,0.6)] flex items-center justify-center gap-3 cursor-pointer min-h-[56px] max-w-xl mx-auto"
+            >
+              <CreditCard className="w-6 h-6 text-[#000a18]" />
+              <span>Lunasta paikkasi nyt ({CAMPAIGN_PRICE})</span>
+            </a>
+
+            <div className="flex items-center justify-center gap-4 text-xs text-slate-400 font-medium pt-2">
+              <span className="flex items-center gap-1">
+                <Lock className="w-3.5 h-3.5 text-[#67e8f9]" />
+                Stripe &amp; MobilePay
+              </span>
+              <span>•</span>
+              <span>14 päivän takuu</span>
+              <span>•</span>
+              <span>Vain {PILOT_SPOTS} paikkaa</span>
+            </div>
+          </div>
+
+          <div className="p-6 sm:p-8 rounded-3xl bg-[#001433] border border-[#0C66B4]/60 space-y-4 text-slate-200 text-sm sm:text-base leading-relaxed">
             <p>Tämä on ensimmäinen kerta, kun tämä ohjelma vedetään läpi. Minä tarvitsen teiltä kolme asiaa, joita minulla ei vielä ole:</p>
             <ol className="list-decimal list-inside space-y-1 font-bold text-white">
               <li>Viikoittaiset mittaukset</li>
@@ -1004,7 +1043,7 @@ export default function PuristusPoisClient() {
           {/* Includes List */}
           <div className="p-8 rounded-3xl bg-[#00183d] border-2 border-[#00AEEF] space-y-6 shadow-2xl">
             <h3 className="text-xl font-bold text-white border-b border-[#0C66B4]/50 pb-4">
-              Mitä {PILOT_PRICE} sisältää
+              Mitä {CAMPAIGN_PRICE} sisältää
             </h3>
             
             <ul className="space-y-3 text-sm text-slate-200">
@@ -1064,27 +1103,6 @@ export default function PuristusPoisClient() {
               <p className="text-[#67e8f9] font-bold text-sm pt-2">
                 Tämä maksaa vähemmän kuin yksi fysioterapiakäynti.
               </p>
-            </div>
-
-            {/* Stripe Payment CTA Link (CTA HINTA) */}
-            <a
-              href={STRIPE_URL}
-              data-cta="hinta"
-              className="w-full py-4 px-8 rounded-xl bg-gradient-to-r from-[#00AEEF] to-[#38bdf8] text-[#000a18] font-extrabold text-lg hover:from-white hover:to-slate-100 transition-all shadow-[0_0_35px_rgba(0,174,239,0.6)] flex items-center justify-center gap-3 cursor-pointer min-h-[52px]"
-            >
-              <CreditCard className="w-6 h-6 text-[#000a18]" />
-              <span>Ota paikkasi — {PILOT_PRICE}</span>
-            </a>
-
-            <div className="flex items-center justify-center gap-4 text-xs text-slate-400 font-medium">
-              <span className="flex items-center gap-1">
-                <Lock className="w-3.5 h-3.5 text-[#67e8f9]" />
-                Stripe &amp; MobilePay
-              </span>
-              <span>•</span>
-              <span>14 päivän takuu</span>
-              <span>•</span>
-              <span>{PILOT_SPOTS} paikkaa</span>
             </div>
 
           </div>
@@ -1181,7 +1199,7 @@ export default function PuristusPoisClient() {
               Mutta sinä tiedät, mistä oireesi tulevat. Sinä tiedät, mitä tehdä kun ne alkavat. Ja sinä tiedät, milloin asia ei kuulu sinulle vaan lääkärille.
             </p>
             <p className="text-2xl sm:text-3xl font-extrabold text-[#67e8f9] pt-2">
-              Sinä lakkaat olemasta oman kehosi arvoituksen edessäavuton.
+              Sinä lakkaat olemasta oman kehosi arvoituksen edessä avuton.
             </p>
             <p className="text-sm text-slate-300 italic pt-2">
               Se on se, mitä yritän saada aikaan jokaisella vastaanotolla, jonka pidän.
@@ -1189,14 +1207,14 @@ export default function PuristusPoisClient() {
           </div>
 
           <div className="pt-6 space-y-4">
-            {/* Stripe Payment CTA Link (CTA LOPPU) */}
+            {/* Direct Stripe Payment CTA Link (CTA LOPPU) */}
             <a
               href={STRIPE_URL}
               data-cta="loppu"
               className="w-full sm:w-auto px-10 py-5 rounded-2xl bg-gradient-to-r from-[#00AEEF] to-[#38bdf8] text-[#000a18] font-extrabold text-xl hover:from-white hover:to-slate-100 transition-all duration-300 shadow-[0_0_40px_rgba(0,174,239,0.7)] cursor-pointer inline-flex items-center justify-center gap-3 min-h-[56px]"
             >
               <Flame className="w-6 h-6 text-[#000a18]" />
-              <span>Ota paikkasi — {PILOT_PRICE}</span>
+              <span>Lunasta paikkasi nyt ({CAMPAIGN_PRICE})</span>
             </a>
 
             <p className="text-xs text-slate-400 font-medium">
@@ -1211,16 +1229,19 @@ export default function PuristusPoisClient() {
       {showMobileCta && (
         <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#000814]/95 border-t border-[#00AEEF]/60 p-3 backdrop-blur-xl shadow-[0_-10px_30px_rgba(0,0,0,0.8)] flex items-center justify-between gap-3 animate-in slide-in-from-bottom duration-300">
           <div className="flex flex-col pl-1">
-            <span className="text-xs text-slate-300 font-medium">Pilottiryhmä ({PILOT_SPOTS} paikkaa)</span>
-            <span className="text-sm font-extrabold text-[#67e8f9]">{PILOT_PRICE} · Kertamaksu</span>
+            <span className="text-xs text-slate-300 font-medium">Founding Member ({PILOT_SPOTS} kpl)</span>
+            <div className="flex items-baseline gap-1.5">
+              <span className="text-sm font-extrabold text-[#67e8f9]">{CAMPAIGN_PRICE}</span>
+              <span className="text-xs text-slate-400 line-through">{REGULAR_PRICE}</span>
+            </div>
           </div>
           <a
             href={STRIPE_URL}
             data-cta="mobiili"
-            className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#00AEEF] to-[#38bdf8] text-[#000a18] font-extrabold text-sm shadow-[0_0_15px_rgba(0,174,239,0.5)] flex items-center gap-1.5 shrink-0"
+            className="px-4 py-2.5 rounded-xl bg-gradient-to-r from-[#00AEEF] to-[#38bdf8] text-[#000a18] font-extrabold text-xs sm:text-sm shadow-[0_0_15px_rgba(0,174,239,0.5)] flex items-center gap-1.5 shrink-0"
           >
             <CreditCard className="w-4 h-4 text-[#000a18]" />
-            <span>Ota paikkasi</span>
+            <span>Lunasta paikkasi</span>
           </a>
         </div>
       )}
