@@ -3,15 +3,12 @@
 import Link from "next/link";
 import { Play, Clock, ArrowUpRight } from "lucide-react";
 import { Video } from "@/data/videos";
-import { CATEGORIES } from "@/data/categories";
 
 interface VideoCardProps {
   video: Video;
 }
 
 export default function VideoCard({ video }: VideoCardProps) {
-  const category = CATEGORIES.find((c) => c.id === video.categoryId);
-
   // If YouTube ID is placeholder dQw4w9WgXcQ, use Janne Sakkinen professional branding image
   const isPlaceholder = !video.youtubeId || video.youtubeId === "dQw4w9WgXcQ";
   const thumbnailUrl = video.thumbnailUrl || (isPlaceholder 
@@ -39,11 +36,6 @@ export default function VideoCard({ video }: VideoCardProps) {
             <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-gradient-to-r from-[#00AEEF] to-[#38bdf8] text-[#000a18] flex items-center justify-center shadow-[0_0_25px_rgba(0,174,239,0.7)] group-hover:scale-110 group-hover:shadow-[0_0_35px_rgba(0,174,239,0.9)] transition-all duration-300 p-3">
               <Play className="w-6 h-6 fill-current translate-x-0.5" />
             </div>
-          </div>
-
-          {/* Category Tag */}
-          <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-[#000e24]/85 border border-[#00AEEF]/50 text-[#67e8f9] text-[11px] font-bold uppercase tracking-wider backdrop-blur-md shadow-sm">
-            {category?.name || "Fysioterapia"}
           </div>
 
           {/* Duration Badge */}
