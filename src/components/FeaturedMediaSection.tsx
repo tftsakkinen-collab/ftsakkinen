@@ -1,43 +1,68 @@
 "use client";
 
-import { ExternalLink, Newspaper, Award, Sparkles, Quote, ArrowUpRight } from "lucide-react";
+import { ExternalLink, Newspaper, Award, Sparkles, Quote, ArrowUpRight, Calendar, BookmarkCheck } from "lucide-react";
 
 export default function FeaturedMediaSection() {
   const articles = [
     {
+      publisher: "Anna.fi / Otavamedia",
+      date: "1.9.2026",
+      title: "Tämä muutos parantaisi lähes jokaisen suomalaisen hyvinvointia – se ei maksa mitään, mutta harva on siihen valmis",
+      desc: "Työfysioterapeutti Janne Säkkinen nimeää 3 konkreettista ohjetta istumatyöläisille: arjen liike, seisomatyön harjoittelu ja työpäivän säännöllinen tauotus, jotta selkä oikenee vielä eläkkeelläkin.",
+      quote: "Ei ole olemassa selkää, joka kestäisi päivittäistä tuntitolkulla istumista vuosien ajan ilman minkäänlaisia ongelmia. Lisää liikettä työpäiviin jo nyt, vaikka vaivoja ei vielä olisi.",
+      url: "https://anna.fi/hyvinvointi/ilmainen-muutos",
+      badge: "Uusin julkaisu • Anna.fi",
+      category: "Istumatyö & Selkäkipu",
+      highlight: true,
+    },
+    {
+      publisher: "Anna.fi / Otavamedia",
+      date: "28.8.2026",
+      title: "Fysioterapeutti paljastaa mokat, jotka moni tekee sänkyostoksilla – hotelleista ei kannata ottaa mallia",
+      desc: "Fysioterapeutti Janne Säkkinen purkaa tyypilliset nukkumisergonomian mokat: miksi muhkeat hotellityynyt vääntävät kaularankaa, milloin 5–8 vuotta vanha patja on syytä vaihtaa ja miten valita keholle oikea nukkumisasennon tuki.",
+      quote: "Muhkeat tyynyt tuovat mieleen hotellien lakanat, mutta niskoille paksut tyynyt ovat kaikkea muuta kuin ylellisyyttä. Lättänä tyyny on usein parempi, ja tyynyn korkeus on ensimmäinen asia tarkistaa, jos niskat ovat aamuisin jumissa.",
+      url: "https://anna.fi/hyvinvointi/sankymokat",
+      badge: "Valtakunnallinen Media",
+      category: "Nukkumisergonomia & Niska",
+      highlight: true,
+    },
+    {
       publisher: "Apu.fi / A-lehdet",
+      date: "A-lehdet",
       title: "Pakarakipu pahenee istuessa? Kokeile näitä fysioterapeutin suosittelemia harjoitteita",
       desc: "Pitkittynyt istuminen, rasitus tai pieni vamma voivat ärsyttää piriformis-lihasta. OMT-fysioterapeutti Janne Säkkinen antaa 5 täsmällistä itsehoitokeinoa pakarakivun lievittämiseen ja piriformis-syndrooman hoitoon.",
       quote: "Pitkittynyt istuminen ärsyttää piriformis-lihasta. Oikeilla liikehoidoilla ja fysioterapeuttisilla harjoitteilla hermopuristeesta ja kivusta päästään eroon.",
       url: "https://www.apu.fi/artikkelit/pakarakipu-pahenee-istuessa-kokeile-naita-fysioterapeutin-suosittelemia-harjoitteita",
       badge: "Valtakunnallinen Media",
       category: "Pakarakipu & Piriformis",
-      color: "from-red-500/20 to-transparent",
+      highlight: false,
     },
     {
       publisher: "Kaleva.fi / Kaleva Media",
+      date: "Kaleva Media",
       title: "Jos naama pysyy peruslukemilla, venyttelet oikein",
       desc: "Kalevan asiantuntijahaastattelussa fysioterapeutti Janne Säkkinen avaa fysioterapian ja kehonhuollon perusperiaatteita: venyttelyn ei pidä sattua, vaan kasvojen tulee säilyä rentona harjoittelun aikana.",
       quote: "Jos naama menee irvistykseen, lihas reagoi suojajännityksellä. Venyttelyn ja kehonhuollon tulee aina tukea hermoston rauhoittumista.",
       url: "https://www.kaleva.fi/jos-naama-pysyy-peruslukemilla-venyttelet-oikein-t/12341018",
       badge: "Sanomalehti Kaleva",
       category: "Venyttely & Lihashuolto",
-      color: "from-blue-500/20 to-transparent",
+      highlight: false,
     },
     {
       publisher: "LinkedIn Professional Feature",
+      date: "Ammatillinen julkaisu",
       title: "Asiantuntijayhteistyö: Fysioterapian & Kuntoutuksen Kehittäminen",
       desc: "Ammatillinen julkaisu ja asiantuntija-avaus fysioterapiakäytäntöjen, OMT-osaamisen ja terveydenhuollon yhteistyön kehittämisestä yhdessä alan huippuammattilaisten kanssa.",
       quote: "Lyötiin Mervi Niippalan kanssa päät yhteen – moniammatillinen yhteistyö on avain parhaisiin kuntoutustuloksiin.",
       url: "https://www.linkedin.com/posts/janne-s%C3%A4kkinen-4868bb221_ly%C3%B6tiin-mervi-niippan-kanssa-p%C3%A4%C3%A4t-yhteen-share-7440686206058790912-YuRP/",
-      badge: "LinkedIn Julkaisu",
+      badge: "Ammatillinen Verkosto",
       category: "Moniammatillinen Yhteistyö",
-      color: "from-cyan-500/20 to-transparent",
+      highlight: false,
     },
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-[#000814] via-[#001026] to-[#000814] border-b border-[#0C66B4]/30 relative overflow-hidden">
+    <section id="janne-sakkinen-mediassa" className="py-20 bg-gradient-to-b from-[#000814] via-[#001026] to-[#000814] border-b border-[#0C66B4]/30 relative overflow-hidden">
       {/* Background Subtle Glow */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#00AEEF]/5 rounded-full blur-[160px] pointer-events-none" />
 
@@ -55,27 +80,46 @@ export default function FeaturedMediaSection() {
           </h2>
 
           <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-            Lue FT Janne Säkkisen asiantuntija-artikkeleita ja haastatteluja valtakunnallisissa medioissa (Apu, Kaleva, ammatilliset verkostot).
+            Lue OMT-fysioterapeutti Janne Säkkisen asiantuntijahaastatteluja ja artikkeleita valtakunnallisissa medioissa (Anna.fi, Apu.fi, Kaleva ja ammatilliset julkaisut).
           </p>
         </div>
 
         {/* Article Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {articles.map((art, idx) => (
             <article
               key={idx}
-              className="rounded-3xl bg-[#00122e]/90 border border-[#0C66B4]/50 p-6 sm:p-8 flex flex-col justify-between space-y-6 hover:border-[#00AEEF] transition-all duration-300 shadow-2xl shadow-cyan-950/20 group hover:-translate-y-1.5 relative overflow-hidden backdrop-blur-md"
+              className={`rounded-3xl p-6 sm:p-8 flex flex-col justify-between space-y-6 transition-all duration-300 shadow-2xl group hover:-translate-y-1.5 relative overflow-hidden backdrop-blur-md border ${
+                art.highlight
+                  ? "bg-[#001438] border-[#00AEEF]/60 hover:border-[#00AEEF] shadow-cyan-950/40 ring-1 ring-[#00AEEF]/30"
+                  : "bg-[#00122e]/90 border-[#0C66B4]/50 hover:border-[#00AEEF] shadow-cyan-950/20"
+              }`}
             >
+              {art.highlight && (
+                <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-[#00AEEF]/20 to-transparent pointer-events-none" />
+              )}
+
               <div className="space-y-4">
                 {/* Header badges */}
                 <div className="flex items-center justify-between gap-2 border-b border-[#0C66B4]/30 pb-4">
                   <span className="text-xs font-bold text-[#67e8f9] uppercase tracking-wider flex items-center gap-1.5">
-                    <Award className="w-3.5 h-3.5 text-[#67e8f9]" />
-                    {art.publisher}
+                    <Award className="w-3.5 h-3.5 text-[#67e8f9] shrink-0" />
+                    <span className="truncate">{art.publisher}</span>
                   </span>
-                  <span className="px-2.5 py-1 rounded-full bg-[#014489]/40 border border-[#00AEEF]/30 text-[10px] font-semibold text-slate-300">
+                  <span className="px-2.5 py-1 rounded-full bg-[#014489]/40 border border-[#00AEEF]/30 text-[10px] font-semibold text-slate-200 shrink-0">
                     {art.badge}
                   </span>
+                </div>
+
+                {/* Category & Date */}
+                <div className="flex items-center justify-between text-[11px] text-slate-400 font-medium">
+                  <span className="text-[#00AEEF] font-bold uppercase tracking-wider">{art.category}</span>
+                  {art.date && (
+                    <span className="flex items-center gap-1 text-slate-400">
+                      <Calendar className="w-3 h-3 text-[#00AEEF]" />
+                      <span>{art.date}</span>
+                    </span>
+                  )}
                 </div>
 
                 {/* Article Title */}
@@ -86,8 +130,8 @@ export default function FeaturedMediaSection() {
                 {/* Pull Quote */}
                 <div className="p-4 rounded-2xl bg-[#000814]/90 border-l-4 border-[#00AEEF] text-xs text-slate-300 italic space-y-1 shadow-inner">
                   <div className="flex items-center gap-1.5 text-[#67e8f9] font-bold not-italic text-[11px]">
-                    <Quote className="w-3 h-3" />
-                    <span>Laina-tsitaatti artikkelista:</span>
+                    <Quote className="w-3 h-3 text-[#00AEEF]" />
+                    <span>Lainaus artikkelista:</span>
                   </div>
                   <p className="leading-relaxed">"{art.quote}"</p>
                 </div>
@@ -104,7 +148,7 @@ export default function FeaturedMediaSection() {
                   href={art.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-[#014489]/40 border border-[#00AEEF]/50 text-white font-semibold text-xs hover:bg-[#00AEEF] hover:text-[#000a18] transition-all duration-300 shadow-glow-sm text-center group/btn"
+                  className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-[#014489]/40 border border-[#00AEEF]/50 text-white font-semibold text-xs hover:bg-[#00AEEF] hover:text-[#000a18] transition-all duration-300 shadow-glow-sm text-center group/btn cursor-pointer"
                 >
                   <span>Lue artikkeli julkaisusta</span>
                   <ArrowUpRight className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
@@ -121,8 +165,8 @@ export default function FeaturedMediaSection() {
               <Sparkles className="w-6 h-6 text-[#67e8f9]" />
             </div>
             <div>
-              <h4 className="text-base font-bold text-white">Tutkittua tietoa &amp; kliinistä asiantuntijuutta</h4>
-              <p className="text-xs text-slate-300 mt-0.5">Janne Säkkinen toimii Oulun yliopiston luennoitsijana ja OMT-fysioterapian asiantuntijana.</p>
+              <h4 className="text-base font-bold text-white">Tutkittua tietoa &amp; valtakunnallista asiantuntijuutta</h4>
+              <p className="text-xs text-slate-300 mt-0.5">Janne Säkkinen toimii fysioterapian ja ergonomian asiantuntijana valtakunnallisissa medioissa ja Oulun yliopistossa.</p>
             </div>
           </div>
           <a

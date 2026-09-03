@@ -2,6 +2,7 @@ import { SITE_CONFIG } from "@/data/config";
 import { CV_DATA_FI } from "@/data/cv";
 import { Award, GraduationCap, Briefcase, BookOpen, CheckCircle2, ShieldCheck, FileCheck, ArrowRight, User, MapPin, Mail, Phone, Users, HeartHandshake, Sparkles, Target, Compass, Globe, ArrowUpRight } from "lucide-react";
 import { PersonPhysicianSchema, BreadcrumbSchema } from "@/components/JsonLdSchemas";
+import FeaturedMediaSection from "@/components/FeaturedMediaSection";
 import Script from "next/script";
 import type { Metadata } from "next";
 
@@ -66,6 +67,11 @@ export default function AboutPage() {
           }
         ],
         "sameAs": [
+          "https://anna.fi/hyvinvointi/ilmainen-muutos",
+          "https://anna.fi/hyvinvointi/sankymokat",
+          "https://www.apu.fi/artikkelit/pakarakipu-pahenee-istuessa-kokeile-naita-fysioterapeutin-suosittelemia-harjoitteita",
+          "https://www.kaleva.fi/jos-naama-pysyy-peruslukemilla-venyttelet-oikein-t/12341018",
+          "https://www.linkedin.com/posts/janne-s%C3%A4kkinen-4868bb221_ly%C3%B6tiin-mervi-niippan-kanssa-p%C3%A4%C3%A4t-yhteen-share-7440686206058790912-YuRP/",
           "https://www.oulu.fi/",
           "https://www.terveystalo.com/",
           "https://www.ftsakkinen.com/",
@@ -74,6 +80,46 @@ export default function AboutPage() {
           "https://www.instagram.com/sakkinenjanne",
           "https://www.tiktok.com/@sakkinenjanne",
           "https://beacons.ai/sakkinenjanne"
+        ],
+        "subjectOf": [
+          {
+            "@type": "NewsArticle",
+            "headline": "Tämä muutos parantaisi lähes jokaisen suomalaisen hyvinvointia – se ei maksa mitään, mutta harva on siihen valmis",
+            "url": "https://anna.fi/hyvinvointi/ilmainen-muutos",
+            "datePublished": "2026-09-01",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Anna.fi / Otavamedia"
+            }
+          },
+          {
+            "@type": "NewsArticle",
+            "headline": "Fysioterapeutti paljastaa mokat, jotka moni tekee sänkyostoksilla – hotelleista ei kannata ottaa mallia",
+            "url": "https://anna.fi/hyvinvointi/sankymokat",
+            "datePublished": "2026-08-28",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Anna.fi / Otavamedia"
+            }
+          },
+          {
+            "@type": "NewsArticle",
+            "headline": "Pakarakipu pahenee istuessa? Kokeile näitä fysioterapeutin suosittelemia harjoitteita",
+            "url": "https://www.apu.fi/artikkelit/pakarakipu-pahenee-istuessa-kokeile-naita-fysioterapeutin-suosittelemia-harjoitteita",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Apu.fi / A-lehdet"
+            }
+          },
+          {
+            "@type": "NewsArticle",
+            "headline": "Jos naama pysyy peruslukemilla, venyttelet oikein",
+            "url": "https://www.kaleva.fi/jos-naama-pysyy-peruslukemilla-venyttelet-oikein-t/12341018",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Kaleva Media"
+            }
+          }
         ]
       }
     },
@@ -378,6 +424,9 @@ export default function AboutPage() {
         </div>
 
       </div>
+
+      {/* Janne Säkkinen Mediassa (Anna.fi, Apu.fi, Kaleva) */}
+      <FeaturedMediaSection />
     </div>
   );
 }

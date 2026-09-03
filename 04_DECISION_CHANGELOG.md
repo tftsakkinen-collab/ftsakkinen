@@ -1,5 +1,26 @@
 # Architectural Decisions & Changelog (04_DECISION_CHANGELOG.md)
 
+## [2026-09-03] Integration of National Media Articles (Anna.fi / Otavamedia) & SEO/AI Citation Architecture
+
+### 1. Context & Objective
+Integrate two high-profile national expert articles featuring Janne Säkkinen from **Anna.fi / Otavamedia** into the website's media showcase (`FeaturedMediaSection`), root homepage, information architecture, and structured data schemas to boost E-E-A-T, Google Knowledge Graph associations, and AI search citations (Perplexity, ChatGPT, Claude, Gemini).
+
+Articles added:
+1. **"Tämä muutos parantaisi lähes jokaisen suomalaisen hyvinvointia – se ei maksa mitään, mutta harva on siihen valmis"** (Anna.fi, 1.9.2026) — Istumatyö, arkiaktiivisuus, seisomatyö ja selän toimintakyky.
+2. **"Fysioterapeutti paljastaa mokat, jotka moni tekee sänkyostoksilla – hotelleista ei kannata ottaa mallia"** (Anna.fi, 28.8.2026) — Nukkumisergonomia, tyynyn oikea korkeus, kaularangan lepoasento ja patjan 5–8v käyttöikä.
+
+### 2. Architecture & Design Decisions
+- **`FeaturedMediaSection.tsx`:** Upgraded to showcase 5 major media features with a flexible, responsive 3-column card grid. The two newest Anna.fi articles feature prominent highlight styles (`ring-1 ring-[#00AEEF]/30`), publication dates, authoritative quotes, clinical summaries, and outbound secure links.
+- **Component Placement:** Mounted `FeaturedMediaSection` directly on the homepage (`/`) after `AboutSection` and on the about page (`/tietoa-minusta`) to cement clinical authority and media trust.
+- **Structured Data / JSON-LD (`JsonLdSchemas.tsx`, `page.tsx`, `tietoa-minusta/page.tsx`):**
+  - Added Anna.fi URLs to `Person.sameAs`.
+  - Added structured `NewsArticle` objects under `Person.subjectOf` with headline, publisher (Anna.fi / Otavamedia), publication date, and relevant medical/ergonomic topics.
+  - Corrected telephone format to `+358413274967`.
+- **AI & LLM Indexes (`public/llms.txt` & `public/llms-full.txt`):** Added a dedicated `Janne Säkkinen Mediassa & Valtakunnallisissa Julkaisuissa` section containing direct clinical answers and key takeaways for AI search engines.
+- **Contextual Topic Page Cross-Linking (`/aihe/[slug]`):** Added contextual media callout boxes in `/aihe/selkakipu-ja-iskias`, `/aihe/niskakipu-ja-paansarky`, and `/aihe/ergonomia-ja-tyohyvinvointi` linking directly to Janne's Anna.fi interviews.
+
+---
+
 ## [2026-08-26] Header & Navigation Bar De-Cluttering & Architectural Streamlining
 
 ### 1. Context & Objective

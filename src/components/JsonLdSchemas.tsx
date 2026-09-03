@@ -57,9 +57,57 @@ export function PersonPhysicianSchema() {
           "addressCountry": "FI"
         },
         "sameAs": [
-          "https://www.youtube.com/channel/UCbIWSnSD_k3YoTQSqrzi5Bw",
-          "https://www.tiktok.com/@ptsakkinen",
-          "https://www.instagram.com/ptsakkinen/"
+          "https://anna.fi/hyvinvointi/ilmainen-muutos",
+          "https://anna.fi/hyvinvointi/sankymokat",
+          "https://www.apu.fi/artikkelit/pakarakipu-pahenee-istuessa-kokeile-naita-fysioterapeutin-suosittelemia-harjoitteita",
+          "https://www.kaleva.fi/jos-naama-pysyy-peruslukemilla-venyttelet-oikein-t/12341018",
+          "https://www.linkedin.com/posts/janne-s%C3%A4kkinen-4868bb221_ly%C3%B6tiin-mervi-niippan-kanssa-p%C3%A4%C3%A4t-yhteen-share-7440686206058790912-YuRP/",
+          "https://www.youtube.com/@ft_sakkinen",
+          "https://www.instagram.com/sakkinenjanne",
+          "https://www.tiktok.com/@sakkinenjanne",
+          "https://www.ptsakkinen.com/"
+        ],
+        "subjectOf": [
+          {
+            "@type": "NewsArticle",
+            "headline": "Tämä muutos parantaisi lähes jokaisen suomalaisen hyvinvointia – se ei maksa mitään, mutta harva on siihen valmis",
+            "url": "https://anna.fi/hyvinvointi/ilmainen-muutos",
+            "datePublished": "2026-09-01",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Anna.fi / Otavamedia"
+            },
+            "about": ["Istumatyö", "Selkäkipu", "Työergonomia", "Fysioterapia"]
+          },
+          {
+            "@type": "NewsArticle",
+            "headline": "Fysioterapeutti paljastaa mokat, jotka moni tekee sänkyostoksilla – hotelleista ei kannata ottaa mallia",
+            "url": "https://anna.fi/hyvinvointi/sankymokat",
+            "datePublished": "2026-08-28",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Anna.fi / Otavamedia"
+            },
+            "about": ["Nukkumisergonomia", "Niskakipu", "Tyynyn valinta", "Fysioterapia"]
+          },
+          {
+            "@type": "NewsArticle",
+            "headline": "Pakarakipu pahenee istuessa? Kokeile näitä fysioterapeutin suosittelemia harjoitteita",
+            "url": "https://www.apu.fi/artikkelit/pakarakipu-pahenee-istuessa-kokeile-naita-fysioterapeutin-suosittelemia-harjoitteita",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Apu.fi / A-lehdet"
+            }
+          },
+          {
+            "@type": "NewsArticle",
+            "headline": "Jos naama pysyy peruslukemilla, venyttelet oikein",
+            "url": "https://www.kaleva.fi/jos-naama-pysyy-peruslukemilla-venyttelet-oikein-t/12341018",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Kaleva Media"
+            }
+          }
         ]
       },
       {
@@ -70,7 +118,7 @@ export function PersonPhysicianSchema() {
         "identifier": "3305813-7",
         "vatID": "FI33058137",
         "url": "https://www.ftsakkinen.com/",
-        "telephone": "+358401234567",
+        "telephone": "+358413274967",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Oulu",

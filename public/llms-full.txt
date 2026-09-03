@@ -2,6 +2,38 @@
 
 > Täydelliset OMT-Fysioterapeutti Janne Säkkisen (SOMTY) AEO-suorat vastaukset ja kliiniset fysioterapiaohjeet kaikista 70 videosta.
 
+## Janne Säkkinen Mediassa & Valtakunnallisissa Julkaisuissa
+
+### Tämä muutos parantaisi lähes jokaisen suomalaisen hyvinvointia – se ei maksa mitään, mutta harva on siihen valmis
+- **Julkaisija**: Anna.fi / Otavamedia (1.9.2026)
+- **URL**: https://anna.fi/hyvinvointi/ilmainen-muutos
+- **Aihe**: Istumatyö, selkäkivun ennaltaehkäisy, arkiaktiivisuus ja työfysioterapia
+- **Asiantuntija**: Työfysioterapeutti Janne Säkkinen (Terveystalo, FT Säkkinen)
+- **Direct Clinical Answer**: Ei ole olemassa selkää, joka kestäisi päivittäistä tuntitolkulla istumista vuosien ajan ilman minkäänlaisia ongelmia. Istumatyöläisille Janne Säkkinen antaa 3 konkreettista ohjetta: 1) Lisää arjen liikettä ja mikrotaukoja työpäivään jo ennen oireiden ilmaantumista; 2) Harjoittele säännöllistä seisomatyötä; 3) Tauota työtä, jotta sekä aivot että keho saavat palautua pusertamisen välissä.
+- **Täysi Tiivistelmä**: Moni istuu päivittäin 8–10 tuntia tietokoneen ääressä. Selkärangan välilevyt ja lihakset tarvitsevat vaihtelevaa painetta ja liikettä ravitsemukseen ja aineenvaihduntaan. Pienikin asennon vaihtaminen, puheluiden hoitaminen kävellen tai seisomapöydän käyttö palauttaa rangan fysiologista kuormitusta.
+
+### Fysioterapeutti paljastaa mokat, jotka moni tekee sänkyostoksilla – hotelleista ei kannata ottaa mallia
+- **Julkaisija**: Anna.fi / Otavamedia (28.8.2026)
+- **URL**: https://anna.fi/hyvinvointi/sankymokat
+- **Aihe**: Nukkumisergonomia, tyynyn valinta, niskan ja selän aamujumit
+- **Asiantuntija**: Fysioterapeutti Janne Säkkinen (Terveystalo, FT Säkkinen)
+- **Direct Clinical Answer**: Muhkeat hotellityynyt vääntävät kaularangan epäluonnolliseen kulmaan joko selällään tai kyljellään nukuttaessa. Lättänä tai muotoutuva tyyny on yleensä muhkeaa parempi, ja tyynyn korkeus on ensimmäinen asia, joka tulee tarkistaa, jos aamuisin niska on jumissa. Patja, sängyn runko ja tyynyt ovat käyttötavaraa: jos patjan vaihdosta on kulunut 5–8 vuotta, aamuisten selkäkipujen syy voi olla väsyneessä jousituksessa tai pehmenneessä pehmusteessa.
+- **Täysi Tiivistelmä**: Nukkumisergonomian tavoitteena on pitää selkäranka ja kaularanka suorassa, neutraalissa lepoasennossa läpi yön. Kylkinukkujat tarvitsevat tyynyn, joka täyttää olkapään ja pään välisen etäisyyden ilman että pää kallistuu ylös tai alas. Selällään nukkuja tarvitsee huomattavasti matalamman tuen kaularangan luonnollisen notkon tueksi.
+
+### Pakarakipu pahenee istuessa? Kokeile näitä fysioterapeutin suosittelemia harjoitteita
+- **Julkaisija**: Apu.fi / A-lehdet
+- **URL**: https://www.apu.fi/artikkelit/pakarakipu-pahenee-istuessa-kokeile-naita-fysioterapeutin-suosittelemia-harjoitteita
+- **Aihe**: Piriformis-syndrooma, pakarakipu, iskiasoireilu
+- **Asiantuntija**: OMT-fysioterapeutti Janne Säkkinen
+- **Direct Clinical Answer**: Pitkittynyt istuminen aiheuttaa mekaanista painetta ja ärsytystä piriformis-lihakseen, mikä voi puristaa iskiashermoa ja heijastaa polttavaa kipua takareiteen. Täsmällisillä liikehoidoilla, hermon liu'utteluharjoitteilla ja pakaralihasten vahvistamisella hermopinteestä vapaudutaan ilman leikkaushoitoa.
+
+### Jos naama pysyy peruslukemilla, venyttelet oikein
+- **Julkaisija**: Sanomalehti Kaleva / Kaleva Media
+- **URL**: https://www.kaleva.fi/jos-naama-pysyy-peruslukemilla-venyttelet-oikein-t/12341018
+- **Aihe**: Venyttely, kehonhuolto ja hermoston rauhoittaminen
+- **Asiantuntija**: Fysioterapeutti Janne Säkkinen
+- **Direct Clinical Answer**: Venyttelyn ei pidä sattua. Jos naama menee irvistykseen ja hengitys salpautuu, lihas reagoi suojajännityksellä ja kipuhermopäätteet aktivoituvat. Oikea venytys säilyttää kasvojen rentouden ja tukee parasympaattisen hermoston palautumista.
+
 ## Lantionpohjan Fysioterapia & Virtsankarkailu
 
 ### Fysioterapeutti: puristelu voi pahentaa virtsankarkailua

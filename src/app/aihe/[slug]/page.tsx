@@ -398,6 +398,106 @@ export default async function TopicHubPage(props: { params: Promise<{ slug: stri
               {paragraph}
             </p>
           ))}
+
+          {/* Contextual Media Feature Callouts */}
+          {resolvedSlug === "selkakipu-ja-iskias" && (
+            <div className="mt-6 p-5 rounded-2xl bg-[#000814] border border-[#00AEEF]/50 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div className="space-y-1">
+                <span className="text-[10px] uppercase font-bold tracking-wider text-[#67e8f9] px-2 py-0.5 rounded bg-[#014489]/40 border border-[#00AEEF]/30 inline-block">
+                  Asiantuntijana Mediassa • Anna.fi (1.9.2026)
+                </span>
+                <h4 className="text-sm sm:text-base font-bold text-white">
+                  Tämä muutos parantaisi lähes jokaisen suomalaisen hyvinvointia – se ei maksa mitään, mutta harva on siihen valmis
+                </h4>
+                <p className="text-xs text-slate-300">
+                  Työfysioterapeutti Janne Säkkinen kertoo miksi selkä ei kestä tuntitolkulla istumista ja miten arjen liike pelastaa rangan.
+                </p>
+              </div>
+              <a
+                href="https://anna.fi/hyvinvointi/ilmainen-muutos"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="shrink-0 px-4 py-2 rounded-xl bg-[#014489]/40 border border-[#00AEEF]/50 text-white hover:bg-[#00AEEF] hover:text-[#000a18] font-bold text-xs transition-all flex items-center gap-1.5 cursor-pointer"
+              >
+                <span>Lue Anna.fi-artikkeli</span>
+                <ArrowUpRight className="w-3.5 h-3.5" />
+              </a>
+            </div>
+          )}
+
+          {resolvedSlug === "niskakipu-ja-paansarky" && (
+            <div className="mt-6 p-5 rounded-2xl bg-[#000814] border border-[#00AEEF]/50 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div className="space-y-1">
+                <span className="text-[10px] uppercase font-bold tracking-wider text-[#67e8f9] px-2 py-0.5 rounded bg-[#014489]/40 border border-[#00AEEF]/30 inline-block">
+                  Asiantuntijana Mediassa • Anna.fi (28.8.2026)
+                </span>
+                <h4 className="text-sm sm:text-base font-bold text-white">
+                  Fysioterapeutti paljastaa mokat, jotka moni tekee sänkyostoksilla – hotelleista ei kannata ottaa mallia
+                </h4>
+                <p className="text-xs text-slate-300">
+                  Fysioterapeutti Janne Säkkinen purkaa tyypilliset nukkumisergonomian ja tyynyn valinnan sudenkuopat aamuisten niskajumien ehkäisyssä.
+                </p>
+              </div>
+              <a
+                href="https://anna.fi/hyvinvointi/sankymokat"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="shrink-0 px-4 py-2 rounded-xl bg-[#014489]/40 border border-[#00AEEF]/50 text-white hover:bg-[#00AEEF] hover:text-[#000a18] font-bold text-xs transition-all flex items-center gap-1.5 cursor-pointer"
+              >
+                <span>Lue Anna.fi-artikkeli</span>
+                <ArrowUpRight className="w-3.5 h-3.5" />
+              </a>
+            </div>
+          )}
+
+          {resolvedSlug === "ergonomia-ja-tyohyvinvointi" && (
+            <div className="mt-6 space-y-3">
+              <div className="p-5 rounded-2xl bg-[#000814] border border-[#00AEEF]/50 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div className="space-y-1">
+                  <span className="text-[10px] uppercase font-bold tracking-wider text-[#67e8f9] px-2 py-0.5 rounded bg-[#014489]/40 border border-[#00AEEF]/30 inline-block">
+                    Asiantuntijana Mediassa • Anna.fi (1.9.2026)
+                  </span>
+                  <h4 className="text-sm sm:text-base font-bold text-white">
+                    Tämä muutos parantaisi lähes jokaisen suomalaisen hyvinvointia – se ei maksa mitään
+                  </h4>
+                  <p className="text-xs text-slate-300">
+                    Työfysioterapeutti Janne Säkkisen 3 ohjetta istumatyöläisille: arjen liike, seisomatyö ja säännöllinen tauotus.
+                  </p>
+                </div>
+                <a
+                  href="https://anna.fi/hyvinvointi/ilmainen-muutos"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="shrink-0 px-4 py-2 rounded-xl bg-[#014489]/40 border border-[#00AEEF]/50 text-white hover:bg-[#00AEEF] hover:text-[#000a18] font-bold text-xs transition-all flex items-center gap-1.5 cursor-pointer"
+                >
+                  <span>Lue artikkeli</span>
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </a>
+              </div>
+              <div className="p-5 rounded-2xl bg-[#000814] border border-[#00AEEF]/50 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div className="space-y-1">
+                  <span className="text-[10px] uppercase font-bold tracking-wider text-[#67e8f9] px-2 py-0.5 rounded bg-[#014489]/40 border border-[#00AEEF]/30 inline-block">
+                    Asiantuntijana Mediassa • Anna.fi (28.8.2026)
+                  </span>
+                  <h4 className="text-sm sm:text-base font-bold text-white">
+                    Fysioterapeutti paljastaa mokat, jotka moni tekee sänkyostoksilla
+                  </h4>
+                  <p className="text-xs text-slate-300">
+                    Fysioterapeutti Janne Säkkinen avaa nukkumisergonomian ja oikean tyynykorkeuden merkityksen palautumiselle.
+                  </p>
+                </div>
+                <a
+                  href="https://anna.fi/hyvinvointi/sankymokat"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="shrink-0 px-4 py-2 rounded-xl bg-[#014489]/40 border border-[#00AEEF]/50 text-white hover:bg-[#00AEEF] hover:text-[#000a18] font-bold text-xs transition-all flex items-center gap-1.5 cursor-pointer"
+                >
+                  <span>Lue artikkeli</span>
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </a>
+              </div>
+            </div>
+          )}
         </article>
 
         {resolvedSlug === "tenniskyynarpaa-ja-golfkyynarpaa" && (
