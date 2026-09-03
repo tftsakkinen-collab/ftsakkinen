@@ -15,19 +15,6 @@ export interface Video {
 
 export const FALLBACK_VIDEOS: Video[] = [
   {
-    "id": "P1lZdpluD64",
-    "youtubeId": "P1lZdpluD64",
-    "title": "Leukanivelen Ensiapuopas Suomi 4K",
-    "promiseDescription": "Akuutti fysioterapiaopas leukanivelelle",
-    "categoryId": "purenta-tmd",
-    "duration": "Pitkä video",
-    "publishedAt": "2026-08-16",
-    "thumbnailUrl": "https://i.ytimg.com/vi/P1lZdpluD64/hqdefault.jpg",
-    "pairVideoId": "P1lZdpluD64",
-    "pairUrl": "https://www.ptsakkinen.com/videos/P1lZdpluD64",
-    "isShort": false
-  },
-  {
     "id": "8H_k0lrebJ0",
     "youtubeId": "8H_k0lrebJ0",
     "title": "Fysioterapeutti: puristelu voi pahentaa virtsankarkailua",

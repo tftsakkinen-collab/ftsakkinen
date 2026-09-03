@@ -18,8 +18,8 @@ const SYMPTOMS: SymptomOption[] = [
     icon: "🦷",
     title: "Leukanivel & Purentaelimistö (TMD)",
     description: "Leuan naksuminen, bruksismi, hampaiden yhteenpureminen tai kipu syödessä.",
-    recommendedVideoId: "P1lZdpluD64",
-    videoTitle: "Leukanivelen Ensiapuopas & Kuntoutus",
+    recommendedVideoId: "Nnf2NUdnC7M",
+    videoTitle: "Näin hoidat leuan kipua oikein (älä tee tätä virhettä!)",
   },
   {
     id: "niska-päänsärky",

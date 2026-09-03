@@ -9,7 +9,7 @@ interface GatedVideoPlayerProps {
 }
 
 export default function GatedVideoPlayer({ video }: GatedVideoPlayerProps) {
-  const isGatedVideo = Boolean((video as unknown as { isGated?: boolean }).isGated || video.id === "P1lZdpluD64");
+  const isGatedVideo = Boolean((video as unknown as { isGated?: boolean }).isGated);
 
   const [isUnlocked, setIsUnlocked] = useState(false);
   const [email, setEmail] = useState("");

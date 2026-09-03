@@ -27,13 +27,13 @@ export default function EmailLeadForm({
 
   const bonusVideos = [
     {
-      id: "P1lZdpluD64",
-      title: "1. Leukanivelen Ensiapuopas",
-      desc: "Akuutti fysioterapeuttinen apu leukanivelen naksumiseen, jännitykseen ja lukkiutumiseen.",
-      youtubeUrl: "https://www.youtube.com/watch?v=P1lZdpluD64",
-      embedUrl: "https://www.youtube-nocookie.com/embed/P1lZdpluD64",
-      thumbnail: "https://img.youtube.com/vi/P1lZdpluD64/mqdefault.jpg",
-      badge: "Akuutti Ensiapu & Naksuminen",
+      id: "Nnf2NUdnC7M",
+      title: "1. Näin hoidat leuan kipua oikein (älä tee tätä virhettä!)",
+      desc: "OMT-fysioterapeutin ohjeet masseter-purentalihaksen kuormittumiseen, purentakiskoihin ja itsehoitoharjoitteisiin.",
+      youtubeUrl: "https://www.youtube.com/watch?v=Nnf2NUdnC7M",
+      embedUrl: "https://www.youtube-nocookie.com/embed/Nnf2NUdnC7M",
+      thumbnail: "https://img.youtube.com/vi/Nnf2NUdnC7M/mqdefault.jpg",
+      badge: "Purenta & TMD Itsehoito",
     },
     {
       id: "exfFQ0iRLiI",

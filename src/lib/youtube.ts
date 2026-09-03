@@ -21,6 +21,9 @@ const CATEGORY_MAP: Record<string, string> = {
   kegel: "tule-vaivat",
 };
 
+// Explicitly excluded videos (e.g., converted to paid services / courses)
+const EXCLUDED_VIDEO_IDS = new Set(["P1lZdpluD64"]);
+
 function decodeXmlEntities(str: string): string {
   return str
     .replace(/&amp;/g, "&")
@@ -42,13 +45,13 @@ export async function fetchYouTubeVideos(): Promise<Video[]> {
     );
 
     if (!res.ok) {
-      return FALLBACK_VIDEOS;
+      return FALLBACK_VIDEOS.filter(v => !EXCLUDED_VIDEO_IDS.has(v.id) && !v.title.toLowerCase().includes("ensiapuopas"));
     }
 
     const xmlText = await res.text();
     const entries = xmlText.split("<entry>");
     if (entries.length <= 1) {
-      return FALLBACK_VIDEOS;
+      return FALLBACK_VIDEOS.filter(v => !EXCLUDED_VIDEO_IDS.has(v.id) && !v.title.toLowerCase().includes("ensiapuopas"));
     }
 
     const fetchedVideos: Video[] = [];
@@ -71,7 +74,7 @@ export async function fetchYouTubeVideos(): Promise<Video[]> {
       const published = publishedMatch ? publishedMatch[1].split("T")[0] : "";
       const thumbnailUrl = thumbnailMatch ? thumbnailMatch[1] : `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
 
-      // HARD FILTER: DISCARD ALL SHORTS, REELS, VERTICAL VIDEOS & COMMUNITY POSTS
+      // HARD FILTER: DISCARD ALL SHORTS, REELS, VERTICAL VIDEOS, COMMUNITY POSTS & EXCLUDED VIDEOS
       const isCommunityPost = !videoId || entry.includes("yt:community") || entry.includes("/community/");
       const isShort = title.toLowerCase().includes("#shorts") || 
                       title.toLowerCase().includes("#short") || 
@@ -81,8 +84,9 @@ export async function fetchYouTubeVideos(): Promise<Video[]> {
                       title.toLowerCase().includes("#reels") ||
                       title.toLowerCase().includes("#tiktok") ||
                       entry.includes("/shorts/");
+      const isExcluded = EXCLUDED_VIDEO_IDS.has(videoId) || title.toLowerCase().includes("ensiapuopas");
 
-      if (!isCommunityPost && !isShort && videoId) {
+      if (!isCommunityPost && !isShort && !isExcluded && videoId) {
         let categoryId = "tule-vaivat";
         const fallbackMatch = FALLBACK_VIDEOS.find(fv => fv.id === videoId);
         if (fallbackMatch && fallbackMatch.categoryId) {
@@ -114,11 +118,13 @@ export async function fetchYouTubeVideos(): Promise<Video[]> {
     }
 
     // Return only non-short videos or fallback
-    const longFormOnly = fetchedVideos.filter(v => !v.isShort);
-    return longFormOnly.length > 0 ? longFormOnly : FALLBACK_VIDEOS;
+    const longFormOnly = fetchedVideos.filter(v => !v.isShort && !EXCLUDED_VIDEO_IDS.has(v.id) && !v.title.toLowerCase().includes("ensiapuopas"));
+    return longFormOnly.length > 0
+      ? longFormOnly
+      : FALLBACK_VIDEOS.filter(v => !EXCLUDED_VIDEO_IDS.has(v.id) && !v.title.toLowerCase().includes("ensiapuopas"));
   } catch (error) {
     console.error("YouTube RSS sync error, using fallback videos:", error);
-    return FALLBACK_VIDEOS;
+    return FALLBACK_VIDEOS.filter(v => !EXCLUDED_VIDEO_IDS.has(v.id) && !v.title.toLowerCase().includes("ensiapuopas"));
   }
 }
 
@@ -127,22 +133,26 @@ export async function getAllVideos(): Promise<Video[]> {
   const videoMap = new Map<string, Video>();
 
   for (const v of FALLBACK_VIDEOS) {
-    videoMap.set(v.id, v);
+    if (!EXCLUDED_VIDEO_IDS.has(v.id) && !v.title.toLowerCase().includes("ensiapuopas")) {
+      videoMap.set(v.id, v);
+    }
   }
 
   for (const v of fetched) {
-    const existing = videoMap.get(v.id);
-    if (existing) {
-      videoMap.set(v.id, {
-        ...existing,
-        ...v,
-        categoryId: existing.categoryId || v.categoryId,
-        transcript: existing.transcript || v.transcript,
-        pairVideoId: existing.pairVideoId || v.pairVideoId,
-        pairUrl: existing.pairUrl || v.pairUrl,
-      });
-    } else {
-      videoMap.set(v.id, v);
+    if (!EXCLUDED_VIDEO_IDS.has(v.id) && !v.title.toLowerCase().includes("ensiapuopas")) {
+      const existing = videoMap.get(v.id);
+      if (existing) {
+        videoMap.set(v.id, {
+          ...existing,
+          ...v,
+          categoryId: existing.categoryId || v.categoryId,
+          transcript: existing.transcript || v.transcript,
+          pairVideoId: existing.pairVideoId || v.pairVideoId,
+          pairUrl: existing.pairUrl || v.pairUrl,
+        });
+      } else {
+        videoMap.set(v.id, v);
+      }
     }
   }
 
@@ -150,6 +160,9 @@ export async function getAllVideos(): Promise<Video[]> {
 }
 
 export async function getVideoById(id: string): Promise<Video | undefined> {
+  if (EXCLUDED_VIDEO_IDS.has(id)) {
+    return undefined;
+  }
   const all = await getAllVideos();
   return all.find((v) => v.id === id);
 }

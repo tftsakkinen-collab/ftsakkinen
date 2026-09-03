@@ -95,7 +95,7 @@ export default function Navbar() {
     {
       name: "Ilmaiset Kuntoutusoppaat",
       href: "/ilmaisopas",
-      description: "Ladattavat PDF-oppaat ja leukanivelen ensiapuvideot.",
+      description: "Ladattavat PDF-oppaat ja fysioterapeutin itsehoito-ohjeet.",
       icon: FileText,
     },
   ];

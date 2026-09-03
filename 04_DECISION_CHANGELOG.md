@@ -1,5 +1,21 @@
 # Architectural Decisions & Changelog (04_DECISION_CHANGELOG.md)
 
+## [2026-09-03] Removal of "Leukanivelen Ensiapuopas" from Public Free Video Library
+
+### 1. Context & Objective
+The video **"Leukanivelen Ensiapuopas Suomi 4K"** (`P1lZdpluD64`) has been transitioned by Janne Säkkinen into a premium / paid service. Consequently, it must no longer be accessible for free or listed anywhere in the public video library, video listings, recommendations, lead bonuses, navigation descriptions, or search/AI indexes.
+
+### 2. Architecture & Design Decisions
+- **`videos.ts`:** Removed `P1lZdpluD64` from `FALLBACK_VIDEOS`.
+- **`youtube.ts`:** Added an active exclusion filter (`EXCLUDED_VIDEO_IDS = new Set(["P1lZdpluD64"])` and title check for "ensiapuopas") to `fetchYouTubeVideos`, `getAllVideos`, and `getVideoById`. Direct route accesses now return 404.
+- **`SymptomIntake.tsx`:** Replaced purenta recommendation video with high-value free video `Nnf2NUdnC7M` ("Näin hoidat leuan kipua oikein (älä tee tätä virhettä!)").
+- **`EmailLeadForm.tsx`:** Replaced the first bonus stream video with `Nnf2NUdnC7M`.
+- **`GatedVideoPlayer.tsx`:** Removed hardcoded gate check for `P1lZdpluD64`.
+- **`Navbar.tsx`:** Updated link description to "Ladattavat PDF-oppaat ja fysioterapeutin itsehoito-ohjeet".
+- **`public/llms.txt`:** Purged reference to `P1lZdpluD64`.
+
+---
+
 ## [2026-09-03] Integration of National Media Articles (Anna.fi / Otavamedia) & SEO/AI Citation Architecture
 
 ### 1. Context & Objective
