@@ -1,33 +1,26 @@
 "use client";
 
 import { useState } from "react";
-import { Sparkles, ArrowRight, Lock, FileText, Calendar, CheckCircle2, ShieldCheck, Download, Activity } from "lucide-react";
+import { Sparkles, ArrowRight, Lock, FileText, Calendar, CheckCircle2, ShieldCheck, Download, Activity, FolderDown } from "lucide-react";
 
 interface SymptomOption {
   id: string;
   icon: string;
   title: string;
   description: string;
-  recommendedVideoId: string;
+  recommendedVideoId?: string;
   videoTitle: string;
+  isPdf?: boolean;
 }
 
 const SYMPTOMS: SymptomOption[] = [
   {
-    id: "purenta-leuka",
-    icon: "🦷",
-    title: "Leukanivel & Purentaelimistö (TMD)",
-    description: "Leuan naksuminen, bruksismi, hampaiden yhteenpureminen tai kipu syödessä.",
-    recommendedVideoId: "Nnf2NUdnC7M",
-    videoTitle: "Näin hoidat leuan kipua oikein (älä tee tätä virhettä!)",
-  },
-  {
-    id: "niska-päänsärky",
+    id: "niska-paansarky",
     icon: "🧘",
     title: "Yläniska & Jännityspäänsärky",
     description: "Niskan kireys, ohimokipu, vannemainen särky tai yläniskan liikerajoitus.",
     recommendedVideoId: "JyducxjS1b8",
-    videoTitle: "Yläniskan Venyttely & Liikkuvuusohje",
+    videoTitle: "Erikoisvideo: Yläniskan Venyttely & Liikkuvuusohje",
   },
   {
     id: "hermosto-uni",
@@ -35,7 +28,7 @@ const SYMPTOMS: SymptomOption[] = [
     title: "Hermoston Rauhoittaminen & Uni",
     description: "Kehon ylikierrokset, jatkuva jännitys, pinnallinen hengitys ja palautumishaasteet.",
     recommendedVideoId: "ZFTSdUdEkC0",
-    videoTitle: "Parasympaattisen Hermoston Aktivoiminen",
+    videoTitle: "Erikoisvideo: Parasympaattisen Hermoston Aktivoiminen",
   },
   {
     id: "vammat-kuntoutus",
@@ -43,12 +36,20 @@ const SYMPTOMS: SymptomOption[] = [
     title: "Vaikeat Vammat & Kuntoutus",
     description: "Pitkittynyt tuki- ja liikuntaelimistön vaiva, akuutti vamma tai leikkauksen jälkitila.",
     recommendedVideoId: "exfFQ0iRLiI",
-    videoTitle: "Vaikean Vamman Tutkiminen ja Hoito",
-  }
+    videoTitle: "Erikoisvideo: Vaikean Vamman Tutkiminen ja Hoito",
+  },
+  {
+    id: "pdf-oppaat",
+    icon: "📚",
+    title: "Ladattavat PDF-Kuntoutusoppaat",
+    description: "Täsmälliset PDF-oppaat ja harjoiteohjelmat niskaan, selkään, purentaan ja ergonomiaan.",
+    videoTitle: "Kaikki Ladattavat PDF-Kuntoutusoppaat (Google Drive)",
+    isPdf: true,
+  },
 ];
 
 export default function SymptomIntake() {
-  const [selectedId, setSelectedId] = useState<string>("purenta-leuka");
+  const [selectedId, setSelectedId] = useState<string>("niska-paansarky");
 
   const activeOption = SYMPTOMS.find((s) => s.id === selectedId) || SYMPTOMS[0];
 
@@ -122,7 +123,7 @@ export default function SymptomIntake() {
             <div>
               <div className="flex items-center gap-2 text-xs font-bold text-[#67e8f9] uppercase tracking-wider mb-1">
                 <CheckCircle2 className="w-4 h-4 text-[#67e8f9]" />
-                <span>Suositeltu Fysioterapiaopas</span>
+                <span>{activeOption.isPdf ? "Suositeltu PDF-Kuntoutusmateriaali" : "Suositeltu Erikoisvideo-opas"}</span>
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-white">{activeOption.videoTitle}</h3>
             </div>
@@ -136,28 +137,45 @@ export default function SymptomIntake() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-            {/* Video Thumbnail (Gated / Locked Overlay) */}
-            <div
-              onClick={scrollToEmailForm}
-              className="relative rounded-2xl overflow-hidden border-2 border-[#00AEEF]/60 group cursor-pointer shadow-xl"
-            >
-              <img
-                src={`https://i2.ytimg.com/vi/${activeOption.recommendedVideoId}/hqdefault.jpg`}
-                alt={activeOption.videoTitle}
-                className="w-full h-48 md:h-56 object-cover group-hover:scale-105 transition-transform duration-500 filter blur-[1px] brightness-75"
-              />
-              <div className="absolute inset-0 bg-slate-950/70 flex flex-col items-center justify-center p-4 text-center space-y-2.5 group-hover:bg-slate-950/60 transition-all">
-                <div className="w-14 h-14 rounded-full bg-[#00AEEF] text-[#000a18] flex items-center justify-center shadow-[0_0_25px_rgba(0,174,239,0.8)] group-hover:scale-110 transition-transform">
-                  <Lock className="w-6 h-6 text-[#000a18]" />
+            {/* Thumbnail Display (Gated / Locked Overlay) */}
+            {activeOption.isPdf ? (
+              <div
+                onClick={scrollToEmailForm}
+                className="relative rounded-2xl overflow-hidden border-2 border-[#00AEEF]/60 group cursor-pointer shadow-xl bg-gradient-to-br from-[#001433] via-[#000d21] to-[#000814] h-48 md:h-56 flex flex-col items-center justify-center p-6 text-center"
+              >
+                <div className="w-14 h-14 rounded-2xl bg-[#00AEEF]/20 border border-[#00AEEF] text-[#67e8f9] flex items-center justify-center mb-3 shadow-[0_0_25px_rgba(0,174,239,0.5)] group-hover:scale-110 transition-transform">
+                  <FolderDown className="w-7 h-7 text-[#67e8f9]" />
                 </div>
                 <span className="text-xs font-bold text-white uppercase tracking-wider px-3 py-1 rounded-full bg-[#000e24]/90 border border-[#00AEEF]/60">
                   🔒 Pääsy vaatii sähköpostilistalle liittymisen
                 </span>
-                <p className="text-[11px] text-slate-200 max-w-xs leading-relaxed">
-                  Liity sähköpostilistalle avataksesi tämän opasvideon ja ladattavat PDF-kuntoutusohjeet välittömästi!
+                <p className="text-[11px] text-slate-200 max-w-xs leading-relaxed mt-2">
+                  Liity sähköpostilistalle avataksesi kaikki PDF-kuntoutusoppaat ja erikoisvideot välittömästi!
                 </p>
               </div>
-            </div>
+            ) : (
+              <div
+                onClick={scrollToEmailForm}
+                className="relative rounded-2xl overflow-hidden border-2 border-[#00AEEF]/60 group cursor-pointer shadow-xl"
+              >
+                <img
+                  src={`https://i2.ytimg.com/vi/${activeOption.recommendedVideoId}/hqdefault.jpg`}
+                  alt={activeOption.videoTitle}
+                  className="w-full h-48 md:h-56 object-cover group-hover:scale-105 transition-transform duration-500 filter blur-[1px] brightness-75"
+                />
+                <div className="absolute inset-0 bg-slate-950/70 flex flex-col items-center justify-center p-4 text-center space-y-2.5 group-hover:bg-slate-950/60 transition-all">
+                  <div className="w-14 h-14 rounded-full bg-[#00AEEF] text-[#000a18] flex items-center justify-center shadow-[0_0_25px_rgba(0,174,239,0.8)] group-hover:scale-110 transition-transform">
+                    <Lock className="w-6 h-6 text-[#000a18]" />
+                  </div>
+                  <span className="text-xs font-bold text-white uppercase tracking-wider px-3 py-1 rounded-full bg-[#000e24]/90 border border-[#00AEEF]/60">
+                    🔒 Pääsy vaatii sähköpostilistalle liittymisen
+                  </span>
+                  <p className="text-[11px] text-slate-200 max-w-xs leading-relaxed">
+                    Liity sähköpostilistalle avataksesi tämän opasvideon ja ladattavat PDF-kuntoutusohjeet välittömästi!
+                  </p>
+                </div>
+              </div>
+            )}
 
             {/* Content & Action Buttons */}
             <div className="space-y-4">

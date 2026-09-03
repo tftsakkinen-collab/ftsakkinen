@@ -1,5 +1,32 @@
 # Architectural Decisions & Changelog (04_DECISION_CHANGELOG.md)
 
+## [2026-09-03] Refinement of Lead Magnet Hooks: Exclusion of Public YouTube Videos
+
+### 1. Context & Objective
+The video "Näin hoidat leuan kipua oikein (älä tee tätä virhettä!)" (`Nnf2NUdnC7M`) is a standard, publicly accessible YouTube video. Advertising it behind an email lock / gated opt-in in `SymptomIntake.tsx` and `EmailLeadForm.tsx` is incongruent and misleading to users. The user requested to remove this public video from the email signup incentive and strictly use the genuine unlisted bonus links and PDF materials as the hooks.
+
+### 2. Architecture & Design Decisions
+- **`EmailLeadForm.tsx`:**
+  - Removed `Nnf2NUdnC7M` from the `bonusVideos` array.
+  - Aligned to 3 genuine unlisted bonus videos:
+    1. *Vaikean Vamman Tutkiminen ja Hoito* (`exfFQ0iRLiI`)
+    2. *Parasympaattisen Hermoston Aktivoiminen & Kivun Säätely* (`ZFTSdUdEkC0`)
+    3. *Yläniskan Venyttely & Liikkuvuusohje* (`JyducxjS1b8`)
+    plus the downloadable Google Drive PDF guides.
+  - Adjusted responsive layouts to a clean 3-column grid (`md:grid-cols-3`).
+  - Updated headings and copy to reflect 3 special videos + PDF materials.
+- **`SymptomIntake.tsx`:**
+  - Removed public TMD video from the gated intake options.
+  - Replaced options with genuine lead magnet materials:
+    1. *Yläniska & Jännityspäänsärky* -> `JyducxjS1b8` (Erikoisvideo)
+    2. *Hermoston Rauhoittaminen & Uni* -> `ZFTSdUdEkC0` (Erikoisvideo)
+    3. *Vaikeat Vammat & Kuntoutus* -> `exfFQ0iRLiI` (Erikoisvideo)
+    4. *Ladattavat PDF-Kuntoutusoppaat* -> Dedicated Google Drive PDF guide preview card
+  - Set default selection to `niska-paansarky`.
+- **`ilmaisopas/page.tsx`:** Updated header copy to "kolmeen erikoisvideo-oppaaseen".
+
+---
+
 ## [2026-09-03] Removal of "Leukanivelen Ensiapuopas" from Public Free Video Library
 
 ### 1. Context & Objective

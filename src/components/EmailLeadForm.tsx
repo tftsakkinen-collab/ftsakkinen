@@ -13,8 +13,8 @@ interface EmailLeadFormProps {
 type FormState = "idle" | "sending" | "success" | "error";
 
 export default function EmailLeadForm({
-  title = "LIITY SÄHKÖPOSTILISTALLE & SAAT VÄLITTÖMÄSTI 4 ERIKOISVIDEO-OPASTA",
-  subtitle = "Syötä etunimesi ja sähköpostiosoitteesi. Saat heti VÄLITTÖMÄN pääsyn neljään exklusiiviseen video-oppaaseen sekä Janne Säkkisen ilmaisille kuntoutusmateriaaleille.",
+  title = "LIITY SÄHKÖPOSTILISTALLE & SAAT VÄLITTÖMÄSTI 3 ERIKOISVIDEO-OPASTA",
+  subtitle = "Syötä etunimesi ja sähköpostiosoitteesi. Saat heti VÄLITTÖMÄN pääsyn kolmeen eksklusiiviseen video-oppaaseen sekä Janne Säkkisen ilmaisille kuntoutusmateriaaleille.",
   lang = "fi"
 }: EmailLeadFormProps) {
   const [email, setEmail] = useState("");
@@ -27,17 +27,8 @@ export default function EmailLeadForm({
 
   const bonusVideos = [
     {
-      id: "Nnf2NUdnC7M",
-      title: "1. Näin hoidat leuan kipua oikein (älä tee tätä virhettä!)",
-      desc: "OMT-fysioterapeutin ohjeet masseter-purentalihaksen kuormittumiseen, purentakiskoihin ja itsehoitoharjoitteisiin.",
-      youtubeUrl: "https://www.youtube.com/watch?v=Nnf2NUdnC7M",
-      embedUrl: "https://www.youtube-nocookie.com/embed/Nnf2NUdnC7M",
-      thumbnail: "https://img.youtube.com/vi/Nnf2NUdnC7M/mqdefault.jpg",
-      badge: "Purenta & TMD Itsehoito",
-    },
-    {
       id: "exfFQ0iRLiI",
-      title: "2. Vaikean Vamman Tutkiminen ja Hoito",
+      title: "1. Vaikean Vamman Tutkiminen ja Hoito",
       desc: "Näin OMT-fysioterapeutti tutkii ja hoitaa perusteellisesti haastavia tuki- ja liikuntaelimistön vamvoja.",
       youtubeUrl: "https://www.youtube.com/watch?v=exfFQ0iRLiI",
       embedUrl: "https://www.youtube-nocookie.com/embed/exfFQ0iRLiI",
@@ -46,7 +37,7 @@ export default function EmailLeadForm({
     },
     {
       id: "ZFTSdUdEkC0",
-      title: "3. Parasympaattisen Hermoston Aktivoiminen",
+      title: "2. Parasympaattisen Hermoston Aktivoiminen",
       desc: "Täsmälliset ohjeet kehon ja hermoston rauhoittamiseen sekä kivun säätelyyn.",
       youtubeUrl: "https://www.youtube.com/watch?v=ZFTSdUdEkC0",
       embedUrl: "https://www.youtube-nocookie.com/embed/ZFTSdUdEkC0",
@@ -55,7 +46,7 @@ export default function EmailLeadForm({
     },
     {
       id: "JyducxjS1b8",
-      title: "4. Yläniskan Venyttelyohje",
+      title: "3. Yläniskan Venyttelyohje",
       desc: "Kliiniset fysioterapiaohjeet yläniskan kireyksien lievittämiseen ja niskan liikkuvuuden parantamiseen.",
       youtubeUrl: "https://www.youtube.com/watch?v=JyducxjS1b8",
       embedUrl: "https://www.youtube-nocookie.com/embed/JyducxjS1b8",
@@ -137,18 +128,18 @@ export default function EmailLeadForm({
           </div>
 
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-display font-extrabold text-white tracking-tight leading-tight max-w-4xl mx-auto break-words">
-            NÄMÄ 4 ERIKOISVIDEO-OPASTA AUKEEVAT HETI KUN LIITYT LISTALLE:
+            NÄMÄ 3 ERIKOISVIDEO-OPASTA AUKEEVAT HETI KUN LIITYT LISTALLE:
           </h2>
 
           <p className="text-slate-300 text-sm sm:text-base max-w-3xl mx-auto leading-relaxed font-normal">
-            Syötä etunimesi ja sähköpostiosoitteesi alla olevaan lomakkeeseen. Saat heti VÄLITTÖMÄN pääsyn näihin neljään erikoisvideoon suoraan ruudullesi &amp; sähköpostiisi, sekä Janne Säkkisen ladattaviin PDF-kuntoutusmateriaaleihin!
+            Syötä etunimesi ja sähköpostiosoitteesi alla olevaan lomakkeeseen. Saat heti VÄLITTÖMÄN pääsyn näihin kolmeen erikoisvideoon suoraan ruudullesi &amp; sähköpostiisi, sekä Janne Säkkisen ladattaviin PDF-kuntoutusmateriaaleihin!
           </p>
         </div>
 
         {state !== "success" ? (
           <div className="space-y-10">
             {/* Showcase Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {bonusVideos.map((video, idx) => (
                 <div key={idx} className="rounded-3xl bg-[#00122e]/95 border-2 border-[#0C66B4]/50 overflow-hidden space-y-4 shadow-xl hover:border-[#00AEEF] transition-all duration-300 group flex flex-col justify-between backdrop-blur-md hover:-translate-y-1">
                   <div>
@@ -215,7 +206,7 @@ export default function EmailLeadForm({
             <form onSubmit={handleSubmit} className="p-6 sm:p-8 md:p-10 rounded-3xl bg-[#00122e]/95 border-2 border-[#00AEEF] space-y-6 shadow-[0_0_50px_rgba(0,174,239,0.3)] backdrop-blur-md">
               <div className="flex items-center gap-2 text-[#67e8f9] text-xs font-bold uppercase tracking-wider">
                 <Gift className="w-4 h-4 text-[#67e8f9]" />
-                <span>Liity sähköpostilistalle – Avaa 4 erikoisvideota &amp; Drive-oppaat</span>
+                <span>Liity sähköpostilistalle – Avaa 3 erikoisvideota &amp; Drive-oppaat</span>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -294,12 +285,12 @@ export default function EmailLeadForm({
                 Kiitos liittymisestä{name ? `, ${name}` : ""}!
               </h3>
               <p className="text-slate-300 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
-                Sähköpostiosoitteesi <strong className="text-[#67e8f9]">{email}</strong> on lisätty listalle. Linkki lähetettiin myös sähköpostiisi, ja voit katsoa kaikki 4 erikoisvideota tästä suoraan:
+                Sähköpostiosoitteesi <strong className="text-[#67e8f9]">{email}</strong> on lisätty listalle. Linkki lähetettiin myös sähköpostiisi, ja voit katsoa kaikki 3 erikoisvideota tästä suoraan:
               </p>
             </div>
 
-            {/* Embedded 4 Videos */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Embedded 3 Videos */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {bonusVideos.map((video, idx) => (
                 <div key={idx} className="rounded-2xl bg-[#000814] border border-[#0C66B4]/60 overflow-hidden space-y-3 flex flex-col justify-between p-4 shadow-panel">
                   <div className="space-y-3">
@@ -314,7 +305,7 @@ export default function EmailLeadForm({
                     </div>
                     <div>
                       <span className="text-[10px] font-bold text-[#67e8f9] uppercase tracking-wider block">
-                        Osa {idx + 1} / 4
+                        Osa {idx + 1} / 3
                       </span>
                       <h4 className="text-sm font-bold text-white leading-snug mt-1">
                         {video.title}
